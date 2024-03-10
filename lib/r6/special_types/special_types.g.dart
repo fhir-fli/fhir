@@ -122,6 +122,69 @@ Map<String, dynamic> _$$ReferenceImplToJson(_$ReferenceImpl instance) {
   return val;
 }
 
+_$RelativeTimeImpl _$$RelativeTimeImplFromJson(Map<String, dynamic> json) =>
+    _$RelativeTimeImpl(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      contextReference: json['contextReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['contextReference'] as Map<String, dynamic>),
+      contextDefinition: json['contextDefinition'] == null
+          ? null
+          : FhirCanonical.fromJson(json['contextDefinition']),
+      contextPath: json['contextPath'] as String?,
+      contextPathElement: json['_contextPath'] == null
+          ? null
+          : Element.fromJson(json['_contextPath'] as Map<String, dynamic>),
+      contextCode: json['contextCode'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['contextCode'] as Map<String, dynamic>),
+      offsetDuration: json['offsetDuration'] == null
+          ? null
+          : FhirDuration.fromJson(
+              json['offsetDuration'] as Map<String, dynamic>),
+      offsetRange: json['offsetRange'] == null
+          ? null
+          : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
+      text: json['text'] as String?,
+      textElement: json['_text'] == null
+          ? null
+          : Element.fromJson(json['_text'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$RelativeTimeImplToJson(_$RelativeTimeImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('contextReference', instance.contextReference?.toJson());
+  writeNotNull('contextDefinition', instance.contextDefinition?.toJson());
+  writeNotNull('contextPath', instance.contextPath);
+  writeNotNull('_contextPath', instance.contextPathElement?.toJson());
+  writeNotNull('contextCode', instance.contextCode?.toJson());
+  writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
+  writeNotNull('offsetRange', instance.offsetRange?.toJson());
+  writeNotNull('text', instance.text);
+  writeNotNull('_text', instance.textElement?.toJson());
+  return val;
+}
+
 _$FhirMetaImpl _$$FhirMetaImplFromJson(Map<String, dynamic> json) =>
     _$FhirMetaImpl(
       id: json['id'] as String?,

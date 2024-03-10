@@ -8,7 +8,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../../../r5.dart';
+import '../../../../r6.dart';
 
 part 'medications.freezed.dart';
 part 'medications.g.dart';
@@ -98,9 +98,9 @@ class FormularyItem with Resource, _$FormularyItem {
   ///
   const factory FormularyItem({
     /// [resourceType] This is a FormularyItem resource
-    @Default(R5ResourceType.FormularyItem)
-    @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.FormularyItem)
+    @JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -390,9 +390,9 @@ class Immunization with Resource, _$Immunization {
   ///
   const factory Immunization({
     /// [resourceType] This is a Immunization resource
-    @Default(R5ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Immunization)
+    @JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1256,9 +1256,9 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ///
   const factory ImmunizationEvaluation({
     /// [resourceType] This is a ImmunizationEvaluation resource
-    @Default(R5ResourceType.ImmunizationEvaluation)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.ImmunizationEvaluation)
+    @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1508,9 +1508,9 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///
   const factory ImmunizationRecommendation({
     /// [resourceType] This is a ImmunizationRecommendation resource
-    @Default(R5ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.ImmunizationRecommendation)
+    @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2067,9 +2067,9 @@ class Medication with Resource, _$Medication {
   ///
   const factory Medication({
     /// [resourceType] This is a Medication resource
-    @Default(R5ResourceType.Medication)
-    @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Medication)
+    @JsonKey(unknownEnumValue: R6ResourceType.Medication)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2674,9 +2674,9 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   ///
   const factory MedicationAdministration({
     /// [resourceType] This is a MedicationAdministration resource
-    @Default(R5ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MedicationAdministration)
+    @JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3391,9 +3391,9 @@ class MedicationDispense with Resource, _$MedicationDispense {
   ///
   const factory MedicationDispense({
     /// [resourceType] This is a MedicationDispense resource
-    @Default(R5ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MedicationDispense)
+    @JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -4151,9 +4151,9 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///
   const factory MedicationKnowledge({
     /// [resourceType] This is a MedicationKnowledge resource
-    @Default(R5ResourceType.MedicationKnowledge)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MedicationKnowledge)
+    @JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -6978,9 +6978,9 @@ class MedicationRequest with Resource, _$MedicationRequest {
   ///
   const factory MedicationRequest({
     /// [resourceType] This is a MedicationRequest resource
-    @Default(R5ResourceType.MedicationRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MedicationRequest)
+    @JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -7785,7 +7785,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   ///  during the history taking process during a patient visit or stay.   The
   ///  medication information may come from sources such as the patient's memory,
   ///  from a prescription bottle,  or from a list of medications the patient,
-  ///  clinician or other party maintains.  The primary difference between a
+  ///  clinician or other party maintains. The primary difference between a
   /// medicationstatement and a medicationadministration is that the medication
   /// administration has complete administration information and is based on
   /// actual administration information from the person who administered the
@@ -7936,9 +7936,9 @@ class MedicationStatement with Resource, _$MedicationStatement {
   ///
   const factory MedicationStatement({
     /// [resourceType] This is a MedicationStatement resource
-    @Default(R5ResourceType.MedicationStatement)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MedicationStatement)
+    @JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -8153,20 +8153,21 @@ class MedicationStatement with Resource, _$MedicationStatement {
 ///  information is captured is during the history taking process during a
 ///  patient visit or stay.   The medication information may come from sources
 ///  such as the patient's memory, from a prescription bottle,  or from a list
-///  of medications the patient, clinician or other party maintains. The primary
-/// difference between a medicationstatement and a medicationadministration is
-/// that the medication administration has complete administration information
-/// and is based on actual administration information from the person who
-/// administered the medication.  A medicationstatement is often, if not always,
-/// less specific.  There is no required date/time when the medication was
-/// administered, in fact we only know that a source has reported the patient
-/// is taking this medication, where details such as time, quantity, or rate or
-/// even medication product may be incomplete or missing or less precise.  As
-/// stated earlier, the Medication Statement information may come from the
-/// patient's memory, from a prescription bottle or from a list of medications
-/// the patient, clinician or other party maintains.  Medication administration
-/// is more formal and is not missing detailed information. The
-/// MedicationStatement resource was previously called MedicationStatement.
+///  of medications the patient, clinician or other party maintains.
+/// The primary difference between a medicationstatement and a
+/// medicationadministration is that the medication administration has
+/// complete administration information and is based on actual administration
+/// information from the person who administered the medication.  A
+/// medicationstatement is often, if not always, less specific.  There is no
+/// required date/time when the medication was administered, in fact we only
+/// know that a source has reported the patient is taking this medication,
+/// where details such as time, quantity, or rate or even medication product
+/// may be incomplete or missing or less precise.  As stated earlier, the
+/// Medication Statement information may come from the patient's memory, from a
+/// prescription bottle or from a list of medications the patient, clinician or
+/// other party maintains.  Medication administration is more formal and is not
+/// missing detailed information.
+/// The MedicationStatement resource was previously called MedicationStatement.
 @freezed
 class MedicationStatementAdherence with _$MedicationStatementAdherence {
   /// [MedicationStatementAdherence] A record of a medication that is being
@@ -8178,20 +8179,21 @@ class MedicationStatementAdherence with _$MedicationStatementAdherence {
   ///  information is captured is during the history taking process during a
   ///  patient visit or stay.   The medication information may come from sources
   ///  such as the patient's memory, from a prescription bottle,  or from a list
-  ///  of medications the patient, clinician or other party maintains. The primary
-  /// difference between a medicationstatement and a medicationadministration is
-  /// that the medication administration has complete administration information
-  /// and is based on actual administration information from the person who
-  /// administered the medication.  A medicationstatement is often, if not
-  /// always, less specific.  There is no required date/time when the medication
-  /// was administered, in fact we only know that a source has reported the
-  /// patient is taking this medication, where details such as time, quantity,
-  /// or rate or even medication product may be incomplete or missing or less
-  /// precise.  As stated earlier, the Medication Statement information may come
-  /// from the patient's memory, from a prescription bottle or from a list of
-  /// medications the patient, clinician or other party maintains.  Medication
-  /// administration is more formal and is not missing detailed information. The
-  /// MedicationStatement resource was previously called MedicationStatement.
+  ///  of medications the patient, clinician or other party maintains.
+  /// The primary difference between a medicationstatement and a
+  /// medicationadministration is that the medication administration has
+  /// complete administration information and is based on actual administration
+  /// information from the person who administered the medication.  A
+  /// medicationstatement is often, if not always, less specific.  There is no
+  /// required date/time when the medication was administered, in fact we only
+  /// know that a source has reported the patient is taking this medication,
+  /// where details such as time, quantity, or rate or even medication product
+  /// may be incomplete or missing or less precise.  As stated earlier, the
+  /// Medication Statement information may come from the patient's memory, from a
+  /// prescription bottle or from a list of medications the patient, clinician or
+  /// other party maintains.  Medication administration is more formal and is not
+  /// missing detailed information.
+  /// The MedicationStatement resource was previously called MedicationStatement.
   const MedicationStatementAdherence._();
 
   /// [MedicationStatementAdherence] A record of a medication that is being
@@ -8203,20 +8205,21 @@ class MedicationStatementAdherence with _$MedicationStatementAdherence {
   ///  information is captured is during the history taking process during a
   ///  patient visit or stay.   The medication information may come from sources
   ///  such as the patient's memory, from a prescription bottle,  or from a list
-  ///  of medications the patient, clinician or other party maintains. The primary
-  /// difference between a medicationstatement and a medicationadministration is
-  /// that the medication administration has complete administration information
-  /// and is based on actual administration information from the person who
-  /// administered the medication.  A medicationstatement is often, if not always,
-  /// less specific.  There is no required date/time when the medication was
-  /// administered, in fact we only know that a source has reported the patient
-  /// is taking this medication, where details such as time, quantity, or rate or
-  /// even medication product may be incomplete or missing or less precise.  As
-  /// stated earlier, the Medication Statement information may come from the
-  /// patient's memory, from a prescription bottle or from a list of medications
-  /// the patient, clinician or other party maintains.  Medication administration
-  /// is more formal and is not missing detailed information. The
-  /// MedicationStatement resource was previously called MedicationStatement.
+  ///  of medications the patient, clinician or other party maintains.
+  /// The primary difference between a medicationstatement and a
+  /// medicationadministration is that the medication administration has
+  /// complete administration information and is based on actual administration
+  /// information from the person who administered the medication.  A
+  /// medicationstatement is often, if not always, less specific.  There is no
+  /// required date/time when the medication was administered, in fact we only
+  /// know that a source has reported the patient is taking this medication,
+  /// where details such as time, quantity, or rate or even medication product
+  /// may be incomplete or missing or less precise.  As stated earlier, the
+  /// Medication Statement information may come from the patient's memory, from a
+  /// prescription bottle or from a list of medications the patient, clinician or
+  /// other party maintains.  Medication administration is more formal and is not
+  /// missing detailed information.
+  /// The MedicationStatement resource was previously called MedicationStatement.
   ///
   /// [id] Unique id for the element within a resource (for internal references).
   ///  This may be any string value that does not contain spaces.

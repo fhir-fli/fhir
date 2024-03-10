@@ -10,9 +10,9 @@ _$ArtifactAssessmentImpl _$$ArtifactAssessmentImplFromJson(
         Map<String, dynamic> json) =>
     _$ArtifactAssessmentImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ArtifactAssessment) ??
-          R5ResourceType.ArtifactAssessment,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.ArtifactAssessment) ??
+          R6ResourceType.ArtifactAssessment,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -118,7 +118,7 @@ _$ArtifactAssessmentImpl _$$ArtifactAssessmentImplFromJson(
 Map<String, dynamic> _$$ArtifactAssessmentImplToJson(
     _$ArtifactAssessmentImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -169,167 +169,167 @@ Map<String, dynamic> _$$ArtifactAssessmentImplToJson(
   return val;
 }
 
-const _$R5ResourceTypeEnumMap = {
-  R5ResourceType.Account: 'Account',
-  R5ResourceType.ActivityDefinition: 'ActivityDefinition',
-  R5ResourceType.ActorDefinition: 'ActorDefinition',
-  R5ResourceType.AdministrableProductDefinition:
+const _$R6ResourceTypeEnumMap = {
+  R6ResourceType.Account: 'Account',
+  R6ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R6ResourceType.ActorDefinition: 'ActorDefinition',
+  R6ResourceType.AdministrableProductDefinition:
       'AdministrableProductDefinition',
-  R5ResourceType.AdverseEvent: 'AdverseEvent',
-  R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
-  R5ResourceType.Appointment: 'Appointment',
-  R5ResourceType.AppointmentResponse: 'AppointmentResponse',
-  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
-  R5ResourceType.AuditEvent: 'AuditEvent',
-  R5ResourceType.Basic: 'Basic',
-  R5ResourceType.Binary: 'Binary',
-  R5ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
-  R5ResourceType.BiologicallyDerivedProductDispense:
+  R6ResourceType.AdverseEvent: 'AdverseEvent',
+  R6ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  R6ResourceType.Appointment: 'Appointment',
+  R6ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R6ResourceType.ArtifactAssessment: 'ArtifactAssessment',
+  R6ResourceType.AuditEvent: 'AuditEvent',
+  R6ResourceType.Basic: 'Basic',
+  R6ResourceType.Binary: 'Binary',
+  R6ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R6ResourceType.BiologicallyDerivedProductDispense:
       'BiologicallyDerivedProductDispense',
-  R5ResourceType.BodyStructure: 'BodyStructure',
-  R5ResourceType.Bundle: 'Bundle',
-  R5ResourceType.CapabilityStatement: 'CapabilityStatement',
-  R5ResourceType.CarePlan: 'CarePlan',
-  R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.ChargeItem: 'ChargeItem',
-  R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
-  R5ResourceType.Citation: 'Citation',
-  R5ResourceType.Claim: 'Claim',
-  R5ResourceType.ClaimResponse: 'ClaimResponse',
-  R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
-  R5ResourceType.CodeSystem: 'CodeSystem',
-  R5ResourceType.Communication: 'Communication',
-  R5ResourceType.CommunicationRequest: 'CommunicationRequest',
-  R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
-  R5ResourceType.Composition: 'Composition',
-  R5ResourceType.ConceptMap: 'ConceptMap',
-  R5ResourceType.Condition: 'Condition',
-  R5ResourceType.ConditionDefinition: 'ConditionDefinition',
-  R5ResourceType.Consent: 'Consent',
-  R5ResourceType.Contract: 'Contract',
-  R5ResourceType.Coverage: 'Coverage',
-  R5ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
-  R5ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
-  R5ResourceType.DetectedIssue: 'DetectedIssue',
-  R5ResourceType.Device: 'Device',
-  R5ResourceType.DeviceAssociation: 'DeviceAssociation',
-  R5ResourceType.DeviceDefinition: 'DeviceDefinition',
-  R5ResourceType.DeviceDispense: 'DeviceDispense',
-  R5ResourceType.DeviceMetric: 'DeviceMetric',
-  R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUsage: 'DeviceUsage',
-  R5ResourceType.DiagnosticReport: 'DiagnosticReport',
-  R5ResourceType.DocumentReference: 'DocumentReference',
-  R5ResourceType.Encounter: 'Encounter',
-  R5ResourceType.EncounterHistory: 'EncounterHistory',
-  R5ResourceType.Endpoint: 'Endpoint',
-  R5ResourceType.EnrollmentRequest: 'EnrollmentRequest',
-  R5ResourceType.EnrollmentResponse: 'EnrollmentResponse',
-  R5ResourceType.EpisodeOfCare: 'EpisodeOfCare',
-  R5ResourceType.EventDefinition: 'EventDefinition',
-  R5ResourceType.Evidence: 'Evidence',
-  R5ResourceType.EvidenceReport: 'EvidenceReport',
-  R5ResourceType.EvidenceVariable: 'EvidenceVariable',
-  R5ResourceType.ExampleScenario: 'ExampleScenario',
-  R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
-  R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
-  R5ResourceType.Flag: 'Flag',
-  R5ResourceType.FormularyItem: 'FormularyItem',
-  R5ResourceType.GenomicStudy: 'GenomicStudy',
-  R5ResourceType.Goal: 'Goal',
-  R5ResourceType.GraphDefinition: 'GraphDefinition',
-  R5ResourceType.Group: 'Group',
-  R5ResourceType.GuidanceResponse: 'GuidanceResponse',
-  R5ResourceType.HealthcareService: 'HealthcareService',
-  R5ResourceType.ImagingSelection: 'ImagingSelection',
-  R5ResourceType.ImagingStudy: 'ImagingStudy',
-  R5ResourceType.Immunization: 'Immunization',
-  R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
-  R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
-  R5ResourceType.ImplementationGuide: 'ImplementationGuide',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.InsurancePlan: 'InsurancePlan',
-  R5ResourceType.InventoryItem: 'InventoryItem',
-  R5ResourceType.InventoryReport: 'InventoryReport',
-  R5ResourceType.Invoice: 'Invoice',
-  R5ResourceType.Library: 'Library',
-  R5ResourceType.Linkage: 'Linkage',
-  R5ResourceType.List: 'List',
-  R5ResourceType.Location: 'Location',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.Measure: 'Measure',
-  R5ResourceType.MeasureReport: 'MeasureReport',
-  R5ResourceType.Medication: 'Medication',
-  R5ResourceType.MedicationAdministration: 'MedicationAdministration',
-  R5ResourceType.MedicationDispense: 'MedicationDispense',
-  R5ResourceType.MedicationKnowledge: 'MedicationKnowledge',
-  R5ResourceType.MedicationRequest: 'MedicationRequest',
-  R5ResourceType.MedicationStatement: 'MedicationStatement',
-  R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.MessageDefinition: 'MessageDefinition',
-  R5ResourceType.MessageHeader: 'MessageHeader',
-  R5ResourceType.MolecularSequence: 'MolecularSequence',
-  R5ResourceType.NamingSystem: 'NamingSystem',
-  R5ResourceType.NutritionIntake: 'NutritionIntake',
-  R5ResourceType.NutritionOrder: 'NutritionOrder',
-  R5ResourceType.NutritionProduct: 'NutritionProduct',
-  R5ResourceType.Observation: 'Observation',
-  R5ResourceType.ObservationDefinition: 'ObservationDefinition',
-  R5ResourceType.OperationDefinition: 'OperationDefinition',
-  R5ResourceType.OperationOutcome: 'OperationOutcome',
-  R5ResourceType.Organization: 'Organization',
-  R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.Parameters: 'Parameters',
-  R5ResourceType.Patient: 'Patient',
-  R5ResourceType.PaymentNotice: 'PaymentNotice',
-  R5ResourceType.PaymentReconciliation: 'PaymentReconciliation',
-  R5ResourceType.Permission: 'Permission',
-  R5ResourceType.Person: 'Person',
-  R5ResourceType.PlanDefinition: 'PlanDefinition',
-  R5ResourceType.Practitioner: 'Practitioner',
-  R5ResourceType.PractitionerRole: 'PractitionerRole',
-  R5ResourceType.Procedure: 'Procedure',
-  R5ResourceType.Provenance: 'Provenance',
-  R5ResourceType.Questionnaire: 'Questionnaire',
-  R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.RelatedPerson: 'RelatedPerson',
-  R5ResourceType.RequestOrchestration: 'RequestOrchestration',
-  R5ResourceType.Requirements: 'Requirements',
-  R5ResourceType.ResearchStudy: 'ResearchStudy',
-  R5ResourceType.ResearchSubject: 'ResearchSubject',
-  R5ResourceType.RiskAssessment: 'RiskAssessment',
-  R5ResourceType.Schedule: 'Schedule',
-  R5ResourceType.SearchParameter: 'SearchParameter',
-  R5ResourceType.ServiceRequest: 'ServiceRequest',
-  R5ResourceType.Slot: 'Slot',
-  R5ResourceType.Specimen: 'Specimen',
-  R5ResourceType.SpecimenDefinition: 'SpecimenDefinition',
-  R5ResourceType.StructureDefinition: 'StructureDefinition',
-  R5ResourceType.StructureMap: 'StructureMap',
-  R5ResourceType.Subscription: 'Subscription',
-  R5ResourceType.SubscriptionStatus: 'SubscriptionStatus',
-  R5ResourceType.SubscriptionTopic: 'SubscriptionTopic',
-  R5ResourceType.Substance: 'Substance',
-  R5ResourceType.SubstanceDefinition: 'SubstanceDefinition',
-  R5ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R5ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R5ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R5ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R5ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R5ResourceType.SupplyDelivery: 'SupplyDelivery',
-  R5ResourceType.SupplyRequest: 'SupplyRequest',
-  R5ResourceType.Task: 'Task',
-  R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
-  R5ResourceType.TestPlan: 'TestPlan',
-  R5ResourceType.TestReport: 'TestReport',
-  R5ResourceType.TestScript: 'TestScript',
-  R5ResourceType.Transport: 'Transport',
-  R5ResourceType.ValueSet: 'ValueSet',
-  R5ResourceType.VerificationResult: 'VerificationResult',
-  R5ResourceType.VisionPrescription: 'VisionPrescription',
+  R6ResourceType.BodyStructure: 'BodyStructure',
+  R6ResourceType.Bundle: 'Bundle',
+  R6ResourceType.CapabilityStatement: 'CapabilityStatement',
+  R6ResourceType.CarePlan: 'CarePlan',
+  R6ResourceType.CareTeam: 'CareTeam',
+  R6ResourceType.ChargeItem: 'ChargeItem',
+  R6ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R6ResourceType.Citation: 'Citation',
+  R6ResourceType.Claim: 'Claim',
+  R6ResourceType.ClaimResponse: 'ClaimResponse',
+  R6ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R6ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
+  R6ResourceType.CodeSystem: 'CodeSystem',
+  R6ResourceType.Communication: 'Communication',
+  R6ResourceType.CommunicationRequest: 'CommunicationRequest',
+  R6ResourceType.CompartmentDefinition: 'CompartmentDefinition',
+  R6ResourceType.Composition: 'Composition',
+  R6ResourceType.ConceptMap: 'ConceptMap',
+  R6ResourceType.Condition: 'Condition',
+  R6ResourceType.ConditionDefinition: 'ConditionDefinition',
+  R6ResourceType.Consent: 'Consent',
+  R6ResourceType.Contract: 'Contract',
+  R6ResourceType.Coverage: 'Coverage',
+  R6ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
+  R6ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
+  R6ResourceType.DetectedIssue: 'DetectedIssue',
+  R6ResourceType.Device: 'Device',
+  R6ResourceType.DeviceAssociation: 'DeviceAssociation',
+  R6ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R6ResourceType.DeviceDispense: 'DeviceDispense',
+  R6ResourceType.DeviceMetric: 'DeviceMetric',
+  R6ResourceType.DeviceRequest: 'DeviceRequest',
+  R6ResourceType.DeviceUsage: 'DeviceUsage',
+  R6ResourceType.DiagnosticReport: 'DiagnosticReport',
+  R6ResourceType.DocumentReference: 'DocumentReference',
+  R6ResourceType.Encounter: 'Encounter',
+  R6ResourceType.EncounterHistory: 'EncounterHistory',
+  R6ResourceType.Endpoint: 'Endpoint',
+  R6ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  R6ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  R6ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  R6ResourceType.EventDefinition: 'EventDefinition',
+  R6ResourceType.Evidence: 'Evidence',
+  R6ResourceType.EvidenceReport: 'EvidenceReport',
+  R6ResourceType.EvidenceVariable: 'EvidenceVariable',
+  R6ResourceType.ExampleScenario: 'ExampleScenario',
+  R6ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  R6ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  R6ResourceType.Flag: 'Flag',
+  R6ResourceType.FormularyItem: 'FormularyItem',
+  R6ResourceType.GenomicStudy: 'GenomicStudy',
+  R6ResourceType.Goal: 'Goal',
+  R6ResourceType.GraphDefinition: 'GraphDefinition',
+  R6ResourceType.Group: 'Group',
+  R6ResourceType.GuidanceResponse: 'GuidanceResponse',
+  R6ResourceType.HealthcareService: 'HealthcareService',
+  R6ResourceType.ImagingSelection: 'ImagingSelection',
+  R6ResourceType.ImagingStudy: 'ImagingStudy',
+  R6ResourceType.Immunization: 'Immunization',
+  R6ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
+  R6ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  R6ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R6ResourceType.Ingredient: 'Ingredient',
+  R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InventoryItem: 'InventoryItem',
+  R6ResourceType.InventoryReport: 'InventoryReport',
+  R6ResourceType.Invoice: 'Invoice',
+  R6ResourceType.Library: 'Library',
+  R6ResourceType.Linkage: 'Linkage',
+  R6ResourceType.List: 'List',
+  R6ResourceType.Location: 'Location',
+  R6ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
+  R6ResourceType.Measure: 'Measure',
+  R6ResourceType.MeasureReport: 'MeasureReport',
+  R6ResourceType.Medication: 'Medication',
+  R6ResourceType.MedicationAdministration: 'MedicationAdministration',
+  R6ResourceType.MedicationDispense: 'MedicationDispense',
+  R6ResourceType.MedicationKnowledge: 'MedicationKnowledge',
+  R6ResourceType.MedicationRequest: 'MedicationRequest',
+  R6ResourceType.MedicationStatement: 'MedicationStatement',
+  R6ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
+  R6ResourceType.MessageDefinition: 'MessageDefinition',
+  R6ResourceType.MessageHeader: 'MessageHeader',
+  R6ResourceType.MolecularSequence: 'MolecularSequence',
+  R6ResourceType.NamingSystem: 'NamingSystem',
+  R6ResourceType.NutritionIntake: 'NutritionIntake',
+  R6ResourceType.NutritionOrder: 'NutritionOrder',
+  R6ResourceType.NutritionProduct: 'NutritionProduct',
+  R6ResourceType.Observation: 'Observation',
+  R6ResourceType.ObservationDefinition: 'ObservationDefinition',
+  R6ResourceType.OperationDefinition: 'OperationDefinition',
+  R6ResourceType.OperationOutcome: 'OperationOutcome',
+  R6ResourceType.Organization: 'Organization',
+  R6ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R6ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
+  R6ResourceType.Parameters: 'Parameters',
+  R6ResourceType.Patient: 'Patient',
+  R6ResourceType.PaymentNotice: 'PaymentNotice',
+  R6ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  R6ResourceType.Permission: 'Permission',
+  R6ResourceType.Person: 'Person',
+  R6ResourceType.PlanDefinition: 'PlanDefinition',
+  R6ResourceType.Practitioner: 'Practitioner',
+  R6ResourceType.PractitionerRole: 'PractitionerRole',
+  R6ResourceType.Procedure: 'Procedure',
+  R6ResourceType.Provenance: 'Provenance',
+  R6ResourceType.Questionnaire: 'Questionnaire',
+  R6ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R6ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
+  R6ResourceType.RelatedPerson: 'RelatedPerson',
+  R6ResourceType.RequestOrchestration: 'RequestOrchestration',
+  R6ResourceType.Requirements: 'Requirements',
+  R6ResourceType.ResearchStudy: 'ResearchStudy',
+  R6ResourceType.ResearchSubject: 'ResearchSubject',
+  R6ResourceType.RiskAssessment: 'RiskAssessment',
+  R6ResourceType.Schedule: 'Schedule',
+  R6ResourceType.SearchParameter: 'SearchParameter',
+  R6ResourceType.ServiceRequest: 'ServiceRequest',
+  R6ResourceType.Slot: 'Slot',
+  R6ResourceType.Specimen: 'Specimen',
+  R6ResourceType.SpecimenDefinition: 'SpecimenDefinition',
+  R6ResourceType.StructureDefinition: 'StructureDefinition',
+  R6ResourceType.StructureMap: 'StructureMap',
+  R6ResourceType.Subscription: 'Subscription',
+  R6ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R6ResourceType.SubscriptionTopic: 'SubscriptionTopic',
+  R6ResourceType.Substance: 'Substance',
+  R6ResourceType.SubstanceDefinition: 'SubstanceDefinition',
+  R6ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
+  R6ResourceType.SubstancePolymer: 'SubstancePolymer',
+  R6ResourceType.SubstanceProtein: 'SubstanceProtein',
+  R6ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
+  R6ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
+  R6ResourceType.SupplyDelivery: 'SupplyDelivery',
+  R6ResourceType.SupplyRequest: 'SupplyRequest',
+  R6ResourceType.Task: 'Task',
+  R6ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R6ResourceType.TestPlan: 'TestPlan',
+  R6ResourceType.TestReport: 'TestReport',
+  R6ResourceType.TestScript: 'TestScript',
+  R6ResourceType.Transport: 'Transport',
+  R6ResourceType.ValueSet: 'ValueSet',
+  R6ResourceType.VerificationResult: 'VerificationResult',
+  R6ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
 _$ArtifactAssessmentContentImpl _$$ArtifactAssessmentContentImplFromJson(
@@ -423,9 +423,9 @@ Map<String, dynamic> _$$ArtifactAssessmentContentImplToJson(
 _$CitationImpl _$$CitationImplFromJson(Map<String, dynamic> json) =>
     _$CitationImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Citation) ??
-          R5ResourceType.Citation,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.Citation) ??
+          R6ResourceType.Citation,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -589,7 +589,7 @@ _$CitationImpl _$$CitationImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$CitationImplToJson(_$CitationImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1674,9 +1674,9 @@ Map<String, dynamic> _$$CitationSummary1ImplToJson(
 _$EvidenceImpl _$$EvidenceImplFromJson(Map<String, dynamic> json) =>
     _$EvidenceImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Evidence) ??
-          R5ResourceType.Evidence,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.Evidence) ??
+          R6ResourceType.Evidence,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1855,7 +1855,7 @@ _$EvidenceImpl _$$EvidenceImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$EvidenceImplToJson(_$EvidenceImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1962,8 +1962,21 @@ _$EvidenceVariableDefinitionImpl _$$EvidenceVariableDefinitionImplFromJson(
       note: (json['note'] as List<dynamic>?)
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      variableRole: CodeableConcept.fromJson(
-          json['variableRole'] as Map<String, dynamic>),
+      variableRole: json['variableRole'] == null
+          ? null
+          : FhirCode.fromJson(json['variableRole']),
+      variableRoleElement: json['_variableRole'] == null
+          ? null
+          : Element.fromJson(json['_variableRole'] as Map<String, dynamic>),
+      roleSubtype: json['roleSubtype'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['roleSubtype'] as Map<String, dynamic>),
+      comparatorCategory: json['comparatorCategory'] as String?,
+      comparatorCategoryElement: json['_comparatorCategory'] == null
+          ? null
+          : Element.fromJson(
+              json['_comparatorCategory'] as Map<String, dynamic>),
       observed: json['observed'] == null
           ? null
           : Reference.fromJson(json['observed'] as Map<String, dynamic>),
@@ -1994,7 +2007,12 @@ Map<String, dynamic> _$$EvidenceVariableDefinitionImplToJson(
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  val['variableRole'] = instance.variableRole.toJson();
+  writeNotNull('variableRole', instance.variableRole?.toJson());
+  writeNotNull('_variableRole', instance.variableRoleElement?.toJson());
+  writeNotNull('roleSubtype', instance.roleSubtype?.toJson());
+  writeNotNull('comparatorCategory', instance.comparatorCategory);
+  writeNotNull(
+      '_comparatorCategory', instance.comparatorCategoryElement?.toJson());
   writeNotNull('observed', instance.observed?.toJson());
   writeNotNull('intended', instance.intended?.toJson());
   writeNotNull('directnessMatch', instance.directnessMatch?.toJson());
@@ -2233,10 +2251,37 @@ _$EvidenceModelCharacteristicImpl _$$EvidenceModelCharacteristicImplFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      value: json['value'] == null
+      conditionCodeableConcept: json['conditionCodeableConcept'] == null
           ? null
-          : Quantity.fromJson(json['value'] as Map<String, dynamic>),
+          : CodeableConcept.fromJson(
+              json['conditionCodeableConcept'] as Map<String, dynamic>),
+      conditionExpression: json['conditionExpression'] == null
+          ? null
+          : FhirExpression.fromJson(
+              json['conditionExpression'] as Map<String, dynamic>),
+      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      valueQuantity: json['valueQuantity'] == null
+          ? null
+          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+      valueRange: json['valueRange'] == null
+          ? null
+          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+      valueCodeableConcept: json['valueCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['valueCodeableConcept'] as Map<String, dynamic>),
+      intended: json['intended'] == null
+          ? null
+          : FhirBoolean.fromJson(json['intended']),
+      intendedElement: json['_intended'] == null
+          ? null
+          : Element.fromJson(json['_intended'] as Map<String, dynamic>),
+      applied: json['applied'] == null
+          ? null
+          : FhirBoolean.fromJson(json['applied']),
+      appliedElement: json['_applied'] == null
+          ? null
+          : Element.fromJson(json['_applied'] as Map<String, dynamic>),
       variable: (json['variable'] as List<dynamic>?)
           ?.map((e) =>
               ModelCharacteristicVariable.fromJson(e as Map<String, dynamic>))
@@ -2244,6 +2289,10 @@ _$EvidenceModelCharacteristicImpl _$$EvidenceModelCharacteristicImplFromJson(
       attributeEstimate: (json['attributeEstimate'] as List<dynamic>?)
           ?.map((e) =>
               EvidenceAttributeEstimate.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modelCharacteristic: (json['modelCharacteristic'] as List<dynamic>?)
+          ?.map((e) =>
+              EvidenceModelCharacteristic.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -2262,11 +2311,22 @@ Map<String, dynamic> _$$EvidenceModelCharacteristicImplToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'conditionCodeableConcept', instance.conditionCodeableConcept?.toJson());
+  writeNotNull('conditionExpression', instance.conditionExpression?.toJson());
   val['code'] = instance.code.toJson();
-  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('intended', instance.intended?.toJson());
+  writeNotNull('_intended', instance.intendedElement?.toJson());
+  writeNotNull('applied', instance.applied?.toJson());
+  writeNotNull('_applied', instance.appliedElement?.toJson());
   writeNotNull('variable', instance.variable?.map((e) => e.toJson()).toList());
   writeNotNull('attributeEstimate',
       instance.attributeEstimate?.map((e) => e.toJson()).toList());
+  writeNotNull('modelCharacteristic',
+      instance.modelCharacteristic?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2389,9 +2449,9 @@ Map<String, dynamic> _$$EvidenceCertaintyImplToJson(
 _$EvidenceReportImpl _$$EvidenceReportImplFromJson(Map<String, dynamic> json) =>
     _$EvidenceReportImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EvidenceReport) ??
-          R5ResourceType.EvidenceReport,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.EvidenceReport) ??
+          R6ResourceType.EvidenceReport,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2564,7 +2624,7 @@ _$EvidenceReportImpl _$$EvidenceReportImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$EvidenceReportImplToJson(
     _$EvidenceReportImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2939,9 +2999,9 @@ _$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
         Map<String, dynamic> json) =>
     _$EvidenceVariableImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EvidenceVariable) ??
-          R5ResourceType.EvidenceVariable,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.EvidenceVariable) ??
+          R6ResourceType.EvidenceVariable,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3093,10 +3153,10 @@ _$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
-      characteristic: (json['characteristic'] as List<dynamic>?)
-          ?.map((e) => EvidenceVariableCharacteristic.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
+      definition: json['definition'] == null
+          ? null
+          : CodeableReference.fromJson(
+              json['definition'] as Map<String, dynamic>),
       handling:
           json['handling'] == null ? null : FhirCode.fromJson(json['handling']),
       handlingElement: json['_handling'] == null
@@ -3111,7 +3171,7 @@ _$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
 Map<String, dynamic> _$$EvidenceVariableImplToJson(
     _$EvidenceVariableImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3186,339 +3246,10 @@ Map<String, dynamic> _$$EvidenceVariableImplToJson(
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('actual', instance.actual?.toJson());
   writeNotNull('_actual', instance.actualElement?.toJson());
-  writeNotNull('characteristic',
-      instance.characteristic?.map((e) => e.toJson()).toList());
+  writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('handling', instance.handling?.toJson());
   writeNotNull('_handling', instance.handlingElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$EvidenceVariableCharacteristicImpl
-    _$$EvidenceVariableCharacteristicImplFromJson(Map<String, dynamic> json) =>
-        _$EvidenceVariableCharacteristicImpl(
-          id: json['id'] as String?,
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          linkId:
-              json['linkId'] == null ? null : FhirId.fromJson(json['linkId']),
-          linkIdElement: json['_linkId'] == null
-              ? null
-              : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
-          description: json['description'] == null
-              ? null
-              : FhirMarkdown.fromJson(json['description']),
-          descriptionElement: json['_description'] == null
-              ? null
-              : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          note: (json['note'] as List<dynamic>?)
-              ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          exclude: json['exclude'] == null
-              ? null
-              : FhirBoolean.fromJson(json['exclude']),
-          excludeElement: json['_exclude'] == null
-              ? null
-              : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
-          definitionReference: json['definitionReference'] == null
-              ? null
-              : Reference.fromJson(
-                  json['definitionReference'] as Map<String, dynamic>),
-          definitionCanonical: json['definitionCanonical'] == null
-              ? null
-              : FhirCanonical.fromJson(json['definitionCanonical']),
-          definitionCodeableConcept: json['definitionCodeableConcept'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['definitionCodeableConcept'] as Map<String, dynamic>),
-          definitionExpression: json['definitionExpression'] == null
-              ? null
-              : FhirExpression.fromJson(
-                  json['definitionExpression'] as Map<String, dynamic>),
-          definitionId: json['definitionId'] == null
-              ? null
-              : FhirId.fromJson(json['definitionId']),
-          definitionIdElement: json['_definitionId'] == null
-              ? null
-              : Element.fromJson(json['_definitionId'] as Map<String, dynamic>),
-          definitionByTypeAndValue: json['definitionByTypeAndValue'] == null
-              ? null
-              : EvidenceVariableDefinitionByTypeAndValue.fromJson(
-                  json['definitionByTypeAndValue'] as Map<String, dynamic>),
-          definitionByCombination: json['definitionByCombination'] == null
-              ? null
-              : EvidenceVariableDefinitionByCombination.fromJson(
-                  json['definitionByCombination'] as Map<String, dynamic>),
-          instancesQuantity: json['instancesQuantity'] == null
-              ? null
-              : Quantity.fromJson(
-                  json['instancesQuantity'] as Map<String, dynamic>),
-          instancesRange: json['instancesRange'] == null
-              ? null
-              : Range.fromJson(json['instancesRange'] as Map<String, dynamic>),
-          durationQuantity: json['durationQuantity'] == null
-              ? null
-              : Quantity.fromJson(
-                  json['durationQuantity'] as Map<String, dynamic>),
-          durationRange: json['durationRange'] == null
-              ? null
-              : Range.fromJson(json['durationRange'] as Map<String, dynamic>),
-          timeFromEvent: (json['timeFromEvent'] as List<dynamic>?)
-              ?.map((e) => EvidenceVariableTimeFromEvent.fromJson(
-                  e as Map<String, dynamic>))
-              .toList(),
-        );
-
-Map<String, dynamic> _$$EvidenceVariableCharacteristicImplToJson(
-    _$EvidenceVariableCharacteristicImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('linkId', instance.linkId?.toJson());
-  writeNotNull('_linkId', instance.linkIdElement?.toJson());
-  writeNotNull('description', instance.description?.toJson());
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('exclude', instance.exclude?.toJson());
-  writeNotNull('_exclude', instance.excludeElement?.toJson());
-  writeNotNull('definitionReference', instance.definitionReference?.toJson());
-  writeNotNull('definitionCanonical', instance.definitionCanonical?.toJson());
-  writeNotNull('definitionCodeableConcept',
-      instance.definitionCodeableConcept?.toJson());
-  writeNotNull('definitionExpression', instance.definitionExpression?.toJson());
-  writeNotNull('definitionId', instance.definitionId?.toJson());
-  writeNotNull('_definitionId', instance.definitionIdElement?.toJson());
-  writeNotNull(
-      'definitionByTypeAndValue', instance.definitionByTypeAndValue?.toJson());
-  writeNotNull(
-      'definitionByCombination', instance.definitionByCombination?.toJson());
-  writeNotNull('instancesQuantity', instance.instancesQuantity?.toJson());
-  writeNotNull('instancesRange', instance.instancesRange?.toJson());
-  writeNotNull('durationQuantity', instance.durationQuantity?.toJson());
-  writeNotNull('durationRange', instance.durationRange?.toJson());
-  writeNotNull(
-      'timeFromEvent', instance.timeFromEvent?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$EvidenceVariableDefinitionByTypeAndValueImpl
-    _$$EvidenceVariableDefinitionByTypeAndValueImplFromJson(
-            Map<String, dynamic> json) =>
-        _$EvidenceVariableDefinitionByTypeAndValueImpl(
-          id: json['id'] as String?,
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-          method: (json['method'] as List<dynamic>?)
-              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          device: json['device'] == null
-              ? null
-              : Reference.fromJson(json['device'] as Map<String, dynamic>),
-          valueCodeableConcept: json['valueCodeableConcept'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['valueCodeableConcept'] as Map<String, dynamic>),
-          valueBoolean: json['valueBoolean'] == null
-              ? null
-              : FhirBoolean.fromJson(json['valueBoolean']),
-          valueBooleanElement: json['_valueBoolean'] == null
-              ? null
-              : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-          valueQuantity: json['valueQuantity'] == null
-              ? null
-              : Quantity.fromJson(
-                  json['valueQuantity'] as Map<String, dynamic>),
-          valueRange: json['valueRange'] == null
-              ? null
-              : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-          valueReference: json['valueReference'] == null
-              ? null
-              : Reference.fromJson(
-                  json['valueReference'] as Map<String, dynamic>),
-          valueId:
-              json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
-          valueIdElement: json['_valueId'] == null
-              ? null
-              : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
-          offset: json['offset'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['offset'] as Map<String, dynamic>),
-        );
-
-Map<String, dynamic> _$$EvidenceVariableDefinitionByTypeAndValueImplToJson(
-    _$EvidenceVariableDefinitionByTypeAndValueImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = instance.type.toJson();
-  writeNotNull('method', instance.method?.map((e) => e.toJson()).toList());
-  writeNotNull('device', instance.device?.toJson());
-  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueRange', instance.valueRange?.toJson());
-  writeNotNull('valueReference', instance.valueReference?.toJson());
-  writeNotNull('valueId', instance.valueId?.toJson());
-  writeNotNull('_valueId', instance.valueIdElement?.toJson());
-  writeNotNull('offset', instance.offset?.toJson());
-  return val;
-}
-
-_$EvidenceVariableDefinitionByCombinationImpl
-    _$$EvidenceVariableDefinitionByCombinationImplFromJson(
-            Map<String, dynamic> json) =>
-        _$EvidenceVariableDefinitionByCombinationImpl(
-          id: json['id'] as String?,
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
-          codeElement: json['_code'] == null
-              ? null
-              : Element.fromJson(json['_code'] as Map<String, dynamic>),
-          threshold: json['threshold'] == null
-              ? null
-              : FhirPositiveInt.fromJson(json['threshold']),
-          thresholdElement: json['_threshold'] == null
-              ? null
-              : Element.fromJson(json['_threshold'] as Map<String, dynamic>),
-          characteristic: (json['characteristic'] as List<dynamic>)
-              .map((e) => EvidenceVariableCharacteristic.fromJson(
-                  e as Map<String, dynamic>))
-              .toList(),
-        );
-
-Map<String, dynamic> _$$EvidenceVariableDefinitionByCombinationImplToJson(
-    _$EvidenceVariableDefinitionByCombinationImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  writeNotNull('threshold', instance.threshold?.toJson());
-  writeNotNull('_threshold', instance.thresholdElement?.toJson());
-  val['characteristic'] =
-      instance.characteristic.map((e) => e.toJson()).toList();
-  return val;
-}
-
-_$EvidenceVariableTimeFromEventImpl
-    _$$EvidenceVariableTimeFromEventImplFromJson(Map<String, dynamic> json) =>
-        _$EvidenceVariableTimeFromEventImpl(
-          id: json['id'] as String?,
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          description: json['description'] == null
-              ? null
-              : FhirMarkdown.fromJson(json['description']),
-          descriptionElement: json['_description'] == null
-              ? null
-              : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          note: (json['note'] as List<dynamic>?)
-              ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          eventCodeableConcept: json['eventCodeableConcept'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['eventCodeableConcept'] as Map<String, dynamic>),
-          eventReference: json['eventReference'] == null
-              ? null
-              : Reference.fromJson(
-                  json['eventReference'] as Map<String, dynamic>),
-          eventDateTime: json['eventDateTime'] == null
-              ? null
-              : FhirDateTime.fromJson(json['eventDateTime'] as String),
-          eventDateTimeElement: json['_eventDateTime'] == null
-              ? null
-              : Element.fromJson(
-                  json['_eventDateTime'] as Map<String, dynamic>),
-          eventId:
-              json['eventId'] == null ? null : FhirId.fromJson(json['eventId']),
-          eventIdElement: json['_eventId'] == null
-              ? null
-              : Element.fromJson(json['_eventId'] as Map<String, dynamic>),
-          quantity: json['quantity'] == null
-              ? null
-              : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-          range: json['range'] == null
-              ? null
-              : Range.fromJson(json['range'] as Map<String, dynamic>),
-        );
-
-Map<String, dynamic> _$$EvidenceVariableTimeFromEventImplToJson(
-    _$EvidenceVariableTimeFromEventImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description?.toJson());
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('eventCodeableConcept', instance.eventCodeableConcept?.toJson());
-  writeNotNull('eventReference', instance.eventReference?.toJson());
-  writeNotNull('eventDateTime', instance.eventDateTime?.toJson());
-  writeNotNull('_eventDateTime', instance.eventDateTimeElement?.toJson());
-  writeNotNull('eventId', instance.eventId?.toJson());
-  writeNotNull('_eventId', instance.eventIdElement?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('range', instance.range?.toJson());
   return val;
 }
 
@@ -3546,6 +3277,9 @@ _$EvidenceVariableCategoryImpl _$$EvidenceVariableCategoryImplFromJson(
       valueRange: json['valueRange'] == null
           ? null
           : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+      valueReference: json['valueReference'] == null
+          ? null
+          : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$EvidenceVariableCategoryImplToJson(
@@ -3568,5 +3302,6 @@ Map<String, dynamic> _$$EvidenceVariableCategoryImplToJson(
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
   return val;
 }

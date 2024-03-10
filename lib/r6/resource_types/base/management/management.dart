@@ -8,7 +8,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../../../r5.dart';
+import '../../../../r6.dart';
 
 part 'management.freezed.dart';
 part 'management.g.dart';
@@ -188,9 +188,10 @@ class Encounter with Resource, _$Encounter {
   ///  encounter.
   ///
   const factory Encounter({
-    @Default(R5ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-    R5ResourceType resourceType,
+    /// [resourceType] This is a Encounter resource
+    @Default(R6ResourceType.Encounter)
+    @JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1197,10 +1198,12 @@ class EncounterHistory with Resource, _$EncounterHistory {
   /// [location] The location of the patient at this point in the encounter, the
   ///  multiple cardinality permits de-normalizing the levels of the location
   ///  hierarchy, such as site/ward/room/bed.
+  ///
   const factory EncounterHistory({
-    @Default(R5ResourceType.EncounterHistory)
-    @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-    R5ResourceType resourceType,
+    /// [resourceType] This is a EncounterHistory resource
+    @Default(R6ResourceType.EncounterHistory)
+    @JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1571,7 +1574,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [diagnosis] The list of medical conditions that were addressed during the
   ///  episode of care.
   ///
-  /// [patient] The patient who is the focus of this episode of care.
+  /// [subject] The patient/group who is the focus of this episode of care.
   ///
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for care coordination, care delivery, or other services
@@ -1591,10 +1594,12 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   ///
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
+  ///
   const factory EpisodeOfCare({
-    @Default(R5ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-    R5ResourceType resourceType,
+    /// [resourceType] This is a EpisodeOfCare resource
+    @Default(R6ResourceType.EpisodeOfCare)
+    @JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1684,8 +1689,8 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     ///  episode of care.
     List<EpisodeOfCareDiagnosis>? diagnosis,
 
-    /// [patient] The patient who is the focus of this episode of care.
-    required Reference patient,
+    /// [subject] The patient/group who is the focus of this episode of care.
+    required Reference subject,
 
     /// [managingOrganization] The organization that has assumed the specific
     ///  responsibilities for care coordination, care delivery, or other services
@@ -2195,10 +2200,15 @@ class Flag with Resource, _$Flag {
   /// [encounter] This alert is only relevant during the encounter.
   ///
   /// [author] The person, organization or device that created the flag.
+  ///
+  /// [supportingInfo] Additional information that may be relevant to the flag,
+  ///  such as why the flag was created or how to guide management of the flag.
+  ///
   const factory Flag({
-    @Default(R5ResourceType.Flag)
-    @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-    R5ResourceType resourceType,
+    /// [resourceType] This is a Flag resource
+    @Default(R6ResourceType.Flag)
+    @JsonKey(unknownEnumValue: R6ResourceType.Flag)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2295,6 +2305,10 @@ class Flag with Resource, _$Flag {
 
     /// [author] The person, organization or device that created the flag.
     Reference? author,
+
+    /// [supportingInfo] Additional information that may be relevant to the flag,
+    ///  such as why the flag was created or how to guide management of the flag.
+    List<Reference>? supportingInfo,
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object
@@ -2570,10 +2584,12 @@ class Library with Resource, _$Library {
   ///  reference to a url, or may be directly embedded as a base-64 string.
   ///  Either way, the contentType of the attachment determines how to interpret
   ///  the content.
+  ///
   const factory Library({
-    @Default(R5ResourceType.Library)
-    @JsonKey(unknownEnumValue: R5ResourceType.Library)
-    R5ResourceType resourceType,
+    /// [resourceType] This is a Library resource
+    @Default(R6ResourceType.Library)
+    @JsonKey(unknownEnumValue: R6ResourceType.Library)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3001,10 +3017,12 @@ class FhirList with Resource, _$FhirList {
   /// [entry] Entries in this list.
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
-  factory FhirList({
-    @Default(R5ResourceType.List)
-    @JsonKey(unknownEnumValue: R5ResourceType.List)
-    R5ResourceType resourceType,
+  ///
+  const factory FhirList({
+    /// [resourceType] This is a List resource
+    @Default(R6ResourceType.List)
+    @JsonKey(unknownEnumValue: R6ResourceType.List)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

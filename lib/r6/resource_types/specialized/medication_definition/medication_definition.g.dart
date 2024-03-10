@@ -10,10 +10,10 @@ _$AdministrableProductDefinitionImpl
     _$$AdministrableProductDefinitionImplFromJson(Map<String, dynamic> json) =>
         _$AdministrableProductDefinitionImpl(
           resourceType: $enumDecodeNullable(
-                  _$R5ResourceTypeEnumMap, json['resourceType'],
+                  _$R6ResourceTypeEnumMap, json['resourceType'],
                   unknownValue:
-                      R5ResourceType.AdministrableProductDefinition) ??
-              R5ResourceType.AdministrableProductDefinition,
+                      R6ResourceType.AdministrableProductDefinition) ??
+              R6ResourceType.AdministrableProductDefinition,
           id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           meta: json['meta'] == null
               ? null
@@ -92,7 +92,7 @@ _$AdministrableProductDefinitionImpl
 Map<String, dynamic> _$$AdministrableProductDefinitionImplToJson(
     _$AdministrableProductDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -135,167 +135,167 @@ Map<String, dynamic> _$$AdministrableProductDefinitionImplToJson(
   return val;
 }
 
-const _$R5ResourceTypeEnumMap = {
-  R5ResourceType.Account: 'Account',
-  R5ResourceType.ActivityDefinition: 'ActivityDefinition',
-  R5ResourceType.ActorDefinition: 'ActorDefinition',
-  R5ResourceType.AdministrableProductDefinition:
+const _$R6ResourceTypeEnumMap = {
+  R6ResourceType.Account: 'Account',
+  R6ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R6ResourceType.ActorDefinition: 'ActorDefinition',
+  R6ResourceType.AdministrableProductDefinition:
       'AdministrableProductDefinition',
-  R5ResourceType.AdverseEvent: 'AdverseEvent',
-  R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
-  R5ResourceType.Appointment: 'Appointment',
-  R5ResourceType.AppointmentResponse: 'AppointmentResponse',
-  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
-  R5ResourceType.AuditEvent: 'AuditEvent',
-  R5ResourceType.Basic: 'Basic',
-  R5ResourceType.Binary: 'Binary',
-  R5ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
-  R5ResourceType.BiologicallyDerivedProductDispense:
+  R6ResourceType.AdverseEvent: 'AdverseEvent',
+  R6ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  R6ResourceType.Appointment: 'Appointment',
+  R6ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R6ResourceType.ArtifactAssessment: 'ArtifactAssessment',
+  R6ResourceType.AuditEvent: 'AuditEvent',
+  R6ResourceType.Basic: 'Basic',
+  R6ResourceType.Binary: 'Binary',
+  R6ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R6ResourceType.BiologicallyDerivedProductDispense:
       'BiologicallyDerivedProductDispense',
-  R5ResourceType.BodyStructure: 'BodyStructure',
-  R5ResourceType.Bundle: 'Bundle',
-  R5ResourceType.CapabilityStatement: 'CapabilityStatement',
-  R5ResourceType.CarePlan: 'CarePlan',
-  R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.ChargeItem: 'ChargeItem',
-  R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
-  R5ResourceType.Citation: 'Citation',
-  R5ResourceType.Claim: 'Claim',
-  R5ResourceType.ClaimResponse: 'ClaimResponse',
-  R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
-  R5ResourceType.CodeSystem: 'CodeSystem',
-  R5ResourceType.Communication: 'Communication',
-  R5ResourceType.CommunicationRequest: 'CommunicationRequest',
-  R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
-  R5ResourceType.Composition: 'Composition',
-  R5ResourceType.ConceptMap: 'ConceptMap',
-  R5ResourceType.Condition: 'Condition',
-  R5ResourceType.ConditionDefinition: 'ConditionDefinition',
-  R5ResourceType.Consent: 'Consent',
-  R5ResourceType.Contract: 'Contract',
-  R5ResourceType.Coverage: 'Coverage',
-  R5ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
-  R5ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
-  R5ResourceType.DetectedIssue: 'DetectedIssue',
-  R5ResourceType.Device: 'Device',
-  R5ResourceType.DeviceAssociation: 'DeviceAssociation',
-  R5ResourceType.DeviceDefinition: 'DeviceDefinition',
-  R5ResourceType.DeviceDispense: 'DeviceDispense',
-  R5ResourceType.DeviceMetric: 'DeviceMetric',
-  R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUsage: 'DeviceUsage',
-  R5ResourceType.DiagnosticReport: 'DiagnosticReport',
-  R5ResourceType.DocumentReference: 'DocumentReference',
-  R5ResourceType.Encounter: 'Encounter',
-  R5ResourceType.EncounterHistory: 'EncounterHistory',
-  R5ResourceType.Endpoint: 'Endpoint',
-  R5ResourceType.EnrollmentRequest: 'EnrollmentRequest',
-  R5ResourceType.EnrollmentResponse: 'EnrollmentResponse',
-  R5ResourceType.EpisodeOfCare: 'EpisodeOfCare',
-  R5ResourceType.EventDefinition: 'EventDefinition',
-  R5ResourceType.Evidence: 'Evidence',
-  R5ResourceType.EvidenceReport: 'EvidenceReport',
-  R5ResourceType.EvidenceVariable: 'EvidenceVariable',
-  R5ResourceType.ExampleScenario: 'ExampleScenario',
-  R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
-  R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
-  R5ResourceType.Flag: 'Flag',
-  R5ResourceType.FormularyItem: 'FormularyItem',
-  R5ResourceType.GenomicStudy: 'GenomicStudy',
-  R5ResourceType.Goal: 'Goal',
-  R5ResourceType.GraphDefinition: 'GraphDefinition',
-  R5ResourceType.Group: 'Group',
-  R5ResourceType.GuidanceResponse: 'GuidanceResponse',
-  R5ResourceType.HealthcareService: 'HealthcareService',
-  R5ResourceType.ImagingSelection: 'ImagingSelection',
-  R5ResourceType.ImagingStudy: 'ImagingStudy',
-  R5ResourceType.Immunization: 'Immunization',
-  R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
-  R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
-  R5ResourceType.ImplementationGuide: 'ImplementationGuide',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.InsurancePlan: 'InsurancePlan',
-  R5ResourceType.InventoryItem: 'InventoryItem',
-  R5ResourceType.InventoryReport: 'InventoryReport',
-  R5ResourceType.Invoice: 'Invoice',
-  R5ResourceType.Library: 'Library',
-  R5ResourceType.Linkage: 'Linkage',
-  R5ResourceType.List: 'List',
-  R5ResourceType.Location: 'Location',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.Measure: 'Measure',
-  R5ResourceType.MeasureReport: 'MeasureReport',
-  R5ResourceType.Medication: 'Medication',
-  R5ResourceType.MedicationAdministration: 'MedicationAdministration',
-  R5ResourceType.MedicationDispense: 'MedicationDispense',
-  R5ResourceType.MedicationKnowledge: 'MedicationKnowledge',
-  R5ResourceType.MedicationRequest: 'MedicationRequest',
-  R5ResourceType.MedicationStatement: 'MedicationStatement',
-  R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.MessageDefinition: 'MessageDefinition',
-  R5ResourceType.MessageHeader: 'MessageHeader',
-  R5ResourceType.MolecularSequence: 'MolecularSequence',
-  R5ResourceType.NamingSystem: 'NamingSystem',
-  R5ResourceType.NutritionIntake: 'NutritionIntake',
-  R5ResourceType.NutritionOrder: 'NutritionOrder',
-  R5ResourceType.NutritionProduct: 'NutritionProduct',
-  R5ResourceType.Observation: 'Observation',
-  R5ResourceType.ObservationDefinition: 'ObservationDefinition',
-  R5ResourceType.OperationDefinition: 'OperationDefinition',
-  R5ResourceType.OperationOutcome: 'OperationOutcome',
-  R5ResourceType.Organization: 'Organization',
-  R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.Parameters: 'Parameters',
-  R5ResourceType.Patient: 'Patient',
-  R5ResourceType.PaymentNotice: 'PaymentNotice',
-  R5ResourceType.PaymentReconciliation: 'PaymentReconciliation',
-  R5ResourceType.Permission: 'Permission',
-  R5ResourceType.Person: 'Person',
-  R5ResourceType.PlanDefinition: 'PlanDefinition',
-  R5ResourceType.Practitioner: 'Practitioner',
-  R5ResourceType.PractitionerRole: 'PractitionerRole',
-  R5ResourceType.Procedure: 'Procedure',
-  R5ResourceType.Provenance: 'Provenance',
-  R5ResourceType.Questionnaire: 'Questionnaire',
-  R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.RelatedPerson: 'RelatedPerson',
-  R5ResourceType.RequestOrchestration: 'RequestOrchestration',
-  R5ResourceType.Requirements: 'Requirements',
-  R5ResourceType.ResearchStudy: 'ResearchStudy',
-  R5ResourceType.ResearchSubject: 'ResearchSubject',
-  R5ResourceType.RiskAssessment: 'RiskAssessment',
-  R5ResourceType.Schedule: 'Schedule',
-  R5ResourceType.SearchParameter: 'SearchParameter',
-  R5ResourceType.ServiceRequest: 'ServiceRequest',
-  R5ResourceType.Slot: 'Slot',
-  R5ResourceType.Specimen: 'Specimen',
-  R5ResourceType.SpecimenDefinition: 'SpecimenDefinition',
-  R5ResourceType.StructureDefinition: 'StructureDefinition',
-  R5ResourceType.StructureMap: 'StructureMap',
-  R5ResourceType.Subscription: 'Subscription',
-  R5ResourceType.SubscriptionStatus: 'SubscriptionStatus',
-  R5ResourceType.SubscriptionTopic: 'SubscriptionTopic',
-  R5ResourceType.Substance: 'Substance',
-  R5ResourceType.SubstanceDefinition: 'SubstanceDefinition',
-  R5ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R5ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R5ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R5ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R5ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R5ResourceType.SupplyDelivery: 'SupplyDelivery',
-  R5ResourceType.SupplyRequest: 'SupplyRequest',
-  R5ResourceType.Task: 'Task',
-  R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
-  R5ResourceType.TestPlan: 'TestPlan',
-  R5ResourceType.TestReport: 'TestReport',
-  R5ResourceType.TestScript: 'TestScript',
-  R5ResourceType.Transport: 'Transport',
-  R5ResourceType.ValueSet: 'ValueSet',
-  R5ResourceType.VerificationResult: 'VerificationResult',
-  R5ResourceType.VisionPrescription: 'VisionPrescription',
+  R6ResourceType.BodyStructure: 'BodyStructure',
+  R6ResourceType.Bundle: 'Bundle',
+  R6ResourceType.CapabilityStatement: 'CapabilityStatement',
+  R6ResourceType.CarePlan: 'CarePlan',
+  R6ResourceType.CareTeam: 'CareTeam',
+  R6ResourceType.ChargeItem: 'ChargeItem',
+  R6ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R6ResourceType.Citation: 'Citation',
+  R6ResourceType.Claim: 'Claim',
+  R6ResourceType.ClaimResponse: 'ClaimResponse',
+  R6ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R6ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
+  R6ResourceType.CodeSystem: 'CodeSystem',
+  R6ResourceType.Communication: 'Communication',
+  R6ResourceType.CommunicationRequest: 'CommunicationRequest',
+  R6ResourceType.CompartmentDefinition: 'CompartmentDefinition',
+  R6ResourceType.Composition: 'Composition',
+  R6ResourceType.ConceptMap: 'ConceptMap',
+  R6ResourceType.Condition: 'Condition',
+  R6ResourceType.ConditionDefinition: 'ConditionDefinition',
+  R6ResourceType.Consent: 'Consent',
+  R6ResourceType.Contract: 'Contract',
+  R6ResourceType.Coverage: 'Coverage',
+  R6ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
+  R6ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
+  R6ResourceType.DetectedIssue: 'DetectedIssue',
+  R6ResourceType.Device: 'Device',
+  R6ResourceType.DeviceAssociation: 'DeviceAssociation',
+  R6ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R6ResourceType.DeviceDispense: 'DeviceDispense',
+  R6ResourceType.DeviceMetric: 'DeviceMetric',
+  R6ResourceType.DeviceRequest: 'DeviceRequest',
+  R6ResourceType.DeviceUsage: 'DeviceUsage',
+  R6ResourceType.DiagnosticReport: 'DiagnosticReport',
+  R6ResourceType.DocumentReference: 'DocumentReference',
+  R6ResourceType.Encounter: 'Encounter',
+  R6ResourceType.EncounterHistory: 'EncounterHistory',
+  R6ResourceType.Endpoint: 'Endpoint',
+  R6ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  R6ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  R6ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  R6ResourceType.EventDefinition: 'EventDefinition',
+  R6ResourceType.Evidence: 'Evidence',
+  R6ResourceType.EvidenceReport: 'EvidenceReport',
+  R6ResourceType.EvidenceVariable: 'EvidenceVariable',
+  R6ResourceType.ExampleScenario: 'ExampleScenario',
+  R6ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  R6ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  R6ResourceType.Flag: 'Flag',
+  R6ResourceType.FormularyItem: 'FormularyItem',
+  R6ResourceType.GenomicStudy: 'GenomicStudy',
+  R6ResourceType.Goal: 'Goal',
+  R6ResourceType.GraphDefinition: 'GraphDefinition',
+  R6ResourceType.Group: 'Group',
+  R6ResourceType.GuidanceResponse: 'GuidanceResponse',
+  R6ResourceType.HealthcareService: 'HealthcareService',
+  R6ResourceType.ImagingSelection: 'ImagingSelection',
+  R6ResourceType.ImagingStudy: 'ImagingStudy',
+  R6ResourceType.Immunization: 'Immunization',
+  R6ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
+  R6ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  R6ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R6ResourceType.Ingredient: 'Ingredient',
+  R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InventoryItem: 'InventoryItem',
+  R6ResourceType.InventoryReport: 'InventoryReport',
+  R6ResourceType.Invoice: 'Invoice',
+  R6ResourceType.Library: 'Library',
+  R6ResourceType.Linkage: 'Linkage',
+  R6ResourceType.List: 'List',
+  R6ResourceType.Location: 'Location',
+  R6ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
+  R6ResourceType.Measure: 'Measure',
+  R6ResourceType.MeasureReport: 'MeasureReport',
+  R6ResourceType.Medication: 'Medication',
+  R6ResourceType.MedicationAdministration: 'MedicationAdministration',
+  R6ResourceType.MedicationDispense: 'MedicationDispense',
+  R6ResourceType.MedicationKnowledge: 'MedicationKnowledge',
+  R6ResourceType.MedicationRequest: 'MedicationRequest',
+  R6ResourceType.MedicationStatement: 'MedicationStatement',
+  R6ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
+  R6ResourceType.MessageDefinition: 'MessageDefinition',
+  R6ResourceType.MessageHeader: 'MessageHeader',
+  R6ResourceType.MolecularSequence: 'MolecularSequence',
+  R6ResourceType.NamingSystem: 'NamingSystem',
+  R6ResourceType.NutritionIntake: 'NutritionIntake',
+  R6ResourceType.NutritionOrder: 'NutritionOrder',
+  R6ResourceType.NutritionProduct: 'NutritionProduct',
+  R6ResourceType.Observation: 'Observation',
+  R6ResourceType.ObservationDefinition: 'ObservationDefinition',
+  R6ResourceType.OperationDefinition: 'OperationDefinition',
+  R6ResourceType.OperationOutcome: 'OperationOutcome',
+  R6ResourceType.Organization: 'Organization',
+  R6ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R6ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
+  R6ResourceType.Parameters: 'Parameters',
+  R6ResourceType.Patient: 'Patient',
+  R6ResourceType.PaymentNotice: 'PaymentNotice',
+  R6ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  R6ResourceType.Permission: 'Permission',
+  R6ResourceType.Person: 'Person',
+  R6ResourceType.PlanDefinition: 'PlanDefinition',
+  R6ResourceType.Practitioner: 'Practitioner',
+  R6ResourceType.PractitionerRole: 'PractitionerRole',
+  R6ResourceType.Procedure: 'Procedure',
+  R6ResourceType.Provenance: 'Provenance',
+  R6ResourceType.Questionnaire: 'Questionnaire',
+  R6ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R6ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
+  R6ResourceType.RelatedPerson: 'RelatedPerson',
+  R6ResourceType.RequestOrchestration: 'RequestOrchestration',
+  R6ResourceType.Requirements: 'Requirements',
+  R6ResourceType.ResearchStudy: 'ResearchStudy',
+  R6ResourceType.ResearchSubject: 'ResearchSubject',
+  R6ResourceType.RiskAssessment: 'RiskAssessment',
+  R6ResourceType.Schedule: 'Schedule',
+  R6ResourceType.SearchParameter: 'SearchParameter',
+  R6ResourceType.ServiceRequest: 'ServiceRequest',
+  R6ResourceType.Slot: 'Slot',
+  R6ResourceType.Specimen: 'Specimen',
+  R6ResourceType.SpecimenDefinition: 'SpecimenDefinition',
+  R6ResourceType.StructureDefinition: 'StructureDefinition',
+  R6ResourceType.StructureMap: 'StructureMap',
+  R6ResourceType.Subscription: 'Subscription',
+  R6ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R6ResourceType.SubscriptionTopic: 'SubscriptionTopic',
+  R6ResourceType.Substance: 'Substance',
+  R6ResourceType.SubstanceDefinition: 'SubstanceDefinition',
+  R6ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
+  R6ResourceType.SubstancePolymer: 'SubstancePolymer',
+  R6ResourceType.SubstanceProtein: 'SubstanceProtein',
+  R6ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
+  R6ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
+  R6ResourceType.SupplyDelivery: 'SupplyDelivery',
+  R6ResourceType.SupplyRequest: 'SupplyRequest',
+  R6ResourceType.Task: 'Task',
+  R6ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R6ResourceType.TestPlan: 'TestPlan',
+  R6ResourceType.TestReport: 'TestReport',
+  R6ResourceType.TestScript: 'TestScript',
+  R6ResourceType.Transport: 'Transport',
+  R6ResourceType.ValueSet: 'ValueSet',
+  R6ResourceType.VerificationResult: 'VerificationResult',
+  R6ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
 _$AdministrableProductDefinitionPropertyImpl
@@ -535,9 +535,9 @@ _$ClinicalUseDefinitionImpl _$$ClinicalUseDefinitionImplFromJson(
         Map<String, dynamic> json) =>
     _$ClinicalUseDefinitionImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ClinicalUseDefinition) ??
-          R5ResourceType.ClinicalUseDefinition,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.ClinicalUseDefinition) ??
+          R6ResourceType.ClinicalUseDefinition,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -612,7 +612,7 @@ _$ClinicalUseDefinitionImpl _$$ClinicalUseDefinitionImplFromJson(
 Map<String, dynamic> _$$ClinicalUseDefinitionImplToJson(
     _$ClinicalUseDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1022,9 +1022,9 @@ Map<String, dynamic> _$$ClinicalUseDefinitionWarningImplToJson(
 _$IngredientImpl _$$IngredientImplFromJson(Map<String, dynamic> json) =>
     _$IngredientImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Ingredient) ??
-          R5ResourceType.Ingredient,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.Ingredient) ??
+          R6ResourceType.Ingredient,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1092,7 +1092,7 @@ _$IngredientImpl _$$IngredientImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$IngredientImplToJson(_$IngredientImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1374,9 +1374,9 @@ _$ManufacturedItemDefinitionImpl _$$ManufacturedItemDefinitionImplFromJson(
         Map<String, dynamic> json) =>
     _$ManufacturedItemDefinitionImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ManufacturedItemDefinition) ??
-          R5ResourceType.ManufacturedItemDefinition,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.ManufacturedItemDefinition) ??
+          R6ResourceType.ManufacturedItemDefinition,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1443,7 +1443,7 @@ _$ManufacturedItemDefinitionImpl _$$ManufacturedItemDefinitionImplFromJson(
 Map<String, dynamic> _$$ManufacturedItemDefinitionImplToJson(
     _$ManufacturedItemDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1674,9 +1674,9 @@ _$MedicinalProductDefinitionImpl _$$MedicinalProductDefinitionImplFromJson(
         Map<String, dynamic> json) =>
     _$MedicinalProductDefinitionImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.MedicinalProductDefinition) ??
-          R5ResourceType.MedicinalProductDefinition,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.MedicinalProductDefinition) ??
+          R6ResourceType.MedicinalProductDefinition,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1818,7 +1818,7 @@ _$MedicinalProductDefinitionImpl _$$MedicinalProductDefinitionImplFromJson(
 Map<String, dynamic> _$$MedicinalProductDefinitionImplToJson(
     _$MedicinalProductDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2232,9 +2232,9 @@ _$PackagedProductDefinitionImpl _$$PackagedProductDefinitionImplFromJson(
         Map<String, dynamic> json) =>
     _$PackagedProductDefinitionImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.PackagedProductDefinition) ??
-          R5ResourceType.PackagedProductDefinition,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.PackagedProductDefinition) ??
+          R6ResourceType.PackagedProductDefinition,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2326,7 +2326,7 @@ _$PackagedProductDefinitionImpl _$$PackagedProductDefinitionImplFromJson(
 Map<String, dynamic> _$$PackagedProductDefinitionImplToJson(
     _$PackagedProductDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2618,9 +2618,9 @@ _$RegulatedAuthorizationImpl _$$RegulatedAuthorizationImplFromJson(
         Map<String, dynamic> json) =>
     _$RegulatedAuthorizationImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.RegulatedAuthorization) ??
-          R5ResourceType.RegulatedAuthorization,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.RegulatedAuthorization) ??
+          R6ResourceType.RegulatedAuthorization,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2706,7 +2706,7 @@ _$RegulatedAuthorizationImpl _$$RegulatedAuthorizationImplFromJson(
 Map<String, dynamic> _$$RegulatedAuthorizationImplToJson(
     _$RegulatedAuthorizationImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2815,9 +2815,9 @@ _$SubstanceDefinitionImpl _$$SubstanceDefinitionImplFromJson(
         Map<String, dynamic> json) =>
     _$SubstanceDefinitionImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SubstanceDefinition) ??
-          R5ResourceType.SubstanceDefinition,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.SubstanceDefinition) ??
+          R6ResourceType.SubstanceDefinition,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2936,7 +2936,7 @@ _$SubstanceDefinitionImpl _$$SubstanceDefinitionImplFromJson(
 Map<String, dynamic> _$$SubstanceDefinitionImplToJson(
     _$SubstanceDefinitionImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3677,9 +3677,9 @@ _$SubstanceNucleicAcidImpl _$$SubstanceNucleicAcidImplFromJson(
         Map<String, dynamic> json) =>
     _$SubstanceNucleicAcidImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SubstanceNucleicAcid) ??
-          R5ResourceType.SubstanceNucleicAcid,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.SubstanceNucleicAcid) ??
+          R6ResourceType.SubstanceNucleicAcid,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3735,7 +3735,7 @@ _$SubstanceNucleicAcidImpl _$$SubstanceNucleicAcidImplFromJson(
 Map<String, dynamic> _$$SubstanceNucleicAcidImplToJson(
     _$SubstanceNucleicAcidImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3945,9 +3945,9 @@ _$SubstancePolymerImpl _$$SubstancePolymerImplFromJson(
         Map<String, dynamic> json) =>
     _$SubstancePolymerImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SubstancePolymer) ??
-          R5ResourceType.SubstancePolymer,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.SubstancePolymer) ??
+          R6ResourceType.SubstancePolymer,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4004,7 +4004,7 @@ _$SubstancePolymerImpl _$$SubstancePolymerImplFromJson(
 Map<String, dynamic> _$$SubstancePolymerImplToJson(
     _$SubstancePolymerImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4352,9 +4352,9 @@ _$SubstanceProteinImpl _$$SubstanceProteinImplFromJson(
         Map<String, dynamic> json) =>
     _$SubstanceProteinImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SubstanceProtein) ??
-          R5ResourceType.SubstanceProtein,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.SubstanceProtein) ??
+          R6ResourceType.SubstanceProtein,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4407,7 +4407,7 @@ _$SubstanceProteinImpl _$$SubstanceProteinImplFromJson(
 Map<String, dynamic> _$$SubstanceProteinImplToJson(
     _$SubstanceProteinImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4527,9 +4527,9 @@ _$SubstanceReferenceInformationImpl
     _$$SubstanceReferenceInformationImplFromJson(Map<String, dynamic> json) =>
         _$SubstanceReferenceInformationImpl(
           resourceType: $enumDecodeNullable(
-                  _$R5ResourceTypeEnumMap, json['resourceType'],
-                  unknownValue: R5ResourceType.SubstanceReferenceInformation) ??
-              R5ResourceType.SubstanceReferenceInformation,
+                  _$R6ResourceTypeEnumMap, json['resourceType'],
+                  unknownValue: R6ResourceType.SubstanceReferenceInformation) ??
+              R6ResourceType.SubstanceReferenceInformation,
           id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           meta: json['meta'] == null
               ? null
@@ -4580,7 +4580,7 @@ _$SubstanceReferenceInformationImpl
 Map<String, dynamic> _$$SubstanceReferenceInformationImplToJson(
     _$SubstanceReferenceInformationImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4780,9 +4780,9 @@ _$SubstanceSourceMaterialImpl _$$SubstanceSourceMaterialImplFromJson(
         Map<String, dynamic> json) =>
     _$SubstanceSourceMaterialImpl(
       resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SubstanceSourceMaterial) ??
-          R5ResourceType.SubstanceSourceMaterial,
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.SubstanceSourceMaterial) ??
+          R6ResourceType.SubstanceSourceMaterial,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4870,7 +4870,7 @@ _$SubstanceSourceMaterialImpl _$$SubstanceSourceMaterialImplFromJson(
 Map<String, dynamic> _$$SubstanceSourceMaterialImplToJson(
     _$SubstanceSourceMaterialImpl instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

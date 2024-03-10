@@ -21,8 +21,8 @@ ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ArtifactAssessment {
   /// [resourceType] This is a ArtifactAssessment resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -205,8 +205,8 @@ abstract class $ArtifactAssessmentCopyWith<$Res> {
       _$ArtifactAssessmentCopyWithImpl<$Res, ArtifactAssessment>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -313,7 +313,7 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -655,8 +655,8 @@ abstract class _$$ArtifactAssessmentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -777,7 +777,7 @@ class __$$ArtifactAssessmentImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -922,8 +922,8 @@ class __$$ArtifactAssessmentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ArtifactAssessmentImpl extends _ArtifactAssessment {
   const _$ArtifactAssessmentImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-      this.resourceType = R5ResourceType.ArtifactAssessment,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+      this.resourceType = R6ResourceType.ArtifactAssessment,
       this.id,
       this.meta,
       this.implicitRules,
@@ -970,8 +970,8 @@ class _$ArtifactAssessmentImpl extends _ArtifactAssessment {
 
   /// [resourceType] This is a ArtifactAssessment resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1376,8 +1376,8 @@ class _$ArtifactAssessmentImpl extends _ArtifactAssessment {
 
 abstract class _ArtifactAssessment extends ArtifactAssessment {
   const factory _ArtifactAssessment(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -1422,8 +1422,8 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
   @override
 
   /// [resourceType] This is a ArtifactAssessment resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ArtifactAssessment)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -2506,8 +2506,8 @@ Citation _$CitationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Citation {
   /// [resourceType] This is a Citation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.Citation)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2797,8 +2797,8 @@ abstract class $CitationCopyWith<$Res> {
       _$CitationCopyWithImpl<$Res, Citation>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Citation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -2960,7 +2960,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3472,8 +3472,8 @@ abstract class _$$CitationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Citation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -3655,7 +3655,7 @@ class __$$CitationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3896,8 +3896,8 @@ class __$$CitationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CitationImpl extends _Citation {
   const _$CitationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-      this.resourceType = R5ResourceType.Citation,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Citation)
+      this.resourceType = R6ResourceType.Citation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3982,8 +3982,8 @@ class _$CitationImpl extends _Citation {
 
   /// [resourceType] This is a Citation resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Citation)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -4697,8 +4697,8 @@ class _$CitationImpl extends _Citation {
 
 abstract class _Citation extends Citation {
   const factory _Citation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Citation)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -4766,8 +4766,8 @@ abstract class _Citation extends Citation {
   @override
 
   /// [resourceType] This is a Citation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Citation)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -15383,8 +15383,8 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Evidence {
   /// [resourceType] This is a Evidence resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -15695,8 +15695,8 @@ abstract class $EvidenceCopyWith<$Res> {
       _$EvidenceCopyWithImpl<$Res, Evidence>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -15871,7 +15871,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -16439,8 +16439,8 @@ abstract class _$$EvidenceImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -16638,7 +16638,7 @@ class __$$EvidenceImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -16899,8 +16899,8 @@ class __$$EvidenceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvidenceImpl extends _Evidence {
   const _$EvidenceImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-      this.resourceType = R5ResourceType.Evidence,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+      this.resourceType = R6ResourceType.Evidence,
       this.id,
       this.meta,
       this.implicitRules,
@@ -16990,8 +16990,8 @@ class _$EvidenceImpl extends _Evidence {
 
   /// [resourceType] This is a Evidence resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -17747,8 +17747,8 @@ class _$EvidenceImpl extends _Evidence {
 
 abstract class _Evidence extends Evidence {
   const factory _Evidence(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -17821,8 +17821,8 @@ abstract class _Evidence extends Evidence {
   @override
 
   /// [resourceType] This is a Evidence resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Evidence)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -18230,9 +18230,23 @@ mixin _$EvidenceVariableDefinition {
   /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
-  /// [variableRole] population | subpopulation | exposure | referenceExposure |
-  ///  measuredVariable | confounder.
-  CodeableConcept get variableRole => throw _privateConstructorUsedError;
+  /// [variableRole] Classification of the role of the variable.
+  FhirCode? get variableRole => throw _privateConstructorUsedError;
+
+  /// [variableRoleElement] ("_variableRole") Extensions for variableRole
+  @JsonKey(name: '_variableRole')
+  Element? get variableRoleElement => throw _privateConstructorUsedError;
+
+  /// [roleSubtype] Sub-classification of the role of the variable.
+  CodeableConcept? get roleSubtype => throw _privateConstructorUsedError;
+
+  /// [comparatorCategory] The reference value used for comparison.
+  String? get comparatorCategory => throw _privateConstructorUsedError;
+
+  /// [comparatorCategoryElement] ("_comparatorCategory") Extensions for
+  ///  comparatorCategory
+  @JsonKey(name: '_comparatorCategory')
+  Element? get comparatorCategoryElement => throw _privateConstructorUsedError;
 
   /// [observed] Definition of the actual variable related to the statistic(s).
   Reference? get observed => throw _privateConstructorUsedError;
@@ -18264,13 +18278,19 @@ abstract class $EvidenceVariableDefinitionCopyWith<$Res> {
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
-      CodeableConcept variableRole,
+      FhirCode? variableRole,
+      @JsonKey(name: '_variableRole') Element? variableRoleElement,
+      CodeableConcept? roleSubtype,
+      String? comparatorCategory,
+      @JsonKey(name: '_comparatorCategory') Element? comparatorCategoryElement,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch});
 
   $ElementCopyWith<$Res>? get descriptionElement;
-  $CodeableConceptCopyWith<$Res> get variableRole;
+  $ElementCopyWith<$Res>? get variableRoleElement;
+  $CodeableConceptCopyWith<$Res>? get roleSubtype;
+  $ElementCopyWith<$Res>? get comparatorCategoryElement;
   $ReferenceCopyWith<$Res>? get observed;
   $ReferenceCopyWith<$Res>? get intended;
   $CodeableConceptCopyWith<$Res>? get directnessMatch;
@@ -18296,7 +18316,11 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res,
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
-    Object? variableRole = null,
+    Object? variableRole = freezed,
+    Object? variableRoleElement = freezed,
+    Object? roleSubtype = freezed,
+    Object? comparatorCategory = freezed,
+    Object? comparatorCategoryElement = freezed,
     Object? observed = freezed,
     Object? intended = freezed,
     Object? directnessMatch = freezed,
@@ -18326,10 +18350,26 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res,
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      variableRole: null == variableRole
+      variableRole: freezed == variableRole
           ? _value.variableRole
           : variableRole // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as FhirCode?,
+      variableRoleElement: freezed == variableRoleElement
+          ? _value.variableRoleElement
+          : variableRoleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      roleSubtype: freezed == roleSubtype
+          ? _value.roleSubtype
+          : roleSubtype // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      comparatorCategory: freezed == comparatorCategory
+          ? _value.comparatorCategory
+          : comparatorCategory // ignore: cast_nullable_to_non_nullable
+              as String?,
+      comparatorCategoryElement: freezed == comparatorCategoryElement
+          ? _value.comparatorCategoryElement
+          : comparatorCategoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       observed: freezed == observed
           ? _value.observed
           : observed // ignore: cast_nullable_to_non_nullable
@@ -18359,9 +18399,37 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res> get variableRole {
-    return $CodeableConceptCopyWith<$Res>(_value.variableRole, (value) {
-      return _then(_value.copyWith(variableRole: value) as $Val);
+  $ElementCopyWith<$Res>? get variableRoleElement {
+    if (_value.variableRoleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.variableRoleElement!, (value) {
+      return _then(_value.copyWith(variableRoleElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get roleSubtype {
+    if (_value.roleSubtype == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.roleSubtype!, (value) {
+      return _then(_value.copyWith(roleSubtype: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get comparatorCategoryElement {
+    if (_value.comparatorCategoryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.comparatorCategoryElement!, (value) {
+      return _then(_value.copyWith(comparatorCategoryElement: value) as $Val);
     });
   }
 
@@ -18418,7 +18486,11 @@ abstract class _$$EvidenceVariableDefinitionImplCopyWith<$Res>
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
-      CodeableConcept variableRole,
+      FhirCode? variableRole,
+      @JsonKey(name: '_variableRole') Element? variableRoleElement,
+      CodeableConcept? roleSubtype,
+      String? comparatorCategory,
+      @JsonKey(name: '_comparatorCategory') Element? comparatorCategoryElement,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch});
@@ -18426,7 +18498,11 @@ abstract class _$$EvidenceVariableDefinitionImplCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $CodeableConceptCopyWith<$Res> get variableRole;
+  $ElementCopyWith<$Res>? get variableRoleElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get roleSubtype;
+  @override
+  $ElementCopyWith<$Res>? get comparatorCategoryElement;
   @override
   $ReferenceCopyWith<$Res>? get observed;
   @override
@@ -18454,7 +18530,11 @@ class __$$EvidenceVariableDefinitionImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
-    Object? variableRole = null,
+    Object? variableRole = freezed,
+    Object? variableRoleElement = freezed,
+    Object? roleSubtype = freezed,
+    Object? comparatorCategory = freezed,
+    Object? comparatorCategoryElement = freezed,
     Object? observed = freezed,
     Object? intended = freezed,
     Object? directnessMatch = freezed,
@@ -18484,10 +18564,26 @@ class __$$EvidenceVariableDefinitionImplCopyWithImpl<$Res>
           ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      variableRole: null == variableRole
+      variableRole: freezed == variableRole
           ? _value.variableRole
           : variableRole // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as FhirCode?,
+      variableRoleElement: freezed == variableRoleElement
+          ? _value.variableRoleElement
+          : variableRoleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      roleSubtype: freezed == roleSubtype
+          ? _value.roleSubtype
+          : roleSubtype // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      comparatorCategory: freezed == comparatorCategory
+          ? _value.comparatorCategory
+          : comparatorCategory // ignore: cast_nullable_to_non_nullable
+              as String?,
+      comparatorCategoryElement: freezed == comparatorCategoryElement
+          ? _value.comparatorCategoryElement
+          : comparatorCategoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       observed: freezed == observed
           ? _value.observed
           : observed // ignore: cast_nullable_to_non_nullable
@@ -18514,7 +18610,11 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       final List<Annotation>? note,
-      required this.variableRole,
+      this.variableRole,
+      @JsonKey(name: '_variableRole') this.variableRoleElement,
+      this.roleSubtype,
+      this.comparatorCategory,
+      @JsonKey(name: '_comparatorCategory') this.comparatorCategoryElement,
       this.observed,
       this.intended,
       this.directnessMatch})
@@ -18614,10 +18714,28 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [variableRole] population | subpopulation | exposure | referenceExposure |
-  ///  measuredVariable | confounder.
+  /// [variableRole] Classification of the role of the variable.
   @override
-  final CodeableConcept variableRole;
+  final FhirCode? variableRole;
+
+  /// [variableRoleElement] ("_variableRole") Extensions for variableRole
+  @override
+  @JsonKey(name: '_variableRole')
+  final Element? variableRoleElement;
+
+  /// [roleSubtype] Sub-classification of the role of the variable.
+  @override
+  final CodeableConcept? roleSubtype;
+
+  /// [comparatorCategory] The reference value used for comparison.
+  @override
+  final String? comparatorCategory;
+
+  /// [comparatorCategoryElement] ("_comparatorCategory") Extensions for
+  ///  comparatorCategory
+  @override
+  @JsonKey(name: '_comparatorCategory')
+  final Element? comparatorCategoryElement;
 
   /// [observed] Definition of the actual variable related to the statistic(s).
   @override
@@ -18634,7 +18752,7 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
 
   @override
   String toString() {
-    return 'EvidenceVariableDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, variableRole: $variableRole, observed: $observed, intended: $intended, directnessMatch: $directnessMatch)';
+    return 'EvidenceVariableDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, variableRole: $variableRole, variableRoleElement: $variableRoleElement, roleSubtype: $roleSubtype, comparatorCategory: $comparatorCategory, comparatorCategoryElement: $comparatorCategoryElement, observed: $observed, intended: $intended, directnessMatch: $directnessMatch)';
   }
 
   @override
@@ -18654,6 +18772,15 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
             const DeepCollectionEquality().equals(other._note, _note) &&
             (identical(other.variableRole, variableRole) ||
                 other.variableRole == variableRole) &&
+            (identical(other.variableRoleElement, variableRoleElement) ||
+                other.variableRoleElement == variableRoleElement) &&
+            (identical(other.roleSubtype, roleSubtype) ||
+                other.roleSubtype == roleSubtype) &&
+            (identical(other.comparatorCategory, comparatorCategory) ||
+                other.comparatorCategory == comparatorCategory) &&
+            (identical(other.comparatorCategoryElement,
+                    comparatorCategoryElement) ||
+                other.comparatorCategoryElement == comparatorCategoryElement) &&
             (identical(other.observed, observed) ||
                 other.observed == observed) &&
             (identical(other.intended, intended) ||
@@ -18673,6 +18800,10 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
       descriptionElement,
       const DeepCollectionEquality().hash(_note),
       variableRole,
+      variableRoleElement,
+      roleSubtype,
+      comparatorCategory,
+      comparatorCategoryElement,
       observed,
       intended,
       directnessMatch);
@@ -18700,7 +18831,12 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
           final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           final List<Annotation>? note,
-          required final CodeableConcept variableRole,
+          final FhirCode? variableRole,
+          @JsonKey(name: '_variableRole') final Element? variableRoleElement,
+          final CodeableConcept? roleSubtype,
+          final String? comparatorCategory,
+          @JsonKey(name: '_comparatorCategory')
+          final Element? comparatorCategoryElement,
           final Reference? observed,
           final Reference? intended,
           final CodeableConcept? directnessMatch}) =
@@ -18755,9 +18891,27 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
   List<Annotation>? get note;
   @override
 
-  /// [variableRole] population | subpopulation | exposure | referenceExposure |
-  ///  measuredVariable | confounder.
-  CodeableConcept get variableRole;
+  /// [variableRole] Classification of the role of the variable.
+  FhirCode? get variableRole;
+  @override
+
+  /// [variableRoleElement] ("_variableRole") Extensions for variableRole
+  @JsonKey(name: '_variableRole')
+  Element? get variableRoleElement;
+  @override
+
+  /// [roleSubtype] Sub-classification of the role of the variable.
+  CodeableConcept? get roleSubtype;
+  @override
+
+  /// [comparatorCategory] The reference value used for comparison.
+  String? get comparatorCategory;
+  @override
+
+  /// [comparatorCategoryElement] ("_comparatorCategory") Extensions for
+  ///  comparatorCategory
+  @JsonKey(name: '_comparatorCategory')
+  Element? get comparatorCategoryElement;
   @override
 
   /// [observed] Definition of the actual variable related to the statistic(s).
@@ -20960,12 +21114,42 @@ mixin _$EvidenceModelCharacteristic {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
+  /// [conditionCodeableConcept] When this characteristic is used.
+  CodeableConcept? get conditionCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  /// [conditionExpression] When this characteristic is used.
+  FhirExpression? get conditionExpression => throw _privateConstructorUsedError;
+
   /// [code] Description of a component of the method to generate the statistic.
   CodeableConcept get code => throw _privateConstructorUsedError;
 
-  /// [value] Further specification of the quantified value of the component of
-  ///  the method to generate the statistic.
-  Quantity? get value => throw _privateConstructorUsedError;
+  /// [valueQuantity] Further specification of the value of the component of the
+  ///  method to generate the statistic.
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Further specification of the value of the component of the
+  ///  method to generate the statistic.
+  Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Further specification of the value of the component
+  ///  of the method to generate the statistic.
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  /// [intended] The plan for analysis.
+  FhirBoolean? get intended => throw _privateConstructorUsedError;
+
+  /// [intendedElement] ("_intended") Extensions for intended
+  @JsonKey(name: '_intended')
+  Element? get intendedElement => throw _privateConstructorUsedError;
+
+  /// [applied] The analysis that was applied.
+  FhirBoolean? get applied => throw _privateConstructorUsedError;
+
+  /// [appliedElement] ("_applied") Extensions for applied
+  @JsonKey(name: '_applied')
+  Element? get appliedElement => throw _privateConstructorUsedError;
 
   /// [variable] A variable adjusted for in the adjusted analysis.
   List<ModelCharacteristicVariable>? get variable =>
@@ -20974,6 +21158,10 @@ mixin _$EvidenceModelCharacteristic {
   /// [attributeEstimate] An attribute of the statistic used as a model
   ///  characteristic.
   List<EvidenceAttributeEstimate>? get attributeEstimate =>
+      throw _privateConstructorUsedError;
+
+  /// [modelCharacteristic] Model component.
+  List<EvidenceModelCharacteristic>? get modelCharacteristic =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20994,13 +21182,28 @@ abstract class $EvidenceModelCharacteristicCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableConcept? conditionCodeableConcept,
+      FhirExpression? conditionExpression,
       CodeableConcept code,
-      Quantity? value,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept,
+      FhirBoolean? intended,
+      @JsonKey(name: '_intended') Element? intendedElement,
+      FhirBoolean? applied,
+      @JsonKey(name: '_applied') Element? appliedElement,
       List<ModelCharacteristicVariable>? variable,
-      List<EvidenceAttributeEstimate>? attributeEstimate});
+      List<EvidenceAttributeEstimate>? attributeEstimate,
+      List<EvidenceModelCharacteristic>? modelCharacteristic});
 
+  $CodeableConceptCopyWith<$Res>? get conditionCodeableConcept;
+  $FhirExpressionCopyWith<$Res>? get conditionExpression;
   $CodeableConceptCopyWith<$Res> get code;
-  $QuantityCopyWith<$Res>? get value;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $ElementCopyWith<$Res>? get intendedElement;
+  $ElementCopyWith<$Res>? get appliedElement;
 }
 
 /// @nodoc
@@ -21020,10 +21223,19 @@ class _$EvidenceModelCharacteristicCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? conditionCodeableConcept = freezed,
+    Object? conditionExpression = freezed,
     Object? code = null,
-    Object? value = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? intended = freezed,
+    Object? intendedElement = freezed,
+    Object? applied = freezed,
+    Object? appliedElement = freezed,
     Object? variable = freezed,
     Object? attributeEstimate = freezed,
+    Object? modelCharacteristic = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -21038,14 +21250,46 @@ class _$EvidenceModelCharacteristicCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      conditionCodeableConcept: freezed == conditionCodeableConcept
+          ? _value.conditionCodeableConcept
+          : conditionCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      conditionExpression: freezed == conditionExpression
+          ? _value.conditionExpression
+          : conditionExpression // ignore: cast_nullable_to_non_nullable
+              as FhirExpression?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intended: freezed == intended
+          ? _value.intended
+          : intended // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      intendedElement: freezed == intendedElement
+          ? _value.intendedElement
+          : intendedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      applied: freezed == applied
+          ? _value.applied
+          : applied // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      appliedElement: freezed == appliedElement
+          ? _value.appliedElement
+          : appliedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -21054,7 +21298,36 @@ class _$EvidenceModelCharacteristicCopyWithImpl<$Res,
           ? _value.attributeEstimate
           : attributeEstimate // ignore: cast_nullable_to_non_nullable
               as List<EvidenceAttributeEstimate>?,
+      modelCharacteristic: freezed == modelCharacteristic
+          ? _value.modelCharacteristic
+          : modelCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceModelCharacteristic>?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get conditionCodeableConcept {
+    if (_value.conditionCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.conditionCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(conditionCodeableConcept: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirExpressionCopyWith<$Res>? get conditionExpression {
+    if (_value.conditionExpression == null) {
+      return null;
+    }
+
+    return $FhirExpressionCopyWith<$Res>(_value.conditionExpression!, (value) {
+      return _then(_value.copyWith(conditionExpression: value) as $Val);
+    });
   }
 
   @override
@@ -21067,13 +21340,62 @@ class _$EvidenceModelCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get value {
-    if (_value.value == null) {
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
       return null;
     }
 
-    return $QuantityCopyWith<$Res>(_value.value!, (value) {
-      return _then(_value.copyWith(value: value) as $Val);
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get intendedElement {
+    if (_value.intendedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.intendedElement!, (value) {
+      return _then(_value.copyWith(intendedElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get appliedElement {
+    if (_value.appliedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.appliedElement!, (value) {
+      return _then(_value.copyWith(appliedElement: value) as $Val);
     });
   }
 }
@@ -21091,15 +21413,36 @@ abstract class _$$EvidenceModelCharacteristicImplCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableConcept? conditionCodeableConcept,
+      FhirExpression? conditionExpression,
       CodeableConcept code,
-      Quantity? value,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      CodeableConcept? valueCodeableConcept,
+      FhirBoolean? intended,
+      @JsonKey(name: '_intended') Element? intendedElement,
+      FhirBoolean? applied,
+      @JsonKey(name: '_applied') Element? appliedElement,
       List<ModelCharacteristicVariable>? variable,
-      List<EvidenceAttributeEstimate>? attributeEstimate});
+      List<EvidenceAttributeEstimate>? attributeEstimate,
+      List<EvidenceModelCharacteristic>? modelCharacteristic});
 
+  @override
+  $CodeableConceptCopyWith<$Res>? get conditionCodeableConcept;
+  @override
+  $FhirExpressionCopyWith<$Res>? get conditionExpression;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
-  $QuantityCopyWith<$Res>? get value;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res>? get intendedElement;
+  @override
+  $ElementCopyWith<$Res>? get appliedElement;
 }
 
 /// @nodoc
@@ -21118,10 +21461,19 @@ class __$$EvidenceModelCharacteristicImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? conditionCodeableConcept = freezed,
+    Object? conditionExpression = freezed,
     Object? code = null,
-    Object? value = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? intended = freezed,
+    Object? intendedElement = freezed,
+    Object? applied = freezed,
+    Object? appliedElement = freezed,
     Object? variable = freezed,
     Object? attributeEstimate = freezed,
+    Object? modelCharacteristic = freezed,
   }) {
     return _then(_$EvidenceModelCharacteristicImpl(
       id: freezed == id
@@ -21136,14 +21488,46 @@ class __$$EvidenceModelCharacteristicImplCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      conditionCodeableConcept: freezed == conditionCodeableConcept
+          ? _value.conditionCodeableConcept
+          : conditionCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      conditionExpression: freezed == conditionExpression
+          ? _value.conditionExpression
+          : conditionExpression // ignore: cast_nullable_to_non_nullable
+              as FhirExpression?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intended: freezed == intended
+          ? _value.intended
+          : intended // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      intendedElement: freezed == intendedElement
+          ? _value.intendedElement
+          : intendedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      applied: freezed == applied
+          ? _value.applied
+          : applied // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      appliedElement: freezed == appliedElement
+          ? _value.appliedElement
+          : appliedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       variable: freezed == variable
           ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -21152,6 +21536,10 @@ class __$$EvidenceModelCharacteristicImplCopyWithImpl<$Res>
           ? _value._attributeEstimate
           : attributeEstimate // ignore: cast_nullable_to_non_nullable
               as List<EvidenceAttributeEstimate>?,
+      modelCharacteristic: freezed == modelCharacteristic
+          ? _value._modelCharacteristic
+          : modelCharacteristic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceModelCharacteristic>?,
     ));
   }
 }
@@ -21163,14 +21551,24 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      this.conditionCodeableConcept,
+      this.conditionExpression,
       required this.code,
-      this.value,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueCodeableConcept,
+      this.intended,
+      @JsonKey(name: '_intended') this.intendedElement,
+      this.applied,
+      @JsonKey(name: '_applied') this.appliedElement,
       final List<ModelCharacteristicVariable>? variable,
-      final List<EvidenceAttributeEstimate>? attributeEstimate})
+      final List<EvidenceAttributeEstimate>? attributeEstimate,
+      final List<EvidenceModelCharacteristic>? modelCharacteristic})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _variable = variable,
         _attributeEstimate = attributeEstimate,
+        _modelCharacteristic = modelCharacteristic,
         super._();
 
   factory _$EvidenceModelCharacteristicImpl.fromJson(
@@ -21242,14 +21640,50 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [conditionCodeableConcept] When this characteristic is used.
+  @override
+  final CodeableConcept? conditionCodeableConcept;
+
+  /// [conditionExpression] When this characteristic is used.
+  @override
+  final FhirExpression? conditionExpression;
+
   /// [code] Description of a component of the method to generate the statistic.
   @override
   final CodeableConcept code;
 
-  /// [value] Further specification of the quantified value of the component of
-  ///  the method to generate the statistic.
+  /// [valueQuantity] Further specification of the value of the component of the
+  ///  method to generate the statistic.
   @override
-  final Quantity? value;
+  final Quantity? valueQuantity;
+
+  /// [valueRange] Further specification of the value of the component of the
+  ///  method to generate the statistic.
+  @override
+  final Range? valueRange;
+
+  /// [valueCodeableConcept] Further specification of the value of the component
+  ///  of the method to generate the statistic.
+  @override
+  final CodeableConcept? valueCodeableConcept;
+
+  /// [intended] The plan for analysis.
+  @override
+  final FhirBoolean? intended;
+
+  /// [intendedElement] ("_intended") Extensions for intended
+  @override
+  @JsonKey(name: '_intended')
+  final Element? intendedElement;
+
+  /// [applied] The analysis that was applied.
+  @override
+  final FhirBoolean? applied;
+
+  /// [appliedElement] ("_applied") Extensions for applied
+  @override
+  @JsonKey(name: '_applied')
+  final Element? appliedElement;
 
   /// [variable] A variable adjusted for in the adjusted analysis.
   final List<ModelCharacteristicVariable>? _variable;
@@ -21280,9 +21714,23 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modelCharacteristic] Model component.
+  final List<EvidenceModelCharacteristic>? _modelCharacteristic;
+
+  /// [modelCharacteristic] Model component.
+  @override
+  List<EvidenceModelCharacteristic>? get modelCharacteristic {
+    final value = _modelCharacteristic;
+    if (value == null) return null;
+    if (_modelCharacteristic is EqualUnmodifiableListView)
+      return _modelCharacteristic;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'EvidenceModelCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, value: $value, variable: $variable, attributeEstimate: $attributeEstimate)';
+    return 'EvidenceModelCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, conditionCodeableConcept: $conditionCodeableConcept, conditionExpression: $conditionExpression, code: $code, valueQuantity: $valueQuantity, valueRange: $valueRange, valueCodeableConcept: $valueCodeableConcept, intended: $intended, intendedElement: $intendedElement, applied: $applied, appliedElement: $appliedElement, variable: $variable, attributeEstimate: $attributeEstimate, modelCharacteristic: $modelCharacteristic)';
   }
 
   @override
@@ -21295,11 +21743,30 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(
+                    other.conditionCodeableConcept, conditionCodeableConcept) ||
+                other.conditionCodeableConcept == conditionCodeableConcept) &&
+            (identical(other.conditionExpression, conditionExpression) ||
+                other.conditionExpression == conditionExpression) &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.value, value) || other.value == value) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                other.valueQuantity == valueQuantity) &&
+            (identical(other.valueRange, valueRange) ||
+                other.valueRange == valueRange) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                other.valueCodeableConcept == valueCodeableConcept) &&
+            (identical(other.intended, intended) ||
+                other.intended == intended) &&
+            (identical(other.intendedElement, intendedElement) ||
+                other.intendedElement == intendedElement) &&
+            (identical(other.applied, applied) || other.applied == applied) &&
+            (identical(other.appliedElement, appliedElement) ||
+                other.appliedElement == appliedElement) &&
             const DeepCollectionEquality().equals(other._variable, _variable) &&
             const DeepCollectionEquality()
-                .equals(other._attributeEstimate, _attributeEstimate));
+                .equals(other._attributeEstimate, _attributeEstimate) &&
+            const DeepCollectionEquality()
+                .equals(other._modelCharacteristic, _modelCharacteristic));
   }
 
   @JsonKey(ignore: true)
@@ -21309,10 +21776,19 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
+      conditionCodeableConcept,
+      conditionExpression,
       code,
-      value,
+      valueQuantity,
+      valueRange,
+      valueCodeableConcept,
+      intended,
+      intendedElement,
+      applied,
+      appliedElement,
       const DeepCollectionEquality().hash(_variable),
-      const DeepCollectionEquality().hash(_attributeEstimate));
+      const DeepCollectionEquality().hash(_attributeEstimate),
+      const DeepCollectionEquality().hash(_modelCharacteristic));
 
   @JsonKey(ignore: true)
   @override
@@ -21335,10 +21811,19 @@ abstract class _EvidenceModelCharacteristic
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? conditionCodeableConcept,
+          final FhirExpression? conditionExpression,
           required final CodeableConcept code,
-          final Quantity? value,
+          final Quantity? valueQuantity,
+          final Range? valueRange,
+          final CodeableConcept? valueCodeableConcept,
+          final FhirBoolean? intended,
+          @JsonKey(name: '_intended') final Element? intendedElement,
+          final FhirBoolean? applied,
+          @JsonKey(name: '_applied') final Element? appliedElement,
           final List<ModelCharacteristicVariable>? variable,
-          final List<EvidenceAttributeEstimate>? attributeEstimate}) =
+          final List<EvidenceAttributeEstimate>? attributeEstimate,
+          final List<EvidenceModelCharacteristic>? modelCharacteristic}) =
       _$EvidenceModelCharacteristicImpl;
   const _EvidenceModelCharacteristic._() : super._();
 
@@ -21377,13 +21862,49 @@ abstract class _EvidenceModelCharacteristic
   List<FhirExtension>? get modifierExtension;
   @override
 
+  /// [conditionCodeableConcept] When this characteristic is used.
+  CodeableConcept? get conditionCodeableConcept;
+  @override
+
+  /// [conditionExpression] When this characteristic is used.
+  FhirExpression? get conditionExpression;
+  @override
+
   /// [code] Description of a component of the method to generate the statistic.
   CodeableConcept get code;
   @override
 
-  /// [value] Further specification of the quantified value of the component of
-  ///  the method to generate the statistic.
-  Quantity? get value;
+  /// [valueQuantity] Further specification of the value of the component of the
+  ///  method to generate the statistic.
+  Quantity? get valueQuantity;
+  @override
+
+  /// [valueRange] Further specification of the value of the component of the
+  ///  method to generate the statistic.
+  Range? get valueRange;
+  @override
+
+  /// [valueCodeableConcept] Further specification of the value of the component
+  ///  of the method to generate the statistic.
+  CodeableConcept? get valueCodeableConcept;
+  @override
+
+  /// [intended] The plan for analysis.
+  FhirBoolean? get intended;
+  @override
+
+  /// [intendedElement] ("_intended") Extensions for intended
+  @JsonKey(name: '_intended')
+  Element? get intendedElement;
+  @override
+
+  /// [applied] The analysis that was applied.
+  FhirBoolean? get applied;
+  @override
+
+  /// [appliedElement] ("_applied") Extensions for applied
+  @JsonKey(name: '_applied')
+  Element? get appliedElement;
   @override
 
   /// [variable] A variable adjusted for in the adjusted analysis.
@@ -21393,6 +21914,10 @@ abstract class _EvidenceModelCharacteristic
   /// [attributeEstimate] An attribute of the statistic used as a model
   ///  characteristic.
   List<EvidenceAttributeEstimate>? get attributeEstimate;
+  @override
+
+  /// [modelCharacteristic] Model component.
+  List<EvidenceModelCharacteristic>? get modelCharacteristic;
   @override
   @JsonKey(ignore: true)
   _$$EvidenceModelCharacteristicImplCopyWith<_$EvidenceModelCharacteristicImpl>
@@ -22560,8 +23085,8 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EvidenceReport {
   /// [resourceType] This is a EvidenceReport resource
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -22871,8 +23396,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
       _$EvidenceReportCopyWithImpl<$Res, EvidenceReport>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -23043,7 +23568,7 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -23599,8 +24124,8 @@ abstract class _$$EvidenceReportImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -23794,7 +24319,7 @@ class __$$EvidenceReportImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -24047,8 +24572,8 @@ class __$$EvidenceReportImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvidenceReportImpl extends _EvidenceReport {
   const _$EvidenceReportImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-      this.resourceType = R5ResourceType.EvidenceReport,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+      this.resourceType = R6ResourceType.EvidenceReport,
       this.id,
       this.meta,
       this.implicitRules,
@@ -24135,8 +24660,8 @@ class _$EvidenceReportImpl extends _EvidenceReport {
 
   /// [resourceType] This is a EvidenceReport resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -24877,8 +25402,8 @@ class _$EvidenceReportImpl extends _EvidenceReport {
 
 abstract class _EvidenceReport extends EvidenceReport {
   const factory _EvidenceReport(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -24949,8 +25474,8 @@ abstract class _EvidenceReport extends EvidenceReport {
   @override
 
   /// [resourceType] This is a EvidenceReport resource
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceReport)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -28259,8 +28784,8 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EvidenceVariable {
   /// [resourceType] This is a EvidenceVariable resource
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -28548,10 +29073,8 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
 
-  /// [characteristic] A defining factor of the EvidenceVariable. Multiple
-  ///  characteristics are applied with "and" semantics.
-  List<EvidenceVariableCharacteristic>? get characteristic =>
-      throw _privateConstructorUsedError;
+  /// [definition] Defines the variable with a concept and/or Reference.
+  CodeableReference? get definition => throw _privateConstructorUsedError;
 
   /// [handling] The method of handling in statistical analysis.
   FhirCode? get handling => throw _privateConstructorUsedError;
@@ -28577,8 +29100,8 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       _$EvidenceVariableCopyWithImpl<$Res, EvidenceVariable>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -28637,7 +29160,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       List<Annotation>? note,
       FhirBoolean? actual,
       @JsonKey(name: '_actual') Element? actualElement,
-      List<EvidenceVariableCharacteristic>? characteristic,
+      CodeableReference? definition,
       FhirCode? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<EvidenceVariableCategory>? category});
@@ -28665,6 +29188,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $ElementCopyWith<$Res>? get shortTitleElement;
   $ElementCopyWith<$Res>? get actualElement;
+  $CodeableReferenceCopyWith<$Res>? get definition;
   $ElementCopyWith<$Res>? get handlingElement;
 }
 
@@ -28739,7 +29263,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
     Object? note = freezed,
     Object? actual = freezed,
     Object? actualElement = freezed,
-    Object? characteristic = freezed,
+    Object? definition = freezed,
     Object? handling = freezed,
     Object? handlingElement = freezed,
     Object? category = freezed,
@@ -28748,7 +29272,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -28977,10 +29501,10 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      characteristic: freezed == characteristic
-          ? _value.characteristic
-          : characteristic // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableCharacteristic>?,
+      definition: freezed == definition
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       handling: freezed == handling
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
@@ -29276,6 +29800,18 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
 
   @override
   @pragma('vm:prefer-inline')
+  $CodeableReferenceCopyWith<$Res>? get definition {
+    if (_value.definition == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.definition!, (value) {
+      return _then(_value.copyWith(definition: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get handlingElement {
     if (_value.handlingElement == null) {
       return null;
@@ -29296,8 +29832,8 @@ abstract class _$$EvidenceVariableImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -29356,7 +29892,7 @@ abstract class _$$EvidenceVariableImplCopyWith<$Res>
       List<Annotation>? note,
       FhirBoolean? actual,
       @JsonKey(name: '_actual') Element? actualElement,
-      List<EvidenceVariableCharacteristic>? characteristic,
+      CodeableReference? definition,
       FhirCode? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<EvidenceVariableCategory>? category});
@@ -29407,6 +29943,8 @@ abstract class _$$EvidenceVariableImplCopyWith<$Res>
   $ElementCopyWith<$Res>? get shortTitleElement;
   @override
   $ElementCopyWith<$Res>? get actualElement;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get definition;
   @override
   $ElementCopyWith<$Res>? get handlingElement;
 }
@@ -29480,7 +30018,7 @@ class __$$EvidenceVariableImplCopyWithImpl<$Res>
     Object? note = freezed,
     Object? actual = freezed,
     Object? actualElement = freezed,
-    Object? characteristic = freezed,
+    Object? definition = freezed,
     Object? handling = freezed,
     Object? handlingElement = freezed,
     Object? category = freezed,
@@ -29489,7 +30027,7 @@ class __$$EvidenceVariableImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -29718,10 +30256,10 @@ class __$$EvidenceVariableImplCopyWithImpl<$Res>
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      characteristic: freezed == characteristic
-          ? _value._characteristic
-          : characteristic // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableCharacteristic>?,
+      definition: freezed == definition
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       handling: freezed == handling
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
@@ -29742,8 +30280,8 @@ class __$$EvidenceVariableImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvidenceVariableImpl extends _EvidenceVariable {
   const _$EvidenceVariableImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-      this.resourceType = R5ResourceType.EvidenceVariable,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+      this.resourceType = R6ResourceType.EvidenceVariable,
       this.id,
       this.meta,
       this.implicitRules,
@@ -29802,7 +30340,7 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
       final List<Annotation>? note,
       this.actual,
       @JsonKey(name: '_actual') this.actualElement,
-      final List<EvidenceVariableCharacteristic>? characteristic,
+      this.definition,
       this.handling,
       @JsonKey(name: '_handling') this.handlingElement,
       final List<EvidenceVariableCategory>? category})
@@ -29820,7 +30358,6 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
         _endorser = endorser,
         _relatedArtifact = relatedArtifact,
         _note = note,
-        _characteristic = characteristic,
         _category = category,
         super._();
 
@@ -29829,8 +30366,8 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
 
   /// [resourceType] This is a EvidenceVariable resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -30335,20 +30872,9 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
   @JsonKey(name: '_actual')
   final Element? actualElement;
 
-  /// [characteristic] A defining factor of the EvidenceVariable. Multiple
-  ///  characteristics are applied with "and" semantics.
-  final List<EvidenceVariableCharacteristic>? _characteristic;
-
-  /// [characteristic] A defining factor of the EvidenceVariable. Multiple
-  ///  characteristics are applied with "and" semantics.
+  /// [definition] Defines the variable with a concept and/or Reference.
   @override
-  List<EvidenceVariableCharacteristic>? get characteristic {
-    final value = _characteristic;
-    if (value == null) return null;
-    if (_characteristic is EqualUnmodifiableListView) return _characteristic;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final CodeableReference? definition;
 
   /// [handling] The method of handling in statistical analysis.
   @override
@@ -30374,7 +30900,7 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
 
   @override
   String toString() {
-    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
+    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, note: $note, actual: $actual, actualElement: $actualElement, definition: $definition, handling: $handling, handlingElement: $handlingElement, category: $category)';
   }
 
   @override
@@ -30477,7 +31003,7 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
             const DeepCollectionEquality().equals(other._note, _note) &&
             (identical(other.actual, actual) || other.actual == actual) &&
             (identical(other.actualElement, actualElement) || other.actualElement == actualElement) &&
-            const DeepCollectionEquality().equals(other._characteristic, _characteristic) &&
+            (identical(other.definition, definition) || other.definition == definition) &&
             (identical(other.handling, handling) || other.handling == handling) &&
             (identical(other.handlingElement, handlingElement) || other.handlingElement == handlingElement) &&
             const DeepCollectionEquality().equals(other._category, _category));
@@ -30545,7 +31071,7 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
         const DeepCollectionEquality().hash(_note),
         actual,
         actualElement,
-        const DeepCollectionEquality().hash(_characteristic),
+        definition,
         handling,
         handlingElement,
         const DeepCollectionEquality().hash(_category)
@@ -30568,8 +31094,8 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
 
 abstract class _EvidenceVariable extends EvidenceVariable {
   const factory _EvidenceVariable(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -30628,7 +31154,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       final List<Annotation>? note,
       final FhirBoolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
-      final List<EvidenceVariableCharacteristic>? characteristic,
+      final CodeableReference? definition,
       final FhirCode? handling,
       @JsonKey(name: '_handling') final Element? handlingElement,
       final List<EvidenceVariableCategory>? category}) = _$EvidenceVariableImpl;
@@ -30640,8 +31166,8 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
 
   /// [resourceType] This is a EvidenceVariable resource
-  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EvidenceVariable)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -30984,9 +31510,8 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   Element? get actualElement;
   @override
 
-  /// [characteristic] A defining factor of the EvidenceVariable. Multiple
-  ///  characteristics are applied with "and" semantics.
-  List<EvidenceVariableCharacteristic>? get characteristic;
+  /// [definition] Defines the variable with a concept and/or Reference.
+  CodeableReference? get definition;
   @override
 
   /// [handling] The method of handling in statistical analysis.
@@ -31004,3222 +31529,6 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(ignore: true)
   _$$EvidenceVariableImplCopyWith<_$EvidenceVariableImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceVariableCharacteristic.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EvidenceVariableCharacteristic {
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id => throw _privateConstructorUsedError;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-
-  /// [linkId] Label used for when a characteristic refers to another
-  ///  characteristic.
-  FhirId? get linkId => throw _privateConstructorUsedError;
-
-  /// [linkIdElement] ("_linkId") Extensions for linkId
-  @JsonKey(name: '_linkId')
-  Element? get linkIdElement => throw _privateConstructorUsedError;
-
-  /// [description] A short, natural language description of the characteristic
-  ///  that could be used to communicate the criteria to an end-user.
-  FhirMarkdown? get description => throw _privateConstructorUsedError;
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  characteristic.
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-
-  /// [exclude] When true, this characteristic is an exclusion criterion. In
-  ///  other words, not matching this characteristic definition is equivalent to
-  ///  meeting this criterion.
-  FhirBoolean? get exclude => throw _privateConstructorUsedError;
-
-  /// [excludeElement] ("_exclude") Extensions for exclude
-  @JsonKey(name: '_exclude')
-  Element? get excludeElement => throw _privateConstructorUsedError;
-
-  /// [definitionReference] Defines the characteristic using a Reference.
-  Reference? get definitionReference => throw _privateConstructorUsedError;
-
-  /// [definitionCanonical] Defines the characteristic using Canonical.
-  FhirCanonical? get definitionCanonical => throw _privateConstructorUsedError;
-
-  /// [definitionCodeableConcept] Defines the characteristic using
-  ///  CodeableConcept.
-  CodeableConcept? get definitionCodeableConcept =>
-      throw _privateConstructorUsedError;
-
-  /// [definitionExpression] Defines the characteristic using Expression.
-  FhirExpression? get definitionExpression =>
-      throw _privateConstructorUsedError;
-
-  /// [definitionId] Defines the characteristic using id.
-  FhirId? get definitionId => throw _privateConstructorUsedError;
-
-  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
-  @JsonKey(name: '_definitionId')
-  Element? get definitionIdElement => throw _privateConstructorUsedError;
-
-  /// [definitionByTypeAndValue] Defines the characteristic using both a type and
-  ///  value[x] elements.
-  EvidenceVariableDefinitionByTypeAndValue? get definitionByTypeAndValue =>
-      throw _privateConstructorUsedError;
-
-  /// [definitionByCombination] Defines the characteristic as a combination of
-  ///  two or more characteristics.
-  EvidenceVariableDefinitionByCombination? get definitionByCombination =>
-      throw _privateConstructorUsedError;
-
-  /// [instancesQuantity] Number of occurrences meeting the characteristic.
-  Quantity? get instancesQuantity => throw _privateConstructorUsedError;
-
-  /// [instancesRange] Number of occurrences meeting the characteristic.
-  Range? get instancesRange => throw _privateConstructorUsedError;
-
-  /// [durationQuantity] Length of time in which the characteristic is met.
-  Quantity? get durationQuantity => throw _privateConstructorUsedError;
-
-  /// [durationRange] Length of time in which the characteristic is met.
-  Range? get durationRange => throw _privateConstructorUsedError;
-
-  /// [timeFromEvent] Timing in which the characteristic is determined.
-  List<EvidenceVariableTimeFromEvent>? get timeFromEvent =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceVariableCharacteristicCopyWith<EvidenceVariableCharacteristic>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
-  factory $EvidenceVariableCharacteristicCopyWith(
-          EvidenceVariableCharacteristic value,
-          $Res Function(EvidenceVariableCharacteristic) then) =
-      _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
-          EvidenceVariableCharacteristic>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirId? linkId,
-      @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirMarkdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation>? note,
-      FhirBoolean? exclude,
-      @JsonKey(name: '_exclude') Element? excludeElement,
-      Reference? definitionReference,
-      FhirCanonical? definitionCanonical,
-      CodeableConcept? definitionCodeableConcept,
-      FhirExpression? definitionExpression,
-      FhirId? definitionId,
-      @JsonKey(name: '_definitionId') Element? definitionIdElement,
-      EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
-      EvidenceVariableDefinitionByCombination? definitionByCombination,
-      Quantity? instancesQuantity,
-      Range? instancesRange,
-      Quantity? durationQuantity,
-      Range? durationRange,
-      List<EvidenceVariableTimeFromEvent>? timeFromEvent});
-
-  $ElementCopyWith<$Res>? get linkIdElement;
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $ElementCopyWith<$Res>? get excludeElement;
-  $ReferenceCopyWith<$Res>? get definitionReference;
-  $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
-  $FhirExpressionCopyWith<$Res>? get definitionExpression;
-  $ElementCopyWith<$Res>? get definitionIdElement;
-  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
-      get definitionByTypeAndValue;
-  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
-      get definitionByCombination;
-  $QuantityCopyWith<$Res>? get instancesQuantity;
-  $RangeCopyWith<$Res>? get instancesRange;
-  $QuantityCopyWith<$Res>? get durationQuantity;
-  $RangeCopyWith<$Res>? get durationRange;
-}
-
-/// @nodoc
-class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
-        $Val extends EvidenceVariableCharacteristic>
-    implements $EvidenceVariableCharacteristicCopyWith<$Res> {
-  _$EvidenceVariableCharacteristicCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? linkId = freezed,
-    Object? linkIdElement = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? exclude = freezed,
-    Object? excludeElement = freezed,
-    Object? definitionReference = freezed,
-    Object? definitionCanonical = freezed,
-    Object? definitionCodeableConcept = freezed,
-    Object? definitionExpression = freezed,
-    Object? definitionId = freezed,
-    Object? definitionIdElement = freezed,
-    Object? definitionByTypeAndValue = freezed,
-    Object? definitionByCombination = freezed,
-    Object? instancesQuantity = freezed,
-    Object? instancesRange = freezed,
-    Object? durationQuantity = freezed,
-    Object? durationRange = freezed,
-    Object? timeFromEvent = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      linkId: freezed == linkId
-          ? _value.linkId
-          : linkId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      linkIdElement: freezed == linkIdElement
-          ? _value.linkIdElement
-          : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as FhirMarkdown?,
-      descriptionElement: freezed == descriptionElement
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      exclude: freezed == exclude
-          ? _value.exclude
-          : exclude // ignore: cast_nullable_to_non_nullable
-              as FhirBoolean?,
-      excludeElement: freezed == excludeElement
-          ? _value.excludeElement
-          : excludeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      definitionReference: freezed == definitionReference
-          ? _value.definitionReference
-          : definitionReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      definitionCanonical: freezed == definitionCanonical
-          ? _value.definitionCanonical
-          : definitionCanonical // ignore: cast_nullable_to_non_nullable
-              as FhirCanonical?,
-      definitionCodeableConcept: freezed == definitionCodeableConcept
-          ? _value.definitionCodeableConcept
-          : definitionCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      definitionExpression: freezed == definitionExpression
-          ? _value.definitionExpression
-          : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as FhirExpression?,
-      definitionId: freezed == definitionId
-          ? _value.definitionId
-          : definitionId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      definitionIdElement: freezed == definitionIdElement
-          ? _value.definitionIdElement
-          : definitionIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      definitionByTypeAndValue: freezed == definitionByTypeAndValue
-          ? _value.definitionByTypeAndValue
-          : definitionByTypeAndValue // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefinitionByTypeAndValue?,
-      definitionByCombination: freezed == definitionByCombination
-          ? _value.definitionByCombination
-          : definitionByCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefinitionByCombination?,
-      instancesQuantity: freezed == instancesQuantity
-          ? _value.instancesQuantity
-          : instancesQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      instancesRange: freezed == instancesRange
-          ? _value.instancesRange
-          : instancesRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      durationQuantity: freezed == durationQuantity
-          ? _value.durationQuantity
-          : durationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      durationRange: freezed == durationRange
-          ? _value.durationRange
-          : durationRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      timeFromEvent: freezed == timeFromEvent
-          ? _value.timeFromEvent
-          : timeFromEvent // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableTimeFromEvent>?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get linkIdElement {
-    if (_value.linkIdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.linkIdElement!, (value) {
-      return _then(_value.copyWith(linkIdElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get excludeElement {
-    if (_value.excludeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.excludeElement!, (value) {
-      return _then(_value.copyWith(excludeElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get definitionReference {
-    if (_value.definitionReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.definitionReference!, (value) {
-      return _then(_value.copyWith(definitionReference: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept {
-    if (_value.definitionCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.definitionCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(definitionCodeableConcept: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FhirExpressionCopyWith<$Res>? get definitionExpression {
-    if (_value.definitionExpression == null) {
-      return null;
-    }
-
-    return $FhirExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
-      return _then(_value.copyWith(definitionExpression: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get definitionIdElement {
-    if (_value.definitionIdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.definitionIdElement!, (value) {
-      return _then(_value.copyWith(definitionIdElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
-      get definitionByTypeAndValue {
-    if (_value.definitionByTypeAndValue == null) {
-      return null;
-    }
-
-    return $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>(
-        _value.definitionByTypeAndValue!, (value) {
-      return _then(_value.copyWith(definitionByTypeAndValue: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
-      get definitionByCombination {
-    if (_value.definitionByCombination == null) {
-      return null;
-    }
-
-    return $EvidenceVariableDefinitionByCombinationCopyWith<$Res>(
-        _value.definitionByCombination!, (value) {
-      return _then(_value.copyWith(definitionByCombination: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get instancesQuantity {
-    if (_value.instancesQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.instancesQuantity!, (value) {
-      return _then(_value.copyWith(instancesQuantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get instancesRange {
-    if (_value.instancesRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.instancesRange!, (value) {
-      return _then(_value.copyWith(instancesRange: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get durationQuantity {
-    if (_value.durationQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.durationQuantity!, (value) {
-      return _then(_value.copyWith(durationQuantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get durationRange {
-    if (_value.durationRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.durationRange!, (value) {
-      return _then(_value.copyWith(durationRange: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$EvidenceVariableCharacteristicImplCopyWith<$Res>
-    implements $EvidenceVariableCharacteristicCopyWith<$Res> {
-  factory _$$EvidenceVariableCharacteristicImplCopyWith(
-          _$EvidenceVariableCharacteristicImpl value,
-          $Res Function(_$EvidenceVariableCharacteristicImpl) then) =
-      __$$EvidenceVariableCharacteristicImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirId? linkId,
-      @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirMarkdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation>? note,
-      FhirBoolean? exclude,
-      @JsonKey(name: '_exclude') Element? excludeElement,
-      Reference? definitionReference,
-      FhirCanonical? definitionCanonical,
-      CodeableConcept? definitionCodeableConcept,
-      FhirExpression? definitionExpression,
-      FhirId? definitionId,
-      @JsonKey(name: '_definitionId') Element? definitionIdElement,
-      EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
-      EvidenceVariableDefinitionByCombination? definitionByCombination,
-      Quantity? instancesQuantity,
-      Range? instancesRange,
-      Quantity? durationQuantity,
-      Range? durationRange,
-      List<EvidenceVariableTimeFromEvent>? timeFromEvent});
-
-  @override
-  $ElementCopyWith<$Res>? get linkIdElement;
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $ElementCopyWith<$Res>? get excludeElement;
-  @override
-  $ReferenceCopyWith<$Res>? get definitionReference;
-  @override
-  $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
-  @override
-  $FhirExpressionCopyWith<$Res>? get definitionExpression;
-  @override
-  $ElementCopyWith<$Res>? get definitionIdElement;
-  @override
-  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
-      get definitionByTypeAndValue;
-  @override
-  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
-      get definitionByCombination;
-  @override
-  $QuantityCopyWith<$Res>? get instancesQuantity;
-  @override
-  $RangeCopyWith<$Res>? get instancesRange;
-  @override
-  $QuantityCopyWith<$Res>? get durationQuantity;
-  @override
-  $RangeCopyWith<$Res>? get durationRange;
-}
-
-/// @nodoc
-class __$$EvidenceVariableCharacteristicImplCopyWithImpl<$Res>
-    extends _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
-        _$EvidenceVariableCharacteristicImpl>
-    implements _$$EvidenceVariableCharacteristicImplCopyWith<$Res> {
-  __$$EvidenceVariableCharacteristicImplCopyWithImpl(
-      _$EvidenceVariableCharacteristicImpl _value,
-      $Res Function(_$EvidenceVariableCharacteristicImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? linkId = freezed,
-    Object? linkIdElement = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? exclude = freezed,
-    Object? excludeElement = freezed,
-    Object? definitionReference = freezed,
-    Object? definitionCanonical = freezed,
-    Object? definitionCodeableConcept = freezed,
-    Object? definitionExpression = freezed,
-    Object? definitionId = freezed,
-    Object? definitionIdElement = freezed,
-    Object? definitionByTypeAndValue = freezed,
-    Object? definitionByCombination = freezed,
-    Object? instancesQuantity = freezed,
-    Object? instancesRange = freezed,
-    Object? durationQuantity = freezed,
-    Object? durationRange = freezed,
-    Object? timeFromEvent = freezed,
-  }) {
-    return _then(_$EvidenceVariableCharacteristicImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      linkId: freezed == linkId
-          ? _value.linkId
-          : linkId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      linkIdElement: freezed == linkIdElement
-          ? _value.linkIdElement
-          : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as FhirMarkdown?,
-      descriptionElement: freezed == descriptionElement
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      exclude: freezed == exclude
-          ? _value.exclude
-          : exclude // ignore: cast_nullable_to_non_nullable
-              as FhirBoolean?,
-      excludeElement: freezed == excludeElement
-          ? _value.excludeElement
-          : excludeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      definitionReference: freezed == definitionReference
-          ? _value.definitionReference
-          : definitionReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      definitionCanonical: freezed == definitionCanonical
-          ? _value.definitionCanonical
-          : definitionCanonical // ignore: cast_nullable_to_non_nullable
-              as FhirCanonical?,
-      definitionCodeableConcept: freezed == definitionCodeableConcept
-          ? _value.definitionCodeableConcept
-          : definitionCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      definitionExpression: freezed == definitionExpression
-          ? _value.definitionExpression
-          : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as FhirExpression?,
-      definitionId: freezed == definitionId
-          ? _value.definitionId
-          : definitionId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      definitionIdElement: freezed == definitionIdElement
-          ? _value.definitionIdElement
-          : definitionIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      definitionByTypeAndValue: freezed == definitionByTypeAndValue
-          ? _value.definitionByTypeAndValue
-          : definitionByTypeAndValue // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefinitionByTypeAndValue?,
-      definitionByCombination: freezed == definitionByCombination
-          ? _value.definitionByCombination
-          : definitionByCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefinitionByCombination?,
-      instancesQuantity: freezed == instancesQuantity
-          ? _value.instancesQuantity
-          : instancesQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      instancesRange: freezed == instancesRange
-          ? _value.instancesRange
-          : instancesRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      durationQuantity: freezed == durationQuantity
-          ? _value.durationQuantity
-          : durationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      durationRange: freezed == durationRange
-          ? _value.durationRange
-          : durationRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      timeFromEvent: freezed == timeFromEvent
-          ? _value._timeFromEvent
-          : timeFromEvent // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableTimeFromEvent>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$EvidenceVariableCharacteristicImpl
-    extends _EvidenceVariableCharacteristic {
-  const _$EvidenceVariableCharacteristicImpl(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.linkId,
-      @JsonKey(name: '_linkId') this.linkIdElement,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      final List<Annotation>? note,
-      this.exclude,
-      @JsonKey(name: '_exclude') this.excludeElement,
-      this.definitionReference,
-      this.definitionCanonical,
-      this.definitionCodeableConcept,
-      this.definitionExpression,
-      this.definitionId,
-      @JsonKey(name: '_definitionId') this.definitionIdElement,
-      this.definitionByTypeAndValue,
-      this.definitionByCombination,
-      this.instancesQuantity,
-      this.instancesRange,
-      this.durationQuantity,
-      this.durationRange,
-      final List<EvidenceVariableTimeFromEvent>? timeFromEvent})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _note = note,
-        _timeFromEvent = timeFromEvent,
-        super._();
-
-  factory _$EvidenceVariableCharacteristicImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$EvidenceVariableCharacteristicImplFromJson(json);
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  @override
-  final String? id;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  final List<FhirExtension>? _extension_;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  final List<FhirExtension>? _modifierExtension;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [linkId] Label used for when a characteristic refers to another
-  ///  characteristic.
-  @override
-  final FhirId? linkId;
-
-  /// [linkIdElement] ("_linkId") Extensions for linkId
-  @override
-  @JsonKey(name: '_linkId')
-  final Element? linkIdElement;
-
-  /// [description] A short, natural language description of the characteristic
-  ///  that could be used to communicate the criteria to an end-user.
-  @override
-  final FhirMarkdown? description;
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  characteristic.
-  final List<Annotation>? _note;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  characteristic.
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    if (_note is EqualUnmodifiableListView) return _note;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [exclude] When true, this characteristic is an exclusion criterion. In
-  ///  other words, not matching this characteristic definition is equivalent to
-  ///  meeting this criterion.
-  @override
-  final FhirBoolean? exclude;
-
-  /// [excludeElement] ("_exclude") Extensions for exclude
-  @override
-  @JsonKey(name: '_exclude')
-  final Element? excludeElement;
-
-  /// [definitionReference] Defines the characteristic using a Reference.
-  @override
-  final Reference? definitionReference;
-
-  /// [definitionCanonical] Defines the characteristic using Canonical.
-  @override
-  final FhirCanonical? definitionCanonical;
-
-  /// [definitionCodeableConcept] Defines the characteristic using
-  ///  CodeableConcept.
-  @override
-  final CodeableConcept? definitionCodeableConcept;
-
-  /// [definitionExpression] Defines the characteristic using Expression.
-  @override
-  final FhirExpression? definitionExpression;
-
-  /// [definitionId] Defines the characteristic using id.
-  @override
-  final FhirId? definitionId;
-
-  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
-  @override
-  @JsonKey(name: '_definitionId')
-  final Element? definitionIdElement;
-
-  /// [definitionByTypeAndValue] Defines the characteristic using both a type and
-  ///  value[x] elements.
-  @override
-  final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue;
-
-  /// [definitionByCombination] Defines the characteristic as a combination of
-  ///  two or more characteristics.
-  @override
-  final EvidenceVariableDefinitionByCombination? definitionByCombination;
-
-  /// [instancesQuantity] Number of occurrences meeting the characteristic.
-  @override
-  final Quantity? instancesQuantity;
-
-  /// [instancesRange] Number of occurrences meeting the characteristic.
-  @override
-  final Range? instancesRange;
-
-  /// [durationQuantity] Length of time in which the characteristic is met.
-  @override
-  final Quantity? durationQuantity;
-
-  /// [durationRange] Length of time in which the characteristic is met.
-  @override
-  final Range? durationRange;
-
-  /// [timeFromEvent] Timing in which the characteristic is determined.
-  final List<EvidenceVariableTimeFromEvent>? _timeFromEvent;
-
-  /// [timeFromEvent] Timing in which the characteristic is determined.
-  @override
-  List<EvidenceVariableTimeFromEvent>? get timeFromEvent {
-    final value = _timeFromEvent;
-    if (value == null) return null;
-    if (_timeFromEvent is EqualUnmodifiableListView) return _timeFromEvent;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, linkIdElement: $linkIdElement, description: $description, descriptionElement: $descriptionElement, note: $note, exclude: $exclude, excludeElement: $excludeElement, definitionReference: $definitionReference, definitionCanonical: $definitionCanonical, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionId: $definitionId, definitionIdElement: $definitionIdElement, definitionByTypeAndValue: $definitionByTypeAndValue, definitionByCombination: $definitionByCombination, instancesQuantity: $instancesQuantity, instancesRange: $instancesRange, durationQuantity: $durationQuantity, durationRange: $durationRange, timeFromEvent: $timeFromEvent)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EvidenceVariableCharacteristicImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.linkId, linkId) || other.linkId == linkId) &&
-            (identical(other.linkIdElement, linkIdElement) ||
-                other.linkIdElement == linkIdElement) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            (identical(other.exclude, exclude) || other.exclude == exclude) &&
-            (identical(other.excludeElement, excludeElement) ||
-                other.excludeElement == excludeElement) &&
-            (identical(other.definitionReference, definitionReference) ||
-                other.definitionReference == definitionReference) &&
-            (identical(other.definitionCanonical, definitionCanonical) ||
-                other.definitionCanonical == definitionCanonical) &&
-            (identical(other.definitionCodeableConcept,
-                    definitionCodeableConcept) ||
-                other.definitionCodeableConcept == definitionCodeableConcept) &&
-            (identical(other.definitionExpression, definitionExpression) ||
-                other.definitionExpression == definitionExpression) &&
-            (identical(other.definitionId, definitionId) ||
-                other.definitionId == definitionId) &&
-            (identical(other.definitionIdElement, definitionIdElement) ||
-                other.definitionIdElement == definitionIdElement) &&
-            (identical(
-                    other.definitionByTypeAndValue, definitionByTypeAndValue) ||
-                other.definitionByTypeAndValue == definitionByTypeAndValue) &&
-            (identical(
-                    other.definitionByCombination, definitionByCombination) ||
-                other.definitionByCombination == definitionByCombination) &&
-            (identical(other.instancesQuantity, instancesQuantity) ||
-                other.instancesQuantity == instancesQuantity) &&
-            (identical(other.instancesRange, instancesRange) ||
-                other.instancesRange == instancesRange) &&
-            (identical(other.durationQuantity, durationQuantity) ||
-                other.durationQuantity == durationQuantity) &&
-            (identical(other.durationRange, durationRange) ||
-                other.durationRange == durationRange) &&
-            const DeepCollectionEquality()
-                .equals(other._timeFromEvent, _timeFromEvent));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        linkId,
-        linkIdElement,
-        description,
-        descriptionElement,
-        const DeepCollectionEquality().hash(_note),
-        exclude,
-        excludeElement,
-        definitionReference,
-        definitionCanonical,
-        definitionCodeableConcept,
-        definitionExpression,
-        definitionId,
-        definitionIdElement,
-        definitionByTypeAndValue,
-        definitionByCombination,
-        instancesQuantity,
-        instancesRange,
-        durationQuantity,
-        durationRange,
-        const DeepCollectionEquality().hash(_timeFromEvent)
-      ]);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EvidenceVariableCharacteristicImplCopyWith<
-          _$EvidenceVariableCharacteristicImpl>
-      get copyWith => __$$EvidenceVariableCharacteristicImplCopyWithImpl<
-          _$EvidenceVariableCharacteristicImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EvidenceVariableCharacteristicImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EvidenceVariableCharacteristic
-    extends EvidenceVariableCharacteristic {
-  const factory _EvidenceVariableCharacteristic(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirId? linkId,
-      @JsonKey(name: '_linkId') final Element? linkIdElement,
-      final FhirMarkdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<Annotation>? note,
-      final FhirBoolean? exclude,
-      @JsonKey(name: '_exclude') final Element? excludeElement,
-      final Reference? definitionReference,
-      final FhirCanonical? definitionCanonical,
-      final CodeableConcept? definitionCodeableConcept,
-      final FhirExpression? definitionExpression,
-      final FhirId? definitionId,
-      @JsonKey(name: '_definitionId') final Element? definitionIdElement,
-      final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
-      final EvidenceVariableDefinitionByCombination? definitionByCombination,
-      final Quantity? instancesQuantity,
-      final Range? instancesRange,
-      final Quantity? durationQuantity,
-      final Range? durationRange,
-      final List<EvidenceVariableTimeFromEvent>?
-          timeFromEvent}) = _$EvidenceVariableCharacteristicImpl;
-  const _EvidenceVariableCharacteristic._() : super._();
-
-  factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$EvidenceVariableCharacteristicImpl.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id;
-  @override
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension;
-  @override
-
-  /// [linkId] Label used for when a characteristic refers to another
-  ///  characteristic.
-  FhirId? get linkId;
-  @override
-
-  /// [linkIdElement] ("_linkId") Extensions for linkId
-  @JsonKey(name: '_linkId')
-  Element? get linkIdElement;
-  @override
-
-  /// [description] A short, natural language description of the characteristic
-  ///  that could be used to communicate the criteria to an end-user.
-  FhirMarkdown? get description;
-  @override
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  @override
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  characteristic.
-  List<Annotation>? get note;
-  @override
-
-  /// [exclude] When true, this characteristic is an exclusion criterion. In
-  ///  other words, not matching this characteristic definition is equivalent to
-  ///  meeting this criterion.
-  FhirBoolean? get exclude;
-  @override
-
-  /// [excludeElement] ("_exclude") Extensions for exclude
-  @JsonKey(name: '_exclude')
-  Element? get excludeElement;
-  @override
-
-  /// [definitionReference] Defines the characteristic using a Reference.
-  Reference? get definitionReference;
-  @override
-
-  /// [definitionCanonical] Defines the characteristic using Canonical.
-  FhirCanonical? get definitionCanonical;
-  @override
-
-  /// [definitionCodeableConcept] Defines the characteristic using
-  ///  CodeableConcept.
-  CodeableConcept? get definitionCodeableConcept;
-  @override
-
-  /// [definitionExpression] Defines the characteristic using Expression.
-  FhirExpression? get definitionExpression;
-  @override
-
-  /// [definitionId] Defines the characteristic using id.
-  FhirId? get definitionId;
-  @override
-
-  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
-  @JsonKey(name: '_definitionId')
-  Element? get definitionIdElement;
-  @override
-
-  /// [definitionByTypeAndValue] Defines the characteristic using both a type and
-  ///  value[x] elements.
-  EvidenceVariableDefinitionByTypeAndValue? get definitionByTypeAndValue;
-  @override
-
-  /// [definitionByCombination] Defines the characteristic as a combination of
-  ///  two or more characteristics.
-  EvidenceVariableDefinitionByCombination? get definitionByCombination;
-  @override
-
-  /// [instancesQuantity] Number of occurrences meeting the characteristic.
-  Quantity? get instancesQuantity;
-  @override
-
-  /// [instancesRange] Number of occurrences meeting the characteristic.
-  Range? get instancesRange;
-  @override
-
-  /// [durationQuantity] Length of time in which the characteristic is met.
-  Quantity? get durationQuantity;
-  @override
-
-  /// [durationRange] Length of time in which the characteristic is met.
-  Range? get durationRange;
-  @override
-
-  /// [timeFromEvent] Timing in which the characteristic is determined.
-  List<EvidenceVariableTimeFromEvent>? get timeFromEvent;
-  @override
-  @JsonKey(ignore: true)
-  _$$EvidenceVariableCharacteristicImplCopyWith<
-          _$EvidenceVariableCharacteristicImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EvidenceVariableDefinitionByTypeAndValue
-    _$EvidenceVariableDefinitionByTypeAndValueFromJson(
-        Map<String, dynamic> json) {
-  return _EvidenceVariableDefinitionByTypeAndValue.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EvidenceVariableDefinitionByTypeAndValue {
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id => throw _privateConstructorUsedError;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-
-  /// [type] Used to express the type of characteristic.
-  CodeableConcept get type => throw _privateConstructorUsedError;
-
-  /// [method] Method for how the characteristic value was determined.
-  List<CodeableConcept>? get method => throw _privateConstructorUsedError;
-
-  /// [device] Device used for determining characteristic.
-  Reference? get device => throw _privateConstructorUsedError;
-
-  /// [valueCodeableConcept] Defines the characteristic when paired with
-  ///  characteristic.type.
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
-
-  /// [valueBoolean] Defines the characteristic when paired with
-  ///  characteristic.type.
-  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
-
-  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
-  @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
-
-  /// [valueQuantity] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-
-  /// [valueRange] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Range? get valueRange => throw _privateConstructorUsedError;
-
-  /// [valueReference] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Reference? get valueReference => throw _privateConstructorUsedError;
-
-  /// [valueId] Defines the characteristic when paired with characteristic.type.
-  FhirId? get valueId => throw _privateConstructorUsedError;
-
-  /// [valueIdElement] ("_valueId") Extensions for valueId
-  @JsonKey(name: '_valueId')
-  Element? get valueIdElement => throw _privateConstructorUsedError;
-
-  /// [offset] Defines the reference point for comparison when valueQuantity or
-  ///  valueRange is not compared to zero.
-  CodeableConcept? get offset => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceVariableDefinitionByTypeAndValueCopyWith<
-          EvidenceVariableDefinitionByTypeAndValue>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
-  factory $EvidenceVariableDefinitionByTypeAndValueCopyWith(
-          EvidenceVariableDefinitionByTypeAndValue value,
-          $Res Function(EvidenceVariableDefinitionByTypeAndValue) then) =
-      _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
-          EvidenceVariableDefinitionByTypeAndValue>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept type,
-      List<CodeableConcept>? method,
-      Reference? device,
-      CodeableConcept? valueCodeableConcept,
-      FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Reference? valueReference,
-      FhirId? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      CodeableConcept? offset});
-
-  $CodeableConceptCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res>? get device;
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  $ElementCopyWith<$Res>? get valueBooleanElement;
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  $RangeCopyWith<$Res>? get valueRange;
-  $ReferenceCopyWith<$Res>? get valueReference;
-  $ElementCopyWith<$Res>? get valueIdElement;
-  $CodeableConceptCopyWith<$Res>? get offset;
-}
-
-/// @nodoc
-class _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
-        $Val extends EvidenceVariableDefinitionByTypeAndValue>
-    implements $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
-  _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl(
-      this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = null,
-    Object? method = freezed,
-    Object? device = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueBoolean = freezed,
-    Object? valueBooleanElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-    Object? valueReference = freezed,
-    Object? valueId = freezed,
-    Object? valueIdElement = freezed,
-    Object? offset = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
-      method: freezed == method
-          ? _value.method
-          : method // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      device: freezed == device
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueBoolean: freezed == valueBoolean
-          ? _value.valueBoolean
-          : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as FhirBoolean?,
-      valueBooleanElement: freezed == valueBooleanElement
-          ? _value.valueBooleanElement
-          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      valueReference: freezed == valueReference
-          ? _value.valueReference
-          : valueReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      valueId: freezed == valueId
-          ? _value.valueId
-          : valueId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      valueIdElement: freezed == valueIdElement
-          ? _value.valueIdElement
-          : valueIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res> get type {
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get device {
-    if (_value.device == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
-      return _then(_value.copyWith(device: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
-    if (_value.valueCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get valueBooleanElement {
-    if (_value.valueBooleanElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
-      return _then(_value.copyWith(valueBooleanElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get valueQuantity {
-    if (_value.valueQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get valueRange {
-    if (_value.valueRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
-      return _then(_value.copyWith(valueRange: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get valueReference {
-    if (_value.valueReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
-      return _then(_value.copyWith(valueReference: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get valueIdElement {
-    if (_value.valueIdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
-      return _then(_value.copyWith(valueIdElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get offset {
-    if (_value.offset == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.offset!, (value) {
-      return _then(_value.copyWith(offset: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$EvidenceVariableDefinitionByTypeAndValueImplCopyWith<$Res>
-    implements $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
-  factory _$$EvidenceVariableDefinitionByTypeAndValueImplCopyWith(
-          _$EvidenceVariableDefinitionByTypeAndValueImpl value,
-          $Res Function(_$EvidenceVariableDefinitionByTypeAndValueImpl) then) =
-      __$$EvidenceVariableDefinitionByTypeAndValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept type,
-      List<CodeableConcept>? method,
-      Reference? device,
-      CodeableConcept? valueCodeableConcept,
-      FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Reference? valueReference,
-      FhirId? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      CodeableConcept? offset});
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $ReferenceCopyWith<$Res>? get device;
-  @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  @override
-  $ElementCopyWith<$Res>? get valueBooleanElement;
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $RangeCopyWith<$Res>? get valueRange;
-  @override
-  $ReferenceCopyWith<$Res>? get valueReference;
-  @override
-  $ElementCopyWith<$Res>? get valueIdElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get offset;
-}
-
-/// @nodoc
-class __$$EvidenceVariableDefinitionByTypeAndValueImplCopyWithImpl<$Res>
-    extends _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
-        _$EvidenceVariableDefinitionByTypeAndValueImpl>
-    implements _$$EvidenceVariableDefinitionByTypeAndValueImplCopyWith<$Res> {
-  __$$EvidenceVariableDefinitionByTypeAndValueImplCopyWithImpl(
-      _$EvidenceVariableDefinitionByTypeAndValueImpl _value,
-      $Res Function(_$EvidenceVariableDefinitionByTypeAndValueImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = null,
-    Object? method = freezed,
-    Object? device = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueBoolean = freezed,
-    Object? valueBooleanElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-    Object? valueReference = freezed,
-    Object? valueId = freezed,
-    Object? valueIdElement = freezed,
-    Object? offset = freezed,
-  }) {
-    return _then(_$EvidenceVariableDefinitionByTypeAndValueImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
-      method: freezed == method
-          ? _value._method
-          : method // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      device: freezed == device
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueBoolean: freezed == valueBoolean
-          ? _value.valueBoolean
-          : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as FhirBoolean?,
-      valueBooleanElement: freezed == valueBooleanElement
-          ? _value.valueBooleanElement
-          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-      valueReference: freezed == valueReference
-          ? _value.valueReference
-          : valueReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      valueId: freezed == valueId
-          ? _value.valueId
-          : valueId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      valueIdElement: freezed == valueIdElement
-          ? _value.valueIdElement
-          : valueIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$EvidenceVariableDefinitionByTypeAndValueImpl
-    extends _EvidenceVariableDefinitionByTypeAndValue {
-  const _$EvidenceVariableDefinitionByTypeAndValueImpl(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required this.type,
-      final List<CodeableConcept>? method,
-      this.device,
-      this.valueCodeableConcept,
-      this.valueBoolean,
-      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
-      this.valueQuantity,
-      this.valueRange,
-      this.valueReference,
-      this.valueId,
-      @JsonKey(name: '_valueId') this.valueIdElement,
-      this.offset})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _method = method,
-        super._();
-
-  factory _$EvidenceVariableDefinitionByTypeAndValueImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$EvidenceVariableDefinitionByTypeAndValueImplFromJson(json);
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  @override
-  final String? id;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  final List<FhirExtension>? _extension_;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  final List<FhirExtension>? _modifierExtension;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [type] Used to express the type of characteristic.
-  @override
-  final CodeableConcept type;
-
-  /// [method] Method for how the characteristic value was determined.
-  final List<CodeableConcept>? _method;
-
-  /// [method] Method for how the characteristic value was determined.
-  @override
-  List<CodeableConcept>? get method {
-    final value = _method;
-    if (value == null) return null;
-    if (_method is EqualUnmodifiableListView) return _method;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [device] Device used for determining characteristic.
-  @override
-  final Reference? device;
-
-  /// [valueCodeableConcept] Defines the characteristic when paired with
-  ///  characteristic.type.
-  @override
-  final CodeableConcept? valueCodeableConcept;
-
-  /// [valueBoolean] Defines the characteristic when paired with
-  ///  characteristic.type.
-  @override
-  final FhirBoolean? valueBoolean;
-
-  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
-  @override
-  @JsonKey(name: '_valueBoolean')
-  final Element? valueBooleanElement;
-
-  /// [valueQuantity] Defines the characteristic when paired with
-  ///  characteristic.type.
-  @override
-  final Quantity? valueQuantity;
-
-  /// [valueRange] Defines the characteristic when paired with
-  ///  characteristic.type.
-  @override
-  final Range? valueRange;
-
-  /// [valueReference] Defines the characteristic when paired with
-  ///  characteristic.type.
-  @override
-  final Reference? valueReference;
-
-  /// [valueId] Defines the characteristic when paired with characteristic.type.
-  @override
-  final FhirId? valueId;
-
-  /// [valueIdElement] ("_valueId") Extensions for valueId
-  @override
-  @JsonKey(name: '_valueId')
-  final Element? valueIdElement;
-
-  /// [offset] Defines the reference point for comparison when valueQuantity or
-  ///  valueRange is not compared to zero.
-  @override
-  final CodeableConcept? offset;
-
-  @override
-  String toString() {
-    return 'EvidenceVariableDefinitionByTypeAndValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, method: $method, device: $device, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, valueId: $valueId, valueIdElement: $valueIdElement, offset: $offset)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EvidenceVariableDefinitionByTypeAndValueImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._method, _method) &&
-            (identical(other.device, device) || other.device == device) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                other.valueCodeableConcept == valueCodeableConcept) &&
-            (identical(other.valueBoolean, valueBoolean) ||
-                other.valueBoolean == valueBoolean) &&
-            (identical(other.valueBooleanElement, valueBooleanElement) ||
-                other.valueBooleanElement == valueBooleanElement) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                other.valueQuantity == valueQuantity) &&
-            (identical(other.valueRange, valueRange) ||
-                other.valueRange == valueRange) &&
-            (identical(other.valueReference, valueReference) ||
-                other.valueReference == valueReference) &&
-            (identical(other.valueId, valueId) || other.valueId == valueId) &&
-            (identical(other.valueIdElement, valueIdElement) ||
-                other.valueIdElement == valueIdElement) &&
-            (identical(other.offset, offset) || other.offset == offset));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      type,
-      const DeepCollectionEquality().hash(_method),
-      device,
-      valueCodeableConcept,
-      valueBoolean,
-      valueBooleanElement,
-      valueQuantity,
-      valueRange,
-      valueReference,
-      valueId,
-      valueIdElement,
-      offset);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EvidenceVariableDefinitionByTypeAndValueImplCopyWith<
-          _$EvidenceVariableDefinitionByTypeAndValueImpl>
-      get copyWith =>
-          __$$EvidenceVariableDefinitionByTypeAndValueImplCopyWithImpl<
-              _$EvidenceVariableDefinitionByTypeAndValueImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EvidenceVariableDefinitionByTypeAndValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EvidenceVariableDefinitionByTypeAndValue
-    extends EvidenceVariableDefinitionByTypeAndValue {
-  const factory _EvidenceVariableDefinitionByTypeAndValue(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          required final CodeableConcept type,
-          final List<CodeableConcept>? method,
-          final Reference? device,
-          final CodeableConcept? valueCodeableConcept,
-          final FhirBoolean? valueBoolean,
-          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-          final Quantity? valueQuantity,
-          final Range? valueRange,
-          final Reference? valueReference,
-          final FhirId? valueId,
-          @JsonKey(name: '_valueId') final Element? valueIdElement,
-          final CodeableConcept? offset}) =
-      _$EvidenceVariableDefinitionByTypeAndValueImpl;
-  const _EvidenceVariableDefinitionByTypeAndValue._() : super._();
-
-  factory _EvidenceVariableDefinitionByTypeAndValue.fromJson(
-          Map<String, dynamic> json) =
-      _$EvidenceVariableDefinitionByTypeAndValueImpl.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id;
-  @override
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension;
-  @override
-
-  /// [type] Used to express the type of characteristic.
-  CodeableConcept get type;
-  @override
-
-  /// [method] Method for how the characteristic value was determined.
-  List<CodeableConcept>? get method;
-  @override
-
-  /// [device] Device used for determining characteristic.
-  Reference? get device;
-  @override
-
-  /// [valueCodeableConcept] Defines the characteristic when paired with
-  ///  characteristic.type.
-  CodeableConcept? get valueCodeableConcept;
-  @override
-
-  /// [valueBoolean] Defines the characteristic when paired with
-  ///  characteristic.type.
-  FhirBoolean? get valueBoolean;
-  @override
-
-  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
-  @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
-  @override
-
-  /// [valueQuantity] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Quantity? get valueQuantity;
-  @override
-
-  /// [valueRange] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Range? get valueRange;
-  @override
-
-  /// [valueReference] Defines the characteristic when paired with
-  ///  characteristic.type.
-  Reference? get valueReference;
-  @override
-
-  /// [valueId] Defines the characteristic when paired with characteristic.type.
-  FhirId? get valueId;
-  @override
-
-  /// [valueIdElement] ("_valueId") Extensions for valueId
-  @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
-  @override
-
-  /// [offset] Defines the reference point for comparison when valueQuantity or
-  ///  valueRange is not compared to zero.
-  CodeableConcept? get offset;
-  @override
-  @JsonKey(ignore: true)
-  _$$EvidenceVariableDefinitionByTypeAndValueImplCopyWith<
-          _$EvidenceVariableDefinitionByTypeAndValueImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EvidenceVariableDefinitionByCombination
-    _$EvidenceVariableDefinitionByCombinationFromJson(
-        Map<String, dynamic> json) {
-  return _EvidenceVariableDefinitionByCombination.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EvidenceVariableDefinitionByCombination {
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id => throw _privateConstructorUsedError;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-
-  /// [code] Used to specify if two or more characteristics are combined with OR
-  ///  or AND.
-  FhirCode? get code => throw _privateConstructorUsedError;
-
-  /// [codeElement] ("_code") Extensions for code
-  @JsonKey(name: '_code')
-  Element? get codeElement => throw _privateConstructorUsedError;
-
-  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes
-  ///  are used.
-  FhirPositiveInt? get threshold => throw _privateConstructorUsedError;
-
-  /// [thresholdElement] ("_threshold") Extensions for threshold
-  @JsonKey(name: '_threshold')
-  Element? get thresholdElement => throw _privateConstructorUsedError;
-
-  /// [characteristic] A defining factor of the characteristic.
-  List<EvidenceVariableCharacteristic> get characteristic =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceVariableDefinitionByCombinationCopyWith<
-          EvidenceVariableDefinitionByCombination>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
-  factory $EvidenceVariableDefinitionByCombinationCopyWith(
-          EvidenceVariableDefinitionByCombination value,
-          $Res Function(EvidenceVariableDefinitionByCombination) then) =
-      _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
-          EvidenceVariableDefinitionByCombination>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirCode? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      FhirPositiveInt? threshold,
-      @JsonKey(name: '_threshold') Element? thresholdElement,
-      List<EvidenceVariableCharacteristic> characteristic});
-
-  $ElementCopyWith<$Res>? get codeElement;
-  $ElementCopyWith<$Res>? get thresholdElement;
-}
-
-/// @nodoc
-class _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
-        $Val extends EvidenceVariableDefinitionByCombination>
-    implements $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
-  _$EvidenceVariableDefinitionByCombinationCopyWithImpl(
-      this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? code = freezed,
-    Object? codeElement = freezed,
-    Object? threshold = freezed,
-    Object? thresholdElement = freezed,
-    Object? characteristic = null,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
-      codeElement: freezed == codeElement
-          ? _value.codeElement
-          : codeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      threshold: freezed == threshold
-          ? _value.threshold
-          : threshold // ignore: cast_nullable_to_non_nullable
-              as FhirPositiveInt?,
-      thresholdElement: freezed == thresholdElement
-          ? _value.thresholdElement
-          : thresholdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      characteristic: null == characteristic
-          ? _value.characteristic
-          : characteristic // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableCharacteristic>,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get codeElement {
-    if (_value.codeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
-      return _then(_value.copyWith(codeElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get thresholdElement {
-    if (_value.thresholdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.thresholdElement!, (value) {
-      return _then(_value.copyWith(thresholdElement: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$EvidenceVariableDefinitionByCombinationImplCopyWith<$Res>
-    implements $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
-  factory _$$EvidenceVariableDefinitionByCombinationImplCopyWith(
-          _$EvidenceVariableDefinitionByCombinationImpl value,
-          $Res Function(_$EvidenceVariableDefinitionByCombinationImpl) then) =
-      __$$EvidenceVariableDefinitionByCombinationImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirCode? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      FhirPositiveInt? threshold,
-      @JsonKey(name: '_threshold') Element? thresholdElement,
-      List<EvidenceVariableCharacteristic> characteristic});
-
-  @override
-  $ElementCopyWith<$Res>? get codeElement;
-  @override
-  $ElementCopyWith<$Res>? get thresholdElement;
-}
-
-/// @nodoc
-class __$$EvidenceVariableDefinitionByCombinationImplCopyWithImpl<$Res>
-    extends _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
-        _$EvidenceVariableDefinitionByCombinationImpl>
-    implements _$$EvidenceVariableDefinitionByCombinationImplCopyWith<$Res> {
-  __$$EvidenceVariableDefinitionByCombinationImplCopyWithImpl(
-      _$EvidenceVariableDefinitionByCombinationImpl _value,
-      $Res Function(_$EvidenceVariableDefinitionByCombinationImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? code = freezed,
-    Object? codeElement = freezed,
-    Object? threshold = freezed,
-    Object? thresholdElement = freezed,
-    Object? characteristic = null,
-  }) {
-    return _then(_$EvidenceVariableDefinitionByCombinationImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
-      codeElement: freezed == codeElement
-          ? _value.codeElement
-          : codeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      threshold: freezed == threshold
-          ? _value.threshold
-          : threshold // ignore: cast_nullable_to_non_nullable
-              as FhirPositiveInt?,
-      thresholdElement: freezed == thresholdElement
-          ? _value.thresholdElement
-          : thresholdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      characteristic: null == characteristic
-          ? _value._characteristic
-          : characteristic // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceVariableCharacteristic>,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$EvidenceVariableDefinitionByCombinationImpl
-    extends _EvidenceVariableDefinitionByCombination {
-  const _$EvidenceVariableDefinitionByCombinationImpl(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.code,
-      @JsonKey(name: '_code') this.codeElement,
-      this.threshold,
-      @JsonKey(name: '_threshold') this.thresholdElement,
-      required final List<EvidenceVariableCharacteristic> characteristic})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _characteristic = characteristic,
-        super._();
-
-  factory _$EvidenceVariableDefinitionByCombinationImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$EvidenceVariableDefinitionByCombinationImplFromJson(json);
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  @override
-  final String? id;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  final List<FhirExtension>? _extension_;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  final List<FhirExtension>? _modifierExtension;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [code] Used to specify if two or more characteristics are combined with OR
-  ///  or AND.
-  @override
-  final FhirCode? code;
-
-  /// [codeElement] ("_code") Extensions for code
-  @override
-  @JsonKey(name: '_code')
-  final Element? codeElement;
-
-  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes
-  ///  are used.
-  @override
-  final FhirPositiveInt? threshold;
-
-  /// [thresholdElement] ("_threshold") Extensions for threshold
-  @override
-  @JsonKey(name: '_threshold')
-  final Element? thresholdElement;
-
-  /// [characteristic] A defining factor of the characteristic.
-  final List<EvidenceVariableCharacteristic> _characteristic;
-
-  /// [characteristic] A defining factor of the characteristic.
-  @override
-  List<EvidenceVariableCharacteristic> get characteristic {
-    if (_characteristic is EqualUnmodifiableListView) return _characteristic;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_characteristic);
-  }
-
-  @override
-  String toString() {
-    return 'EvidenceVariableDefinitionByCombination(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, threshold: $threshold, thresholdElement: $thresholdElement, characteristic: $characteristic)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EvidenceVariableDefinitionByCombinationImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.codeElement, codeElement) ||
-                other.codeElement == codeElement) &&
-            (identical(other.threshold, threshold) ||
-                other.threshold == threshold) &&
-            (identical(other.thresholdElement, thresholdElement) ||
-                other.thresholdElement == thresholdElement) &&
-            const DeepCollectionEquality()
-                .equals(other._characteristic, _characteristic));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      code,
-      codeElement,
-      threshold,
-      thresholdElement,
-      const DeepCollectionEquality().hash(_characteristic));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EvidenceVariableDefinitionByCombinationImplCopyWith<
-          _$EvidenceVariableDefinitionByCombinationImpl>
-      get copyWith =>
-          __$$EvidenceVariableDefinitionByCombinationImplCopyWithImpl<
-              _$EvidenceVariableDefinitionByCombinationImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EvidenceVariableDefinitionByCombinationImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EvidenceVariableDefinitionByCombination
-    extends EvidenceVariableDefinitionByCombination {
-  const factory _EvidenceVariableDefinitionByCombination(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirCode? code,
-          @JsonKey(name: '_code') final Element? codeElement,
-          final FhirPositiveInt? threshold,
-          @JsonKey(name: '_threshold') final Element? thresholdElement,
-          required final List<EvidenceVariableCharacteristic> characteristic}) =
-      _$EvidenceVariableDefinitionByCombinationImpl;
-  const _EvidenceVariableDefinitionByCombination._() : super._();
-
-  factory _EvidenceVariableDefinitionByCombination.fromJson(
-          Map<String, dynamic> json) =
-      _$EvidenceVariableDefinitionByCombinationImpl.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id;
-  @override
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension;
-  @override
-
-  /// [code] Used to specify if two or more characteristics are combined with OR
-  ///  or AND.
-  FhirCode? get code;
-  @override
-
-  /// [codeElement] ("_code") Extensions for code
-  @JsonKey(name: '_code')
-  Element? get codeElement;
-  @override
-
-  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes
-  ///  are used.
-  FhirPositiveInt? get threshold;
-  @override
-
-  /// [thresholdElement] ("_threshold") Extensions for threshold
-  @JsonKey(name: '_threshold')
-  Element? get thresholdElement;
-  @override
-
-  /// [characteristic] A defining factor of the characteristic.
-  List<EvidenceVariableCharacteristic> get characteristic;
-  @override
-  @JsonKey(ignore: true)
-  _$$EvidenceVariableDefinitionByCombinationImplCopyWith<
-          _$EvidenceVariableDefinitionByCombinationImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EvidenceVariableTimeFromEvent _$EvidenceVariableTimeFromEventFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceVariableTimeFromEvent.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EvidenceVariableTimeFromEvent {
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id => throw _privateConstructorUsedError;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-
-  /// [description] Human readable description.
-  FhirMarkdown? get description => throw _privateConstructorUsedError;
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  timeFromEvent.
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-
-  /// [eventCodeableConcept] The event used as a base point (reference point) in
-  ///  time.
-  CodeableConcept? get eventCodeableConcept =>
-      throw _privateConstructorUsedError;
-
-  /// [eventReference] The event used as a base point (reference point) in time.
-  Reference? get eventReference => throw _privateConstructorUsedError;
-
-  /// [eventDateTime] The event used as a base point (reference point) in time.
-  FhirDateTime? get eventDateTime => throw _privateConstructorUsedError;
-
-  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
-  @JsonKey(name: '_eventDateTime')
-  Element? get eventDateTimeElement => throw _privateConstructorUsedError;
-
-  /// [eventId] The event used as a base point (reference point) in time.
-  FhirId? get eventId => throw _privateConstructorUsedError;
-
-  /// [eventIdElement] ("_eventId") Extensions for eventId
-  @JsonKey(name: '_eventId')
-  Element? get eventIdElement => throw _privateConstructorUsedError;
-
-  /// [quantity] Used to express the observation at a defined amount of time
-  ///  before or after the event.
-  Quantity? get quantity => throw _privateConstructorUsedError;
-
-  /// [range] Used to express the observation within a period before and/or after
-  ///  the event.
-  Range? get range => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceVariableTimeFromEventCopyWith<EvidenceVariableTimeFromEvent>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceVariableTimeFromEventCopyWith<$Res> {
-  factory $EvidenceVariableTimeFromEventCopyWith(
-          EvidenceVariableTimeFromEvent value,
-          $Res Function(EvidenceVariableTimeFromEvent) then) =
-      _$EvidenceVariableTimeFromEventCopyWithImpl<$Res,
-          EvidenceVariableTimeFromEvent>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirMarkdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation>? note,
-      CodeableConcept? eventCodeableConcept,
-      Reference? eventReference,
-      FhirDateTime? eventDateTime,
-      @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
-      FhirId? eventId,
-      @JsonKey(name: '_eventId') Element? eventIdElement,
-      Quantity? quantity,
-      Range? range});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $CodeableConceptCopyWith<$Res>? get eventCodeableConcept;
-  $ReferenceCopyWith<$Res>? get eventReference;
-  $ElementCopyWith<$Res>? get eventDateTimeElement;
-  $ElementCopyWith<$Res>? get eventIdElement;
-  $QuantityCopyWith<$Res>? get quantity;
-  $RangeCopyWith<$Res>? get range;
-}
-
-/// @nodoc
-class _$EvidenceVariableTimeFromEventCopyWithImpl<$Res,
-        $Val extends EvidenceVariableTimeFromEvent>
-    implements $EvidenceVariableTimeFromEventCopyWith<$Res> {
-  _$EvidenceVariableTimeFromEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? eventCodeableConcept = freezed,
-    Object? eventReference = freezed,
-    Object? eventDateTime = freezed,
-    Object? eventDateTimeElement = freezed,
-    Object? eventId = freezed,
-    Object? eventIdElement = freezed,
-    Object? quantity = freezed,
-    Object? range = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as FhirMarkdown?,
-      descriptionElement: freezed == descriptionElement
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      eventCodeableConcept: freezed == eventCodeableConcept
-          ? _value.eventCodeableConcept
-          : eventCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      eventReference: freezed == eventReference
-          ? _value.eventReference
-          : eventReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      eventDateTime: freezed == eventDateTime
-          ? _value.eventDateTime
-          : eventDateTime // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      eventDateTimeElement: freezed == eventDateTimeElement
-          ? _value.eventDateTimeElement
-          : eventDateTimeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      eventId: freezed == eventId
-          ? _value.eventId
-          : eventId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      eventIdElement: freezed == eventIdElement
-          ? _value.eventIdElement
-          : eventIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      quantity: freezed == quantity
-          ? _value.quantity
-          : quantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      range: freezed == range
-          ? _value.range
-          : range // ignore: cast_nullable_to_non_nullable
-              as Range?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get eventCodeableConcept {
-    if (_value.eventCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.eventCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(eventCodeableConcept: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get eventReference {
-    if (_value.eventReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.eventReference!, (value) {
-      return _then(_value.copyWith(eventReference: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get eventDateTimeElement {
-    if (_value.eventDateTimeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.eventDateTimeElement!, (value) {
-      return _then(_value.copyWith(eventDateTimeElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get eventIdElement {
-    if (_value.eventIdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.eventIdElement!, (value) {
-      return _then(_value.copyWith(eventIdElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
-      return _then(_value.copyWith(quantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get range {
-    if (_value.range == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.range!, (value) {
-      return _then(_value.copyWith(range: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$EvidenceVariableTimeFromEventImplCopyWith<$Res>
-    implements $EvidenceVariableTimeFromEventCopyWith<$Res> {
-  factory _$$EvidenceVariableTimeFromEventImplCopyWith(
-          _$EvidenceVariableTimeFromEventImpl value,
-          $Res Function(_$EvidenceVariableTimeFromEventImpl) then) =
-      __$$EvidenceVariableTimeFromEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirMarkdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation>? note,
-      CodeableConcept? eventCodeableConcept,
-      Reference? eventReference,
-      FhirDateTime? eventDateTime,
-      @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
-      FhirId? eventId,
-      @JsonKey(name: '_eventId') Element? eventIdElement,
-      Quantity? quantity,
-      Range? range});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get eventCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get eventReference;
-  @override
-  $ElementCopyWith<$Res>? get eventDateTimeElement;
-  @override
-  $ElementCopyWith<$Res>? get eventIdElement;
-  @override
-  $QuantityCopyWith<$Res>? get quantity;
-  @override
-  $RangeCopyWith<$Res>? get range;
-}
-
-/// @nodoc
-class __$$EvidenceVariableTimeFromEventImplCopyWithImpl<$Res>
-    extends _$EvidenceVariableTimeFromEventCopyWithImpl<$Res,
-        _$EvidenceVariableTimeFromEventImpl>
-    implements _$$EvidenceVariableTimeFromEventImplCopyWith<$Res> {
-  __$$EvidenceVariableTimeFromEventImplCopyWithImpl(
-      _$EvidenceVariableTimeFromEventImpl _value,
-      $Res Function(_$EvidenceVariableTimeFromEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? eventCodeableConcept = freezed,
-    Object? eventReference = freezed,
-    Object? eventDateTime = freezed,
-    Object? eventDateTimeElement = freezed,
-    Object? eventId = freezed,
-    Object? eventIdElement = freezed,
-    Object? quantity = freezed,
-    Object? range = freezed,
-  }) {
-    return _then(_$EvidenceVariableTimeFromEventImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as FhirMarkdown?,
-      descriptionElement: freezed == descriptionElement
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: freezed == note
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      eventCodeableConcept: freezed == eventCodeableConcept
-          ? _value.eventCodeableConcept
-          : eventCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      eventReference: freezed == eventReference
-          ? _value.eventReference
-          : eventReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      eventDateTime: freezed == eventDateTime
-          ? _value.eventDateTime
-          : eventDateTime // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      eventDateTimeElement: freezed == eventDateTimeElement
-          ? _value.eventDateTimeElement
-          : eventDateTimeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      eventId: freezed == eventId
-          ? _value.eventId
-          : eventId // ignore: cast_nullable_to_non_nullable
-              as FhirId?,
-      eventIdElement: freezed == eventIdElement
-          ? _value.eventIdElement
-          : eventIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      quantity: freezed == quantity
-          ? _value.quantity
-          : quantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      range: freezed == range
-          ? _value.range
-          : range // ignore: cast_nullable_to_non_nullable
-              as Range?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$EvidenceVariableTimeFromEventImpl
-    extends _EvidenceVariableTimeFromEvent {
-  const _$EvidenceVariableTimeFromEventImpl(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      final List<Annotation>? note,
-      this.eventCodeableConcept,
-      this.eventReference,
-      this.eventDateTime,
-      @JsonKey(name: '_eventDateTime') this.eventDateTimeElement,
-      this.eventId,
-      @JsonKey(name: '_eventId') this.eventIdElement,
-      this.quantity,
-      this.range})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _note = note,
-        super._();
-
-  factory _$EvidenceVariableTimeFromEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$EvidenceVariableTimeFromEventImplFromJson(json);
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  @override
-  final String? id;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  final List<FhirExtension>? _extension_;
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  final List<FhirExtension>? _modifierExtension;
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [description] Human readable description.
-  @override
-  final FhirMarkdown? description;
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  timeFromEvent.
-  final List<Annotation>? _note;
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  timeFromEvent.
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    if (_note is EqualUnmodifiableListView) return _note;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  /// [eventCodeableConcept] The event used as a base point (reference point) in
-  ///  time.
-  @override
-  final CodeableConcept? eventCodeableConcept;
-
-  /// [eventReference] The event used as a base point (reference point) in time.
-  @override
-  final Reference? eventReference;
-
-  /// [eventDateTime] The event used as a base point (reference point) in time.
-  @override
-  final FhirDateTime? eventDateTime;
-
-  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
-  @override
-  @JsonKey(name: '_eventDateTime')
-  final Element? eventDateTimeElement;
-
-  /// [eventId] The event used as a base point (reference point) in time.
-  @override
-  final FhirId? eventId;
-
-  /// [eventIdElement] ("_eventId") Extensions for eventId
-  @override
-  @JsonKey(name: '_eventId')
-  final Element? eventIdElement;
-
-  /// [quantity] Used to express the observation at a defined amount of time
-  ///  before or after the event.
-  @override
-  final Quantity? quantity;
-
-  /// [range] Used to express the observation within a period before and/or after
-  ///  the event.
-  @override
-  final Range? range;
-
-  @override
-  String toString() {
-    return 'EvidenceVariableTimeFromEvent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, eventCodeableConcept: $eventCodeableConcept, eventReference: $eventReference, eventDateTime: $eventDateTime, eventDateTimeElement: $eventDateTimeElement, eventId: $eventId, eventIdElement: $eventIdElement, quantity: $quantity, range: $range)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EvidenceVariableTimeFromEventImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            (identical(other.eventCodeableConcept, eventCodeableConcept) ||
-                other.eventCodeableConcept == eventCodeableConcept) &&
-            (identical(other.eventReference, eventReference) ||
-                other.eventReference == eventReference) &&
-            (identical(other.eventDateTime, eventDateTime) ||
-                other.eventDateTime == eventDateTime) &&
-            (identical(other.eventDateTimeElement, eventDateTimeElement) ||
-                other.eventDateTimeElement == eventDateTimeElement) &&
-            (identical(other.eventId, eventId) || other.eventId == eventId) &&
-            (identical(other.eventIdElement, eventIdElement) ||
-                other.eventIdElement == eventIdElement) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
-            (identical(other.range, range) || other.range == range));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      description,
-      descriptionElement,
-      const DeepCollectionEquality().hash(_note),
-      eventCodeableConcept,
-      eventReference,
-      eventDateTime,
-      eventDateTimeElement,
-      eventId,
-      eventIdElement,
-      quantity,
-      range);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EvidenceVariableTimeFromEventImplCopyWith<
-          _$EvidenceVariableTimeFromEventImpl>
-      get copyWith => __$$EvidenceVariableTimeFromEventImplCopyWithImpl<
-          _$EvidenceVariableTimeFromEventImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EvidenceVariableTimeFromEventImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EvidenceVariableTimeFromEvent
-    extends EvidenceVariableTimeFromEvent {
-  const factory _EvidenceVariableTimeFromEvent(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirMarkdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<Annotation>? note,
-      final CodeableConcept? eventCodeableConcept,
-      final Reference? eventReference,
-      final FhirDateTime? eventDateTime,
-      @JsonKey(name: '_eventDateTime') final Element? eventDateTimeElement,
-      final FhirId? eventId,
-      @JsonKey(name: '_eventId') final Element? eventIdElement,
-      final Quantity? quantity,
-      final Range? range}) = _$EvidenceVariableTimeFromEventImpl;
-  const _EvidenceVariableTimeFromEvent._() : super._();
-
-  factory _EvidenceVariableTimeFromEvent.fromJson(Map<String, dynamic> json) =
-      _$EvidenceVariableTimeFromEventImpl.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal references).
-  ///  This may be any string value that does not contain spaces.
-  String? get id;
-  @override
-
-  /// [extension_] ("extension") May be used to represent additional information
-  ///  that is not part of the basic definition of the element. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be met
-  ///  as part of the definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-
-  /// [modifierExtension] May be used to represent additional information that is
-  ///  not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of extensions
-  ///  safe and managable, there is a strict set of governance applied to the
-  ///  definition and use of extensions. Though any implementer can define an
-  ///  extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension. Applications processing a resource are
-  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
-  ///  change the meaning of any elements on Resource or DomainResource
-  ///  (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension;
-  @override
-
-  /// [description] Human readable description.
-  FhirMarkdown? get description;
-  @override
-
-  /// [descriptionElement] ("_description") Extensions for description
-  @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  @override
-
-  /// [note] A human-readable string to clarify or explain concepts about the
-  ///  timeFromEvent.
-  List<Annotation>? get note;
-  @override
-
-  /// [eventCodeableConcept] The event used as a base point (reference point) in
-  ///  time.
-  CodeableConcept? get eventCodeableConcept;
-  @override
-
-  /// [eventReference] The event used as a base point (reference point) in time.
-  Reference? get eventReference;
-  @override
-
-  /// [eventDateTime] The event used as a base point (reference point) in time.
-  FhirDateTime? get eventDateTime;
-  @override
-
-  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
-  @JsonKey(name: '_eventDateTime')
-  Element? get eventDateTimeElement;
-  @override
-
-  /// [eventId] The event used as a base point (reference point) in time.
-  FhirId? get eventId;
-  @override
-
-  /// [eventIdElement] ("_eventId") Extensions for eventId
-  @JsonKey(name: '_eventId')
-  Element? get eventIdElement;
-  @override
-
-  /// [quantity] Used to express the observation at a defined amount of time
-  ///  before or after the event.
-  Quantity? get quantity;
-  @override
-
-  /// [range] Used to express the observation within a period before and/or after
-  ///  the event.
-  Range? get range;
-  @override
-  @JsonKey(ignore: true)
-  _$$EvidenceVariableTimeFromEventImplCopyWith<
-          _$EvidenceVariableTimeFromEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 EvidenceVariableCategory _$EvidenceVariableCategoryFromJson(
@@ -34274,6 +31583,9 @@ mixin _$EvidenceVariableCategory {
   /// [valueRange] Definition of the grouping.
   Range? get valueRange => throw _privateConstructorUsedError;
 
+  /// [valueReference] Definition of the grouping.
+  Reference? get valueReference => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EvidenceVariableCategoryCopyWith<EvidenceVariableCategory> get copyWith =>
@@ -34294,12 +31606,14 @@ abstract class $EvidenceVariableCategoryCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Range? valueRange});
+      Range? valueRange,
+      Reference? valueReference});
 
   $ElementCopyWith<$Res>? get nameElement;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -34324,6 +31638,7 @@ class _$EvidenceVariableCategoryCopyWithImpl<$Res,
     Object? valueCodeableConcept = freezed,
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
+    Object? valueReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -34358,6 +31673,10 @@ class _$EvidenceVariableCategoryCopyWithImpl<$Res,
           ? _value.valueRange
           : valueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
+      valueReference: freezed == valueReference
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ) as $Val);
   }
 
@@ -34409,6 +31728,18 @@ class _$EvidenceVariableCategoryCopyWithImpl<$Res,
       return _then(_value.copyWith(valueRange: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -34428,7 +31759,8 @@ abstract class _$$EvidenceVariableCategoryImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Range? valueRange});
+      Range? valueRange,
+      Reference? valueReference});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -34438,6 +31770,8 @@ abstract class _$$EvidenceVariableCategoryImplCopyWith<$Res>
   $QuantityCopyWith<$Res>? get valueQuantity;
   @override
   $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -34461,6 +31795,7 @@ class __$$EvidenceVariableCategoryImplCopyWithImpl<$Res>
     Object? valueCodeableConcept = freezed,
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
+    Object? valueReference = freezed,
   }) {
     return _then(_$EvidenceVariableCategoryImpl(
       id: freezed == id
@@ -34495,6 +31830,10 @@ class __$$EvidenceVariableCategoryImplCopyWithImpl<$Res>
           ? _value.valueRange
           : valueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
+      valueReference: freezed == valueReference
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -34510,7 +31849,8 @@ class _$EvidenceVariableCategoryImpl extends _EvidenceVariableCategory {
       @JsonKey(name: '_name') this.nameElement,
       this.valueCodeableConcept,
       this.valueQuantity,
-      this.valueRange})
+      this.valueRange,
+      this.valueReference})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -34604,9 +31944,13 @@ class _$EvidenceVariableCategoryImpl extends _EvidenceVariableCategory {
   @override
   final Range? valueRange;
 
+  /// [valueReference] Definition of the grouping.
+  @override
+  final Reference? valueReference;
+
   @override
   String toString() {
-    return 'EvidenceVariableCategory(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueCodeableConcept: $valueCodeableConcept, valueQuantity: $valueQuantity, valueRange: $valueRange)';
+    return 'EvidenceVariableCategory(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueCodeableConcept: $valueCodeableConcept, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference)';
   }
 
   @override
@@ -34627,7 +31971,9 @@ class _$EvidenceVariableCategoryImpl extends _EvidenceVariableCategory {
             (identical(other.valueQuantity, valueQuantity) ||
                 other.valueQuantity == valueQuantity) &&
             (identical(other.valueRange, valueRange) ||
-                other.valueRange == valueRange));
+                other.valueRange == valueRange) &&
+            (identical(other.valueReference, valueReference) ||
+                other.valueReference == valueReference));
   }
 
   @JsonKey(ignore: true)
@@ -34641,7 +31987,8 @@ class _$EvidenceVariableCategoryImpl extends _EvidenceVariableCategory {
       nameElement,
       valueCodeableConcept,
       valueQuantity,
-      valueRange);
+      valueRange,
+      valueReference);
 
   @JsonKey(ignore: true)
   @override
@@ -34667,7 +32014,8 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
       @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? valueCodeableConcept,
       final Quantity? valueQuantity,
-      final Range? valueRange}) = _$EvidenceVariableCategoryImpl;
+      final Range? valueRange,
+      final Reference? valueReference}) = _$EvidenceVariableCategoryImpl;
   const _EvidenceVariableCategory._() : super._();
 
   factory _EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =
@@ -34724,6 +32072,10 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
 
   /// [valueRange] Definition of the grouping.
   Range? get valueRange;
+  @override
+
+  /// [valueReference] Definition of the grouping.
+  Reference? get valueReference;
   @override
   @JsonKey(ignore: true)
   _$$EvidenceVariableCategoryImplCopyWith<_$EvidenceVariableCategoryImpl>

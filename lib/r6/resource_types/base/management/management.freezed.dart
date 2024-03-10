@@ -20,8 +20,9 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Encounter {
-  @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a Encounter resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -242,8 +243,8 @@ abstract class $EncounterCopyWith<$Res> {
       _$EncounterCopyWithImpl<$Res, Encounter>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -363,7 +364,7 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -721,8 +722,8 @@ abstract class _$$EncounterImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -855,7 +856,7 @@ class __$$EncounterImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1028,8 +1029,8 @@ class __$$EncounterImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EncounterImpl extends _Encounter {
   const _$EncounterImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-      this.resourceType = R5ResourceType.Encounter,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+      this.resourceType = R6ResourceType.Encounter,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1096,9 +1097,10 @@ class _$EncounterImpl extends _Encounter {
   factory _$EncounterImpl.fromJson(Map<String, dynamic> json) =>
       _$$EncounterImplFromJson(json);
 
+  /// [resourceType] This is a Encounter resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1710,8 +1712,8 @@ class _$EncounterImpl extends _Encounter {
 
 abstract class _Encounter extends Encounter {
   const factory _Encounter(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -1760,8 +1762,10 @@ abstract class _Encounter extends Encounter {
       _$EncounterImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a Encounter resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Encounter)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -4296,8 +4300,9 @@ EncounterHistory _$EncounterHistoryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EncounterHistory {
-  @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a EncounterHistory resource
+  @JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -4449,8 +4454,8 @@ abstract class $EncounterHistoryCopyWith<$Res> {
       _$EncounterHistoryCopyWithImpl<$Res, EncounterHistory>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -4538,7 +4543,7 @@ class _$EncounterHistoryCopyWithImpl<$Res, $Val extends EncounterHistory>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4808,8 +4813,8 @@ abstract class _$$EncounterHistoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -4908,7 +4913,7 @@ class __$$EncounterHistoryImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5021,8 +5026,8 @@ class __$$EncounterHistoryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EncounterHistoryImpl extends _EncounterHistory {
   const _$EncounterHistoryImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-      this.resourceType = R5ResourceType.EncounterHistory,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+      this.resourceType = R6ResourceType.EncounterHistory,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5061,9 +5066,10 @@ class _$EncounterHistoryImpl extends _EncounterHistory {
   factory _$EncounterHistoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$EncounterHistoryImplFromJson(json);
 
+  /// [resourceType] This is a EncounterHistory resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5421,8 +5427,8 @@ class _$EncounterHistoryImpl extends _EncounterHistory {
 
 abstract class _EncounterHistory extends EncounterHistory {
   const factory _EncounterHistory(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -5456,8 +5462,10 @@ abstract class _EncounterHistory extends EncounterHistory {
       _$EncounterHistoryImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a EncounterHistory resource
+  @JsonKey(unknownEnumValue: R6ResourceType.EncounterHistory)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -6021,8 +6029,9 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EpisodeOfCare {
-  @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a EpisodeOfCare resource
+  @JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6119,8 +6128,8 @@ mixin _$EpisodeOfCare {
   List<EpisodeOfCareDiagnosis>? get diagnosis =>
       throw _privateConstructorUsedError;
 
-  /// [patient] The patient who is the focus of this episode of care.
-  Reference get patient => throw _privateConstructorUsedError;
+  /// [subject] The patient/group who is the focus of this episode of care.
+  Reference get subject => throw _privateConstructorUsedError;
 
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for care coordination, care delivery, or other services
@@ -6160,8 +6169,8 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       _$EpisodeOfCareCopyWithImpl<$Res, EpisodeOfCare>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -6179,7 +6188,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       List<CodeableConcept>? type,
       List<EpisodeOfCareReason>? reason,
       List<EpisodeOfCareDiagnosis>? diagnosis,
-      Reference patient,
+      Reference subject,
       Reference? managingOrganization,
       Period? period,
       List<Reference>? referralRequest,
@@ -6192,7 +6201,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res> get patient;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get managingOrganization;
   $PeriodCopyWith<$Res>? get period;
   $ReferenceCopyWith<$Res>? get careManager;
@@ -6229,7 +6238,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
     Object? type = freezed,
     Object? reason = freezed,
     Object? diagnosis = freezed,
-    Object? patient = null,
+    Object? subject = null,
     Object? managingOrganization = freezed,
     Object? period = freezed,
     Object? referralRequest = freezed,
@@ -6241,7 +6250,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6310,9 +6319,9 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
           ? _value.diagnosis
           : diagnosis // ignore: cast_nullable_to_non_nullable
               as List<EpisodeOfCareDiagnosis>?,
-      patient: null == patient
-          ? _value.patient
-          : patient // ignore: cast_nullable_to_non_nullable
+      subject: null == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
       managingOrganization: freezed == managingOrganization
           ? _value.managingOrganization
@@ -6403,9 +6412,9 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
 
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res> get patient {
-    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
-      return _then(_value.copyWith(patient: value) as $Val);
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
@@ -6455,8 +6464,8 @@ abstract class _$$EpisodeOfCareImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -6474,7 +6483,7 @@ abstract class _$$EpisodeOfCareImplCopyWith<$Res>
       List<CodeableConcept>? type,
       List<EpisodeOfCareReason>? reason,
       List<EpisodeOfCareDiagnosis>? diagnosis,
-      Reference patient,
+      Reference subject,
       Reference? managingOrganization,
       Period? period,
       List<Reference>? referralRequest,
@@ -6493,7 +6502,7 @@ abstract class _$$EpisodeOfCareImplCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res> get patient;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get managingOrganization;
   @override
@@ -6531,7 +6540,7 @@ class __$$EpisodeOfCareImplCopyWithImpl<$Res>
     Object? type = freezed,
     Object? reason = freezed,
     Object? diagnosis = freezed,
-    Object? patient = null,
+    Object? subject = null,
     Object? managingOrganization = freezed,
     Object? period = freezed,
     Object? referralRequest = freezed,
@@ -6543,7 +6552,7 @@ class __$$EpisodeOfCareImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6612,9 +6621,9 @@ class __$$EpisodeOfCareImplCopyWithImpl<$Res>
           ? _value._diagnosis
           : diagnosis // ignore: cast_nullable_to_non_nullable
               as List<EpisodeOfCareDiagnosis>?,
-      patient: null == patient
-          ? _value.patient
-          : patient // ignore: cast_nullable_to_non_nullable
+      subject: null == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
       managingOrganization: freezed == managingOrganization
           ? _value.managingOrganization
@@ -6648,8 +6657,8 @@ class __$$EpisodeOfCareImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EpisodeOfCareImpl extends _EpisodeOfCare {
   const _$EpisodeOfCareImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-      this.resourceType = R5ResourceType.EpisodeOfCare,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+      this.resourceType = R6ResourceType.EpisodeOfCare,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6667,7 +6676,7 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
       final List<CodeableConcept>? type,
       final List<EpisodeOfCareReason>? reason,
       final List<EpisodeOfCareDiagnosis>? diagnosis,
-      required this.patient,
+      required this.subject,
       this.managingOrganization,
       this.period,
       final List<Reference>? referralRequest,
@@ -6690,9 +6699,10 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
   factory _$EpisodeOfCareImpl.fromJson(Map<String, dynamic> json) =>
       _$$EpisodeOfCareImplFromJson(json);
 
+  /// [resourceType] This is a EpisodeOfCare resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6902,9 +6912,9 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [patient] The patient who is the focus of this episode of care.
+  /// [subject] The patient/group who is the focus of this episode of care.
   @override
-  final Reference patient;
+  final Reference subject;
 
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for care coordination, care delivery, or other services
@@ -6969,7 +6979,7 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
 
   @override
   String toString() {
-    return 'EpisodeOfCare(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, type: $type, reason: $reason, diagnosis: $diagnosis, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, careTeam: $careTeam, account: $account)';
+    return 'EpisodeOfCare(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, type: $type, reason: $reason, diagnosis: $diagnosis, subject: $subject, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, careTeam: $careTeam, account: $account)';
   }
 
   @override
@@ -7007,7 +7017,7 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
             const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality()
                 .equals(other._diagnosis, _diagnosis) &&
-            (identical(other.patient, patient) || other.patient == patient) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
             (identical(other.managingOrganization, managingOrganization) ||
                 other.managingOrganization == managingOrganization) &&
             (identical(other.period, period) || other.period == period) &&
@@ -7041,7 +7051,7 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
         const DeepCollectionEquality().hash(_type),
         const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(_diagnosis),
-        patient,
+        subject,
         managingOrganization,
         period,
         const DeepCollectionEquality().hash(_referralRequest),
@@ -7066,8 +7076,8 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
 
 abstract class _EpisodeOfCare extends EpisodeOfCare {
   const factory _EpisodeOfCare(
-      {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -7085,7 +7095,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       final List<CodeableConcept>? type,
       final List<EpisodeOfCareReason>? reason,
       final List<EpisodeOfCareDiagnosis>? diagnosis,
-      required final Reference patient,
+      required final Reference subject,
       final Reference? managingOrganization,
       final Period? period,
       final List<Reference>? referralRequest,
@@ -7098,8 +7108,10 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       _$EpisodeOfCareImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a EpisodeOfCare resource
+  @JsonKey(unknownEnumValue: R6ResourceType.EpisodeOfCare)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -7211,8 +7223,8 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   List<EpisodeOfCareDiagnosis>? get diagnosis;
   @override
 
-  /// [patient] The patient who is the focus of this episode of care.
-  Reference get patient;
+  /// [subject] The patient/group who is the focus of this episode of care.
+  Reference get subject;
   @override
 
   /// [managingOrganization] The organization that has assumed the specific
@@ -8456,8 +8468,9 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Flag {
-  @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a Flag resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Flag)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -8560,6 +8573,10 @@ mixin _$Flag {
   /// [author] The person, organization or device that created the flag.
   Reference? get author => throw _privateConstructorUsedError;
 
+  /// [supportingInfo] Additional information that may be relevant to the flag,
+  ///  such as why the flag was created or how to guide management of the flag.
+  List<Reference>? get supportingInfo => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FlagCopyWith<Flag> get copyWith => throw _privateConstructorUsedError;
@@ -8571,8 +8588,8 @@ abstract class $FlagCopyWith<$Res> {
       _$FlagCopyWithImpl<$Res, Flag>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Flag)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -8591,7 +8608,8 @@ abstract class $FlagCopyWith<$Res> {
       Reference subject,
       Period? period,
       Reference? encounter,
-      Reference? author});
+      Reference? author,
+      List<Reference>? supportingInfo});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8638,12 +8656,13 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
     Object? period = freezed,
     Object? encounter = freezed,
     Object? author = freezed,
+    Object? supportingInfo = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8720,6 +8739,10 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      supportingInfo: freezed == supportingInfo
+          ? _value.supportingInfo
+          : supportingInfo // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ) as $Val);
   }
 
@@ -8844,8 +8867,8 @@ abstract class _$$FlagImplCopyWith<$Res> implements $FlagCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Flag)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -8864,7 +8887,8 @@ abstract class _$$FlagImplCopyWith<$Res> implements $FlagCopyWith<$Res> {
       Reference subject,
       Period? period,
       Reference? encounter,
-      Reference? author});
+      Reference? author,
+      List<Reference>? supportingInfo});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -8918,12 +8942,13 @@ class __$$FlagImplCopyWithImpl<$Res>
     Object? period = freezed,
     Object? encounter = freezed,
     Object? author = freezed,
+    Object? supportingInfo = freezed,
   }) {
     return _then(_$FlagImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9000,6 +9025,10 @@ class __$$FlagImplCopyWithImpl<$Res>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      supportingInfo: freezed == supportingInfo
+          ? _value._supportingInfo
+          : supportingInfo // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -9008,8 +9037,8 @@ class __$$FlagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FlagImpl extends _Flag {
   const _$FlagImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
-      this.resourceType = R5ResourceType.Flag,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Flag)
+      this.resourceType = R6ResourceType.Flag,
       this.id,
       this.meta,
       this.implicitRules,
@@ -9028,20 +9057,23 @@ class _$FlagImpl extends _Flag {
       required this.subject,
       this.period,
       this.encounter,
-      this.author})
+      this.author,
+      final List<Reference>? supportingInfo})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
         _category = category,
+        _supportingInfo = supportingInfo,
         super._();
 
   factory _$FlagImpl.fromJson(Map<String, dynamic> json) =>
       _$$FlagImplFromJson(json);
 
+  /// [resourceType] This is a Flag resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Flag)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -9232,9 +9264,24 @@ class _$FlagImpl extends _Flag {
   @override
   final Reference? author;
 
+  /// [supportingInfo] Additional information that may be relevant to the flag,
+  ///  such as why the flag was created or how to guide management of the flag.
+  final List<Reference>? _supportingInfo;
+
+  /// [supportingInfo] Additional information that may be relevant to the flag,
+  ///  such as why the flag was created or how to guide management of the flag.
+  @override
+  List<Reference>? get supportingInfo {
+    final value = _supportingInfo;
+    if (value == null) return null;
+    if (_supportingInfo is EqualUnmodifiableListView) return _supportingInfo;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'Flag(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author)';
+    return 'Flag(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author, supportingInfo: $supportingInfo)';
   }
 
   @override
@@ -9272,7 +9319,9 @@ class _$FlagImpl extends _Flag {
             (identical(other.period, period) || other.period == period) &&
             (identical(other.encounter, encounter) ||
                 other.encounter == encounter) &&
-            (identical(other.author, author) || other.author == author));
+            (identical(other.author, author) || other.author == author) &&
+            const DeepCollectionEquality()
+                .equals(other._supportingInfo, _supportingInfo));
   }
 
   @JsonKey(ignore: true)
@@ -9298,7 +9347,8 @@ class _$FlagImpl extends _Flag {
         subject,
         period,
         encounter,
-        author
+        author,
+        const DeepCollectionEquality().hash(_supportingInfo)
       ]);
 
   @JsonKey(ignore: true)
@@ -9317,8 +9367,8 @@ class _$FlagImpl extends _Flag {
 
 abstract class _Flag extends Flag {
   const factory _Flag(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Flag)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -9337,14 +9387,17 @@ abstract class _Flag extends Flag {
       required final Reference subject,
       final Period? period,
       final Reference? encounter,
-      final Reference? author}) = _$FlagImpl;
+      final Reference? author,
+      final List<Reference>? supportingInfo}) = _$FlagImpl;
   const _Flag._() : super._();
 
   factory _Flag.fromJson(Map<String, dynamic> json) = _$FlagImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a Flag resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Flag)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -9465,6 +9518,11 @@ abstract class _Flag extends Flag {
   /// [author] The person, organization or device that created the flag.
   Reference? get author;
   @override
+
+  /// [supportingInfo] Additional information that may be relevant to the flag,
+  ///  such as why the flag was created or how to guide management of the flag.
+  List<Reference>? get supportingInfo;
+  @override
   @JsonKey(ignore: true)
   _$$FlagImplCopyWith<_$FlagImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -9476,8 +9534,9 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Library {
-  @JsonKey(unknownEnumValue: R5ResourceType.Library)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a Library resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Library)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -9798,8 +9857,8 @@ abstract class $LibraryCopyWith<$Res> {
       _$LibraryCopyWithImpl<$Res, Library>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Library)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Library)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -9973,7 +10032,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -10545,8 +10604,8 @@ abstract class _$$LibraryImplCopyWith<$Res> implements $LibraryCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Library)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Library)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -10744,7 +10803,7 @@ class __$$LibraryImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11001,8 +11060,8 @@ class __$$LibraryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$LibraryImpl extends _Library {
   const _$LibraryImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Library)
-      this.resourceType = R5ResourceType.Library,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Library)
+      this.resourceType = R6ResourceType.Library,
       this.id,
       this.meta,
       this.implicitRules,
@@ -11087,9 +11146,10 @@ class _$LibraryImpl extends _Library {
   factory _$LibraryImpl.fromJson(Map<String, dynamic> json) =>
       _$$LibraryImplFromJson(json);
 
+  /// [resourceType] This is a Library resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Library)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Library)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -11838,8 +11898,8 @@ class _$LibraryImpl extends _Library {
 
 abstract class _Library extends Library {
   const factory _Library(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Library)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Library)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -11908,8 +11968,10 @@ abstract class _Library extends Library {
   factory _Library.fromJson(Map<String, dynamic> json) = _$LibraryImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Library)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a Library resource
+  @JsonKey(unknownEnumValue: R6ResourceType.Library)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -12286,8 +12348,9 @@ FhirList _$FhirListFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirList {
-  @JsonKey(unknownEnumValue: R5ResourceType.List)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  /// [resourceType] This is a List resource
+  @JsonKey(unknownEnumValue: R6ResourceType.List)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -12429,8 +12492,8 @@ abstract class $FhirListCopyWith<$Res> {
       _$FhirListCopyWithImpl<$Res, FhirList>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.List)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.List)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -12520,7 +12583,7 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -12798,8 +12861,8 @@ abstract class _$$FhirListImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.List)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.List)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -12900,7 +12963,7 @@ class __$$FhirListImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -13016,9 +13079,9 @@ class __$$FhirListImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FhirListImpl extends _FhirList {
-  _$FhirListImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.List)
-      this.resourceType = R5ResourceType.List,
+  const _$FhirListImpl(
+      {@JsonKey(unknownEnumValue: R6ResourceType.List)
+      this.resourceType = R6ResourceType.List,
       this.id,
       this.meta,
       this.implicitRules,
@@ -13058,9 +13121,10 @@ class _$FhirListImpl extends _FhirList {
   factory _$FhirListImpl.fromJson(Map<String, dynamic> json) =>
       _$$FhirListImplFromJson(json);
 
+  /// [resourceType] This is a List resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.List)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.List)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -13407,9 +13471,9 @@ class _$FhirListImpl extends _FhirList {
 }
 
 abstract class _FhirList extends FhirList {
-  factory _FhirList(
-      {@JsonKey(unknownEnumValue: R5ResourceType.List)
-      final R5ResourceType resourceType,
+  const factory _FhirList(
+      {@JsonKey(unknownEnumValue: R6ResourceType.List)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -13437,14 +13501,16 @@ abstract class _FhirList extends FhirList {
       final List<Annotation>? note,
       final List<ListEntry>? entry,
       final CodeableConcept? emptyReason}) = _$FhirListImpl;
-  _FhirList._() : super._();
+  const _FhirList._() : super._();
 
   factory _FhirList.fromJson(Map<String, dynamic> json) =
       _$FhirListImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.List)
-  R5ResourceType get resourceType;
+
+  /// [resourceType] This is a List resource
+  @JsonKey(unknownEnumValue: R6ResourceType.List)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

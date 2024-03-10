@@ -21,8 +21,8 @@ FormularyItem _$FormularyItemFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FormularyItem {
   /// [resourceType] This is a FormularyItem resource
-  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -117,8 +117,8 @@ abstract class $FormularyItemCopyWith<$Res> {
       _$FormularyItemCopyWithImpl<$Res, FormularyItem>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -175,7 +175,7 @@ class _$FormularyItemCopyWithImpl<$Res, $Val extends FormularyItem>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -317,8 +317,8 @@ abstract class _$$FormularyItemImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -379,7 +379,7 @@ class __$$FormularyItemImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -444,8 +444,8 @@ class __$$FormularyItemImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FormularyItemImpl extends _FormularyItem {
   const _$FormularyItemImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-      this.resourceType = R5ResourceType.FormularyItem,
+      {@JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+      this.resourceType = R6ResourceType.FormularyItem,
       this.id,
       this.meta,
       this.implicitRules,
@@ -471,8 +471,8 @@ class _$FormularyItemImpl extends _FormularyItem {
 
   /// [resourceType] This is a FormularyItem resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -697,8 +697,8 @@ class _$FormularyItemImpl extends _FormularyItem {
 
 abstract class _FormularyItem extends FormularyItem {
   const factory _FormularyItem(
-          {@JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-          final R5ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+          final R6ResourceType resourceType,
           final FhirId? id,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
@@ -722,8 +722,8 @@ abstract class _FormularyItem extends FormularyItem {
   @override
 
   /// [resourceType] This is a FormularyItem resource
-  @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.FormularyItem)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -830,8 +830,8 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Immunization {
   /// [resourceType] This is a Immunization resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1068,8 +1068,8 @@ abstract class $ImmunizationCopyWith<$Res> {
       _$ImmunizationCopyWithImpl<$Res, Immunization>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -1207,7 +1207,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1674,8 +1674,8 @@ abstract class _$$ImmunizationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -1834,7 +1834,7 @@ class __$$ImmunizationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2027,8 +2027,8 @@ class __$$ImmunizationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ImmunizationImpl extends _Immunization {
   const _$ImmunizationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-      this.resourceType = R5ResourceType.Immunization,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+      this.resourceType = R6ResourceType.Immunization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2095,8 +2095,8 @@ class _$ImmunizationImpl extends _Immunization {
 
   /// [resourceType] This is a Immunization resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2675,8 +2675,8 @@ class _$ImmunizationImpl extends _Immunization {
 
 abstract class _Immunization extends Immunization {
   const factory _Immunization(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -2734,8 +2734,8 @@ abstract class _Immunization extends Immunization {
   @override
 
   /// [resourceType] This is a Immunization resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Immunization)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -4914,8 +4914,8 @@ ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
 /// @nodoc
 mixin _$ImmunizationEvaluation {
   /// [resourceType] This is a ImmunizationEvaluation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5069,8 +5069,8 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       _$ImmunizationEvaluationCopyWithImpl<$Res, ImmunizationEvaluation>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -5167,7 +5167,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5462,8 +5462,8 @@ abstract class _$$ImmunizationEvaluationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -5574,7 +5574,7 @@ class __$$ImmunizationEvaluationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5699,8 +5699,8 @@ class __$$ImmunizationEvaluationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ImmunizationEvaluationImpl extends _ImmunizationEvaluation {
   const _$ImmunizationEvaluationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-      this.resourceType = R5ResourceType.ImmunizationEvaluation,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+      this.resourceType = R6ResourceType.ImmunizationEvaluation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5742,8 +5742,8 @@ class _$ImmunizationEvaluationImpl extends _ImmunizationEvaluation {
 
   /// [resourceType] This is a ImmunizationEvaluation resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6099,8 +6099,8 @@ class _$ImmunizationEvaluationImpl extends _ImmunizationEvaluation {
 
 abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   const factory _ImmunizationEvaluation(
-          {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-          final R5ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+          final R6ResourceType resourceType,
           final FhirId? id,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
@@ -6139,8 +6139,8 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   @override
 
   /// [resourceType] This is a ImmunizationEvaluation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationEvaluation)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -6321,8 +6321,8 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 /// @nodoc
 mixin _$ImmunizationRecommendation {
   /// [resourceType] This is a ImmunizationRecommendation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6424,8 +6424,8 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           ImmunizationRecommendation>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -6488,7 +6488,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6647,8 +6647,8 @@ abstract class _$$ImmunizationRecommendationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -6717,7 +6717,7 @@ class __$$ImmunizationRecommendationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6790,8 +6790,8 @@ class __$$ImmunizationRecommendationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ImmunizationRecommendationImpl extends _ImmunizationRecommendation {
   const _$ImmunizationRecommendationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-      this.resourceType = R5ResourceType.ImmunizationRecommendation,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+      this.resourceType = R6ResourceType.ImmunizationRecommendation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6822,8 +6822,8 @@ class _$ImmunizationRecommendationImpl extends _ImmunizationRecommendation {
 
   /// [resourceType] This is a ImmunizationRecommendation resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -7070,8 +7070,8 @@ class _$ImmunizationRecommendationImpl extends _ImmunizationRecommendation {
 
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   const factory _ImmunizationRecommendation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -7097,8 +7097,8 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   @override
 
   /// [resourceType] This is a ImmunizationRecommendation resource
-  @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.ImmunizationRecommendation)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -8614,8 +8614,8 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Medication {
   /// [resourceType] This is a Medication resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.Medication)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -8742,8 +8742,8 @@ abstract class $MedicationCopyWith<$Res> {
       _$MedicationCopyWithImpl<$Res, Medication>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Medication)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -8817,7 +8817,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9045,8 +9045,8 @@ abstract class _$$MedicationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Medication)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -9129,7 +9129,7 @@ class __$$MedicationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9218,8 +9218,8 @@ class __$$MedicationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationImpl extends _Medication {
   const _$MedicationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-      this.resourceType = R5ResourceType.Medication,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Medication)
+      this.resourceType = R6ResourceType.Medication,
       this.id,
       this.meta,
       this.implicitRules,
@@ -9252,8 +9252,8 @@ class _$MedicationImpl extends _Medication {
 
   /// [resourceType] This is a Medication resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Medication)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -9543,8 +9543,8 @@ class _$MedicationImpl extends _Medication {
 
 abstract class _Medication extends Medication {
   const factory _Medication(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Medication)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.Medication)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -9573,8 +9573,8 @@ abstract class _Medication extends Medication {
   @override
 
   /// [resourceType] This is a Medication resource
-  @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.Medication)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -10756,8 +10756,8 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 /// @nodoc
 mixin _$MedicationAdministration {
   /// [resourceType] This is a MedicationAdministration resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -10971,8 +10971,8 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       _$MedicationAdministrationCopyWithImpl<$Res, MedicationAdministration>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -11085,7 +11085,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11421,8 +11421,8 @@ abstract class _$$MedicationAdministrationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -11549,7 +11549,7 @@ class __$$MedicationAdministrationImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11706,8 +11706,8 @@ class __$$MedicationAdministrationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationAdministrationImpl extends _MedicationAdministration {
   const _$MedicationAdministrationImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-      this.resourceType = R5ResourceType.MedicationAdministration,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+      this.resourceType = R6ResourceType.MedicationAdministration,
       this.id,
       this.meta,
       this.implicitRules,
@@ -11767,8 +11767,8 @@ class _$MedicationAdministrationImpl extends _MedicationAdministration {
 
   /// [resourceType] This is a MedicationAdministration resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -12318,8 +12318,8 @@ class _$MedicationAdministrationImpl extends _MedicationAdministration {
 
 abstract class _MedicationAdministration extends MedicationAdministration {
   const factory _MedicationAdministration(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -12366,8 +12366,8 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @override
 
   /// [resourceType] This is a MedicationAdministration resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationAdministration)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -13707,8 +13707,8 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationDispense {
   /// [resourceType] This is a MedicationDispense resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -13939,8 +13939,8 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       _$MedicationDispenseCopyWithImpl<$Res, MedicationDispense>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -14070,7 +14070,7 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14493,8 +14493,8 @@ abstract class _$$MedicationDispenseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -14642,7 +14642,7 @@ class __$$MedicationDispenseImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14824,8 +14824,8 @@ class __$$MedicationDispenseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationDispenseImpl extends _MedicationDispense {
   const _$MedicationDispenseImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-      this.resourceType = R5ResourceType.MedicationDispense,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+      this.resourceType = R6ResourceType.MedicationDispense,
       this.id,
       this.meta,
       this.implicitRules,
@@ -14891,8 +14891,8 @@ class _$MedicationDispenseImpl extends _MedicationDispense {
 
   /// [resourceType] This is a MedicationDispense resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -15473,8 +15473,8 @@ class _$MedicationDispenseImpl extends _MedicationDispense {
 
 abstract class _MedicationDispense extends MedicationDispense {
   const factory _MedicationDispense(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -15527,8 +15527,8 @@ abstract class _MedicationDispense extends MedicationDispense {
   @override
 
   /// [resourceType] This is a MedicationDispense resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationDispense)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -16712,8 +16712,8 @@ MedicationKnowledge _$MedicationKnowledgeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationKnowledge {
   /// [resourceType] This is a MedicationKnowledge resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -17073,8 +17073,8 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       _$MedicationKnowledgeCopyWithImpl<$Res, MedicationKnowledge>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -17262,7 +17262,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -17845,8 +17845,8 @@ abstract class _$$MedicationKnowledgeImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -18056,7 +18056,7 @@ class __$$MedicationKnowledgeImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -18341,8 +18341,8 @@ class __$$MedicationKnowledgeImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationKnowledgeImpl extends _MedicationKnowledge {
   const _$MedicationKnowledgeImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-      this.resourceType = R5ResourceType.MedicationKnowledge,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+      this.resourceType = R6ResourceType.MedicationKnowledge,
       this.id,
       this.meta,
       this.implicitRules,
@@ -18450,8 +18450,8 @@ class _$MedicationKnowledgeImpl extends _MedicationKnowledge {
 
   /// [resourceType] This is a MedicationKnowledge resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -19366,8 +19366,8 @@ class _$MedicationKnowledgeImpl extends _MedicationKnowledge {
 
 abstract class _MedicationKnowledge extends MedicationKnowledge {
   const factory _MedicationKnowledge(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -19450,8 +19450,8 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   @override
 
   /// [resourceType] This is a MedicationKnowledge resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationKnowledge)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -28405,8 +28405,8 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationRequest {
   /// [resourceType] This is a MedicationRequest resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -28693,8 +28693,8 @@ abstract class $MedicationRequestCopyWith<$Res> {
       _$MedicationRequestCopyWithImpl<$Res, MedicationRequest>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -28845,7 +28845,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -29360,8 +29360,8 @@ abstract class _$$MedicationRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -29535,7 +29535,7 @@ class __$$MedicationRequestImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -29749,8 +29749,8 @@ class __$$MedicationRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationRequestImpl extends _MedicationRequest {
   const _$MedicationRequestImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-      this.resourceType = R5ResourceType.MedicationRequest,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+      this.resourceType = R6ResourceType.MedicationRequest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -29825,8 +29825,8 @@ class _$MedicationRequestImpl extends _MedicationRequest {
 
   /// [resourceType] This is a MedicationRequest resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -30512,8 +30512,8 @@ class _$MedicationRequestImpl extends _MedicationRequest {
 
 abstract class _MedicationRequest extends MedicationRequest {
   const factory _MedicationRequest(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-      final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+      final R6ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -30574,8 +30574,8 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
 
   /// [resourceType] This is a MedicationRequest resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationRequest)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -32574,8 +32574,8 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationStatement {
   /// [resourceType] This is a MedicationStatement resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -32767,8 +32767,8 @@ abstract class $MedicationStatementCopyWith<$Res> {
       _$MedicationStatementCopyWithImpl<$Res, MedicationStatement>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -32872,7 +32872,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -33182,8 +33182,8 @@ abstract class _$$MedicationStatementImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-      R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+      R6ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -33299,7 +33299,7 @@ class __$$MedicationStatementImplCopyWithImpl<$Res>
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as R5ResourceType,
+              as R6ResourceType,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -33441,8 +33441,8 @@ class __$$MedicationStatementImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MedicationStatementImpl extends _MedicationStatement {
   const _$MedicationStatementImpl(
-      {@JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-      this.resourceType = R5ResourceType.MedicationStatement,
+      {@JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+      this.resourceType = R6ResourceType.MedicationStatement,
       this.id,
       this.meta,
       this.implicitRules,
@@ -33496,8 +33496,8 @@ class _$MedicationStatementImpl extends _MedicationStatement {
 
   /// [resourceType] This is a MedicationStatement resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-  final R5ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+  final R6ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -33984,8 +33984,8 @@ class _$MedicationStatementImpl extends _MedicationStatement {
 
 abstract class _MedicationStatement extends MedicationStatement {
   const factory _MedicationStatement(
-          {@JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-          final R5ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+          final R6ResourceType resourceType,
           final FhirId? id,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
@@ -34030,8 +34030,8 @@ abstract class _MedicationStatement extends MedicationStatement {
   @override
 
   /// [resourceType] This is a MedicationStatement resource
-  @JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-  R5ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R6ResourceType.MedicationStatement)
+  R6ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

@@ -8,7 +8,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../../../r5.dart';
+import '../../../../r6.dart';
 
 part 'other.freezed.dart';
 part 'other.g.dart';
@@ -97,9 +97,9 @@ class Basic with Resource, _$Basic {
   ///
   const factory Basic({
     /// [resourceType] This is a Basic resource
-    @Default(R5ResourceType.Basic)
-    @JsonKey(unknownEnumValue: R5ResourceType.Basic)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Basic)
+    @JsonKey(unknownEnumValue: R6ResourceType.Basic)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -275,9 +275,9 @@ class Binary with Resource, _$Binary {
   ///
   const factory Binary({
     /// [resourceType] This is a Binary resource
-    @Default(R5ResourceType.Binary)
-    @JsonKey(unknownEnumValue: R5ResourceType.Binary)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Binary)
+    @JsonKey(unknownEnumValue: R6ResourceType.Binary)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -461,9 +461,9 @@ class Bundle with Resource, _$Bundle {
   ///
   const factory Bundle({
     /// [resourceType] This is a Bundle resource
-    @Default(R5ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Bundle)
+    @JsonKey(unknownEnumValue: R6ResourceType.Bundle)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1418,9 +1418,9 @@ class Linkage with Resource, _$Linkage {
   ///
   const factory Linkage({
     /// [resourceType] This is a Linkage resource
-    @Default(R5ResourceType.Linkage)
-    @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Linkage)
+    @JsonKey(unknownEnumValue: R6ResourceType.Linkage)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1727,31 +1727,26 @@ class MessageHeader with Resource, _$MessageHeader {
   ///
   /// [eventCoding] Code that identifies the event this message represents and
   ///  connects it with its definition. Events defined as part of the FHIR
-  ///  specification are defined by the implementation.  Alternatively a
-  ///  canonical uri to the EventDefinition.
+  ///  specification are defined by the implementation.  Alternatively a uri ,
+  ///  canonical uri to the EventDefinition or SubscriptionTopic.
+  ///
+  /// [eventUri] Code that identifies the event this message represents and
+  ///  connects it with its definition. Events defined as part of the FHIR
+  ///  specification are defined by the implementation.  Alternatively a uri ,
+  ///  canonical uri to the EventDefinition or SubscriptionTopic.
+  ///
+  /// [eventUriElement] ("_eventUri") Extensions for eventUri
   ///
   /// [eventCanonical] Code that identifies the event this message represents and
   ///  connects it with its definition. Events defined as part of the FHIR
-  ///  specification are defined by the implementation.  Alternatively a
-  ///  canonical uri to the EventDefinition.
+  ///  specification are defined by the implementation.  Alternatively a uri ,
+  ///  canonical uri to the EventDefinition or SubscriptionTopic.
   ///
   /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
   ///
   /// [destination] The destination application which the message is intended for.
   ///
-  /// [sender] Identifies the sending system to allow the use of a trust
-  ///  relationship.
-  ///
-  /// [author] The logical author of the message - the personor device that
-  ///  decided the described event should happen. When there is more than one
-  ///  candidate, pick the most proximal to the MessageHeader. Can provide other
-  ///  authors in extensions.
-  ///
   /// [source] The source application from which this message originated.
-  ///
-  /// [responsible] The person or organization that accepts overall
-  ///  responsibility for the contents of the message. The implication is that
-  ///  the message event happened under the policies of the responsible party.
   ///
   /// [reason] Coded indication of the cause for the event - indicates  a reason
   ///  for the occurrence of the event that is a focus of this message.
@@ -1766,9 +1761,9 @@ class MessageHeader with Resource, _$MessageHeader {
   ///
   const factory MessageHeader({
     /// [resourceType] This is a MessageHeader resource
-    @Default(R5ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.MessageHeader)
+    @JsonKey(unknownEnumValue: R6ResourceType.MessageHeader)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1833,14 +1828,23 @@ class MessageHeader with Resource, _$MessageHeader {
 
     /// [eventCoding] Code that identifies the event this message represents and
     ///  connects it with its definition. Events defined as part of the FHIR
-    ///  specification are defined by the implementation.  Alternatively a
-    ///  canonical uri to the EventDefinition.
+    ///  specification are defined by the implementation.  Alternatively a uri ,
+    ///  canonical uri to the EventDefinition or SubscriptionTopic.
     Coding? eventCoding,
+
+    /// [eventUri] Code that identifies the event this message represents and
+    ///  connects it with its definition. Events defined as part of the FHIR
+    ///  specification are defined by the implementation.  Alternatively a uri ,
+    ///  canonical uri to the EventDefinition or SubscriptionTopic.
+    FhirUri? eventUri,
+
+    /// [eventUriElement] ("_eventUri") Extensions for eventUri
+    @JsonKey(name: '_eventUri') Element? eventUriElement,
 
     /// [eventCanonical] Code that identifies the event this message represents and
     ///  connects it with its definition. Events defined as part of the FHIR
-    ///  specification are defined by the implementation.  Alternatively a
-    ///  canonical uri to the EventDefinition.
+    ///  specification are defined by the implementation.  Alternatively a uri ,
+    ///  canonical uri to the EventDefinition or SubscriptionTopic.
     FhirCanonical? eventCanonical,
 
     /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
@@ -1849,23 +1853,8 @@ class MessageHeader with Resource, _$MessageHeader {
     /// [destination] The destination application which the message is intended for.
     List<MessageHeaderDestination>? destination,
 
-    /// [sender] Identifies the sending system to allow the use of a trust
-    ///  relationship.
-    Reference? sender,
-
-    /// [author] The logical author of the message - the personor device that
-    ///  decided the described event should happen. When there is more than one
-    ///  candidate, pick the most proximal to the MessageHeader. Can provide other
-    ///  authors in extensions.
-    Reference? author,
-
     /// [source] The source application from which this message originated.
     required MessageHeaderSource source,
-
-    /// [responsible] The person or organization that accepts overall
-    ///  responsibility for the contents of the message. The implication is that
-    ///  the message event happened under the policies of the responsible party.
-    Reference? responsible,
 
     /// [reason] Coded indication of the cause for the event - indicates  a reason
     ///  for the occurrence of the event that is a focus of this message.
@@ -2134,6 +2123,9 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// [contact] An e-mail, phone, website or other contact point to use to
   ///  resolve issues with message communications.
   ///
+  /// [sender] Identifies the sending entity to allow the use of a trust
+  ///  relationship.
+  ///
   const factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal references).
     ///  This may be any string value that does not contain spaces.
@@ -2194,6 +2186,10 @@ class MessageHeaderSource with _$MessageHeaderSource {
     /// [contact] An e-mail, phone, website or other contact point to use to
     ///  resolve issues with message communications.
     ContactPoint? contact,
+
+    /// [sender] Identifies the sending entity to allow the use of a trust
+    ///  relationship.
+    Reference? sender,
   }) = _MessageHeaderSource;
 
   /// Produces a Yaml formatted String version of the object
@@ -2430,9 +2426,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
   ///
   const factory OperationOutcome({
     /// [resourceType] This is a OperationOutcome resource
-    @Default(R5ResourceType.OperationOutcome)
-    @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.OperationOutcome)
+    @JsonKey(unknownEnumValue: R6ResourceType.OperationOutcome)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2756,9 +2752,9 @@ class Parameters with Resource, _$Parameters {
   ///
   const factory Parameters({
     /// [resourceType] This is a Parameters resource
-    @Default(R5ResourceType.Parameters)
-    @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Parameters)
+    @JsonKey(unknownEnumValue: R6ResourceType.Parameters)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3514,9 +3510,9 @@ class Subscription with Resource, _$Subscription {
   ///
   const factory Subscription({
     /// [resourceType] This is a Subscription resource
-    @Default(R5ResourceType.Subscription)
-    @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.Subscription)
+    @JsonKey(unknownEnumValue: R6ResourceType.Subscription)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3757,12 +3753,12 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   ///  change the meaning of any elements on Resource or DomainResource
   ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [resourceType] A resource listed in the `SubscriptionTopic` this
-  ///  `Subscription` references (`SubscriptionTopic.canFilterBy.resource`). This
-  ///  element can be used to differentiate filters for topics that include more
-  ///  than one resource type.
+  /// [resource] A resource listed in the `SubscriptionTopic` this `Subscription`
+  ///  references (`SubscriptionTopic.canFilterBy.resource`). This element can be
+  ///  used to differentiate filters for topics that include more than one
+  ///  resource type.
   ///
-  /// [resourceTypeElement] ("_resourceType") Extensions for resourceType
+  /// [resourceElement] ("_resource") Extensions for resource
   ///
   /// [filterParameter] The filter as defined in the
   ///  `SubscriptionTopic.canFilterBy.filterParameter` element.
@@ -3809,14 +3805,14 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
     ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [resourceType] A resource listed in the `SubscriptionTopic` this
-    ///  `Subscription` references (`SubscriptionTopic.canFilterBy.resource`). This
-    ///  element can be used to differentiate filters for topics that include more
-    ///  than one resource type.
-    FhirUri? resourceType,
+    /// [resource] A resource listed in the `SubscriptionTopic` this `Subscription`
+    ///  references (`SubscriptionTopic.canFilterBy.resource`). This element can be
+    ///  used to differentiate filters for topics that include more than one
+    ///  resource type.
+    FhirUri? resource,
 
-    /// [resourceTypeElement] ("_resourceType") Extensions for resourceType
-    @JsonKey(name: '_resourceType') Element? resourceTypeElement,
+    /// [resourceElement] ("_resource") Extensions for resource
+    @JsonKey(name: '_resource') Element? resourceElement,
 
     /// [filterParameter] The filter as defined in the
     ///  `SubscriptionTopic.canFilterBy.filterParameter` element.
@@ -4101,9 +4097,9 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   ///
   const factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource
-    @Default(R5ResourceType.SubscriptionStatus)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.SubscriptionStatus)
+    @JsonKey(unknownEnumValue: R6ResourceType.SubscriptionStatus)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -4588,9 +4584,9 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   ///
   const factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource
-    @Default(R5ResourceType.SubscriptionTopic)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
-    R5ResourceType resourceType,
+    @Default(R6ResourceType.SubscriptionTopic)
+    @JsonKey(unknownEnumValue: R6ResourceType.SubscriptionTopic)
+    R6ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
