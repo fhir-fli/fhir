@@ -336,6 +336,7 @@ class Coverage with Resource, _$Coverage {
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -367,6 +368,7 @@ class Coverage with Resource, _$Coverage {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1165,6 +1167,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   }) = _CoverageEligibilityRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1196,6 +1199,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2226,6 +2230,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   }) = _CoverageEligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2258,6 +2263,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3252,6 +3258,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3283,6 +3290,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3488,6 +3496,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   }) = _EnrollmentResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3519,5 +3528,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }

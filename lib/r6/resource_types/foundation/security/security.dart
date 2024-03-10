@@ -271,6 +271,7 @@ class AuditEvent with Resource, _$AuditEvent {
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -302,6 +303,7 @@ class AuditEvent with Resource, _$AuditEvent {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1365,6 +1367,7 @@ class Consent with Resource, _$Consent {
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1396,6 +1399,7 @@ class Consent with Resource, _$Consent {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2314,6 +2318,7 @@ class Permission with Resource, _$Permission {
   }) = _Permission;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2345,6 +2350,7 @@ class Permission with Resource, _$Permission {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3231,6 +3237,7 @@ class Provenance with Resource, _$Provenance {
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3262,6 +3269,7 @@ class Provenance with Resource, _$Provenance {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

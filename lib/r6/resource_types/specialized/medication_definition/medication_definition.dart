@@ -299,6 +299,7 @@ class AdministrableProductDefinition
   }) = _AdministrableProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -332,6 +333,7 @@ class AdministrableProductDefinition
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1139,6 +1141,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   }) = _ClinicalUseDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1170,6 +1173,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2369,6 +2373,7 @@ class Ingredient with Resource, _$Ingredient {
   }) = _Ingredient;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2400,6 +2405,7 @@ class Ingredient with Resource, _$Ingredient {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3268,6 +3274,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   }) = _ManufacturedItemDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3299,6 +3306,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -4191,6 +4199,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   }) = _MedicinalProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4222,6 +4231,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -5539,6 +5549,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   }) = _PackagedProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5570,6 +5581,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -6439,6 +6451,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   }) = _RegulatedAuthorization;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6470,6 +6483,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -6916,6 +6930,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   }) = _SubstanceDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6947,6 +6962,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -8788,6 +8804,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   }) = _SubstanceNucleicAcid;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -8819,6 +8836,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -9377,13 +9395,13 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// [copolymerConnectivity] Descrtibes the copolymer sequence type (polymer
   ///  connectivity).
   ///
-  /// [modification] Todo - this is intended to connect to a repeating full
+  /// [modification] FhirTodo - this is intended to connect to a repeating full
   ///  modification structure, also used by Protein and Nucleic Acid . String
   ///  is just a placeholder.
   ///
   /// [modificationElement] ("_modification") Extensions for modification
   ///
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   ///
   /// [repeat] Specifies and quantifies the repeated units and their
   ///  configuration.
@@ -9474,7 +9492,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     ///  connectivity).
     List<CodeableConcept>? copolymerConnectivity,
 
-    /// [modification] Todo - this is intended to connect to a repeating full
+    /// [modification] FhirTodo - this is intended to connect to a repeating full
     ///  modification structure, also used by Protein and Nucleic Acid . String
     ///  is just a placeholder.
     String? modification,
@@ -9482,7 +9500,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     /// [modificationElement] ("_modification") Extensions for modification
     @JsonKey(name: '_modification') Element? modificationElement,
 
-    /// [monomerSet] Todo.
+    /// [monomerSet] FhirTodo.
     List<SubstancePolymerMonomerSet>? monomerSet,
 
     /// [repeat] Specifies and quantifies the repeated units and their
@@ -9491,6 +9509,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   }) = _SubstancePolymer;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -9522,6 +9541,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -10542,6 +10562,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   }) = _SubstanceProtein;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -10573,6 +10594,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -10811,14 +10833,14 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformation] Todo.
+/// [SubstanceReferenceInformation] FhirTodo.
 @freezed
 class SubstanceReferenceInformation
     with Resource, _$SubstanceReferenceInformation {
-  /// [SubstanceReferenceInformation] Todo.
+  /// [SubstanceReferenceInformation] FhirTodo.
   const SubstanceReferenceInformation._();
 
-  /// [SubstanceReferenceInformation] Todo.
+  /// [SubstanceReferenceInformation] FhirTodo.
   ///
   /// [resourceType] This is a SubstanceReferenceInformation resource
   ///
@@ -10874,15 +10896,15 @@ class SubstanceReferenceInformation
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   ///
-  /// [comment] Todo.
+  /// [comment] FhirTodo.
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   ///
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   ///
-  /// [target] Todo.
+  /// [target] FhirTodo.
   ///
   const factory SubstanceReferenceInformation({
     /// [resourceType] This is a SubstanceReferenceInformation resource
@@ -10955,23 +10977,24 @@ class SubstanceReferenceInformation
     ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [comment] Todo.
+    /// [comment] FhirTodo.
     String? comment,
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
 
-    /// [gene] Todo.
+    /// [gene] FhirTodo.
     List<SubstanceReferenceInformationGene>? gene,
 
-    /// [geneElement] Todo.
+    /// [geneElement] FhirTodo.
     List<SubstanceReferenceInformationGeneElement>? geneElement,
 
-    /// [target] Todo.
+    /// [target] FhirTodo.
     List<SubstanceReferenceInformationTarget>? target,
   }) = _SubstanceReferenceInformation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -11004,17 +11027,18 @@ class SubstanceReferenceInformation
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationGene] Todo.
+/// [SubstanceReferenceInformationGene] FhirTodo.
 @freezed
 class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
-  /// [SubstanceReferenceInformationGene] Todo.
+  /// [SubstanceReferenceInformationGene] FhirTodo.
   const SubstanceReferenceInformationGene._();
 
-  /// [SubstanceReferenceInformationGene] Todo.
+  /// [SubstanceReferenceInformationGene] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -11040,11 +11064,11 @@ class SubstanceReferenceInformationGene
   ///  DomainResource (including cannot change the meaning of modifierExtension
   ///  itself).
   ///
-  /// [geneSequenceOrigin] Todo.
+  /// [geneSequenceOrigin] FhirTodo.
   ///
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationGene({
     /// [id] Unique id for the element within a resource (for internal
@@ -11075,13 +11099,13 @@ class SubstanceReferenceInformationGene
     ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [geneSequenceOrigin] Todo.
+    /// [geneSequenceOrigin] FhirTodo.
     CodeableConcept? geneSequenceOrigin,
 
-    /// [gene] Todo.
+    /// [gene] FhirTodo.
     CodeableConcept? gene,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationGene;
 
@@ -11123,14 +11147,14 @@ class SubstanceReferenceInformationGene
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationGeneElement] Todo.
+/// [SubstanceReferenceInformationGeneElement] FhirTodo.
 @freezed
 class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
-  /// [SubstanceReferenceInformationGeneElement] Todo.
+  /// [SubstanceReferenceInformationGeneElement] FhirTodo.
   const SubstanceReferenceInformationGeneElement._();
 
-  /// [SubstanceReferenceInformationGeneElement] Todo.
+  /// [SubstanceReferenceInformationGeneElement] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -11156,11 +11180,11 @@ class SubstanceReferenceInformationGeneElement
   ///  DomainResource (including cannot change the meaning of modifierExtension
   ///  itself).
   ///
-  /// [type] Todo.
+  /// [type] FhirTodo.
   ///
-  /// [element] Todo.
+  /// [element] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationGeneElement({
     /// [id] Unique id for the element within a resource (for internal
@@ -11191,13 +11215,13 @@ class SubstanceReferenceInformationGeneElement
     ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] Todo.
+    /// [type] FhirTodo.
     CodeableConcept? type,
 
-    /// [element] Todo.
+    /// [element] FhirTodo.
     Identifier? element,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationGeneElement;
 
@@ -11240,14 +11264,14 @@ class SubstanceReferenceInformationGeneElement
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationTarget] Todo.
+/// [SubstanceReferenceInformationTarget] FhirTodo.
 @freezed
 class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
-  /// [SubstanceReferenceInformationTarget] Todo.
+  /// [SubstanceReferenceInformationTarget] FhirTodo.
   const SubstanceReferenceInformationTarget._();
 
-  /// [SubstanceReferenceInformationTarget] Todo.
+  /// [SubstanceReferenceInformationTarget] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -11273,27 +11297,27 @@ class SubstanceReferenceInformationTarget
   ///  DomainResource (including cannot change the meaning of modifierExtension
   ///  itself).
   ///
-  /// [target] Todo.
+  /// [target] FhirTodo.
   ///
-  /// [type] Todo.
+  /// [type] FhirTodo.
   ///
-  /// [interaction] Todo.
+  /// [interaction] FhirTodo.
   ///
-  /// [organism] Todo.
+  /// [organism] FhirTodo.
   ///
-  /// [organismType] Todo.
+  /// [organismType] FhirTodo.
   ///
-  /// [amountQuantity] Todo.
+  /// [amountQuantity] FhirTodo.
   ///
-  /// [amountRange] Todo.
+  /// [amountRange] FhirTodo.
   ///
-  /// [amountString] Todo.
+  /// [amountString] FhirTodo.
   ///
   /// [amountStringElement] ("_amountString") Extensions for amountString
   ///
-  /// [amountType] Todo.
+  /// [amountType] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationTarget({
     /// [id] Unique id for the element within a resource (for internal
@@ -11324,37 +11348,37 @@ class SubstanceReferenceInformationTarget
     ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [target] Todo.
+    /// [target] FhirTodo.
     Identifier? target,
 
-    /// [type] Todo.
+    /// [type] FhirTodo.
     CodeableConcept? type,
 
-    /// [interaction] Todo.
+    /// [interaction] FhirTodo.
     CodeableConcept? interaction,
 
-    /// [organism] Todo.
+    /// [organism] FhirTodo.
     CodeableConcept? organism,
 
-    /// [organismType] Todo.
+    /// [organismType] FhirTodo.
     CodeableConcept? organismType,
 
-    /// [amountQuantity] Todo.
+    /// [amountQuantity] FhirTodo.
     Quantity? amountQuantity,
 
-    /// [amountRange] Todo.
+    /// [amountRange] FhirTodo.
     Range? amountRange,
 
-    /// [amountString] Todo.
+    /// [amountString] FhirTodo.
     String? amountString,
 
     /// [amountStringElement] ("_amountString") Extensions for amountString
     @JsonKey(name: '_amountString') Element? amountStringElement,
 
-    /// [amountType] Todo.
+    /// [amountType] FhirTodo.
     CodeableConcept? amountType,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationTarget;
 
@@ -11714,6 +11738,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   }) = _SubstanceSourceMaterial;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -11745,6 +11770,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

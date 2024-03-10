@@ -9160,13 +9160,13 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// [copolymerConnectivity] Descrtibes the copolymer sequence type (polymer
   ///  connectivity).
   ///
-  /// [modification] Todo - this is intended to connect to a repeating full
+  /// [modification] FhirTodo - this is intended to connect to a repeating full
   ///  modification structure, also used by Protein and Nucleic Acid . String is
   ///  just a placeholder.
   ///
   /// [modificationElement] ("_modification") Extensions for modification
   ///
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   ///
   /// [repeat] Specifies and quantifies the repeated units and their
   ///  configuration.
@@ -9253,7 +9253,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     ///  connectivity).
     List<CodeableConcept>? copolymerConnectivity,
 
-    /// [modification] Todo - this is intended to connect to a repeating full
+    /// [modification] FhirTodo - this is intended to connect to a repeating full
     ///  modification structure, also used by Protein and Nucleic Acid . String is
     ///  just a placeholder.
     String? modification,
@@ -9261,7 +9261,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     /// [modificationElement] ("_modification") Extensions for modification
     @JsonKey(name: '_modification') Element? modificationElement,
 
-    /// [monomerSet] Todo.
+    /// [monomerSet] FhirTodo.
     List<SubstancePolymerMonomerSet>? monomerSet,
 
     /// [repeat] Specifies and quantifies the repeated units and their
@@ -10558,14 +10558,14 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformation] Todo.
+/// [SubstanceReferenceInformation] FhirTodo.
 @freezed
 class SubstanceReferenceInformation
     with Resource, _$SubstanceReferenceInformation {
-  /// [SubstanceReferenceInformation] Todo.
+  /// [SubstanceReferenceInformation] FhirTodo.
   const SubstanceReferenceInformation._();
 
-  /// [SubstanceReferenceInformation] Todo.
+  /// [SubstanceReferenceInformation] FhirTodo.
   ///
   /// [resourceType] This is a SubstanceReferenceInformation resource
   ///
@@ -10620,15 +10620,15 @@ class SubstanceReferenceInformation
   ///  change the meaning of any elements on Resource or DomainResource
   ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [comment] Todo.
+  /// [comment] FhirTodo.
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   ///
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   ///
-  /// [target] Todo.
+  /// [target] FhirTodo.
   ///
   const factory SubstanceReferenceInformation({
     /// [resourceType] This is a SubstanceReferenceInformation resource
@@ -10697,19 +10697,19 @@ class SubstanceReferenceInformation
     ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [comment] Todo.
+    /// [comment] FhirTodo.
     String? comment,
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
 
-    /// [gene] Todo.
+    /// [gene] FhirTodo.
     List<SubstanceReferenceInformationGene>? gene,
 
-    /// [geneElement] Todo.
+    /// [geneElement] FhirTodo.
     List<SubstanceReferenceInformationGeneElement>? geneElement,
 
-    /// [target] Todo.
+    /// [target] FhirTodo.
     List<SubstanceReferenceInformationTarget>? target,
   }) = _SubstanceReferenceInformation;
 
@@ -10751,14 +10751,14 @@ class SubstanceReferenceInformation
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationGene] Todo.
+/// [SubstanceReferenceInformationGene] FhirTodo.
 @freezed
 class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
-  /// [SubstanceReferenceInformationGene] Todo.
+  /// [SubstanceReferenceInformationGene] FhirTodo.
   const SubstanceReferenceInformationGene._();
 
-  /// [SubstanceReferenceInformationGene] Todo.
+  /// [SubstanceReferenceInformationGene] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal references).
   ///  This may be any string value that does not contain spaces.
@@ -10783,11 +10783,11 @@ class SubstanceReferenceInformationGene
   ///  change the meaning of any elements on Resource or DomainResource
   ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [geneSequenceOrigin] Todo.
+  /// [geneSequenceOrigin] FhirTodo.
   ///
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationGene({
     /// [id] Unique id for the element within a resource (for internal references).
@@ -10816,13 +10816,13 @@ class SubstanceReferenceInformationGene
     ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [geneSequenceOrigin] Todo.
+    /// [geneSequenceOrigin] FhirTodo.
     CodeableConcept? geneSequenceOrigin,
 
-    /// [gene] Todo.
+    /// [gene] FhirTodo.
     CodeableConcept? gene,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationGene;
 
@@ -10864,14 +10864,14 @@ class SubstanceReferenceInformationGene
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationGeneElement] Todo.
+/// [SubstanceReferenceInformationGeneElement] FhirTodo.
 @freezed
 class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
-  /// [SubstanceReferenceInformationGeneElement] Todo.
+  /// [SubstanceReferenceInformationGeneElement] FhirTodo.
   const SubstanceReferenceInformationGeneElement._();
 
-  /// [SubstanceReferenceInformationGeneElement] Todo.
+  /// [SubstanceReferenceInformationGeneElement] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal references).
   ///  This may be any string value that does not contain spaces.
@@ -10896,11 +10896,11 @@ class SubstanceReferenceInformationGeneElement
   ///  change the meaning of any elements on Resource or DomainResource
   ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [type] Todo.
+  /// [type] FhirTodo.
   ///
-  /// [element] Todo.
+  /// [element] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationGeneElement({
     /// [id] Unique id for the element within a resource (for internal references).
@@ -10929,13 +10929,13 @@ class SubstanceReferenceInformationGeneElement
     ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] Todo.
+    /// [type] FhirTodo.
     CodeableConcept? type,
 
-    /// [element] Todo.
+    /// [element] FhirTodo.
     Identifier? element,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationGeneElement;
 
@@ -10978,14 +10978,14 @@ class SubstanceReferenceInformationGeneElement
   String toJsonString() => jsonEncode(toJson());
 }
 
-/// [SubstanceReferenceInformationTarget] Todo.
+/// [SubstanceReferenceInformationTarget] FhirTodo.
 @freezed
 class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
-  /// [SubstanceReferenceInformationTarget] Todo.
+  /// [SubstanceReferenceInformationTarget] FhirTodo.
   const SubstanceReferenceInformationTarget._();
 
-  /// [SubstanceReferenceInformationTarget] Todo.
+  /// [SubstanceReferenceInformationTarget] FhirTodo.
   ///
   /// [id] Unique id for the element within a resource (for internal references).
   ///  This may be any string value that does not contain spaces.
@@ -11010,27 +11010,27 @@ class SubstanceReferenceInformationTarget
   ///  change the meaning of any elements on Resource or DomainResource
   ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [target] Todo.
+  /// [target] FhirTodo.
   ///
-  /// [type] Todo.
+  /// [type] FhirTodo.
   ///
-  /// [interaction] Todo.
+  /// [interaction] FhirTodo.
   ///
-  /// [organism] Todo.
+  /// [organism] FhirTodo.
   ///
-  /// [organismType] Todo.
+  /// [organismType] FhirTodo.
   ///
-  /// [amountQuantity] Todo.
+  /// [amountQuantity] FhirTodo.
   ///
-  /// [amountRange] Todo.
+  /// [amountRange] FhirTodo.
   ///
-  /// [amountString] Todo.
+  /// [amountString] FhirTodo.
   ///
   /// [amountStringElement] ("_amountString") Extensions for amountString
   ///
-  /// [amountType] Todo.
+  /// [amountType] FhirTodo.
   ///
-  /// [source] Todo.
+  /// [source] FhirTodo.
   ///
   const factory SubstanceReferenceInformationTarget({
     /// [id] Unique id for the element within a resource (for internal references).
@@ -11059,37 +11059,37 @@ class SubstanceReferenceInformationTarget
     ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [target] Todo.
+    /// [target] FhirTodo.
     Identifier? target,
 
-    /// [type] Todo.
+    /// [type] FhirTodo.
     CodeableConcept? type,
 
-    /// [interaction] Todo.
+    /// [interaction] FhirTodo.
     CodeableConcept? interaction,
 
-    /// [organism] Todo.
+    /// [organism] FhirTodo.
     CodeableConcept? organism,
 
-    /// [organismType] Todo.
+    /// [organismType] FhirTodo.
     CodeableConcept? organismType,
 
-    /// [amountQuantity] Todo.
+    /// [amountQuantity] FhirTodo.
     Quantity? amountQuantity,
 
-    /// [amountRange] Todo.
+    /// [amountRange] FhirTodo.
     Range? amountRange,
 
-    /// [amountString] Todo.
+    /// [amountString] FhirTodo.
     String? amountString,
 
     /// [amountStringElement] ("_amountString") Extensions for amountString
     @JsonKey(name: '_amountString') Element? amountStringElement,
 
-    /// [amountType] Todo.
+    /// [amountType] FhirTodo.
     CodeableConcept? amountType,
 
-    /// [source] Todo.
+    /// [source] FhirTodo.
     List<Reference>? source,
   }) = _SubstanceReferenceInformationTarget;
 

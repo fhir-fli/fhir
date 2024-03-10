@@ -416,6 +416,7 @@ class Claim with Resource, _$Claim {
   }) = _Claim;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -445,6 +446,7 @@ class Claim with Resource, _$Claim {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3098,6 +3100,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   }) = _ClaimResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3129,6 +3132,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -5845,6 +5849,7 @@ class Invoice with Resource, _$Invoice {
   }) = _Invoice;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5876,6 +5881,7 @@ class Invoice with Resource, _$Invoice {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

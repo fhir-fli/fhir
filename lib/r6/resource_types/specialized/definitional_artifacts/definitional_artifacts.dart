@@ -792,6 +792,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   }) = _ActivityDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -823,6 +824,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1528,6 +1530,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
   }) = _ActorDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1559,6 +1562,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2140,6 +2144,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
   }) = _ConditionDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2171,6 +2176,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2999,6 +3005,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   }) = _DeviceDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3030,6 +3037,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -5673,6 +5681,7 @@ class EventDefinition with Resource, _$EventDefinition {
   }) = _EventDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5704,6 +5713,7 @@ class EventDefinition with Resource, _$EventDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -6100,6 +6110,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   }) = _ExampleScenario;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6131,6 +6142,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -7983,6 +7995,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   }) = _ObservationDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -8014,6 +8027,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -8994,6 +9008,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   }) = _PlanDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -9025,6 +9040,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -11615,6 +11631,7 @@ class Questionnaire with Resource, _$Questionnaire {
   }) = _Questionnaire;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -11646,6 +11663,7 @@ class Questionnaire with Resource, _$Questionnaire {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -13059,6 +13077,7 @@ class Requirements with Resource, _$Requirements {
   }) = _Requirements;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -13090,6 +13109,7 @@ class Requirements with Resource, _$Requirements {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -13821,6 +13841,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   }) = _SpecimenDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -13852,6 +13873,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

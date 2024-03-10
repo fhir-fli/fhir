@@ -235,6 +235,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }) = _PaymentNotice;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -266,6 +267,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -650,6 +652,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }) = _PaymentReconciliation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -681,6 +684,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

@@ -335,6 +335,7 @@ class Communication with Resource, _$Communication {
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -366,6 +367,7 @@ class Communication with Resource, _$Communication {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -847,6 +849,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   }) = _CommunicationRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -878,6 +881,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1196,6 +1200,7 @@ class DeviceAssociation with Resource, _$DeviceAssociation {
   }) = _DeviceAssociation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1227,6 +1232,7 @@ class DeviceAssociation with Resource, _$DeviceAssociation {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1642,6 +1648,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
   }) = _DeviceDispense;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1673,6 +1680,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2204,6 +2212,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   }) = _DeviceRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2235,6 +2244,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -2655,6 +2665,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
   }) = _DeviceUsage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2686,6 +2697,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3117,6 +3129,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   }) = _GuidanceResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3148,6 +3161,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -3375,6 +3389,7 @@ class InventoryItem with Resource, _$InventoryItem {
   }) = _InventoryItem;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3406,6 +3421,7 @@ class InventoryItem with Resource, _$InventoryItem {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -4456,6 +4472,7 @@ class InventoryReport with Resource, _$InventoryReport {
   }) = _InventoryReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4487,6 +4504,7 @@ class InventoryReport with Resource, _$InventoryReport {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -4960,6 +4978,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   }) = _SupplyDelivery;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4991,6 +5010,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -5389,6 +5409,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   }) = _SupplyRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5420,6 +5441,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

@@ -454,6 +454,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -485,6 +486,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 
@@ -1712,6 +1714,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1743,6 +1746,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }
 

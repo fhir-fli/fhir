@@ -6,6 +6,8 @@
 * Added partial timezones for FhirDateTime, FhirInstant
 * Added precision comparison for DateTimePrecision
 * Updated R5
+* Added r6
+* Removed XML
 
 ## [0.12.0]
 
