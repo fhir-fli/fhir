@@ -93,7 +93,7 @@ mixin _$Encounter {
 
   /// [status] The current state of the encounter (not the state of the patient
   ///  within the encounter - that is subjectState).
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EncounterStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -255,7 +255,7 @@ abstract class $EncounterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EncounterStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       @JsonKey(name: 'class') List<CodeableConcept>? class_,
       CodeableConcept? priority,
@@ -411,7 +411,7 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -734,7 +734,7 @@ abstract class _$$EncounterImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EncounterStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       @JsonKey(name: 'class') List<CodeableConcept>? class_,
       CodeableConcept? priority,
@@ -903,7 +903,7 @@ class __$$EncounterImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1238,7 +1238,7 @@ class _$EncounterImpl extends _Encounter {
   /// [status] The current state of the encounter (not the state of the patient
   ///  within the encounter - that is subjectState).
   @override
-  final FhirCode? status;
+  final EncounterStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1723,7 +1723,7 @@ abstract class _Encounter extends Encounter {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final EncounterStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       @JsonKey(name: 'class') final List<CodeableConcept>? class_,
       final CodeableConcept? priority,
@@ -1844,7 +1844,7 @@ abstract class _Encounter extends Encounter {
 
   /// [status] The current state of the encounter (not the state of the patient
   ///  within the encounter - that is subjectState).
-  FhirCode? get status;
+  EncounterStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -3823,7 +3823,7 @@ mixin _$EncounterLocation {
   /// [status] The status of the participants' presence at the specified location
   ///  during the period specified. If the participant is no longer at the
   ///  location, then the period will have an end date/time.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EncounterLocationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -3854,7 +3854,7 @@ abstract class $EncounterLocationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
-      FhirCode? status,
+      EncounterLocationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? form,
       Period? period});
@@ -3907,7 +3907,7 @@ class _$EncounterLocationCopyWithImpl<$Res, $Val extends EncounterLocation>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterLocationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3981,7 +3981,7 @@ abstract class _$$EncounterLocationImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
-      FhirCode? status,
+      EncounterLocationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? form,
       Period? period});
@@ -4036,7 +4036,7 @@ class __$$EncounterLocationImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterLocationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4145,7 +4145,7 @@ class _$EncounterLocationImpl extends _EncounterLocation {
   ///  during the period specified. If the participant is no longer at the
   ///  location, then the period will have an end date/time.
   @override
-  final FhirCode? status;
+  final EncounterLocationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4220,7 +4220,7 @@ abstract class _EncounterLocation extends EncounterLocation {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference location,
-      final FhirCode? status,
+      final EncounterLocationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? form,
       final Period? period}) = _$EncounterLocationImpl;
@@ -4268,7 +4268,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// [status] The status of the participants' presence at the specified location
   ///  during the period specified. If the participant is no longer at the
   ///  location, then the period will have an end date/time.
-  FhirCode? get status;
+  EncounterLocationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -4372,7 +4372,7 @@ mixin _$EncounterHistory {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EncounterStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -4463,7 +4463,7 @@ abstract class $EncounterHistoryCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference? encounter,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EncounterStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       @JsonKey(name: 'class') CodeableConcept class_,
       List<CodeableConcept>? type,
@@ -4590,7 +4590,7 @@ class _$EncounterHistoryCopyWithImpl<$Res, $Val extends EncounterHistory>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4822,7 +4822,7 @@ abstract class _$$EncounterHistoryImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference? encounter,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EncounterStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       @JsonKey(name: 'class') CodeableConcept class_,
       List<CodeableConcept>? type,
@@ -4960,7 +4960,7 @@ class __$$EncounterHistoryImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EncounterStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5207,7 +5207,7 @@ class _$EncounterHistoryImpl extends _EncounterHistory {
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
   @override
-  final FhirCode? status;
+  final EncounterStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -5435,7 +5435,7 @@ abstract class _EncounterHistory extends EncounterHistory {
       final List<FhirExtension>? modifierExtension,
       final Reference? encounter,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final EncounterStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       @JsonKey(name: 'class') required final CodeableConcept class_,
       final List<CodeableConcept>? type,
@@ -5544,7 +5544,7 @@ abstract class _EncounterHistory extends EncounterHistory {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  FhirCode? get status;
+  EncounterStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -6095,7 +6095,7 @@ mixin _$EpisodeOfCare {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EpisodeOfCareStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -6173,7 +6173,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
       List<CodeableConcept>? type,
@@ -6289,7 +6289,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EpisodeOfCareStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6468,7 +6468,7 @@ abstract class _$$EpisodeOfCareImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
       List<CodeableConcept>? type,
@@ -6591,7 +6591,7 @@ class __$$EpisodeOfCareImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EpisodeOfCareStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6835,7 +6835,7 @@ class _$EpisodeOfCareImpl extends _EpisodeOfCare {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @override
-  final FhirCode? status;
+  final EpisodeOfCareStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -7079,7 +7079,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<EpisodeOfCareStatusHistory>? statusHistory,
       final List<CodeableConcept>? type,
@@ -7183,7 +7183,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  FhirCode? get status;
+  EpisodeOfCareStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -7286,7 +7286,7 @@ mixin _$EpisodeOfCareStatusHistory {
       throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EpisodeOfCareStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -7313,7 +7313,7 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCode? status,
+      EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -7358,7 +7358,7 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EpisodeOfCareStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7404,7 +7404,7 @@ abstract class _$$EpisodeOfCareStatusHistoryImplCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCode? status,
+      EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -7450,7 +7450,7 @@ class __$$EpisodeOfCareStatusHistoryImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EpisodeOfCareStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7548,7 +7548,7 @@ class _$EpisodeOfCareStatusHistoryImpl extends _EpisodeOfCareStatusHistory {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @override
-  final FhirCode? status;
+  final EpisodeOfCareStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -7612,7 +7612,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final FhirCode? status,
+      final EpisodeOfCareStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$EpisodeOfCareStatusHistoryImpl;
   const _EpisodeOfCareStatusHistory._() : super._();
@@ -7653,7 +7653,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  FhirCode? get status;
+  EpisodeOfCareStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -8530,7 +8530,7 @@ mixin _$Flag {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Supports basic workflow.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  FlagStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -8584,7 +8584,7 @@ abstract class $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      FlagStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
@@ -8691,7 +8691,7 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as FlagStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8857,7 +8857,7 @@ abstract class _$$FlagImplCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      FlagStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
@@ -8971,7 +8971,7 @@ class __$$FlagImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as FlagStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9184,7 +9184,7 @@ class _$FlagImpl extends _Flag {
 
   /// [status] Supports basic workflow.
   @override
-  final FhirCode? status;
+  final FlagStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -9330,7 +9330,7 @@ abstract class _Flag extends Flag {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final FlagStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
@@ -9428,7 +9428,7 @@ abstract class _Flag extends Flag {
   @override
 
   /// [status] Supports basic workflow.
-  FhirCode? get status;
+  FlagStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -9612,7 +9612,7 @@ mixin _$Library {
 
   /// [status] The status of this library. Enables tracking the life-cycle of the
   ///  content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -9823,7 +9823,7 @@ abstract class $LibraryCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -10065,7 +10065,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10570,7 +10570,7 @@ abstract class _$$LibraryImplCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -10836,7 +10836,7 @@ class __$$LibraryImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11306,7 +11306,7 @@ class _$LibraryImpl extends _Library {
   /// [status] The status of this library. Enables tracking the life-cycle of the
   ///  content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -11863,7 +11863,7 @@ abstract class _Library extends Library {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -12065,7 +12065,7 @@ abstract class _Library extends Library {
 
   /// [status] The status of this library. Enables tracking the life-cycle of the
   ///  content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -12359,7 +12359,7 @@ mixin _$FhirList {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of this list.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  ListStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -12369,7 +12369,7 @@ mixin _$FhirList {
   ///  suitable for being maintained on an ongoing basis, or if it represents a
   ///  snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
-  FhirCode? get mode => throw _privateConstructorUsedError;
+  ListMode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -12442,9 +12442,9 @@ abstract class $FhirListCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      ListStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      FhirCode? mode,
+      ListMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -12568,7 +12568,7 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ListStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12576,7 +12576,7 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ListMode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -12811,9 +12811,9 @@ abstract class _$$FhirListImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      ListStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      FhirCode? mode,
+      ListMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -12948,7 +12948,7 @@ class __$$FhirListImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ListStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12956,7 +12956,7 @@ class __$$FhirListImplCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ListMode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -13201,7 +13201,7 @@ class _$FhirListImpl extends _FhirList {
 
   /// [status] Indicates the current state of this list.
   @override
-  final FhirCode? status;
+  final ListStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -13213,7 +13213,7 @@ class _$FhirListImpl extends _FhirList {
   ///  snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
   @override
-  final FhirCode? mode;
+  final ListMode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -13421,9 +13421,9 @@ abstract class _FhirList extends FhirList {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final ListStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
-      final FhirCode? mode,
+      final ListMode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
@@ -13527,7 +13527,7 @@ abstract class _FhirList extends FhirList {
   @override
 
   /// [status] Indicates the current state of this list.
-  FhirCode? get status;
+  ListStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -13539,7 +13539,7 @@ abstract class _FhirList extends FhirList {
   ///  suitable for being maintained on an ongoing basis, or if it represents a
   ///  snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
-  FhirCode? get mode;
+  ListMode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode

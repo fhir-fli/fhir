@@ -675,7 +675,7 @@ _$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
       udiCarrier: (json['udiCarrier'] as List<dynamic>?)
           ?.map((e) => DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -807,7 +807,7 @@ Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) {
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull(
       'udiCarrier', instance.udiCarrier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('availabilityStatus', instance.availabilityStatus?.toJson());
   writeNotNull(
@@ -849,6 +849,12 @@ Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) {
   return val;
 }
 
+const _$DeviceStatusEnumMap = {
+  DeviceStatus.active: 'active',
+  DeviceStatus.inactive: 'inactive',
+  DeviceStatus.enteredinerror: 'entered-in-error',
+};
+
 _$DeviceUdiCarrierImpl _$$DeviceUdiCarrierImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceUdiCarrierImpl(
@@ -883,9 +889,7 @@ _$DeviceUdiCarrierImpl _$$DeviceUdiCarrierImplFromJson(
       carrierHRFElement: json['_carrierHRF'] == null
           ? null
           : Element.fromJson(json['_carrierHRF'] as Map<String, dynamic>),
-      entryType: json['entryType'] == null
-          ? null
-          : FhirCode.fromJson(json['entryType']),
+      entryType: $enumDecodeNullable(_$UdiEntryTypeEnumMap, json['entryType']),
       entryTypeElement: json['_entryType'] == null
           ? null
           : Element.fromJson(json['_entryType'] as Map<String, dynamic>),
@@ -916,10 +920,20 @@ Map<String, dynamic> _$$DeviceUdiCarrierImplToJson(
   writeNotNull('_carrierAIDC', instance.carrierAIDCElement?.toJson());
   writeNotNull('carrierHRF', instance.carrierHRF);
   writeNotNull('_carrierHRF', instance.carrierHRFElement?.toJson());
-  writeNotNull('entryType', instance.entryType?.toJson());
+  writeNotNull('entryType', _$UdiEntryTypeEnumMap[instance.entryType]);
   writeNotNull('_entryType', instance.entryTypeElement?.toJson());
   return val;
 }
+
+const _$UdiEntryTypeEnumMap = {
+  UdiEntryType.barcode: 'barcode',
+  UdiEntryType.rfid: 'rfid',
+  UdiEntryType.manual: 'manual',
+  UdiEntryType.card: 'card',
+  UdiEntryType.selfreported: 'self-reported',
+  UdiEntryType.electronictransmission: 'electronic-transmission',
+  UdiEntryType.unknown: 'unknown',
+};
 
 _$DeviceNameImpl _$$DeviceNameImplFromJson(Map<String, dynamic> json) =>
     _$DeviceNameImpl(
@@ -934,7 +948,7 @@ _$DeviceNameImpl _$$DeviceNameImplFromJson(Map<String, dynamic> json) =>
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+      type: $enumDecodeNullable(_$DeviceNameTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -962,12 +976,18 @@ Map<String, dynamic> _$$DeviceNameImplToJson(_$DeviceNameImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('value', instance.value);
   writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$DeviceNameTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('display', instance.display?.toJson());
   writeNotNull('_display', instance.displayElement?.toJson());
   return val;
 }
+
+const _$DeviceNameTypeEnumMap = {
+  DeviceNameType.registeredname: 'registered-name',
+  DeviceNameType.userfriendlyname: 'user-friendly-name',
+  DeviceNameType.patientreportedname: 'patient-reported-name',
+};
 
 _$DeviceVersionImpl _$$DeviceVersionImplFromJson(Map<String, dynamic> json) =>
     _$DeviceVersionImpl(
@@ -1174,9 +1194,8 @@ _$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
       device: Reference.fromJson(json['device'] as Map<String, dynamic>),
-      operationalStatus: json['operationalStatus'] == null
-          ? null
-          : FhirCode.fromJson(json['operationalStatus']),
+      operationalStatus: $enumDecodeNullable(
+          _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus']),
       operationalStatusElement: json['_operationalStatus'] == null
           ? null
           : Element.fromJson(
@@ -1186,7 +1205,7 @@ _$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_color'] as Map<String, dynamic>),
       category:
-          json['category'] == null ? null : FhirCode.fromJson(json['category']),
+          $enumDecodeNullable(_$DeviceMetricCategoryEnumMap, json['category']),
       categoryElement: json['_category'] == null
           ? null
           : Element.fromJson(json['_category'] as Map<String, dynamic>),
@@ -1229,18 +1248,33 @@ Map<String, dynamic> _$$DeviceMetricImplToJson(_$DeviceMetricImpl instance) {
   val['type'] = instance.type.toJson();
   writeNotNull('unit', instance.unit?.toJson());
   val['device'] = instance.device.toJson();
-  writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
+  writeNotNull('operationalStatus',
+      _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
   writeNotNull(
       '_operationalStatus', instance.operationalStatusElement?.toJson());
   writeNotNull('color', instance.color?.toJson());
   writeNotNull('_color', instance.colorElement?.toJson());
-  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
   writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('measurementFrequency', instance.measurementFrequency?.toJson());
   writeNotNull(
       'calibration', instance.calibration?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$DeviceMetricOperationalStatusEnumMap = {
+  DeviceMetricOperationalStatus.on_: 'on',
+  DeviceMetricOperationalStatus.off: 'off',
+  DeviceMetricOperationalStatus.standby: 'standby',
+  DeviceMetricOperationalStatus.enteredinerror: 'entered-in-error',
+};
+
+const _$DeviceMetricCategoryEnumMap = {
+  DeviceMetricCategory.measurement: 'measurement',
+  DeviceMetricCategory.setting: 'setting',
+  DeviceMetricCategory.calculation: 'calculation',
+  DeviceMetricCategory.unspecified: 'unspecified',
+};
 
 _$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
         Map<String, dynamic> json) =>
@@ -1252,11 +1286,13 @@ _$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+      type: $enumDecodeNullable(
+          _$DeviceMetricCalibrationTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      state: json['state'] == null ? null : FhirCode.fromJson(json['state']),
+      state: $enumDecodeNullable(
+          _$DeviceMetricCalibrationStateEnumMap, json['state']),
       stateElement: json['_state'] == null
           ? null
           : Element.fromJson(json['_state'] as Map<String, dynamic>),
@@ -1283,14 +1319,28 @@ Map<String, dynamic> _$$DeviceMetricCalibrationImplToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$DeviceMetricCalibrationTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('state', instance.state?.toJson());
+  writeNotNull('state', _$DeviceMetricCalibrationStateEnumMap[instance.state]);
   writeNotNull('_state', instance.stateElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
   return val;
 }
+
+const _$DeviceMetricCalibrationTypeEnumMap = {
+  DeviceMetricCalibrationType.unspecified: 'unspecified',
+  DeviceMetricCalibrationType.offset: 'offset',
+  DeviceMetricCalibrationType.gain: 'gain',
+  DeviceMetricCalibrationType.twopoint: 'two-point',
+};
+
+const _$DeviceMetricCalibrationStateEnumMap = {
+  DeviceMetricCalibrationState.notcalibrated: 'not-calibrated',
+  DeviceMetricCalibrationState.calibrationrequired: 'calibration-required',
+  DeviceMetricCalibrationState.calibrated: 'calibrated',
+  DeviceMetricCalibrationState.unspecified: 'unspecified',
+};
 
 _$NutritionProductImpl _$$NutritionProductImplFromJson(
         Map<String, dynamic> json) =>
@@ -1329,7 +1379,7 @@ _$NutritionProductImpl _$$NutritionProductImplFromJson(
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$ProductStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1389,7 +1439,7 @@ Map<String, dynamic> _$$NutritionProductImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ProductStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1405,6 +1455,12 @@ Map<String, dynamic> _$$NutritionProductImplToJson(
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$ProductStatusEnumMap = {
+  ProductStatus.active: 'active',
+  ProductStatus.inactive: 'inactive',
+  ProductStatus.enteredinerror: 'entered-in-error',
+};
 
 _$NutritionProductNutrientImpl _$$NutritionProductNutrientImplFromJson(
         Map<String, dynamic> json) =>
@@ -1666,7 +1722,7 @@ _$SubstanceImpl _$$SubstanceImplFromJson(Map<String, dynamic> json) =>
       instanceElement: json['_instance'] == null
           ? null
           : Element.fromJson(json['_instance'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$ProductStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1722,7 +1778,7 @@ Map<String, dynamic> _$$SubstanceImplToJson(_$SubstanceImpl instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instance', instance.instance?.toJson());
   writeNotNull('_instance', instance.instanceElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ProductStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();

@@ -98,7 +98,7 @@ mixin _$Appointment {
   /// [status] The overall status of the Appointment. Each of the participants
   ///  has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  AppointmentStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -310,7 +310,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      AppointmentStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? cancellationReason,
       @JsonKey(name: 'class') List<CodeableConcept>? class_,
@@ -490,7 +490,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AppointmentStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -901,7 +901,7 @@ abstract class _$$AppointmentImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      AppointmentStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? cancellationReason,
       @JsonKey(name: 'class') List<CodeableConcept>? class_,
@@ -1098,7 +1098,7 @@ class __$$AppointmentImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AppointmentStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1491,7 +1491,7 @@ class _$AppointmentImpl extends _Appointment {
   ///  has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
   @override
-  final FhirCode? status;
+  final AppointmentStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2070,7 +2070,7 @@ abstract class _Appointment extends Appointment {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final AppointmentStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? cancellationReason,
       @JsonKey(name: 'class') final List<CodeableConcept>? class_,
@@ -2209,7 +2209,7 @@ abstract class _Appointment extends Appointment {
   /// [status] The overall status of the Appointment. Each of the participants
   ///  has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
-  FhirCode? get status;
+  AppointmentStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2487,7 +2487,7 @@ mixin _$AppointmentParticipant {
   Element? get requiredElement => throw _privateConstructorUsedError;
 
   /// [status] Participation status of the actor.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  ParticipationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2514,7 +2514,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       Reference? actor,
       @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      FhirCode? status,
+      ParticipationStatus? status,
       @JsonKey(name: '_status') Element? statusElement});
 
   $PeriodCopyWith<$Res>? get period;
@@ -2584,7 +2584,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ParticipationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2659,7 +2659,7 @@ abstract class _$$AppointmentParticipantImplCopyWith<$Res>
       Reference? actor,
       @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      FhirCode? status,
+      ParticipationStatus? status,
       @JsonKey(name: '_status') Element? statusElement});
 
   @override
@@ -2732,7 +2732,7 @@ class __$$AppointmentParticipantImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ParticipationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2863,7 +2863,7 @@ class _$AppointmentParticipantImpl extends _AppointmentParticipant {
 
   /// [status] Participation status of the actor.
   @override
-  final FhirCode? status;
+  final ParticipationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2937,7 +2937,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           final Reference? actor,
           @JsonKey(name: 'required') final FhirBoolean? required_,
           @JsonKey(name: '_required') final Element? requiredElement,
-          final FhirCode? status,
+          final ParticipationStatus? status,
           @JsonKey(name: '_status') final Element? statusElement}) =
       _$AppointmentParticipantImpl;
   const _AppointmentParticipant._() : super._();
@@ -3002,7 +3002,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
 
   /// [status] Participation status of the actor.
-  FhirCode? get status;
+  ParticipationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -5926,7 +5926,8 @@ mixin _$AppointmentResponse {
   ///  the appointment, then these times should be interpreted as a requested
   ///  time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
-  FhirCode? get participantStatus => throw _privateConstructorUsedError;
+  AppointmentResponseStatus? get participantStatus =>
+      throw _privateConstructorUsedError;
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
   ///  participantStatus
@@ -6001,7 +6002,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @JsonKey(name: '_end') Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      FhirCode? participantStatus,
+      AppointmentResponseStatus? participantStatus,
       @JsonKey(name: '_participantStatus') Element? participantStatusElement,
       FhirMarkdown? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -6161,7 +6162,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       participantStatus: freezed == participantStatus
           ? _value.participantStatus
           : participantStatus // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AppointmentResponseStatus?,
       participantStatusElement: freezed == participantStatusElement
           ? _value.participantStatusElement
           : participantStatusElement // ignore: cast_nullable_to_non_nullable
@@ -6397,7 +6398,7 @@ abstract class _$$AppointmentResponseImplCopyWith<$Res>
       @JsonKey(name: '_end') Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      FhirCode? participantStatus,
+      AppointmentResponseStatus? participantStatus,
       @JsonKey(name: '_participantStatus') Element? participantStatusElement,
       FhirMarkdown? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -6569,7 +6570,7 @@ class __$$AppointmentResponseImplCopyWithImpl<$Res>
       participantStatus: freezed == participantStatus
           ? _value.participantStatus
           : participantStatus // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AppointmentResponseStatus?,
       participantStatusElement: freezed == participantStatusElement
           ? _value.participantStatusElement
           : participantStatusElement // ignore: cast_nullable_to_non_nullable
@@ -6862,7 +6863,7 @@ class _$AppointmentResponseImpl extends _AppointmentResponse {
   ///  time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
   @override
-  final FhirCode? participantStatus;
+  final AppointmentResponseStatus? participantStatus;
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
   ///  participantStatus
@@ -7055,7 +7056,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       @JsonKey(name: '_end') final Element? endElement,
       final List<CodeableConcept>? participantType,
       final Reference? actor,
-      final FhirCode? participantStatus,
+      final AppointmentResponseStatus? participantStatus,
       @JsonKey(name: '_participantStatus')
       final Element? participantStatusElement,
       final FhirMarkdown? comment,
@@ -7210,7 +7211,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   ///  the appointment, then these times should be interpreted as a requested
   ///  time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
-  FhirCode? get participantStatus;
+  AppointmentResponseStatus? get participantStatus;
   @override
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
@@ -8509,7 +8510,7 @@ mixin _$Slot {
   Reference get schedule => throw _privateConstructorUsedError;
 
   /// [status] busy | free | busy-unavailable | busy-tentative | entered-in-error.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  SlotStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -8574,7 +8575,7 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       List<CodeableConcept>? appointmentType,
       Reference schedule,
-      FhirCode? status,
+      SlotStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirInstant? start,
       @JsonKey(name: '_start') Element? startElement,
@@ -8710,7 +8711,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SlotStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8893,7 +8894,7 @@ abstract class _$$SlotImplCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       List<CodeableConcept>? appointmentType,
       Reference schedule,
-      FhirCode? status,
+      SlotStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirInstant? start,
       @JsonKey(name: '_start') Element? startElement,
@@ -9036,7 +9037,7 @@ class __$$SlotImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SlotStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9333,7 +9334,7 @@ class _$SlotImpl extends _Slot {
 
   /// [status] busy | free | busy-unavailable | busy-tentative | entered-in-error.
   @override
-  final FhirCode? status;
+  final SlotStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -9504,7 +9505,7 @@ abstract class _Slot extends Slot {
       final List<CodeableConcept>? specialty,
       final List<CodeableConcept>? appointmentType,
       required final Reference schedule,
-      final FhirCode? status,
+      final SlotStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirInstant? start,
       @JsonKey(name: '_start') final Element? startElement,
@@ -9631,7 +9632,7 @@ abstract class _Slot extends Slot {
   @override
 
   /// [status] busy | free | busy-unavailable | busy-tentative | entered-in-error.
-  FhirCode? get status;
+  SlotStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -9796,7 +9797,7 @@ mixin _$Task {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current status of the task.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  TaskStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -9812,7 +9813,7 @@ mixin _$Task {
   /// [intent] Indicates the "level" of actionability associated with the Task,
   ///  i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
-  FhirCode? get intent => throw _privateConstructorUsedError;
+  TaskIntent? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
@@ -9820,7 +9821,7 @@ mixin _$Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with respect
   ///  to other requests.
-  FhirCode? get priority => throw _privateConstructorUsedError;
+  RequestPriority? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
@@ -9956,13 +9957,13 @@ abstract class $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      FhirCode? status,
+      TaskStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableReference? statusReason,
       CodeableConcept? businessStatus,
-      FhirCode? intent,
+      TaskIntent? intent,
       @JsonKey(name: '_intent') Element? intentElement,
-      FhirCode? priority,
+      RequestPriority? priority,
       @JsonKey(name: '_priority') Element? priorityElement,
       FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -10160,7 +10161,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TaskStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10176,7 +10177,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TaskIntent?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -10184,7 +10185,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as RequestPriority?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -10624,13 +10625,13 @@ abstract class _$$TaskImplCopyWith<$Res> implements $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      FhirCode? status,
+      TaskStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableReference? statusReason,
       CodeableConcept? businessStatus,
-      FhirCode? intent,
+      TaskIntent? intent,
       @JsonKey(name: '_intent') Element? intentElement,
-      FhirCode? priority,
+      RequestPriority? priority,
       @JsonKey(name: '_priority') Element? priorityElement,
       FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -10850,7 +10851,7 @@ class __$$TaskImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TaskStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10866,7 +10867,7 @@ class __$$TaskImplCopyWithImpl<$Res>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TaskIntent?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -10874,7 +10875,7 @@ class __$$TaskImplCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as RequestPriority?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -11270,7 +11271,7 @@ class _$TaskImpl extends _Task {
 
   /// [status] The current status of the task.
   @override
-  final FhirCode? status;
+  final TaskStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -11290,7 +11291,7 @@ class _$TaskImpl extends _Task {
   ///  i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
   @override
-  final FhirCode? intent;
+  final TaskIntent? intent;
 
   /// [intentElement] ("_intent") Extensions for intent
   @override
@@ -11300,7 +11301,7 @@ class _$TaskImpl extends _Task {
   /// [priority] Indicates how quickly the Task should be addressed with respect
   ///  to other requests.
   @override
-  final FhirCode? priority;
+  final RequestPriority? priority;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @override
@@ -11705,13 +11706,13 @@ abstract class _Task extends Task {
       final List<Reference>? basedOn,
       final Identifier? groupIdentifier,
       final List<Reference>? partOf,
-      final FhirCode? status,
+      final TaskStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableReference? statusReason,
       final CodeableConcept? businessStatus,
-      final FhirCode? intent,
+      final TaskIntent? intent,
       @JsonKey(name: '_intent') final Element? intentElement,
-      final FhirCode? priority,
+      final RequestPriority? priority,
       @JsonKey(name: '_priority') final Element? priorityElement,
       final FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform') final Element? doNotPerformElement,
@@ -11870,7 +11871,7 @@ abstract class _Task extends Task {
   @override
 
   /// [status] The current status of the task.
-  FhirCode? get status;
+  TaskStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -11890,7 +11891,7 @@ abstract class _Task extends Task {
   /// [intent] Indicates the "level" of actionability associated with the Task,
   ///  i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
-  FhirCode? get intent;
+  TaskIntent? get intent;
   @override
 
   /// [intentElement] ("_intent") Extensions for intent
@@ -11900,7 +11901,7 @@ abstract class _Task extends Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with respect
   ///  to other requests.
-  FhirCode? get priority;
+  RequestPriority? get priority;
   @override
 
   /// [priorityElement] ("_priority") Extensions for priority
@@ -19535,7 +19536,7 @@ mixin _$Transport {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the transport event.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  TransportStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -19548,7 +19549,7 @@ mixin _$Transport {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned transport,
   ///  an actionable transport, etc.
-  FhirCode? get intent => throw _privateConstructorUsedError;
+  TransportIntent? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
@@ -19556,7 +19557,7 @@ mixin _$Transport {
 
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
-  FhirCode? get priority => throw _privateConstructorUsedError;
+  RequestPriority? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
@@ -19691,12 +19692,12 @@ abstract class $TransportCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      FhirCode? status,
+      TransportStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
-      FhirCode? intent,
+      TransportIntent? intent,
       @JsonKey(name: '_intent') Element? intentElement,
-      FhirCode? priority,
+      RequestPriority? priority,
       @JsonKey(name: '_priority') Element? priorityElement,
       CodeableConcept? code,
       String? description,
@@ -19894,7 +19895,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TransportStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -19906,7 +19907,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TransportIntent?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -19914,7 +19915,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as RequestPriority?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -20359,12 +20360,12 @@ abstract class _$$TransportImplCopyWith<$Res>
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      FhirCode? status,
+      TransportStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? statusReason,
-      FhirCode? intent,
+      TransportIntent? intent,
       @JsonKey(name: '_intent') Element? intentElement,
-      FhirCode? priority,
+      RequestPriority? priority,
       @JsonKey(name: '_priority') Element? priorityElement,
       CodeableConcept? code,
       String? description,
@@ -20586,7 +20587,7 @@ class __$$TransportImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TransportStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -20598,7 +20599,7 @@ class __$$TransportImplCopyWithImpl<$Res>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as TransportIntent?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -20606,7 +20607,7 @@ class __$$TransportImplCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as RequestPriority?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -21003,7 +21004,7 @@ class _$TransportImpl extends _Transport {
 
   /// [status] A code specifying the state of the transport event.
   @override
-  final FhirCode? status;
+  final TransportStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -21019,7 +21020,7 @@ class _$TransportImpl extends _Transport {
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned transport,
   ///  an actionable transport, etc.
   @override
-  final FhirCode? intent;
+  final TransportIntent? intent;
 
   /// [intentElement] ("_intent") Extensions for intent
   @override
@@ -21029,7 +21030,7 @@ class _$TransportImpl extends _Transport {
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
   @override
-  final FhirCode? priority;
+  final RequestPriority? priority;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @override
@@ -21407,12 +21408,12 @@ abstract class _Transport extends Transport {
       final List<Reference>? basedOn,
       final Identifier? groupIdentifier,
       final List<Reference>? partOf,
-      final FhirCode? status,
+      final TransportStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? statusReason,
-      final FhirCode? intent,
+      final TransportIntent? intent,
       @JsonKey(name: '_intent') final Element? intentElement,
-      final FhirCode? priority,
+      final RequestPriority? priority,
       @JsonKey(name: '_priority') final Element? priorityElement,
       final CodeableConcept? code,
       final String? description,
@@ -21574,7 +21575,7 @@ abstract class _Transport extends Transport {
   @override
 
   /// [status] A code specifying the state of the transport event.
-  FhirCode? get status;
+  TransportStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -21590,7 +21591,7 @@ abstract class _Transport extends Transport {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned transport,
   ///  an actionable transport, etc.
-  FhirCode? get intent;
+  TransportIntent? get intent;
   @override
 
   /// [intentElement] ("_intent") Extensions for intent
@@ -21600,7 +21601,7 @@ abstract class _Transport extends Transport {
 
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
-  FhirCode? get priority;
+  RequestPriority? get priority;
   @override
 
   /// [priorityElement] ("_priority") Extensions for priority
@@ -28826,7 +28827,7 @@ mixin _$VerificationResult {
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
-  FhirCode? get status => throw _privateConstructorUsedError;
+  VerificationResultStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -28913,7 +28914,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
       CodeableConcept? need,
-      FhirCode? status,
+      VerificationResultStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate') Element? statusDateElement,
@@ -29052,7 +29053,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VerificationResultStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -29295,7 +29296,7 @@ abstract class _$$VerificationResultImplCopyWith<$Res>
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
       CodeableConcept? need,
-      FhirCode? status,
+      VerificationResultStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate') Element? statusDateElement,
@@ -29445,7 +29446,7 @@ class __$$VerificationResultImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VerificationResultStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -29734,7 +29735,7 @@ class _$VerificationResultImpl extends _VerificationResult {
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
   @override
-  final FhirCode? status;
+  final VerificationResultStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -29969,7 +29970,7 @@ abstract class _VerificationResult extends VerificationResult {
           @JsonKey(name: '_targetLocation')
           final List<Element>? targetLocationElement,
           final CodeableConcept? need,
-          final FhirCode? status,
+          final VerificationResultStatus? status,
           @JsonKey(name: '_status') final Element? statusElement,
           final FhirDateTime? statusDate,
           @JsonKey(name: '_statusDate') final Element? statusDateElement,
@@ -30092,7 +30093,7 @@ abstract class _VerificationResult extends VerificationResult {
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
-  FhirCode? get status;
+  VerificationResultStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

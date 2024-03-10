@@ -82,7 +82,20 @@ enum TransportIntent {
   unknown,
 }
 
-enum Appointmentstatus {
+enum AppointmentResponseStatus {
+  @JsonValue('accepted')
+  accepted,
+  @JsonValue('declined')
+  declined,
+  @JsonValue('tentative')
+  tentative,
+  @JsonValue('needs-action')
+  needsaction,
+  @JsonValue('entered-in-error')
+  enteredinerror,
+}
+
+enum AppointmentStatus {
   @JsonValue('proposed')
   proposed,
   @JsonValue('pending')
@@ -105,7 +118,7 @@ enum Appointmentstatus {
   waitlist,
 }
 
-enum Participationstatus {
+enum ParticipationStatus {
   @JsonValue('accepted')
   accepted,
   @JsonValue('declined')
@@ -146,7 +159,7 @@ enum DaysOfWeek {
   sun,
 }
 
-enum Slotstatus {
+enum SlotStatus {
   @JsonValue('busy')
   busy,
   @JsonValue('free')
@@ -155,6 +168,23 @@ enum Slotstatus {
   busyunavailable,
   @JsonValue('busy-tentative')
   busytentative,
+  @JsonValue('entered-in-error')
+  enteredinerror,
+}
+
+enum VerificationResultStatus {
+  @JsonValue('attested')
+  attested,
+  @JsonValue('validated')
+  validated,
+  @JsonValue('in-process')
+  inprocess,
+  @JsonValue('req-revalid')
+  reqrevalid,
+  @JsonValue('val-fail')
+  valfail,
+  @JsonValue('reval-fail')
+  revalfail,
   @JsonValue('entered-in-error')
   enteredinerror,
 }

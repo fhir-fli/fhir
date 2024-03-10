@@ -1,5 +1,177 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+enum MimeType {
+  @JsonValue('audio/aac')
+  audio_aac,
+  @JsonValue('application/x-abiword')
+  application_x_abiword,
+  @JsonValue('application/x-freearc')
+  application_x_freearc,
+  @JsonValue('image/avif')
+  image_avif,
+  @JsonValue('video/x-msvideo')
+  video_x_msvideo,
+  @JsonValue('application/vnd.amazon.ebook')
+  application_vnd_amazon_ebook,
+  @JsonValue('application/octet-stream')
+  application_octet_stream,
+  @JsonValue('image/bmp')
+  image_bmp,
+  @JsonValue('application/x-bzip')
+  application_x_bzip,
+  @JsonValue('application/x-bzip2')
+  application_x_bzip2,
+  @JsonValue('application/x-cdf')
+  application_x_cdf,
+  @JsonValue('application/x-csh')
+  application_x_csh,
+  @JsonValue('text/css')
+  text_css,
+  @JsonValue('text/csv')
+  text_csv,
+  @JsonValue('application/msword')
+  application_msword,
+  @JsonValue(
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+  application_vnd_openxmlformats_officedocument_wordprocessingml_document,
+  @JsonValue('application/vnd.ms-fontobject')
+  application_vnd_ms_fontobject,
+  @JsonValue('application/epub+zip')
+  application_epub_zip,
+  @JsonValue('application/gzip')
+  application_gzip,
+  @JsonValue('image/gif')
+  image_gif,
+  @JsonValue('text/html')
+  text_html,
+  @JsonValue('image/vnd.microsoft.icon')
+  image_vnd_microsoft_icon,
+  @JsonValue('text/calendar')
+  text_calendar,
+  @JsonValue('application/java-archive')
+  application_java_archive,
+  @JsonValue('image/jpeg')
+  image_jpeg,
+  @JsonValue('text/javascript')
+  text_javascript,
+  @JsonValue('application/json')
+  application_json,
+  @JsonValue('application/ld+json')
+  application_ld_json,
+  @JsonValue('audio/midi')
+  audio_midi,
+  @JsonValue('audio/x-midi')
+  audio_x_midi,
+  @JsonValue('audio/mpeg')
+  audio_mpeg,
+  @JsonValue('video/mp4')
+  video_mp4,
+  @JsonValue('video/mpeg')
+  video_mpeg,
+  @JsonValue('application/vnd.apple.installer+xml')
+  application_vnd_apple_installer_xml,
+  @JsonValue('application/vnd.oasis.opendocument.presentation')
+  application_vnd_oasis_opendocument_presentation,
+  @JsonValue('application/vnd.oasis.opendocument.spreadsheet')
+  application_vnd_oasis_opendocument_spreadsheet,
+  @JsonValue('application/vnd.oasis.opendocument.text')
+  application_vnd_oasis_opendocument_text,
+  @JsonValue('audio/ogg')
+  audio_ogg,
+  @JsonValue('video/ogg')
+  video_ogg,
+  @JsonValue('application/ogg')
+  application_ogg,
+  @JsonValue('audio/opus')
+  audio_opus,
+  @JsonValue('font/otf')
+  font_otf,
+  @JsonValue('image/png')
+  image_png,
+  @JsonValue('application/pdf')
+  application_pdf,
+  @JsonValue('application/x-httpd-php')
+  application_x_httpd_php,
+  @JsonValue('application/vnd.ms-powerpoint')
+  application_vnd_ms_powerpoint,
+  @JsonValue(
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation')
+  application_vnd_openxmlformats_officedocument_presentationml_presentation,
+  @JsonValue('application/vnd.rar')
+  application_vnd_rar,
+  @JsonValue('application/rtf')
+  application_rtf,
+  @JsonValue('application/x-sh')
+  application_x_sh,
+  @JsonValue('image/svg+xml')
+  image_svg_xml,
+  @JsonValue('application/x-tar')
+  application_x_tar,
+  @JsonValue('image/tiff')
+  image_tiff,
+  @JsonValue('video/mp2t')
+  video_mp2t,
+  @JsonValue('font/ttf')
+  font_ttf,
+  @JsonValue('text/plain')
+  text_plain,
+  @JsonValue('application/vnd.visio')
+  application_vnd_visio,
+  @JsonValue('audio/wav')
+  audio_wav,
+  @JsonValue('audio/webm')
+  audio_webm,
+  @JsonValue('video/webm')
+  video_webm,
+  @JsonValue('image/webp')
+  image_webp,
+  @JsonValue('font/woff')
+  font_woff,
+  @JsonValue('font/woff2')
+  font_woff2,
+  @JsonValue('application/xhtml+xml')
+  application_xhtml_xml,
+  @JsonValue('application/vnd.ms-excel')
+  application_vnd_ms_excel,
+  @JsonValue(
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+  application_vnd_openxmlformats_officedocument_spreadsheetml_sheet,
+  @JsonValue('application/xml')
+  application_xml,
+  @JsonValue('text/xml')
+  text_xml,
+  @JsonValue('application/atom+xml')
+  application_atom_xml,
+  @JsonValue('application/vnd.mozilla.xul+xml')
+  application_vnd_mozilla_xul_xml,
+  @JsonValue('application/zip')
+  application_zip,
+  @JsonValue('video/3gpp')
+  video_3gpp,
+  @JsonValue('audio/3gpp')
+  audio_3gpp,
+  @JsonValue('video/3gpp2')
+  video_3gpp2,
+  @JsonValue('audio/3gpp2')
+  audio_3gpp2,
+  @JsonValue('application/x-7z-compressed')
+  application_x_7z_compressed,
+  @JsonValue('text/hl7v2')
+  text_hl7v2,
+  @JsonValue('text/rtf')
+  text_rtf,
+  @JsonValue('application/cda+xml')
+  application_cda_xml,
+  @JsonValue('application/fhir+json')
+  application_fhir_json,
+  @JsonValue('application/fhir+xml')
+  application_fhir_xml,
+  @JsonValue('application/fhir+ndjson')
+  application_fhir_ndjson,
+  @JsonValue('application/json+fhir')
+  application_json_fhir,
+}
+
 enum ServiceMode {
   @JsonValue('in-person')
   inperson,
@@ -382,7 +554,7 @@ enum ActionParticipantFunction {
   witness,
 }
 
-enum DeviceNametype {
+enum DeviceNameType {
   @JsonValue('registered-name')
   registeredname,
   @JsonValue('user-friendly-name')
@@ -519,4 +691,13 @@ enum ListMode {
 enum FhirTypes {
   @JsonValue('Base')
   base,
+}
+
+enum ProductStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  enteredinerror,
 }

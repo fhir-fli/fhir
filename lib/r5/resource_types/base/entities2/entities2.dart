@@ -1297,7 +1297,7 @@ class Device with Resource, _$Device {
 
     /// [status] The Device record status. This is not the status of the device
     ///  like availability.
-    FhirCode? status,
+    DeviceStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1636,7 +1636,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
 
     /// [entryType] A coded entry to indicate how the data was entered.
-    FhirCode? entryType,
+    UdiEntryType? entryType,
 
     /// [entryTypeElement] ("_entryType") Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
@@ -1762,7 +1762,7 @@ class DeviceName with _$DeviceName {
 
     /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
     ///  PatientReportedName.
-    FhirCode? type,
+    DeviceNameType? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2438,7 +2438,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [operationalStatus] Indicates current operational state of the device. For
     ///  example: On, Off, Standby, etc.
-    FhirCode? operationalStatus,
+    DeviceMetricOperationalStatus? operationalStatus,
 
     /// [operationalStatusElement] ("_operationalStatus") Extensions for
     ///  operationalStatus
@@ -2456,7 +2456,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [category] Indicates the category of the observation generation process. A
     ///  DeviceMetric can be for example a setting, measurement, or calculation.
-    FhirCode? category,
+    DeviceMetricCategory? category,
 
     /// [categoryElement] ("_category") Extensions for category
     @JsonKey(name: '_category') Element? categoryElement,
@@ -2587,13 +2587,13 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Describes the type of the calibration method.
-    FhirCode? type,
+    DeviceMetricCalibrationType? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [state] Describes the state of the calibration.
-    FhirCode? state,
+    DeviceMetricCalibrationState? state,
 
     /// [stateElement] ("_state") Extensions for state
     @JsonKey(name: '_state') Element? stateElement,
@@ -2800,7 +2800,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     CodeableConcept? code,
 
     /// [status] The current state of the product.
-    FhirCode? status,
+    ProductStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3581,7 +3581,7 @@ class Substance with Resource, _$Substance {
     @JsonKey(name: '_instance') Element? instanceElement,
 
     /// [status] A code to indicate if the substance is actively used.
-    FhirCode? status,
+    ProductStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

@@ -218,7 +218,7 @@ class FhirGroup with Resource, _$FhirGroup {
 
     /// [type] Identifies the broad classification of the kind of resources the
     ///  group includes.
-    FhirCode? type,
+    GroupType? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -233,7 +233,7 @@ class FhirGroup with Resource, _$FhirGroup {
     /// * 'enumerated': The Group.characteristics are necessary but not sufficient
     ///  to determine membership. Membership is determined by being listed as one
     ///  of the Group.member.
-    FhirCode? membership,
+    GroupMembershipBasis? membership,
 
     /// [membershipElement] ("_membership") Extensions for membership
     @JsonKey(name: '_membership') Element? membershipElement,
@@ -828,7 +828,7 @@ class Patient with Resource, _$Patient {
 
     /// [gender] Administrative Gender - the gender that the patient is considered
     ///  to have for administration and record keeping purposes.
-    FhirCode? gender,
+    AdministrativeGender? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -1034,7 +1034,7 @@ class PatientContact with _$PatientContact {
 
     /// [gender] Administrative Gender - the gender that the contact person is
     ///  considered to have for administration and record keeping purposes.
-    FhirCode? gender,
+    AdministrativeGender? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -1514,7 +1514,7 @@ class Person with Resource, _$Person {
     List<ContactPoint>? telecom,
 
     /// [gender] Administrative Gender.
-    FhirCode? gender,
+    AdministrativeGender? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -1790,7 +1790,7 @@ class PersonLink with _$PersonLink {
 
     /// [assurance] Level of assurance that this link is associated with the target
     ///  resource.
-    FhirCode? assurance,
+    IdentityAssuranceLevel? assurance,
 
     /// [assuranceElement] ("_assurance") Extensions for assurance
     @JsonKey(name: '_assurance') Element? assuranceElement,
@@ -2027,7 +2027,7 @@ class Practitioner with Resource, _$Practitioner {
 
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
-    FhirCode? gender,
+    AdministrativeGender? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -2817,7 +2817,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
-    FhirCode? gender,
+    AdministrativeGender? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @override @JsonKey(name: '_gender') Element? genderElement,

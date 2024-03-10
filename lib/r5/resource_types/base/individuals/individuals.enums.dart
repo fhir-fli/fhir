@@ -11,7 +11,7 @@ enum LinkType {
   seealso,
 }
 
-enum IdentityAssurancelevel {
+enum IdentityAssuranceLevel {
   @JsonValue('level1')
   level1,
   @JsonValue('level2')

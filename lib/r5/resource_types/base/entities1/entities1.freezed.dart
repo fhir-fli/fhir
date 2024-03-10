@@ -1393,7 +1393,7 @@ mixin _$EndpointPayload {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
-  List<FhirCode>? get mimeType => throw _privateConstructorUsedError;
+  List<MimeType>? get mimeType => throw _privateConstructorUsedError;
 
   /// [mimeTypeElement] ("_mimeType") Extensions for mimeType
   @JsonKey(name: '_mimeType')
@@ -1416,7 +1416,7 @@ abstract class $EndpointPayloadCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
-      List<FhirCode>? mimeType,
+      List<MimeType>? mimeType,
       @JsonKey(name: '_mimeType') List<Element>? mimeTypeElement});
 }
 
@@ -1460,7 +1460,7 @@ class _$EndpointPayloadCopyWithImpl<$Res, $Val extends EndpointPayload>
       mimeType: freezed == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
-              as List<FhirCode>?,
+              as List<MimeType>?,
       mimeTypeElement: freezed == mimeTypeElement
           ? _value.mimeTypeElement
           : mimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -1482,7 +1482,7 @@ abstract class _$$EndpointPayloadImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
-      List<FhirCode>? mimeType,
+      List<MimeType>? mimeType,
       @JsonKey(name: '_mimeType') List<Element>? mimeTypeElement});
 }
 
@@ -1524,7 +1524,7 @@ class __$$EndpointPayloadImplCopyWithImpl<$Res>
       mimeType: freezed == mimeType
           ? _value._mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
-              as List<FhirCode>?,
+              as List<MimeType>?,
       mimeTypeElement: freezed == mimeTypeElement
           ? _value._mimeTypeElement
           : mimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -1541,7 +1541,7 @@ class _$EndpointPayloadImpl extends _EndpointPayload {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
-      final List<FhirCode>? mimeType,
+      final List<MimeType>? mimeType,
       @JsonKey(name: '_mimeType') final List<Element>? mimeTypeElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1637,14 +1637,14 @@ class _$EndpointPayloadImpl extends _EndpointPayload {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
-  final List<FhirCode>? _mimeType;
+  final List<MimeType>? _mimeType;
 
   /// [mimeType] The mime type to send the payload in - e.g.
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
   @override
-  List<FhirCode>? get mimeType {
+  List<MimeType>? get mimeType {
     final value = _mimeType;
     if (value == null) return null;
     if (_mimeType is EqualUnmodifiableListView) return _mimeType;
@@ -1719,7 +1719,7 @@ abstract class _EndpointPayload extends EndpointPayload {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<CodeableConcept>? type,
-          final List<FhirCode>? mimeType,
+          final List<MimeType>? mimeType,
           @JsonKey(name: '_mimeType') final List<Element>? mimeTypeElement}) =
       _$EndpointPayloadImpl;
   const _EndpointPayload._() : super._();
@@ -1768,7 +1768,7 @@ abstract class _EndpointPayload extends EndpointPayload {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
-  List<FhirCode>? get mimeType;
+  List<MimeType>? get mimeType;
   @override
 
   /// [mimeTypeElement] ("_mimeType") Extensions for mimeType
@@ -4138,7 +4138,7 @@ mixin _$Location {
 
   /// [mode] Indicates whether a resource instance represents a specific location
   ///  or a class of locations.
-  FhirCode? get mode => throw _privateConstructorUsedError;
+  LocationMode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -4223,7 +4223,7 @@ abstract class $LocationCopyWith<$Res> {
       @JsonKey(name: '_alias') List<Element>? aliasElement,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      FhirCode? mode,
+      LocationMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       List<CodeableConcept>? type,
       List<ExtendedContactDetail>? contact,
@@ -4389,7 +4389,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LocationMode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4641,7 +4641,7 @@ abstract class _$$LocationImplCopyWith<$Res>
       @JsonKey(name: '_alias') List<Element>? aliasElement,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      FhirCode? mode,
+      LocationMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       List<CodeableConcept>? type,
       List<ExtendedContactDetail>? contact,
@@ -4819,7 +4819,7 @@ class __$$LocationImplCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LocationMode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -5138,7 +5138,7 @@ class _$LocationImpl extends _Location {
   /// [mode] Indicates whether a resource instance represents a specific location
   ///  or a class of locations.
   @override
-  final FhirCode? mode;
+  final LocationMode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -5402,7 +5402,7 @@ abstract class _Location extends Location {
       @JsonKey(name: '_alias') final List<Element>? aliasElement,
       final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final FhirCode? mode,
+      final LocationMode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final List<CodeableConcept>? type,
       final List<ExtendedContactDetail>? contact,
@@ -5555,7 +5555,7 @@ abstract class _Location extends Location {
 
   /// [mode] Indicates whether a resource instance represents a specific location
   ///  or a class of locations.
-  FhirCode? get mode;
+  LocationMode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode

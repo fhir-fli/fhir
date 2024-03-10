@@ -4656,7 +4656,7 @@ mixin _$Device {
 
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  DeviceStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -4830,7 +4830,7 @@ abstract class $DeviceCopyWith<$Res> {
       @JsonKey(name: '_displayName') Element? displayNameElement,
       CodeableReference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-      FhirCode? status,
+      DeviceStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? availabilityStatus,
       Identifier? biologicalSourceEvent,
@@ -5028,7 +5028,7 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5478,7 +5478,7 @@ abstract class _$$DeviceImplCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       @JsonKey(name: '_displayName') Element? displayNameElement,
       CodeableReference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-      FhirCode? status,
+      DeviceStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? availabilityStatus,
       Identifier? biologicalSourceEvent,
@@ -5697,7 +5697,7 @@ class __$$DeviceImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6104,7 +6104,7 @@ class _$DeviceImpl extends _Device {
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
   @override
-  final FhirCode? status;
+  final DeviceStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -6594,7 +6594,7 @@ abstract class _Device extends Device {
       @JsonKey(name: '_displayName') final Element? displayNameElement,
       final CodeableReference? definition,
       final List<DeviceUdiCarrier>? udiCarrier,
-      final FhirCode? status,
+      final DeviceStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? availabilityStatus,
       final Identifier? biologicalSourceEvent,
@@ -6745,7 +6745,7 @@ abstract class _Device extends Device {
 
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
-  FhirCode? get status;
+  DeviceStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -7025,7 +7025,7 @@ mixin _$DeviceUdiCarrier {
   Element? get carrierHRFElement => throw _privateConstructorUsedError;
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  FhirCode? get entryType => throw _privateConstructorUsedError;
+  UdiEntryType? get entryType => throw _privateConstructorUsedError;
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   @JsonKey(name: '_entryType')
@@ -7057,7 +7057,7 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      FhirCode? entryType,
+      UdiEntryType? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
@@ -7153,7 +7153,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res, $Val extends DeviceUdiCarrier>
       entryType: freezed == entryType
           ? _value.entryType
           : entryType // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as UdiEntryType?,
       entryTypeElement: freezed == entryTypeElement
           ? _value.entryTypeElement
           : entryTypeElement // ignore: cast_nullable_to_non_nullable
@@ -7256,7 +7256,7 @@ abstract class _$$DeviceUdiCarrierImplCopyWith<$Res>
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      FhirCode? entryType,
+      UdiEntryType? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   @override
@@ -7356,7 +7356,7 @@ class __$$DeviceUdiCarrierImplCopyWithImpl<$Res>
       entryType: freezed == entryType
           ? _value.entryType
           : entryType // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as UdiEntryType?,
       entryTypeElement: freezed == entryTypeElement
           ? _value.entryTypeElement
           : entryTypeElement // ignore: cast_nullable_to_non_nullable
@@ -7526,7 +7526,7 @@ class _$DeviceUdiCarrierImpl extends _DeviceUdiCarrier {
 
   /// [entryType] A coded entry to indicate how the data was entered.
   @override
-  final FhirCode? entryType;
+  final UdiEntryType? entryType;
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   @override
@@ -7625,7 +7625,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
           @JsonKey(name: '_carrierAIDC') final Element? carrierAIDCElement,
           final String? carrierHRF,
           @JsonKey(name: '_carrierHRF') final Element? carrierHRFElement,
-          final FhirCode? entryType,
+          final UdiEntryType? entryType,
           @JsonKey(name: '_entryType') final Element? entryTypeElement}) =
       _$DeviceUdiCarrierImpl;
   const _DeviceUdiCarrier._() : super._();
@@ -7734,7 +7734,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @override
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  FhirCode? get entryType;
+  UdiEntryType? get entryType;
   @override
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
@@ -7789,7 +7789,7 @@ mixin _$DeviceName {
 
   /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
-  FhirCode? get type => throw _privateConstructorUsedError;
+  DeviceNameType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -7820,7 +7820,7 @@ abstract class $DeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      FhirCode? type,
+      DeviceNameType? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? display,
       @JsonKey(name: '_display') Element? displayElement});
@@ -7877,7 +7877,7 @@ class _$DeviceNameCopyWithImpl<$Res, $Val extends DeviceName>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceNameType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7944,7 +7944,7 @@ abstract class _$$DeviceNameImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      FhirCode? type,
+      DeviceNameType? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? display,
       @JsonKey(name: '_display') Element? displayElement});
@@ -8002,7 +8002,7 @@ class __$$DeviceNameImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceNameType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -8116,7 +8116,7 @@ class _$DeviceNameImpl extends _DeviceName {
   /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
   @override
-  final FhirCode? type;
+  final DeviceNameType? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -8193,7 +8193,7 @@ abstract class _DeviceName extends DeviceName {
           final List<FhirExtension>? modifierExtension,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement,
-          final FhirCode? type,
+          final DeviceNameType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final FhirBoolean? display,
           @JsonKey(name: '_display') final Element? displayElement}) =
@@ -8246,7 +8246,7 @@ abstract class _DeviceName extends DeviceName {
 
   /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
-  FhirCode? get type;
+  DeviceNameType? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -10125,7 +10125,8 @@ mixin _$DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device. For
   ///  example: On, Off, Standby, etc.
-  FhirCode? get operationalStatus => throw _privateConstructorUsedError;
+  DeviceMetricOperationalStatus? get operationalStatus =>
+      throw _privateConstructorUsedError;
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
   ///  operationalStatus
@@ -10145,7 +10146,7 @@ mixin _$DeviceMetric {
 
   /// [category] Indicates the category of the observation generation process. A
   ///  DeviceMetric can be for example a setting, measurement, or calculation.
-  FhirCode? get category => throw _privateConstructorUsedError;
+  DeviceMetricCategory? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] ("_category") Extensions for category
   @JsonKey(name: '_category')
@@ -10195,11 +10196,11 @@ abstract class $DeviceMetricCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? unit,
       Reference device,
-      FhirCode? operationalStatus,
+      DeviceMetricOperationalStatus? operationalStatus,
       @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
       FhirCode? color,
       @JsonKey(name: '_color') Element? colorElement,
-      FhirCode? category,
+      DeviceMetricCategory? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Quantity? measurementFrequency,
       List<DeviceMetricCalibration>? calibration});
@@ -10318,7 +10319,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricOperationalStatus?,
       operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
@@ -10334,7 +10335,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCategory?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -10500,11 +10501,11 @@ abstract class _$$DeviceMetricImplCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? unit,
       Reference device,
-      FhirCode? operationalStatus,
+      DeviceMetricOperationalStatus? operationalStatus,
       @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
       FhirCode? color,
       @JsonKey(name: '_color') Element? colorElement,
-      FhirCode? category,
+      DeviceMetricCategory? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Quantity? measurementFrequency,
       List<DeviceMetricCalibration>? calibration});
@@ -10632,7 +10633,7 @@ class __$$DeviceMetricImplCopyWithImpl<$Res>
       operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricOperationalStatus?,
       operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
@@ -10648,7 +10649,7 @@ class __$$DeviceMetricImplCopyWithImpl<$Res>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCategory?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -10865,7 +10866,7 @@ class _$DeviceMetricImpl extends _DeviceMetric {
   /// [operationalStatus] Indicates current operational state of the device. For
   ///  example: On, Off, Standby, etc.
   @override
-  final FhirCode? operationalStatus;
+  final DeviceMetricOperationalStatus? operationalStatus;
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
   ///  operationalStatus
@@ -10889,7 +10890,7 @@ class _$DeviceMetricImpl extends _DeviceMetric {
   /// [category] Indicates the category of the observation generation process. A
   ///  DeviceMetric can be for example a setting, measurement, or calculation.
   @override
-  final FhirCode? category;
+  final DeviceMetricCategory? category;
 
   /// [categoryElement] ("_category") Extensions for category
   @override
@@ -11035,12 +11036,12 @@ abstract class _DeviceMetric extends DeviceMetric {
       required final CodeableConcept type,
       final CodeableConcept? unit,
       required final Reference device,
-      final FhirCode? operationalStatus,
+      final DeviceMetricOperationalStatus? operationalStatus,
       @JsonKey(name: '_operationalStatus')
       final Element? operationalStatusElement,
       final FhirCode? color,
       @JsonKey(name: '_color') final Element? colorElement,
-      final FhirCode? category,
+      final DeviceMetricCategory? category,
       @JsonKey(name: '_category') final Element? categoryElement,
       final Quantity? measurementFrequency,
       final List<DeviceMetricCalibration>? calibration}) = _$DeviceMetricImpl;
@@ -11153,7 +11154,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device. For
   ///  example: On, Off, Standby, etc.
-  FhirCode? get operationalStatus;
+  DeviceMetricOperationalStatus? get operationalStatus;
   @override
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
@@ -11177,7 +11178,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [category] Indicates the category of the observation generation process. A
   ///  DeviceMetric can be for example a setting, measurement, or calculation.
-  FhirCode? get category;
+  DeviceMetricCategory? get category;
   @override
 
   /// [categoryElement] ("_category") Extensions for category
@@ -11241,14 +11242,14 @@ mixin _$DeviceMetricCalibration {
       throw _privateConstructorUsedError;
 
   /// [type] Describes the type of the calibration method.
-  FhirCode? get type => throw _privateConstructorUsedError;
+  DeviceMetricCalibrationType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [state] Describes the state of the calibration.
-  FhirCode? get state => throw _privateConstructorUsedError;
+  DeviceMetricCalibrationState? get state => throw _privateConstructorUsedError;
 
   /// [stateElement] ("_state") Extensions for state
   @JsonKey(name: '_state')
@@ -11277,9 +11278,9 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCode? type,
+      DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirCode? state,
+      DeviceMetricCalibrationState? state,
       @JsonKey(name: '_state') Element? stateElement,
       FhirInstant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -11329,7 +11330,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCalibrationType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -11337,7 +11338,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCalibrationState?,
       stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
@@ -11403,9 +11404,9 @@ abstract class _$$DeviceMetricCalibrationImplCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCode? type,
+      DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirCode? state,
+      DeviceMetricCalibrationState? state,
       @JsonKey(name: '_state') Element? stateElement,
       FhirInstant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -11457,7 +11458,7 @@ class __$$DeviceMetricCalibrationImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCalibrationType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -11465,7 +11466,7 @@ class __$$DeviceMetricCalibrationImplCopyWithImpl<$Res>
       state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DeviceMetricCalibrationState?,
       stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
@@ -11569,7 +11570,7 @@ class _$DeviceMetricCalibrationImpl extends _DeviceMetricCalibration {
 
   /// [type] Describes the type of the calibration method.
   @override
-  final FhirCode? type;
+  final DeviceMetricCalibrationType? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -11578,7 +11579,7 @@ class _$DeviceMetricCalibrationImpl extends _DeviceMetricCalibration {
 
   /// [state] Describes the state of the calibration.
   @override
-  final FhirCode? state;
+  final DeviceMetricCalibrationState? state;
 
   /// [stateElement] ("_state") Extensions for state
   @override
@@ -11654,9 +11655,9 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final FhirCode? type,
+          final DeviceMetricCalibrationType? type,
           @JsonKey(name: '_type') final Element? typeElement,
-          final FhirCode? state,
+          final DeviceMetricCalibrationState? state,
           @JsonKey(name: '_state') final Element? stateElement,
           final FhirInstant? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
@@ -11699,7 +11700,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [type] Describes the type of the calibration method.
-  FhirCode? get type;
+  DeviceMetricCalibrationType? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -11708,7 +11709,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [state] Describes the state of the calibration.
-  FhirCode? get state;
+  DeviceMetricCalibrationState? get state;
   @override
 
   /// [stateElement] ("_state") Extensions for state
@@ -11809,7 +11810,7 @@ mixin _$NutritionProduct {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [status] The current state of the product.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  ProductStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -11874,7 +11875,7 @@ abstract class $NutritionProductCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      FhirCode? status,
+      ProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       List<Reference>? manufacturer,
@@ -11981,7 +11982,7 @@ class _$NutritionProductCopyWithImpl<$Res, $Val extends NutritionProduct>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12116,7 +12117,7 @@ abstract class _$$NutritionProductImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      FhirCode? status,
+      ProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       List<Reference>? manufacturer,
@@ -12227,7 +12228,7 @@ class __$$NutritionProductImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12445,7 +12446,7 @@ class _$NutritionProductImpl extends _NutritionProduct {
 
   /// [status] The current state of the product.
   @override
-  final FhirCode? status;
+  final ProductStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -12669,7 +12670,7 @@ abstract class _NutritionProduct extends NutritionProduct {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final FhirCode? status,
+      final ProductStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       final List<Reference>? manufacturer,
@@ -12771,7 +12772,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [status] The current state of the product.
-  FhirCode? get status;
+  ProductStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -15134,7 +15135,7 @@ mixin _$Substance {
   Element? get instanceElement => throw _privateConstructorUsedError;
 
   /// [status] A code to indicate if the substance is actively used.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  ProductStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -15197,7 +15198,7 @@ abstract class $SubstanceCopyWith<$Res> {
       List<Identifier>? identifier,
       FhirBoolean? instance,
       @JsonKey(name: '_instance') Element? instanceElement,
-      FhirCode? status,
+      ProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableReference code,
@@ -15318,7 +15319,7 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15499,7 +15500,7 @@ abstract class _$$SubstanceImplCopyWith<$Res>
       List<Identifier>? identifier,
       FhirBoolean? instance,
       @JsonKey(name: '_instance') Element? instanceElement,
-      FhirCode? status,
+      ProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableReference code,
@@ -15628,7 +15629,7 @@ class __$$SubstanceImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15865,7 +15866,7 @@ class _$SubstanceImpl extends _Substance {
 
   /// [status] A code to indicate if the substance is actively used.
   @override
-  final FhirCode? status;
+  final ProductStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -16042,7 +16043,7 @@ abstract class _Substance extends Substance {
       final List<Identifier>? identifier,
       final FhirBoolean? instance,
       @JsonKey(name: '_instance') final Element? instanceElement,
-      final FhirCode? status,
+      final ProductStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final CodeableReference code,
@@ -16155,7 +16156,7 @@ abstract class _Substance extends Substance {
   @override
 
   /// [status] A code to indicate if the substance is actively used.
-  FhirCode? get status;
+  ProductStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

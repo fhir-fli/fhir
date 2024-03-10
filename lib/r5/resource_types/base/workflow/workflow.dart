@@ -294,7 +294,7 @@ class Appointment with Resource, _$Appointment {
     /// [status] The overall status of the Appointment. Each of the participants
     ///  has their own participation status which indicates their involvement in
     ///  the process, however this status indicates the shared status.
-    FhirCode? status,
+    AppointmentStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -599,7 +599,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_required') Element? requiredElement,
 
     /// [status] Participation status of the actor.
-    FhirCode? status,
+    ParticipationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1497,7 +1497,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     ///  the appointment, then these times should be interpreted as a requested
     ///  time change. When the status is accepted, the times can either be the time
     ///  of the appointment (as a confirmation of the time) or can be empty.
-    FhirCode? participantStatus,
+    AppointmentResponseStatus? participantStatus,
 
     /// [participantStatusElement] ("_participantStatus") Extensions for
     ///  participantStatus
@@ -2021,7 +2021,7 @@ class Slot with Resource, _$Slot {
     required Reference schedule,
 
     /// [status] busy | free | busy-unavailable | busy-tentative | entered-in-error.
-    FhirCode? status,
+    SlotStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2372,7 +2372,7 @@ class Task with Resource, _$Task {
     List<Reference>? partOf,
 
     /// [status] The current status of the task.
-    FhirCode? status,
+    TaskStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2387,14 +2387,14 @@ class Task with Resource, _$Task {
     /// [intent] Indicates the "level" of actionability associated with the Task,
     ///  i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
     ///  etc.
-    FhirCode? intent,
+    TaskIntent? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the Task should be addressed with respect
     ///  to other requests.
-    FhirCode? priority,
+    RequestPriority? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -3997,7 +3997,7 @@ class Transport with Resource, _$Transport {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the transport event.
-    FhirCode? status,
+    TransportStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -4009,14 +4009,14 @@ class Transport with Resource, _$Transport {
     /// [intent] Indicates the "level" of actionability associated with the
     ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned transport,
     ///  an actionable transport, etc.
-    FhirCode? intent,
+    TransportIntent? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the Transport should be addressed with
     ///  respect to other requests.
-    FhirCode? priority,
+    RequestPriority? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -5421,7 +5421,7 @@ class VerificationResult with Resource, _$VerificationResult {
 
     /// [status] The validation status of the target (attested; validated; in
     ///  process; requires revalidation; validation failed; revalidation failed).
-    FhirCode? status,
+    VerificationResultStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

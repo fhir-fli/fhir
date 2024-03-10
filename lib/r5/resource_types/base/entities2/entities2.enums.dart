@@ -97,6 +97,52 @@ enum UdiEntryType {
   unknown,
 }
 
+enum DeviceMetricOperationalStatus{
+  @JsonValue('on')
+  on_,
+  @JsonValue('off')
+  off,
+  @JsonValue('standby')
+  standby,
+  @JsonValue('entered-in-error')
+  enteredinerror,
+
+}
+
+enum DeviceMetricCategory {
+  @JsonValue('measurement')
+  measurement,
+  @JsonValue('setting')
+  setting,
+  @JsonValue('calculation')
+  calculation,
+  @JsonValue('unspecified')
+  unspecified,
+
+}
+
+enum DeviceMetricCalibrationType {
+  @JsonValue('unspecified')
+  unspecified,
+  @JsonValue('offset')
+  offset,
+  @JsonValue('gain')
+  gain,
+  @JsonValue('two-point')
+  twopoint,
+}
+
+enum DeviceMetricCalibrationState {
+  @JsonValue('not-calibrated')
+  notcalibrated,
+  @JsonValue('calibration-required')
+  calibrationrequired,
+  @JsonValue('calibrated')
+  calibrated,
+  @JsonValue('unspecified')
+  unspecified,
+}
+
 enum DeviceStatus {
   @JsonValue('active')
   active,

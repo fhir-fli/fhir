@@ -42,7 +42,7 @@ _$EncounterImpl _$$EncounterImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$EncounterStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -160,7 +160,7 @@ Map<String, dynamic> _$$EncounterImplToJson(_$EncounterImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('class', instance.class_?.map((e) => e.toJson()).toList());
   writeNotNull('priority', instance.priority?.toJson());
@@ -365,6 +365,18 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
+const _$EncounterStatusEnumMap = {
+  EncounterStatus.planned: 'planned',
+  EncounterStatus.inprogress: 'in-progress',
+  EncounterStatus.onhold: 'on-hold',
+  EncounterStatus.discharged: 'discharged',
+  EncounterStatus.completed: 'completed',
+  EncounterStatus.cancelled: 'cancelled',
+  EncounterStatus.discontinued: 'discontinued',
+  EncounterStatus.enteredinerror: 'entered-in-error',
+  EncounterStatus.unknown: 'unknown',
+};
+
 _$EncounterParticipantImpl _$$EncounterParticipantImplFromJson(
         Map<String, dynamic> json) =>
     _$EncounterParticipantImpl(
@@ -554,7 +566,8 @@ _$EncounterLocationImpl _$$EncounterLocationImplFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       location: Reference.fromJson(json['location'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status:
+          $enumDecodeNullable(_$EncounterLocationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -582,12 +595,19 @@ Map<String, dynamic> _$$EncounterLocationImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['location'] = instance.location.toJson();
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EncounterLocationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('form', instance.form?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
+
+const _$EncounterLocationStatusEnumMap = {
+  EncounterLocationStatus.planned: 'planned',
+  EncounterLocationStatus.active: 'active',
+  EncounterLocationStatus.reserved: 'reserved',
+  EncounterLocationStatus.completed: 'completed',
+};
 
 _$EncounterHistoryImpl _$$EncounterHistoryImplFromJson(
         Map<String, dynamic> json) =>
@@ -629,7 +649,7 @@ _$EncounterHistoryImpl _$$EncounterHistoryImplFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$EncounterStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -699,7 +719,7 @@ Map<String, dynamic> _$$EncounterHistoryImplToJson(
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['class'] = instance.class_.toJson();
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
@@ -789,7 +809,7 @@ _$EpisodeOfCareImpl _$$EpisodeOfCareImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -855,7 +875,7 @@ Map<String, dynamic> _$$EpisodeOfCareImplToJson(_$EpisodeOfCareImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusHistory', instance.statusHistory?.map((e) => e.toJson()).toList());
@@ -874,6 +894,16 @@ Map<String, dynamic> _$$EpisodeOfCareImplToJson(_$EpisodeOfCareImpl instance) {
   return val;
 }
 
+const _$EpisodeOfCareStatusEnumMap = {
+  EpisodeOfCareStatus.planned: 'planned',
+  EpisodeOfCareStatus.waitlist: 'waitlist',
+  EpisodeOfCareStatus.active: 'active',
+  EpisodeOfCareStatus.onhold: 'onhold',
+  EpisodeOfCareStatus.finished: 'finished',
+  EpisodeOfCareStatus.cancelled: 'cancelled',
+  EpisodeOfCareStatus.enteredinerror: 'entered-in-error',
+};
+
 _$EpisodeOfCareStatusHistoryImpl _$$EpisodeOfCareStatusHistoryImplFromJson(
         Map<String, dynamic> json) =>
     _$EpisodeOfCareStatusHistoryImpl(
@@ -884,7 +914,7 @@ _$EpisodeOfCareStatusHistoryImpl _$$EpisodeOfCareStatusHistoryImplFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -906,7 +936,7 @@ Map<String, dynamic> _$$EpisodeOfCareStatusHistoryImplToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['period'] = instance.period.toJson();
   return val;
@@ -1024,7 +1054,7 @@ _$FlagImpl _$$FlagImplFromJson(Map<String, dynamic> json) => _$FlagImpl(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$FlagStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1070,7 +1100,7 @@ Map<String, dynamic> _$$FlagImplToJson(_$FlagImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$FlagStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -1080,6 +1110,12 @@ Map<String, dynamic> _$$FlagImplToJson(_$FlagImpl instance) {
   writeNotNull('author', instance.author?.toJson());
   return val;
 }
+
+const _$FlagStatusEnumMap = {
+  FlagStatus.active: 'active',
+  FlagStatus.inactive: 'inactive',
+  FlagStatus.enteredinerror: 'entered-in-error',
+};
 
 _$LibraryImpl _$$LibraryImplFromJson(Map<String, dynamic> json) =>
     _$LibraryImpl(
@@ -1142,7 +1178,7 @@ _$LibraryImpl _$$LibraryImplFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$PublicationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1294,7 +1330,7 @@ Map<String, dynamic> _$$LibraryImplToJson(_$LibraryImpl instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$PublicationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -1343,6 +1379,13 @@ Map<String, dynamic> _$$LibraryImplToJson(_$LibraryImpl instance) {
   return val;
 }
 
+const _$PublicationStatusEnumMap = {
+  PublicationStatus.draft: 'draft',
+  PublicationStatus.active: 'active',
+  PublicationStatus.retired: 'retired',
+  PublicationStatus.unknown: 'unknown',
+};
+
 _$FhirListImpl _$$FhirListImplFromJson(Map<String, dynamic> json) =>
     _$FhirListImpl(
       resourceType: $enumDecodeNullable(
@@ -1379,11 +1422,11 @@ _$FhirListImpl _$$FhirListImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$ListStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      mode: json['mode'] == null ? null : FhirCode.fromJson(json['mode']),
+      mode: $enumDecodeNullable(_$ListModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1450,9 +1493,9 @@ Map<String, dynamic> _$$FhirListImplToJson(_$FhirListImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ListStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('mode', instance.mode?.toJson());
+  writeNotNull('mode', _$ListModeEnumMap[instance.mode]);
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
@@ -1468,6 +1511,18 @@ Map<String, dynamic> _$$FhirListImplToJson(_$FhirListImpl instance) {
   writeNotNull('emptyReason', instance.emptyReason?.toJson());
   return val;
 }
+
+const _$ListStatusEnumMap = {
+  ListStatus.current: 'current',
+  ListStatus.retired: 'retired',
+  ListStatus.enteredinerror: 'entered-in-error',
+};
+
+const _$ListModeEnumMap = {
+  ListMode.working: 'working',
+  ListMode.snapshot: 'snapshot',
+  ListMode.changes: 'changes',
+};
 
 _$ListEntryImpl _$$ListEntryImplFromJson(Map<String, dynamic> json) =>
     _$ListEntryImpl(

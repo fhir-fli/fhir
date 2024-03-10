@@ -259,7 +259,7 @@ class Encounter with Resource, _$Encounter {
 
     /// [status] The current state of the encounter (not the state of the patient
     ///  within the encounter - that is subjectState).
-    FhirCode? status,
+    EncounterStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1033,7 +1033,7 @@ class EncounterLocation with _$EncounterLocation {
     /// [status] The status of the participants' presence at the specified location
     ///  during the period specified. If the participant is no longer at the
     ///  location, then the period will have an end date/time.
-    FhirCode? status,
+    EncounterLocationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1272,7 +1272,7 @@ class EncounterHistory with Resource, _$EncounterHistory {
 
     /// [status] planned | in-progress | on-hold | discharged | completed |
     ///  cancelled | discontinued | entered-in-error | unknown.
-    FhirCode? status,
+    EncounterStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1664,7 +1664,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<Identifier>? identifier,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-    FhirCode? status,
+    EpisodeOfCareStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1826,7 +1826,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     List<FhirExtension>? modifierExtension,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-    FhirCode? status,
+    EpisodeOfCareStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2268,7 +2268,7 @@ class Flag with Resource, _$Flag {
     List<Identifier>? identifier,
 
     /// [status] Supports basic workflow.
-    FhirCode? status,
+    FlagStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2700,7 +2700,7 @@ class Library with Resource, _$Library {
 
     /// [status] The status of this library. Enables tracking the life-cycle of the
     ///  content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3073,7 +3073,7 @@ class FhirList with Resource, _$FhirList {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this list.
-    FhirCode? status,
+    ListStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3082,7 +3082,7 @@ class FhirList with Resource, _$FhirList {
     ///  suitable for being maintained on an ongoing basis, or if it represents a
     ///  snapshot of a list of items from another source, or whether it is a
     ///  prepared list where items may be marked as added, modified or deleted.
-    FhirCode? mode,
+    ListMode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,

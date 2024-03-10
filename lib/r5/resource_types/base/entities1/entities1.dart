@@ -383,7 +383,7 @@ class EndpointPayload with _$EndpointPayload {
     ///  application/fhir+xml, application/fhir+json. If the mime type is not
     ///  specified, then the sender could send any content (including no content
     ///  depending on the connectionType).
-    List<FhirCode>? mimeType,
+    List<MimeType>? mimeType,
 
     /// [mimeTypeElement] ("_mimeType") Extensions for mimeType
     @JsonKey(name: '_mimeType') List<Element>? mimeTypeElement,
@@ -1137,7 +1137,7 @@ class Location with Resource, _$Location {
 
     /// [mode] Indicates whether a resource instance represents a specific location
     ///  or a class of locations.
-    FhirCode? mode,
+    LocationMode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,

@@ -104,7 +104,7 @@ mixin _$FhirGroup {
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  FhirCode? get type => throw _privateConstructorUsedError;
+  GroupType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -120,7 +120,7 @@ mixin _$FhirGroup {
   /// * 'enumerated': The Group.characteristics are necessary but not sufficient
   ///  to determine membership. Membership is determined by being listed as one
   ///  of the Group.member.
-  FhirCode? get membership => throw _privateConstructorUsedError;
+  GroupMembershipBasis? get membership => throw _privateConstructorUsedError;
 
   /// [membershipElement] ("_membership") Extensions for membership
   @JsonKey(name: '_membership')
@@ -193,9 +193,9 @@ abstract class $FhirGroupCopyWith<$Res> {
       List<Identifier>? identifier,
       FhirBoolean? active,
       @JsonKey(name: '_active') Element? activeElement,
-      FhirCode? type,
+      GroupType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirCode? membership,
+      GroupMembershipBasis? membership,
       @JsonKey(name: '_membership') Element? membershipElement,
       CodeableConcept? code,
       String? name,
@@ -324,7 +324,7 @@ class _$FhirGroupCopyWithImpl<$Res, $Val extends FhirGroup>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as GroupType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -332,7 +332,7 @@ class _$FhirGroupCopyWithImpl<$Res, $Val extends FhirGroup>
       membership: freezed == membership
           ? _value.membership
           : membership // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as GroupMembershipBasis?,
       membershipElement: freezed == membershipElement
           ? _value.membershipElement
           : membershipElement // ignore: cast_nullable_to_non_nullable
@@ -549,9 +549,9 @@ abstract class _$$FhirGroupImplCopyWith<$Res>
       List<Identifier>? identifier,
       FhirBoolean? active,
       @JsonKey(name: '_active') Element? activeElement,
-      FhirCode? type,
+      GroupType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirCode? membership,
+      GroupMembershipBasis? membership,
       @JsonKey(name: '_membership') Element? membershipElement,
       CodeableConcept? code,
       String? name,
@@ -690,7 +690,7 @@ class __$$FhirGroupImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as GroupType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -698,7 +698,7 @@ class __$$FhirGroupImplCopyWithImpl<$Res>
       membership: freezed == membership
           ? _value.membership
           : membership // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as GroupMembershipBasis?,
       membershipElement: freezed == membershipElement
           ? _value.membershipElement
           : membershipElement // ignore: cast_nullable_to_non_nullable
@@ -948,7 +948,7 @@ class _$FhirGroupImpl extends _FhirGroup {
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
   @override
-  final FhirCode? type;
+  final GroupType? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -966,7 +966,7 @@ class _$FhirGroupImpl extends _FhirGroup {
   ///  to determine membership. Membership is determined by being listed as one
   ///  of the Group.member.
   @override
-  final FhirCode? membership;
+  final GroupMembershipBasis? membership;
 
   /// [membershipElement] ("_membership") Extensions for membership
   @override
@@ -1166,9 +1166,9 @@ abstract class _FhirGroup extends FhirGroup {
       final List<Identifier>? identifier,
       final FhirBoolean? active,
       @JsonKey(name: '_active') final Element? activeElement,
-      final FhirCode? type,
+      final GroupType? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      final FhirCode? membership,
+      final GroupMembershipBasis? membership,
       @JsonKey(name: '_membership') final Element? membershipElement,
       final CodeableConcept? code,
       final String? name,
@@ -1284,7 +1284,7 @@ abstract class _FhirGroup extends FhirGroup {
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  FhirCode? get type;
+  GroupType? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -1302,7 +1302,7 @@ abstract class _FhirGroup extends FhirGroup {
   /// * 'enumerated': The Group.characteristics are necessary but not sufficient
   ///  to determine membership. Membership is determined by being listed as one
   ///  of the Group.member.
-  FhirCode? get membership;
+  GroupMembershipBasis? get membership;
   @override
 
   /// [membershipElement] ("_membership") Extensions for membership
@@ -2645,7 +2645,7 @@ mixin _$Patient {
 
   /// [gender] Administrative Gender - the gender that the patient is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender => throw _privateConstructorUsedError;
+  AdministrativeGender? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] ("_gender") Extensions for gender
   @JsonKey(name: '_gender')
@@ -2751,7 +2751,7 @@ abstract class $PatientCopyWith<$Res> {
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -2907,7 +2907,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3169,7 +3169,7 @@ abstract class _$$PatientImplCopyWith<$Res> implements $PatientCopyWith<$Res> {
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -3336,7 +3336,7 @@ class __$$PatientImplCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3660,7 +3660,7 @@ class _$PatientImpl extends _Patient {
   /// [gender] Administrative Gender - the gender that the patient is considered
   ///  to have for administration and record keeping purposes.
   @override
-  final FhirCode? gender;
+  final AdministrativeGender? gender;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -3963,7 +3963,7 @@ abstract class _Patient extends Patient {
       @JsonKey(name: '_active') final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      final FhirCode? gender,
+      final AdministrativeGender? gender,
       @JsonKey(name: '_gender') final Element? genderElement,
       final FhirDate? birthDate,
       @JsonKey(name: '_birthDate') final Element? birthDateElement,
@@ -4100,7 +4100,7 @@ abstract class _Patient extends Patient {
 
   /// [gender] Administrative Gender - the gender that the patient is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender;
+  AdministrativeGender? get gender;
   @override
 
   /// [genderElement] ("_gender") Extensions for gender
@@ -4248,7 +4248,7 @@ mixin _$PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  FhirCode? get gender => throw _privateConstructorUsedError;
+  AdministrativeGender? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] ("_gender") Extensions for gender
   @JsonKey(name: '_gender')
@@ -4282,7 +4282,7 @@ abstract class $PatientContactCopyWith<$Res> {
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -4351,7 +4351,7 @@ class _$PatientContactCopyWithImpl<$Res, $Val extends PatientContact>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4444,7 +4444,7 @@ abstract class _$$PatientContactImplCopyWith<$Res>
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -4516,7 +4516,7 @@ class __$$PatientContactImplCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4663,7 +4663,7 @@ class _$PatientContactImpl extends _PatientContact {
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
   @override
-  final FhirCode? gender;
+  final AdministrativeGender? gender;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -4748,7 +4748,7 @@ abstract class _PatientContact extends PatientContact {
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address,
-      final FhirCode? gender,
+      final AdministrativeGender? gender,
       @JsonKey(name: '_gender') final Element? genderElement,
       final Reference? organization,
       final Period? period}) = _$PatientContactImpl;
@@ -4809,7 +4809,7 @@ abstract class _PatientContact extends PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  FhirCode? get gender;
+  AdministrativeGender? get gender;
   @override
 
   /// [genderElement] ("_gender") Extensions for gender
@@ -5766,7 +5766,7 @@ mixin _$Person {
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender.
-  FhirCode? get gender => throw _privateConstructorUsedError;
+  AdministrativeGender? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] ("_gender") Extensions for gender
   @JsonKey(name: '_gender')
@@ -5845,7 +5845,7 @@ abstract class $PersonCopyWith<$Res> {
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -5985,7 +5985,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -6199,7 +6199,7 @@ abstract class _$$PersonImplCopyWith<$Res> implements $PersonCopyWith<$Res> {
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -6348,7 +6348,7 @@ class __$$PersonImplCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -6634,7 +6634,7 @@ class _$PersonImpl extends _Person {
 
   /// [gender] Administrative Gender.
   @override
-  final FhirCode? gender;
+  final AdministrativeGender? gender;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -6867,7 +6867,7 @@ abstract class _Person extends Person {
       @JsonKey(name: '_active') final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      final FhirCode? gender,
+      final AdministrativeGender? gender,
       @JsonKey(name: '_gender') final Element? genderElement,
       final FhirDate? birthDate,
       @JsonKey(name: '_birthDate') final Element? birthDateElement,
@@ -6990,7 +6990,7 @@ abstract class _Person extends Person {
   @override
 
   /// [gender] Administrative Gender.
-  FhirCode? get gender;
+  AdministrativeGender? get gender;
   @override
 
   /// [genderElement] ("_gender") Extensions for gender
@@ -7522,7 +7522,7 @@ mixin _$PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the target
   ///  resource.
-  FhirCode? get assurance => throw _privateConstructorUsedError;
+  IdentityAssuranceLevel? get assurance => throw _privateConstructorUsedError;
 
   /// [assuranceElement] ("_assurance") Extensions for assurance
   @JsonKey(name: '_assurance')
@@ -7545,7 +7545,7 @@ abstract class $PersonLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      FhirCode? assurance,
+      IdentityAssuranceLevel? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
@@ -7592,7 +7592,7 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
       assurance: freezed == assurance
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as IdentityAssuranceLevel?,
       assuranceElement: freezed == assuranceElement
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -7634,7 +7634,7 @@ abstract class _$$PersonLinkImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      FhirCode? assurance,
+      IdentityAssuranceLevel? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   @override
@@ -7681,7 +7681,7 @@ class __$$PersonLinkImplCopyWithImpl<$Res>
       assurance: freezed == assurance
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as IdentityAssuranceLevel?,
       assuranceElement: freezed == assuranceElement
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -7779,7 +7779,7 @@ class _$PersonLinkImpl extends _PersonLink {
   /// [assurance] Level of assurance that this link is associated with the target
   ///  resource.
   @override
-  final FhirCode? assurance;
+  final IdentityAssuranceLevel? assurance;
 
   /// [assuranceElement] ("_assurance") Extensions for assurance
   @override
@@ -7839,7 +7839,7 @@ abstract class _PersonLink extends PersonLink {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Reference target,
-          final FhirCode? assurance,
+          final IdentityAssuranceLevel? assurance,
           @JsonKey(name: '_assurance') final Element? assuranceElement}) =
       _$PersonLinkImpl;
   const _PersonLink._() : super._();
@@ -7885,7 +7885,7 @@ abstract class _PersonLink extends PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the target
   ///  resource.
-  FhirCode? get assurance;
+  IdentityAssuranceLevel? get assurance;
   @override
 
   /// [assuranceElement] ("_assurance") Extensions for assurance
@@ -7990,7 +7990,7 @@ mixin _$Practitioner {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender => throw _privateConstructorUsedError;
+  AdministrativeGender? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] ("_gender") Extensions for gender
   @JsonKey(name: '_gender')
@@ -8073,7 +8073,7 @@ abstract class $PractitionerCopyWith<$Res> {
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -8207,7 +8207,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8390,7 +8390,7 @@ abstract class _$$PractitionerImplCopyWith<$Res>
       @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -8531,7 +8531,7 @@ class __$$PractitionerImplCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8807,7 +8807,7 @@ class _$PractitionerImpl extends _Practitioner {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @override
-  final FhirCode? gender;
+  final AdministrativeGender? gender;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -9043,7 +9043,7 @@ abstract class _Practitioner extends Practitioner {
       @JsonKey(name: '_active') final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      final FhirCode? gender,
+      final AdministrativeGender? gender,
       @JsonKey(name: '_gender') final Element? genderElement,
       final FhirDate? birthDate,
       @JsonKey(name: '_birthDate') final Element? birthDateElement,
@@ -9165,7 +9165,7 @@ abstract class _Practitioner extends Practitioner {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender;
+  AdministrativeGender? get gender;
   @override
 
   /// [genderElement] ("_gender") Extensions for gender
@@ -11543,7 +11543,7 @@ mixin _$RelatedPerson {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender => throw _privateConstructorUsedError;
+  AdministrativeGender? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -11606,7 +11606,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @override @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @override @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -11742,7 +11742,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -11908,7 +11908,7 @@ abstract class _$$RelatedPersonImplCopyWith<$Res>
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      FhirCode? gender,
+      AdministrativeGender? gender,
       @override @JsonKey(name: '_gender') Element? genderElement,
       FhirDate? birthDate,
       @override @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -12051,7 +12051,7 @@ class __$$RelatedPersonImplCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as AdministrativeGender?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -12336,7 +12336,7 @@ class _$RelatedPersonImpl extends _RelatedPerson {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @override
-  final FhirCode? gender;
+  final AdministrativeGender? gender;
 
   /// [genderElement] ("_gender") Extensions for gender
   @override
@@ -12525,7 +12525,7 @@ abstract class _RelatedPerson extends RelatedPerson {
       final List<CodeableConcept>? relationship,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      final FhirCode? gender,
+      final AdministrativeGender? gender,
       @override @JsonKey(name: '_gender') final Element? genderElement,
       final FhirDate? birthDate,
       @override @JsonKey(name: '_birthDate') final Element? birthDateElement,
@@ -12656,7 +12656,7 @@ abstract class _RelatedPerson extends RelatedPerson {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  FhirCode? get gender;
+  AdministrativeGender? get gender;
   @override
 
   /// [genderElement] ("_gender") Extensions for gender

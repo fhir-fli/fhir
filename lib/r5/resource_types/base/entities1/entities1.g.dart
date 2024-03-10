@@ -317,8 +317,9 @@ _$EndpointPayloadImpl _$$EndpointPayloadImplFromJson(
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mimeType:
-          (json['mimeType'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
+      mimeType: (json['mimeType'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$MimeTypeEnumMap, e))
+          .toList(),
       mimeTypeElement: (json['_mimeType'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -340,11 +341,105 @@ Map<String, dynamic> _$$EndpointPayloadImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('mimeType', instance.mimeType?.map((e) => e.toJson()).toList());
+  writeNotNull('mimeType',
+      instance.mimeType?.map((e) => _$MimeTypeEnumMap[e]!).toList());
   writeNotNull(
       '_mimeType', instance.mimeTypeElement?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$MimeTypeEnumMap = {
+  MimeType.audio_aac: 'audio/aac',
+  MimeType.application_x_abiword: 'application/x-abiword',
+  MimeType.application_x_freearc: 'application/x-freearc',
+  MimeType.image_avif: 'image/avif',
+  MimeType.video_x_msvideo: 'video/x-msvideo',
+  MimeType.application_vnd_amazon_ebook: 'application/vnd.amazon.ebook',
+  MimeType.application_octet_stream: 'application/octet-stream',
+  MimeType.image_bmp: 'image/bmp',
+  MimeType.application_x_bzip: 'application/x-bzip',
+  MimeType.application_x_bzip2: 'application/x-bzip2',
+  MimeType.application_x_cdf: 'application/x-cdf',
+  MimeType.application_x_csh: 'application/x-csh',
+  MimeType.text_css: 'text/css',
+  MimeType.text_csv: 'text/csv',
+  MimeType.application_msword: 'application/msword',
+  MimeType.application_vnd_openxmlformats_officedocument_wordprocessingml_document:
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  MimeType.application_vnd_ms_fontobject: 'application/vnd.ms-fontobject',
+  MimeType.application_epub_zip: 'application/epub+zip',
+  MimeType.application_gzip: 'application/gzip',
+  MimeType.image_gif: 'image/gif',
+  MimeType.text_html: 'text/html',
+  MimeType.image_vnd_microsoft_icon: 'image/vnd.microsoft.icon',
+  MimeType.text_calendar: 'text/calendar',
+  MimeType.application_java_archive: 'application/java-archive',
+  MimeType.image_jpeg: 'image/jpeg',
+  MimeType.text_javascript: 'text/javascript',
+  MimeType.application_json: 'application/json',
+  MimeType.application_ld_json: 'application/ld+json',
+  MimeType.audio_midi: 'audio/midi',
+  MimeType.audio_x_midi: 'audio/x-midi',
+  MimeType.audio_mpeg: 'audio/mpeg',
+  MimeType.video_mp4: 'video/mp4',
+  MimeType.video_mpeg: 'video/mpeg',
+  MimeType.application_vnd_apple_installer_xml:
+      'application/vnd.apple.installer+xml',
+  MimeType.application_vnd_oasis_opendocument_presentation:
+      'application/vnd.oasis.opendocument.presentation',
+  MimeType.application_vnd_oasis_opendocument_spreadsheet:
+      'application/vnd.oasis.opendocument.spreadsheet',
+  MimeType.application_vnd_oasis_opendocument_text:
+      'application/vnd.oasis.opendocument.text',
+  MimeType.audio_ogg: 'audio/ogg',
+  MimeType.video_ogg: 'video/ogg',
+  MimeType.application_ogg: 'application/ogg',
+  MimeType.audio_opus: 'audio/opus',
+  MimeType.font_otf: 'font/otf',
+  MimeType.image_png: 'image/png',
+  MimeType.application_pdf: 'application/pdf',
+  MimeType.application_x_httpd_php: 'application/x-httpd-php',
+  MimeType.application_vnd_ms_powerpoint: 'application/vnd.ms-powerpoint',
+  MimeType.application_vnd_openxmlformats_officedocument_presentationml_presentation:
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  MimeType.application_vnd_rar: 'application/vnd.rar',
+  MimeType.application_rtf: 'application/rtf',
+  MimeType.application_x_sh: 'application/x-sh',
+  MimeType.image_svg_xml: 'image/svg+xml',
+  MimeType.application_x_tar: 'application/x-tar',
+  MimeType.image_tiff: 'image/tiff',
+  MimeType.video_mp2t: 'video/mp2t',
+  MimeType.font_ttf: 'font/ttf',
+  MimeType.text_plain: 'text/plain',
+  MimeType.application_vnd_visio: 'application/vnd.visio',
+  MimeType.audio_wav: 'audio/wav',
+  MimeType.audio_webm: 'audio/webm',
+  MimeType.video_webm: 'video/webm',
+  MimeType.image_webp: 'image/webp',
+  MimeType.font_woff: 'font/woff',
+  MimeType.font_woff2: 'font/woff2',
+  MimeType.application_xhtml_xml: 'application/xhtml+xml',
+  MimeType.application_vnd_ms_excel: 'application/vnd.ms-excel',
+  MimeType.application_vnd_openxmlformats_officedocument_spreadsheetml_sheet:
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  MimeType.application_xml: 'application/xml',
+  MimeType.text_xml: 'text/xml',
+  MimeType.application_atom_xml: 'application/atom+xml',
+  MimeType.application_vnd_mozilla_xul_xml: 'application/vnd.mozilla.xul+xml',
+  MimeType.application_zip: 'application/zip',
+  MimeType.video_3gpp: 'video/3gpp',
+  MimeType.audio_3gpp: 'audio/3gpp',
+  MimeType.video_3gpp2: 'video/3gpp2',
+  MimeType.audio_3gpp2: 'audio/3gpp2',
+  MimeType.application_x_7z_compressed: 'application/x-7z-compressed',
+  MimeType.text_hl7v2: 'text/hl7v2',
+  MimeType.text_rtf: 'text/rtf',
+  MimeType.application_cda_xml: 'application/cda+xml',
+  MimeType.application_fhir_json: 'application/fhir+json',
+  MimeType.application_fhir_xml: 'application/fhir+xml',
+  MimeType.application_fhir_ndjson: 'application/fhir+ndjson',
+  MimeType.application_json_fhir: 'application/json+fhir',
+};
 
 _$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(
         Map<String, dynamic> json) =>
@@ -633,7 +728,7 @@ _$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      mode: json['mode'] == null ? null : FhirCode.fromJson(json['mode']),
+      mode: $enumDecodeNullable(_$LocationModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -710,7 +805,7 @@ Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
       '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('mode', instance.mode?.toJson());
+  writeNotNull('mode', _$LocationModeEnumMap[instance.mode]);
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
@@ -733,6 +828,11 @@ const _$LocationStatusEnumMap = {
   LocationStatus.active: 'active',
   LocationStatus.suspended: 'suspended',
   LocationStatus.inactive: 'inactive',
+};
+
+const _$LocationModeEnumMap = {
+  LocationMode.instance: 'instance',
+  LocationMode.kind: 'kind',
 };
 
 _$LocationPositionImpl _$$LocationPositionImplFromJson(

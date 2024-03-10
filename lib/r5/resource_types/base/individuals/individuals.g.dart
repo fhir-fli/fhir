@@ -47,13 +47,12 @@ _$FhirGroupImpl _$$FhirGroupImplFromJson(Map<String, dynamic> json) =>
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+      type: $enumDecodeNullable(_$GroupTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      membership: json['membership'] == null
-          ? null
-          : FhirCode.fromJson(json['membership']),
+      membership: $enumDecodeNullable(
+          _$GroupMembershipBasisEnumMap, json['membership']),
       membershipElement: json['_membership'] == null
           ? null
           : Element.fromJson(json['_membership'] as Map<String, dynamic>),
@@ -115,9 +114,10 @@ Map<String, dynamic> _$$FhirGroupImplToJson(_$FhirGroupImpl instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$GroupTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('membership', instance.membership?.toJson());
+  writeNotNull(
+      'membership', _$GroupMembershipBasisEnumMap[instance.membership]);
   writeNotNull('_membership', instance.membershipElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('name', instance.name);
@@ -296,6 +296,24 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
+const _$GroupTypeEnumMap = {
+  GroupType.person: 'person',
+  GroupType.animal: 'animal',
+  GroupType.practitioner: 'practitioner',
+  GroupType.device: 'device',
+  GroupType.careteam: 'careteam',
+  GroupType.healthcareservice: 'healthcareservice',
+  GroupType.location: 'location',
+  GroupType.organization: 'organization',
+  GroupType.relatedperson: 'relatedperson',
+  GroupType.specimen: 'specimen',
+};
+
+const _$GroupMembershipBasisEnumMap = {
+  GroupMembershipBasis.definitional: 'definitional',
+  GroupMembershipBasis.enumerated: 'enumerated',
+};
+
 _$GroupCharacteristicImpl _$$GroupCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
     _$GroupCharacteristicImpl(
@@ -454,7 +472,8 @@ _$PatientImpl _$$PatientImplFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
+      gender:
+          $enumDecodeNullable(_$AdministrativeGenderEnumMap, json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -548,7 +567,7 @@ Map<String, dynamic> _$$PatientImplToJson(_$PatientImpl instance) {
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
-  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('gender', _$AdministrativeGenderEnumMap[instance.gender]);
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('_birthDate', instance.birthDateElement?.toJson());
@@ -575,6 +594,13 @@ Map<String, dynamic> _$$PatientImplToJson(_$PatientImpl instance) {
   return val;
 }
 
+const _$AdministrativeGenderEnumMap = {
+  AdministrativeGender.male: 'male',
+  AdministrativeGender.female: 'female',
+  AdministrativeGender.other: 'other',
+  AdministrativeGender.unknown: 'unknown',
+};
+
 _$PatientContactImpl _$$PatientContactImplFromJson(Map<String, dynamic> json) =>
     _$PatientContactImpl(
       id: json['id'] as String?,
@@ -596,7 +622,8 @@ _$PatientContactImpl _$$PatientContactImplFromJson(Map<String, dynamic> json) =>
       address: json['address'] == null
           ? null
           : Address.fromJson(json['address'] as Map<String, dynamic>),
-      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
+      gender:
+          $enumDecodeNullable(_$AdministrativeGenderEnumMap, json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -628,7 +655,7 @@ Map<String, dynamic> _$$PatientContactImplToJson(
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address?.toJson());
-  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('gender', _$AdministrativeGenderEnumMap[instance.gender]);
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('period', instance.period?.toJson());
@@ -758,7 +785,8 @@ _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
+      gender:
+          $enumDecodeNullable(_$AdministrativeGenderEnumMap, json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -832,7 +860,7 @@ Map<String, dynamic> _$$PersonImplToJson(_$PersonImpl instance) {
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
-  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('gender', _$AdministrativeGenderEnumMap[instance.gender]);
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('_birthDate', instance.birthDateElement?.toJson());
@@ -901,9 +929,8 @@ _$PersonLinkImpl _$$PersonLinkImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
-      assurance: json['assurance'] == null
-          ? null
-          : FhirCode.fromJson(json['assurance']),
+      assurance: $enumDecodeNullable(
+          _$IdentityAssuranceLevelEnumMap, json['assurance']),
       assuranceElement: json['_assurance'] == null
           ? null
           : Element.fromJson(json['_assurance'] as Map<String, dynamic>),
@@ -924,10 +951,18 @@ Map<String, dynamic> _$$PersonLinkImplToJson(_$PersonLinkImpl instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['target'] = instance.target.toJson();
-  writeNotNull('assurance', instance.assurance?.toJson());
+  writeNotNull(
+      'assurance', _$IdentityAssuranceLevelEnumMap[instance.assurance]);
   writeNotNull('_assurance', instance.assuranceElement?.toJson());
   return val;
 }
+
+const _$IdentityAssuranceLevelEnumMap = {
+  IdentityAssuranceLevel.level1: 'level1',
+  IdentityAssuranceLevel.level2: 'level2',
+  IdentityAssuranceLevel.level3: 'level3',
+  IdentityAssuranceLevel.level4: 'level4',
+};
 
 _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) =>
     _$PractitionerImpl(
@@ -976,7 +1011,8 @@ _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
+      gender:
+          $enumDecodeNullable(_$AdministrativeGenderEnumMap, json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -1044,7 +1080,7 @@ Map<String, dynamic> _$$PractitionerImplToJson(_$PractitionerImpl instance) {
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
-  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('gender', _$AdministrativeGenderEnumMap[instance.gender]);
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('_birthDate', instance.birthDateElement?.toJson());
@@ -1328,7 +1364,8 @@ _$RelatedPersonImpl _$$RelatedPersonImplFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
+      gender:
+          $enumDecodeNullable(_$AdministrativeGenderEnumMap, json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -1386,7 +1423,7 @@ Map<String, dynamic> _$$RelatedPersonImplToJson(_$RelatedPersonImpl instance) {
       'relationship', instance.relationship?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
-  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('gender', _$AdministrativeGenderEnumMap[instance.gender]);
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('_birthDate', instance.birthDateElement?.toJson());
