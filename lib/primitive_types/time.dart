@@ -11,7 +11,7 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_types.dart';
 
-class FhirTime implements FhirPrimitiveBase {
+class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
   const FhirTime._(this._valueString, this._valueTime, this._isValid);
 
   factory FhirTime(dynamic inValue) => inValue is String &&
@@ -311,4 +311,11 @@ class FhirTime implements FhirPrimitiveBase {
   bool? operator <(Object o) => _compare(Comparator.lt, o);
 
   bool? operator <=(Object o) => _compare(Comparator.lte, o);
+
+  @override
+  int compareTo(FhirTime other) => (this > other ?? false)
+      ? 1
+      : (this < other ?? false)
+          ? -1
+          : 0;
 }

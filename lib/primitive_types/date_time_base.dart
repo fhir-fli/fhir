@@ -3,7 +3,8 @@
 // Project imports:
 import 'primitive_types.dart';
 
-abstract class FhirDateTimeBase implements FhirPrimitiveBase {
+abstract class FhirDateTimeBase
+    implements FhirPrimitiveBase, Comparable<FhirDateTimeBase> {
   final bool isValid;
   final DateTimePrecision precision;
   final Exception? parseError;
@@ -561,4 +562,14 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   FhirDateTimeBase operator +(ExtendedDuration other);
 
   FhirDateTimeBase operator -(ExtendedDuration other);
+
+  @override
+  int compareTo(FhirDateTimeBase other) {
+    final bool? result = _compare(Comparator.lt, other);
+    if (result != null) {
+      return result ? -1 : 1;
+    } else {
+      throw comparisonError(Comparator.lt, other);
+    }
+  }
 }
