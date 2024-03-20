@@ -1,23 +1,23 @@
 part of 'entities1.dart';
 
-enum OrganizationRole {
-  @JsonValue('provider')
-  provider,
-  @JsonValue('agency')
-  agency,
-  @JsonValue('research')
-  research,
-  @JsonValue('payer')
-  payer,
-  @JsonValue('diagnostics')
-  diagnostics,
-  @JsonValue('supplier')
-  supplier,
-  @JsonValue('HIE/HIO')
-  hie_hio,
-  @JsonValue('member')
-  member,
-}
+// enum OrganizationRole {
+//   @JsonValue('provider')
+//   provider,
+//   @JsonValue('agency')
+//   agency,
+//   @JsonValue('research')
+//   research,
+//   @JsonValue('payer')
+//   payer,
+//   @JsonValue('diagnostics')
+//   diagnostics,
+//   @JsonValue('supplier')
+//   supplier,
+//   @JsonValue('HIE/HIO')
+//   hie_hio,
+//   @JsonValue('member')
+//   member,
+// }
 
 enum EndpointStatus {
   @JsonValue('active')
@@ -61,17 +61,17 @@ enum LocationMode {
   kind,
 }
 
-enum LocationCharacteristic {
-  @JsonValue('wheelchair')
-  wheelchair,
-  @JsonValue('has-translation')
-  hastranslation,
-  @JsonValue('has-oxy-nitro')
-  hasoxynitro,
-  @JsonValue('has-neg-press')
-  hasnegpress,
-  @JsonValue('has-iso-ward')
-  hasisoward,
-  @JsonValue('has-icu')
-  hasicu,
-}
+// enum LocationCharacteristic {
+//   @JsonValue('wheelchair')
+//   wheelchair,
+//   @JsonValue('has-translation')
+//   hastranslation,
+//   @JsonValue('has-oxy-nitro')
+//   hasoxynitro,
+//   @JsonValue('has-neg-press')
+//   hasnegpress,
+//   @JsonValue('has-iso-ward')
+//   hasisoward,
+//   @JsonValue('has-icu')
+//   hasicu,
+// }
