@@ -1,6 +1,5 @@
 part of 'support.dart';
 
-
 enum CoverageKind {
   @JsonValue('insurance')
   insurance,

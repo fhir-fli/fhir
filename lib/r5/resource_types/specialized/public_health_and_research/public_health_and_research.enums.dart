@@ -1,6 +1,5 @@
 part of 'public_health_and_research.dart';
 
-
 enum ResearchStudyPrimPurpType {
   @JsonValue('treatment')
   treatment,

@@ -3,9 +3,10 @@
 // Dart imports:
 import 'dart:convert';
 
-// Project imports:
+// Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+// Project imports:
 import 'primitive_types.dart';
 
 @immutable

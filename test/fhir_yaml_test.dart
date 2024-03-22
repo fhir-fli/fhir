@@ -1,12 +1,14 @@
-// ignore_for_file: use_raw_strings, ignore_for_file: invalid_annotation_target
+// ignore_for_file: use_raw_strings, ignore_for_file: invalid_annotation_target, directives_ordering
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
-import 'package:fhir/yaml/fhir_yaml.dart';
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
+
+// Project imports:
+import 'package:fhir/yaml/fhir_yaml.dart';
 
 /// From Package: https://github.com/alexei-sintotski/json2yaml
 /// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart

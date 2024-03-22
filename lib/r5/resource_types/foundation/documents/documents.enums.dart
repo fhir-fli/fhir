@@ -2,56 +2,54 @@ part of 'documents.dart';
 
 enum CompositionStatus {
   @JsonValue('registered')
-registered,
+  registered,
   @JsonValue('partial')
-partial,
+  partial,
   @JsonValue('final')
-final_,
+  final_,
   @JsonValue('amended')
-amended,
+  amended,
   @JsonValue('cancelled')
-cancelled,
+  cancelled,
   @JsonValue('entered-in-error')
-enteredinerror,
+  enteredinerror,
   @JsonValue('deprecated')
-deprecated,
+  deprecated,
   @JsonValue('unknown')
-unknown,
+  unknown,
 }
 
 enum CompositionAttestationMode {
   @JsonValue('personal')
-personal,
+  personal,
   @JsonValue('professional')
-professional,
+  professional,
   @JsonValue('legal')
-legal,
+  legal,
   @JsonValue('official')
-official,
+  official,
 }
-
-
 
 enum DocumentReferenceStatus {
   @JsonValue('current')
-current,
+  current,
   @JsonValue('superseded')
-superseded,
+  superseded,
   @JsonValue('entered-in-error')
-enteredinerror,
+  enteredinerror,
 }
 
 enum DocumentRelationshipType {
   @JsonValue('replaces')
-replaces,
+  replaces,
   @JsonValue('transforms')
-transforms,
+  transforms,
   @JsonValue('signs')
-signs,
+  signs,
   @JsonValue('appends')
-appends,
+  appends,
   @JsonValue('incorporates')
-incorporates,
+  incorporates,
   @JsonValue('summarizes')
-summarizes,
+  summarizes,
 }
