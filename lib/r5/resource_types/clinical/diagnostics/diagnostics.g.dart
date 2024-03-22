@@ -461,7 +461,8 @@ _$DiagnosticReportImpl _$$DiagnosticReportImplFromJson(
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status:
+          $enumDecodeNullable(_$DiagnosticReportStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -562,7 +563,7 @@ Map<String, dynamic> _$$DiagnosticReportImplToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$DiagnosticReportStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -594,6 +595,16 @@ Map<String, dynamic> _$$DiagnosticReportImplToJson(
       'presentedForm', instance.presentedForm?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$DiagnosticReportStatusEnumMap = {
+  DiagnosticReportStatus.registered: 'registered',
+  DiagnosticReportStatus.partial: 'partial',
+  DiagnosticReportStatus.final_: 'final',
+  DiagnosticReportStatus.amended: 'amended',
+  DiagnosticReportStatus.cancelled: 'cancelled',
+  DiagnosticReportStatus.enteredinerror: 'entered-in-error',
+  DiagnosticReportStatus.unknown: 'unknown',
+};
 
 _$DiagnosticReportSupportingInfoImpl
     _$$DiagnosticReportSupportingInfoImplFromJson(Map<String, dynamic> json) =>
@@ -1127,7 +1138,8 @@ _$ImagingSelectionImpl _$$ImagingSelectionImplFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status:
+          $enumDecodeNullable(_$ImagingSelectionStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1220,7 +1232,7 @@ Map<String, dynamic> _$$ImagingSelectionImplToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ImagingSelectionStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('issued', instance.issued?.toJson());
@@ -1247,6 +1259,12 @@ Map<String, dynamic> _$$ImagingSelectionImplToJson(
   writeNotNull('instance', instance.instance?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$ImagingSelectionStatusEnumMap = {
+  ImagingSelectionStatus.available: 'available',
+  ImagingSelectionStatus.enteredinerror: 'entered-in-error',
+  ImagingSelectionStatus.unknown: 'unknown',
+};
 
 _$ImagingSelectionPerformerImpl _$$ImagingSelectionPerformerImplFromJson(
         Map<String, dynamic> json) =>
@@ -2402,7 +2420,8 @@ _$ObservationTriggeredByImpl _$$ObservationTriggeredByImplFromJson(
           .toList(),
       observation:
           Reference.fromJson(json['observation'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+      type: $enumDecodeNullable(
+          _$ObservationTriggeredByTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2428,12 +2447,18 @@ Map<String, dynamic> _$$ObservationTriggeredByImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['observation'] = instance.observation.toJson();
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$ObservationTriggeredByTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('reason', instance.reason);
   writeNotNull('_reason', instance.reasonElement?.toJson());
   return val;
 }
+
+const _$ObservationTriggeredByTypeEnumMap = {
+  ObservationTriggeredByType.reflex: 'reflex',
+  ObservationTriggeredByType.repeat: 'repeat',
+  ObservationTriggeredByType.rerun: 're-run',
+};
 
 _$ObservationReferenceRangeImpl _$$ObservationReferenceRangeImplFromJson(
         Map<String, dynamic> json) =>
@@ -2945,7 +2970,7 @@ _$SpecimenImpl _$$SpecimenImplFromJson(Map<String, dynamic> json) =>
           ? null
           : Identifier.fromJson(
               json['accessionIdentifier'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$SpecimenStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2968,7 +2993,7 @@ _$SpecimenImpl _$$SpecimenImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       combined:
-          json['combined'] == null ? null : FhirCode.fromJson(json['combined']),
+          $enumDecodeNullable(_$SpecimenCombinedEnumMap, json['combined']),
       combinedElement: json['_combined'] == null
           ? null
           : Element.fromJson(json['_combined'] as Map<String, dynamic>),
@@ -3023,7 +3048,7 @@ Map<String, dynamic> _$$SpecimenImplToJson(_$SpecimenImpl instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('accessionIdentifier', instance.accessionIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$SpecimenStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -3031,7 +3056,7 @@ Map<String, dynamic> _$$SpecimenImplToJson(_$SpecimenImpl instance) {
   writeNotNull('_receivedTime', instance.receivedTimeElement?.toJson());
   writeNotNull('parent', instance.parent?.map((e) => e.toJson()).toList());
   writeNotNull('request', instance.request?.map((e) => e.toJson()).toList());
-  writeNotNull('combined', instance.combined?.toJson());
+  writeNotNull('combined', _$SpecimenCombinedEnumMap[instance.combined]);
   writeNotNull('_combined', instance.combinedElement?.toJson());
   writeNotNull('role', instance.role?.map((e) => e.toJson()).toList());
   writeNotNull('feature', instance.feature?.map((e) => e.toJson()).toList());
@@ -3045,6 +3070,18 @@ Map<String, dynamic> _$$SpecimenImplToJson(_$SpecimenImpl instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$SpecimenStatusEnumMap = {
+  SpecimenStatus.available: 'available',
+  SpecimenStatus.unavailable: 'unavailable',
+  SpecimenStatus.unsatisfactory: 'unsatisfactory',
+  SpecimenStatus.enteredinerror: 'entered-in-error',
+};
+
+const _$SpecimenCombinedEnumMap = {
+  SpecimenCombined.grouped: 'grouped',
+  SpecimenCombined.pooled: 'pooled',
+};
 
 _$SpecimenFeatureImpl _$$SpecimenFeatureImplFromJson(
         Map<String, dynamic> json) =>

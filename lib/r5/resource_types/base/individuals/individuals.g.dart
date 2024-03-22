@@ -713,7 +713,7 @@ _$PatientLinkImpl _$$PatientLinkImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       other: Reference.fromJson(json['other'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+      type: $enumDecodeNullable(_$LinkTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -734,10 +734,17 @@ Map<String, dynamic> _$$PatientLinkImplToJson(_$PatientLinkImpl instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['other'] = instance.other.toJson();
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$LinkTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
+
+const _$LinkTypeEnumMap = {
+  LinkType.replacedby: 'replaced-by',
+  LinkType.replaces: 'replaces',
+  LinkType.refer: 'refer',
+  LinkType.seealso: 'seealso',
+};
 
 _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
       resourceType: $enumDecodeNullable(

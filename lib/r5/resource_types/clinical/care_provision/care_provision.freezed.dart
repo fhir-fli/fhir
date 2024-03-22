@@ -2387,7 +2387,7 @@ mixin _$CareTeam {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of the care team.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  CareTeamStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2458,7 +2458,7 @@ abstract class $CareTeamCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      CareTeamStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       String? name,
@@ -2571,7 +2571,7 @@ class _$CareTeamCopyWithImpl<$Res, $Val extends CareTeam>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as CareTeamStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2738,7 +2738,7 @@ abstract class _$$CareTeamImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      CareTeamStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       String? name,
@@ -2857,7 +2857,7 @@ class __$$CareTeamImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as CareTeamStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3096,7 +3096,7 @@ class _$CareTeamImpl extends _CareTeam {
 
   /// [status] Indicates the current state of the care team.
   @override
-  final FhirCode? status;
+  final CareTeamStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -3318,7 +3318,7 @@ abstract class _CareTeam extends CareTeam {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final CareTeamStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       final String? name,
@@ -3423,7 +3423,7 @@ abstract class _CareTeam extends CareTeam {
   @override
 
   /// [status] Indicates the current state of the care team.
-  FhirCode? get status;
+  CareTeamStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -31571,7 +31571,7 @@ mixin _$VisionPrescriptionLensSpecification {
   CodeableConcept get product => throw _privateConstructorUsedError;
 
   /// [eye] The eye for which the lens specification applies.
-  FhirCode? get eye => throw _privateConstructorUsedError;
+  VisionEyeCodes? get eye => throw _privateConstructorUsedError;
 
   /// [eyeElement] ("_eye") Extensions for eye
   @JsonKey(name: '_eye')
@@ -31672,7 +31672,7 @@ abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept product,
-      FhirCode? eye,
+      VisionEyeCodes? eye,
       @JsonKey(name: '_eye') Element? eyeElement,
       FhirDecimal? sphere,
       @JsonKey(name: '_sphere') Element? sphereElement,
@@ -31772,7 +31772,7 @@ class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res,
       eye: freezed == eye
           ? _value.eye
           : eye // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VisionEyeCodes?,
       eyeElement: freezed == eyeElement
           ? _value.eyeElement
           : eyeElement // ignore: cast_nullable_to_non_nullable
@@ -32019,7 +32019,7 @@ abstract class _$$VisionPrescriptionLensSpecificationImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept product,
-      FhirCode? eye,
+      VisionEyeCodes? eye,
       @JsonKey(name: '_eye') Element? eyeElement,
       FhirDecimal? sphere,
       @JsonKey(name: '_sphere') Element? sphereElement,
@@ -32130,7 +32130,7 @@ class __$$VisionPrescriptionLensSpecificationImplCopyWithImpl<$Res>
       eye: freezed == eye
           ? _value.eye
           : eye // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VisionEyeCodes?,
       eyeElement: freezed == eyeElement
           ? _value.eyeElement
           : eyeElement // ignore: cast_nullable_to_non_nullable
@@ -32337,7 +32337,7 @@ class _$VisionPrescriptionLensSpecificationImpl
 
   /// [eye] The eye for which the lens specification applies.
   @override
-  final FhirCode? eye;
+  final VisionEyeCodes? eye;
 
   /// [eyeElement] ("_eye") Extensions for eye
   @override
@@ -32568,7 +32568,7 @@ abstract class _VisionPrescriptionLensSpecification
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept product,
-          final FhirCode? eye,
+          final VisionEyeCodes? eye,
           @JsonKey(name: '_eye') final Element? eyeElement,
           final FhirDecimal? sphere,
           @JsonKey(name: '_sphere') final Element? sphereElement,
@@ -32636,7 +32636,7 @@ abstract class _VisionPrescriptionLensSpecification
   @override
 
   /// [eye] The eye for which the lens specification applies.
-  FhirCode? get eye;
+  VisionEyeCodes? get eye;
   @override
 
   /// [eyeElement] ("_eye") Extensions for eye
@@ -32788,7 +32788,7 @@ mixin _$VisionPrescriptionPrism {
   Element? get amountElement => throw _privateConstructorUsedError;
 
   /// [base] The relative base, or reference lens edge, for the prism.
-  FhirCode? get base => throw _privateConstructorUsedError;
+  VisionBaseCodes? get base => throw _privateConstructorUsedError;
 
   /// [baseElement] ("_base") Extensions for base
   @JsonKey(name: '_base')
@@ -32812,7 +32812,7 @@ abstract class $VisionPrescriptionPrismCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirDecimal? amount,
       @JsonKey(name: '_amount') Element? amountElement,
-      FhirCode? base,
+      VisionBaseCodes? base,
       @JsonKey(name: '_base') Element? baseElement});
 
   $ElementCopyWith<$Res>? get amountElement;
@@ -32865,7 +32865,7 @@ class _$VisionPrescriptionPrismCopyWithImpl<$Res,
       base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VisionBaseCodes?,
       baseElement: freezed == baseElement
           ? _value.baseElement
           : baseElement // ignore: cast_nullable_to_non_nullable
@@ -32913,7 +32913,7 @@ abstract class _$$VisionPrescriptionPrismImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirDecimal? amount,
       @JsonKey(name: '_amount') Element? amountElement,
-      FhirCode? base,
+      VisionBaseCodes? base,
       @JsonKey(name: '_base') Element? baseElement});
 
   @override
@@ -32967,7 +32967,7 @@ class __$$VisionPrescriptionPrismImplCopyWithImpl<$Res>
       base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as VisionBaseCodes?,
       baseElement: freezed == baseElement
           ? _value.baseElement
           : baseElement // ignore: cast_nullable_to_non_nullable
@@ -33071,7 +33071,7 @@ class _$VisionPrescriptionPrismImpl extends _VisionPrescriptionPrism {
 
   /// [base] The relative base, or reference lens edge, for the prism.
   @override
-  final FhirCode? base;
+  final VisionBaseCodes? base;
 
   /// [baseElement] ("_base") Extensions for base
   @override
@@ -33135,7 +33135,7 @@ abstract class _VisionPrescriptionPrism extends VisionPrescriptionPrism {
           final List<FhirExtension>? modifierExtension,
           final FhirDecimal? amount,
           @JsonKey(name: '_amount') final Element? amountElement,
-          final FhirCode? base,
+          final VisionBaseCodes? base,
           @JsonKey(name: '_base') final Element? baseElement}) =
       _$VisionPrescriptionPrismImpl;
   const _VisionPrescriptionPrism._() : super._();
@@ -33186,7 +33186,7 @@ abstract class _VisionPrescriptionPrism extends VisionPrescriptionPrism {
   @override
 
   /// [base] The relative base, or reference lens edge, for the prism.
-  FhirCode? get base;
+  VisionBaseCodes? get base;
   @override
 
   /// [baseElement] ("_base") Extensions for base

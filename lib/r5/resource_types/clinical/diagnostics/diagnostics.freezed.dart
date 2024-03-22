@@ -2532,7 +2532,7 @@ mixin _$DiagnosticReport {
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [status] The status of the diagnostic report.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  DiagnosticReportStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2672,7 +2672,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      FhirCode? status,
+      DiagnosticReportStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
@@ -2819,7 +2819,7 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DiagnosticReportStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3091,7 +3091,7 @@ abstract class _$$DiagnosticReportImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      FhirCode? status,
+      DiagnosticReportStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
@@ -3249,7 +3249,7 @@ class __$$DiagnosticReportImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as DiagnosticReportStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3566,7 +3566,7 @@ class _$DiagnosticReportImpl extends _DiagnosticReport {
 
   /// [status] The status of the diagnostic report.
   @override
-  final FhirCode? status;
+  final DiagnosticReportStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -3969,7 +3969,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      final FhirCode? status,
+      final DiagnosticReportStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
@@ -4090,7 +4090,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
 
   /// [status] The status of the diagnostic report.
-  FhirCode? get status;
+  DiagnosticReportStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -9272,7 +9272,7 @@ mixin _$ImagingSelection {
   /// [status] The current state of the ImagingSelection resource. This is not
   ///  the status of any ImagingStudy, ServiceRequest, or Task resources
   ///  associated with the ImagingSelection.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  ImagingSelectionStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -9394,7 +9394,7 @@ abstract class $ImagingSelectionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      ImagingSelectionStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       FhirInstant? issued,
@@ -9533,7 +9533,7 @@ class _$ImagingSelectionCopyWithImpl<$Res, $Val extends ImagingSelection>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ImagingSelectionStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9796,7 +9796,7 @@ abstract class _$$ImagingSelectionImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      ImagingSelectionStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       FhirInstant? issued,
@@ -9946,7 +9946,7 @@ class __$$ImagingSelectionImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ImagingSelectionStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10234,7 +10234,7 @@ class _$ImagingSelectionImpl extends _ImagingSelection {
   ///  the status of any ImagingStudy, ServiceRequest, or Task resources
   ///  associated with the ImagingSelection.
   @override
-  final FhirCode? status;
+  final ImagingSelectionStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -10565,7 +10565,7 @@ abstract class _ImagingSelection extends ImagingSelection {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final ImagingSelectionStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final Reference? subject,
       final FhirInstant? issued,
@@ -10681,7 +10681,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   /// [status] The current state of the ImagingSelection resource. This is not
   ///  the status of any ImagingStudy, ServiceRequest, or Task resources
   ///  associated with the ImagingSelection.
-  FhirCode? get status;
+  ImagingSelectionStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -22693,7 +22693,7 @@ mixin _$ObservationTriggeredBy {
   Reference get observation => throw _privateConstructorUsedError;
 
   /// [type] The type of trigger. Reflex | Repeat | Re-run.
-  FhirCode? get type => throw _privateConstructorUsedError;
+  ObservationTriggeredByType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -22724,7 +22724,7 @@ abstract class $ObservationTriggeredByCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference observation,
-      FhirCode? type,
+      ObservationTriggeredByType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? reason,
       @JsonKey(name: '_reason') Element? reasonElement});
@@ -22777,7 +22777,7 @@ class _$ObservationTriggeredByCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ObservationTriggeredByType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -22840,7 +22840,7 @@ abstract class _$$ObservationTriggeredByImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference observation,
-      FhirCode? type,
+      ObservationTriggeredByType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? reason,
       @JsonKey(name: '_reason') Element? reasonElement});
@@ -22895,7 +22895,7 @@ class __$$ObservationTriggeredByImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as ObservationTriggeredByType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -23002,7 +23002,7 @@ class _$ObservationTriggeredByImpl extends _ObservationTriggeredBy {
 
   /// [type] The type of trigger. Reflex | Repeat | Re-run.
   @override
-  final FhirCode? type;
+  final ObservationTriggeredByType? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -23078,7 +23078,7 @@ abstract class _ObservationTriggeredBy extends ObservationTriggeredBy {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Reference observation,
-          final FhirCode? type,
+          final ObservationTriggeredByType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? reason,
           @JsonKey(name: '_reason') final Element? reasonElement}) =
@@ -23125,7 +23125,7 @@ abstract class _ObservationTriggeredBy extends ObservationTriggeredBy {
   @override
 
   /// [type] The type of trigger. Reflex | Repeat | Re-run.
-  FhirCode? get type;
+  ObservationTriggeredByType? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -28100,7 +28100,7 @@ mixin _$Specimen {
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The availability of the specimen.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  SpecimenStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -28132,7 +28132,7 @@ mixin _$Specimen {
 
   /// [combined] This element signifies if the specimen is part of a group or
   ///  pooled.
-  FhirCode? get combined => throw _privateConstructorUsedError;
+  SpecimenCombined? get combined => throw _privateConstructorUsedError;
 
   /// [combinedElement] ("_combined") Extensions for combined
   @JsonKey(name: '_combined')
@@ -28195,7 +28195,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      FhirCode? status,
+      SpecimenStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
@@ -28203,7 +28203,7 @@ abstract class $SpecimenCopyWith<$Res> {
       @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
-      FhirCode? combined,
+      SpecimenCombined? combined,
       @JsonKey(name: '_combined') Element? combinedElement,
       List<CodeableConcept>? role,
       List<SpecimenFeature>? feature,
@@ -28326,7 +28326,7 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SpecimenStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -28358,7 +28358,7 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       combined: freezed == combined
           ? _value.combined
           : combined // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SpecimenCombined?,
       combinedElement: freezed == combinedElement
           ? _value.combinedElement
           : combinedElement // ignore: cast_nullable_to_non_nullable
@@ -28550,7 +28550,7 @@ abstract class _$$SpecimenImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      FhirCode? status,
+      SpecimenStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
@@ -28558,7 +28558,7 @@ abstract class _$$SpecimenImplCopyWith<$Res>
       @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
-      FhirCode? combined,
+      SpecimenCombined? combined,
       @JsonKey(name: '_combined') Element? combinedElement,
       List<CodeableConcept>? role,
       List<SpecimenFeature>? feature,
@@ -28690,7 +28690,7 @@ class __$$SpecimenImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SpecimenStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -28722,7 +28722,7 @@ class __$$SpecimenImplCopyWithImpl<$Res>
       combined: freezed == combined
           ? _value.combined
           : combined // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as SpecimenCombined?,
       combinedElement: freezed == combinedElement
           ? _value.combinedElement
           : combinedElement // ignore: cast_nullable_to_non_nullable
@@ -28959,7 +28959,7 @@ class _$SpecimenImpl extends _Specimen {
 
   /// [status] The availability of the specimen.
   @override
-  final FhirCode? status;
+  final SpecimenStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -29019,7 +29019,7 @@ class _$SpecimenImpl extends _Specimen {
   /// [combined] This element signifies if the specimen is part of a group or
   ///  pooled.
   @override
-  final FhirCode? combined;
+  final SpecimenCombined? combined;
 
   /// [combinedElement] ("_combined") Extensions for combined
   @override
@@ -29253,7 +29253,7 @@ abstract class _Specimen extends Specimen {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Identifier? accessionIdentifier,
-      final FhirCode? status,
+      final SpecimenStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
@@ -29261,7 +29261,7 @@ abstract class _Specimen extends Specimen {
       @JsonKey(name: '_receivedTime') final Element? receivedTimeElement,
       final List<Reference>? parent,
       final List<Reference>? request,
-      final FhirCode? combined,
+      final SpecimenCombined? combined,
       @JsonKey(name: '_combined') final Element? combinedElement,
       final List<CodeableConcept>? role,
       final List<SpecimenFeature>? feature,
@@ -29367,7 +29367,7 @@ abstract class _Specimen extends Specimen {
   @override
 
   /// [status] The availability of the specimen.
-  FhirCode? get status;
+  SpecimenStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -29407,7 +29407,7 @@ abstract class _Specimen extends Specimen {
 
   /// [combined] This element signifies if the specimen is part of a group or
   ///  pooled.
-  FhirCode? get combined;
+  SpecimenCombined? get combined;
   @override
 
   /// [combinedElement] ("_combined") Extensions for combined

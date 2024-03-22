@@ -1414,6 +1414,14 @@ const _$TaskStatusEnumMap = {
 
 const _$TaskIntentEnumMap = {
   TaskIntent.unknown: 'unknown',
+  TaskIntent.proposal: 'proposal',
+  TaskIntent.plan: 'plan',
+  TaskIntent.order: 'order',
+  TaskIntent.originalOrder: 'original-order',
+  TaskIntent.reflexOrder: 'reflex-order',
+  TaskIntent.fillerOrder: 'filler-order',
+  TaskIntent.instanceOrder: 'instance-order',
+  TaskIntent.option: 'option',
 };
 
 const _$RequestPriorityEnumMap = {
@@ -2421,6 +2429,14 @@ const _$TransportStatusEnumMap = {
 
 const _$TransportIntentEnumMap = {
   TransportIntent.unknown: 'unknown',
+  TransportIntent.proposal: 'proposal',
+  TransportIntent.plan: 'plan',
+  TransportIntent.order: 'order',
+  TransportIntent.originalOrder: 'original-order',
+  TransportIntent.reflexOrder: 'reflex-order',
+  TransportIntent.fillerOrder: 'filler-order',
+  TransportIntent.instanceOrder: 'instance-order',
+  TransportIntent.option: 'option',
 };
 
 _$TransportRestrictionImpl _$$TransportRestrictionImplFromJson(

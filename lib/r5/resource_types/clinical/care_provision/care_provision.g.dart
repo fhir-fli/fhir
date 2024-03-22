@@ -425,7 +425,7 @@ _$CareTeamImpl _$$CareTeamImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$CareTeamStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -485,7 +485,7 @@ Map<String, dynamic> _$$CareTeamImplToJson(_$CareTeamImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$CareTeamStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
@@ -501,6 +501,14 @@ Map<String, dynamic> _$$CareTeamImplToJson(_$CareTeamImpl instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$CareTeamStatusEnumMap = {
+  CareTeamStatus.proposed: 'proposed',
+  CareTeamStatus.active: 'active',
+  CareTeamStatus.suspended: 'suspended',
+  CareTeamStatus.inactive: 'inactive',
+  CareTeamStatus.enteredinerror: 'entered-in-error',
+};
 
 _$CareTeamParticipantImpl _$$CareTeamParticipantImplFromJson(
         Map<String, dynamic> json) =>
@@ -3252,7 +3260,7 @@ _$VisionPrescriptionLensSpecificationImpl
               .toList(),
           product:
               CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
-          eye: json['eye'] == null ? null : FhirCode.fromJson(json['eye']),
+          eye: $enumDecodeNullable(_$VisionEyeCodesEnumMap, json['eye']),
           eyeElement: json['_eye'] == null
               ? null
               : Element.fromJson(json['_eye'] as Map<String, dynamic>),
@@ -3331,7 +3339,7 @@ Map<String, dynamic> _$$VisionPrescriptionLensSpecificationImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['product'] = instance.product.toJson();
-  writeNotNull('eye', instance.eye?.toJson());
+  writeNotNull('eye', _$VisionEyeCodesEnumMap[instance.eye]);
   writeNotNull('_eye', instance.eyeElement?.toJson());
   writeNotNull('sphere', instance.sphere?.toJson());
   writeNotNull('_sphere', instance.sphereElement?.toJson());
@@ -3357,6 +3365,11 @@ Map<String, dynamic> _$$VisionPrescriptionLensSpecificationImplToJson(
   return val;
 }
 
+const _$VisionEyeCodesEnumMap = {
+  VisionEyeCodes.right: 'right',
+  VisionEyeCodes.left: 'left',
+};
+
 _$VisionPrescriptionPrismImpl _$$VisionPrescriptionPrismImplFromJson(
         Map<String, dynamic> json) =>
     _$VisionPrescriptionPrismImpl(
@@ -3372,7 +3385,7 @@ _$VisionPrescriptionPrismImpl _$$VisionPrescriptionPrismImplFromJson(
       amountElement: json['_amount'] == null
           ? null
           : Element.fromJson(json['_amount'] as Map<String, dynamic>),
-      base: json['base'] == null ? null : FhirCode.fromJson(json['base']),
+      base: $enumDecodeNullable(_$VisionBaseCodesEnumMap, json['base']),
       baseElement: json['_base'] == null
           ? null
           : Element.fromJson(json['_base'] as Map<String, dynamic>),
@@ -3395,7 +3408,14 @@ Map<String, dynamic> _$$VisionPrescriptionPrismImplToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('amount', instance.amount?.toJson());
   writeNotNull('_amount', instance.amountElement?.toJson());
-  writeNotNull('base', instance.base?.toJson());
+  writeNotNull('base', _$VisionBaseCodesEnumMap[instance.base]);
   writeNotNull('_base', instance.baseElement?.toJson());
   return val;
 }
+
+const _$VisionBaseCodesEnumMap = {
+  VisionBaseCodes.up: 'up',
+  VisionBaseCodes.down: 'down',
+  VisionBaseCodes.in_: 'in',
+  VisionBaseCodes.out: 'out',
+};

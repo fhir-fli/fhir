@@ -8,6 +8,7 @@
 * Updated R5
 * Added r6
 * Removed XML
+* added some Enums back to R5
 
 ## [0.12.0]
 

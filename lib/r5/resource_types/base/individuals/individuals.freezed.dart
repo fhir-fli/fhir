@@ -5298,7 +5298,7 @@ mixin _$PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  FhirCode? get type => throw _privateConstructorUsedError;
+  LinkType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -5321,7 +5321,7 @@ abstract class $PatientLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      FhirCode? type,
+      LinkType? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ReferenceCopyWith<$Res> get other;
@@ -5368,7 +5368,7 @@ class _$PatientLinkCopyWithImpl<$Res, $Val extends PatientLink>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LinkType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5410,7 +5410,7 @@ abstract class _$$PatientLinkImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      FhirCode? type,
+      LinkType? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -5457,7 +5457,7 @@ class __$$PatientLinkImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LinkType?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5556,7 +5556,7 @@ class _$PatientLinkImpl extends _PatientLink {
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
   @override
-  final FhirCode? type;
+  final LinkType? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -5615,7 +5615,7 @@ abstract class _PatientLink extends PatientLink {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference other,
-      final FhirCode? type,
+      final LinkType? type,
       @JsonKey(name: '_type') final Element? typeElement}) = _$PatientLinkImpl;
   const _PatientLink._() : super._();
 
@@ -5661,7 +5661,7 @@ abstract class _PatientLink extends PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  FhirCode? get type;
+  LinkType? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type

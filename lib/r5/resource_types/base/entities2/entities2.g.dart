@@ -484,7 +484,8 @@ _$BiologicallyDerivedProductDispenseImpl
               ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
               .toList(),
           status: $enumDecodeNullable(
-              _$BiologicallyDerivedProductStatusEnumMap, json['status']),
+              _$BiologicallyDerivedProductDispenseStatusEnumMap,
+              json['status']),
           statusElement: json['_status'] == null
               ? null
               : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -563,8 +564,8 @@ Map<String, dynamic> _$$BiologicallyDerivedProductDispenseImplToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'status', _$BiologicallyDerivedProductStatusEnumMap[instance.status]);
+  writeNotNull('status',
+      _$BiologicallyDerivedProductDispenseStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'originRelationshipType', instance.originRelationshipType?.toJson());
@@ -586,9 +587,15 @@ Map<String, dynamic> _$$BiologicallyDerivedProductDispenseImplToJson(
   return val;
 }
 
-const _$BiologicallyDerivedProductStatusEnumMap = {
-  BiologicallyDerivedProductStatus.available: 'available',
-  BiologicallyDerivedProductStatus.unavailable: 'unavailable',
+const _$BiologicallyDerivedProductDispenseStatusEnumMap = {
+  BiologicallyDerivedProductDispenseStatus.preparation: 'preparation',
+  BiologicallyDerivedProductDispenseStatus.inprogress: 'in-progress',
+  BiologicallyDerivedProductDispenseStatus.allocated: 'allocated',
+  BiologicallyDerivedProductDispenseStatus.issued: 'issued',
+  BiologicallyDerivedProductDispenseStatus.unfulfilled: 'unfulfilled',
+  BiologicallyDerivedProductDispenseStatus.returned: 'returned',
+  BiologicallyDerivedProductDispenseStatus.enteredinerror: 'entered-in-error',
+  BiologicallyDerivedProductDispenseStatus.unknown: 'unknown',
 };
 
 _$BiologicallyDerivedProductDispensePerformerImpl
@@ -1379,7 +1386,8 @@ _$NutritionProductImpl _$$NutritionProductImplFromJson(
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$ProductStatusEnumMap, json['status']),
+      status:
+          $enumDecodeNullable(_$NutritionProductStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1439,7 +1447,7 @@ Map<String, dynamic> _$$NutritionProductImplToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('status', _$ProductStatusEnumMap[instance.status]);
+  writeNotNull('status', _$NutritionProductStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1456,10 +1464,10 @@ Map<String, dynamic> _$$NutritionProductImplToJson(
   return val;
 }
 
-const _$ProductStatusEnumMap = {
-  ProductStatus.active: 'active',
-  ProductStatus.inactive: 'inactive',
-  ProductStatus.enteredinerror: 'entered-in-error',
+const _$NutritionProductStatusEnumMap = {
+  NutritionProductStatus.active: 'active',
+  NutritionProductStatus.inactive: 'inactive',
+  NutritionProductStatus.enteredinerror: 'entered-in-error',
 };
 
 _$NutritionProductNutrientImpl _$$NutritionProductNutrientImplFromJson(
@@ -1791,6 +1799,12 @@ Map<String, dynamic> _$$SubstanceImplToJson(_$SubstanceImpl instance) {
       'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$ProductStatusEnumMap = {
+  ProductStatus.active: 'active',
+  ProductStatus.inactive: 'inactive',
+  ProductStatus.enteredinerror: 'entered-in-error',
+};
 
 _$SubstanceIngredientImpl _$$SubstanceIngredientImplFromJson(
         Map<String, dynamic> json) =>
