@@ -13,31 +13,31 @@ enum CareTeamStatus {
   enteredinerror,
 }
 
-enum GoalStatus {
-  @JsonValue('proposed')
-  proposed,
-  @JsonValue('planned')
-  planned,
-  @JsonValue('accepted')
-  accepted,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  enteredinerror,
-  @JsonValue('rejected')
-  rejected,
-}
+// enum GoalStatus {
+//   @JsonValue('proposed')
+//   proposed,
+//   @JsonValue('planned')
+//   planned,
+//   @JsonValue('accepted')
+//   accepted,
+//   @JsonValue('cancelled')
+//   cancelled,
+//   @JsonValue('entered-in-error')
+//   enteredinerror,
+//   @JsonValue('rejected')
+//   rejected,
+// }
 
-enum ServicerequestOrderdetailParameterCode {
-  @JsonValue('catheter-insertion')
-  catheterinsertion,
-  @JsonValue('body-elevation')
-  bodyelevation,
-  @JsonValue('device-configuration')
-  deviceconfiguration,
-  @JsonValue('device-settings')
-  devicesettings,
-}
+// enum ServiceRequestOrderDetailParameterCode {
+//   @JsonValue('catheter-insertion')
+//   catheterinsertion,
+//   @JsonValue('body-elevation')
+//   bodyelevation,
+//   @JsonValue('device-configuration')
+//   deviceconfiguration,
+//   @JsonValue('device-settings')
+//   devicesettings,
+// }
 
 enum VisionEyeCodes {
   @JsonValue('right')

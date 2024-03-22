@@ -27,22 +27,38 @@ enum TaskStatus {
   enteredinerror,
 }
 
-enum TaskStatusReason {
-  @JsonValue('missing')
-  missing,
-  @JsonValue('misidentified')
-  misidentified,
-  @JsonValue('equipment-issue')
-  equipmentissue,
-  @JsonValue('environmental-issue')
-  environmentalissue,
-  @JsonValue('personnel-issue')
-  personnelissue,
-}
+// enum TaskStatusReason {
+//   @JsonValue('missing')
+//   missing,
+//   @JsonValue('misidentified')
+//   misidentified,
+//   @JsonValue('equipment-issue')
+//   equipmentissue,
+//   @JsonValue('environmental-issue')
+//   environmentalissue,
+//   @JsonValue('personnel-issue')
+//   personnelissue,
+// }
 
 enum TaskIntent {
   @JsonValue('unknown')
   unknown,
+  @JsonValue('proposal')
+  proposal,
+  @JsonValue('plan')
+  plan,
+  @JsonValue('order')
+  order,
+  @JsonValue('original-order')
+  originalOrder,
+  @JsonValue('reflex-order')
+  reflexOrder,
+  @JsonValue('filler-order')
+  fillerOrder,
+  @JsonValue('instance-order')
+  instanceOrder,
+  @JsonValue('option')
+  option,
 }
 
 enum TransportStatus {
@@ -60,26 +76,42 @@ enum TransportStatus {
   enteredinerror,
 }
 
-enum TransportStatusReason {
-  @JsonValue('declined-by-patient')
-  declinedbypatient,
-  @JsonValue('refused-by-recipient')
-  refusedbyrecipient,
-  @JsonValue('patient-not-available')
-  patientnotavailable,
-  @JsonValue('specimen-not-available')
-  specimennotavailable,
-  @JsonValue('wrong-request-data')
-  wrongrequestdata,
-  @JsonValue('in-route-accident')
-  inrouteaccident,
-  @JsonValue('request-not-acknowledged')
-  requestnotacknowledged,
-}
+// enum TransportStatusReason {
+//   @JsonValue('declined-by-patient')
+//   declinedbypatient,
+//   @JsonValue('refused-by-recipient')
+//   refusedbyrecipient,
+//   @JsonValue('patient-not-available')
+//   patientnotavailable,
+//   @JsonValue('specimen-not-available')
+//   specimennotavailable,
+//   @JsonValue('wrong-request-data')
+//   wrongrequestdata,
+//   @JsonValue('in-route-accident')
+//   inrouteaccident,
+//   @JsonValue('request-not-acknowledged')
+//   requestnotacknowledged,
+// }
 
 enum TransportIntent {
   @JsonValue('unknown')
   unknown,
+  @JsonValue('proposal')
+  proposal,
+  @JsonValue('plan')
+  plan,
+  @JsonValue('order')
+  order,
+  @JsonValue('original-order')
+  originalOrder,
+  @JsonValue('reflex-order')
+  reflexOrder,
+  @JsonValue('filler-order')
+  fillerOrder,
+  @JsonValue('instance-order')
+  instanceOrder,
+  @JsonValue('option')
+  option,
 }
 
 enum AppointmentResponseStatus {
@@ -129,35 +161,35 @@ enum ParticipationStatus {
   needsaction,
 }
 
-enum WeekOfMonth {
-  @JsonValue('first')
-  first,
-  @JsonValue('second')
-  second,
-  @JsonValue('third')
-  third,
-  @JsonValue('fourth')
-  fourth,
-  @JsonValue('last')
-  last,
-}
+// enum WeekOfMonth {
+//   @JsonValue('first')
+//   first,
+//   @JsonValue('second')
+//   second,
+//   @JsonValue('third')
+//   third,
+//   @JsonValue('fourth')
+//   fourth,
+//   @JsonValue('last')
+//   last,
+// }
 
-enum DaysOfWeek {
-  @JsonValue('mon')
-  mon,
-  @JsonValue('tue')
-  tue,
-  @JsonValue('wed')
-  wed,
-  @JsonValue('thu')
-  thu,
-  @JsonValue('fri')
-  fri,
-  @JsonValue('sat')
-  sat,
-  @JsonValue('sun')
-  sun,
-}
+// enum DaysOfWeek {
+//   @JsonValue('mon')
+//   mon,
+//   @JsonValue('tue')
+//   tue,
+//   @JsonValue('wed')
+//   wed,
+//   @JsonValue('thu')
+//   thu,
+//   @JsonValue('fri')
+//   fri,
+//   @JsonValue('sat')
+//   sat,
+//   @JsonValue('sun')
+//   sun,
+// }
 
 enum SlotStatus {
   @JsonValue('busy')

@@ -1,6 +1,6 @@
 part of 'diagnostics.dart';
 
-enum ObservationTriggeredbytype {
+enum ObservationTriggeredByType {
   @JsonValue('reflex')
   reflex,
   @JsonValue('repeat')
@@ -9,12 +9,12 @@ enum ObservationTriggeredbytype {
   rerun,
 }
 
-enum ObservationReferencerangeNormalvalue {
-  @JsonValue('negative')
-  negative,
-  @JsonValue('absent')
-  absent,
-}
+// enum ObservationReferencerangeNormalvalue {
+//   @JsonValue('negative')
+//   negative,
+//   @JsonValue('absent')
+//   absent,
+// }
 
 enum DiagnosticReportStatus {
   @JsonValue('registered')
@@ -72,7 +72,7 @@ enum SpecimenRole {
   v,
 }
 
-enum ImagingselectionStatus {
+enum ImagingSelectionStatus {
   @JsonValue('available')
   available,
   @JsonValue('entered-in-error')

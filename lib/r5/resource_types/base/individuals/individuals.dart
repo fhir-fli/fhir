@@ -1281,7 +1281,7 @@ class PatientLink with _$PatientLink {
 
     /// [type] The type of link between this patient resource and another patient
     ///  resource.
-    FhirCode? type,
+    LinkType? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

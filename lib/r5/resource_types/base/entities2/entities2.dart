@@ -801,7 +801,7 @@ class BiologicallyDerivedProductDispense
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the dispense event.
-    BiologicallyDerivedProductStatus? status,
+    BiologicallyDerivedProductDispenseStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2800,7 +2800,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     CodeableConcept? code,
 
     /// [status] The current state of the product.
-    ProductStatus? status,
+    NutritionProductStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

@@ -867,7 +867,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<Reference>? basedOn,
 
     /// [status] The status of the diagnostic report.
-    FhirCode? status,
+    DiagnosticReportStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2438,7 +2438,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     /// [status] The current state of the ImagingSelection resource. This is not
     ///  the status of any ImagingStudy, ServiceRequest, or Task resources
     ///  associated with the ImagingSelection.
-    FhirCode? status,
+    ImagingSelectionStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5363,7 +5363,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
     required Reference observation,
 
     /// [type] The type of trigger. Reflex | Repeat | Re-run.
-    FhirCode? type,
+    ObservationTriggeredByType? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -6660,7 +6660,7 @@ class Specimen with Resource, _$Specimen {
     Identifier? accessionIdentifier,
 
     /// [status] The availability of the specimen.
-    FhirCode? status,
+    SpecimenStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -6690,7 +6690,7 @@ class Specimen with Resource, _$Specimen {
 
     /// [combined] This element signifies if the specimen is part of a group or
     ///  pooled.
-    FhirCode? combined,
+    SpecimenCombined? combined,
 
     /// [combinedElement] ("_combined") Extensions for combined
     @JsonKey(name: '_combined') Element? combinedElement,

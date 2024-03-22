@@ -21,18 +21,18 @@ enum EncounterStatus {
   unknown,
 }
 
-enum EncounterReasonUse {
-  @JsonValue('CC')
-  cc,
-  @JsonValue('HC')
-  hc,
-  @JsonValue('AD')
-  ad,
-  @JsonValue('RV')
-  rv,
-  @JsonValue('HM')
-  hm,
-}
+// enum EncounterReasonUse {
+//   @JsonValue('CC')
+//   cc,
+//   @JsonValue('HC')
+//   hc,
+//   @JsonValue('AD')
+//   ad,
+//   @JsonValue('RV')
+//   rv,
+//   @JsonValue('HM')
+//   hm,
+// }
 
 enum EncounterLocationStatus {
   @JsonValue('planned')

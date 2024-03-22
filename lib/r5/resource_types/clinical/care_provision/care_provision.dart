@@ -688,7 +688,7 @@ class CareTeam with Resource, _$CareTeam {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of the care team.
-    FhirCode? status,
+    CareTeamStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -7289,7 +7289,7 @@ class VisionPrescriptionLensSpecification
     required CodeableConcept product,
 
     /// [eye] The eye for which the lens specification applies.
-    FhirCode? eye,
+    VisionEyeCodes? eye,
 
     /// [eyeElement] ("_eye") Extensions for eye
     @JsonKey(name: '_eye') Element? eyeElement,
@@ -7476,7 +7476,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     @JsonKey(name: '_amount') Element? amountElement,
 
     /// [base] The relative base, or reference lens edge, for the prism.
-    FhirCode? base,
+    VisionBaseCodes? base,
 
     /// [baseElement] ("_base") Extensions for base
     @JsonKey(name: '_base') Element? baseElement,
