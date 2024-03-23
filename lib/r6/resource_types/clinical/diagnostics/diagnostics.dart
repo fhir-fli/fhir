@@ -6170,6 +6170,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// [questionnaire] The Questionnaire that defines and organizes the
     ///  questions for which answers are being provided.
     required FhirCanonical questionnaire,
+    @JsonKey(name: '_questionnaire') Element? questionnaireElement,
 
     /// [status] The current state of the questionnaire response.
     FhirCode? status,

@@ -6205,6 +6205,7 @@ class TestScript with Resource, _$TestScript {
 
     /// [profile] Reference to the profile to be used for validation.
     List<FhirCanonical>? profile,
+    @JsonKey(name: '_profile') List<Element>? profileElement,
 
     /// [variable] Variable is set based either on element value in response body
     ///  or on header field value in the response headers.

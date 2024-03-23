@@ -209,6 +209,9 @@ _$FhirMetaImpl _$$FhirMetaImplFromJson(Map<String, dynamic> json) =>
       profile: (json['profile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
+      profileElement: (json['_profile'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       security: (json['security'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -236,6 +239,8 @@ Map<String, dynamic> _$$FhirMetaImplToJson(_$FhirMetaImpl instance) {
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('_source', instance.sourceElement?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
   writeNotNull('security', instance.security?.map((e) => e.toJson()).toList());
   writeNotNull('tag', instance.tag?.map((e) => e.toJson()).toList());
   return val;

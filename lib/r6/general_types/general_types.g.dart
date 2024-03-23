@@ -1282,8 +1282,8 @@ _$TimingRepeatImpl _$$TimingRepeatImplFromJson(Map<String, dynamic> json) =>
       durationMaxElement: json['_durationMax'] == null
           ? null
           : Element.fromJson(json['_durationMax'] as Map<String, dynamic>),
-      durationUnit: $enumDecodeNullable(
-          _$TimingRepeatDurationUnitEnumMap, json['durationUnit']),
+      durationUnit:
+          $enumDecodeNullable(_$UnitsOfTimeEnumMap, json['durationUnit']),
       durationUnitElement: json['_durationUnit'] == null
           ? null
           : Element.fromJson(json['_durationUnit'] as Map<String, dynamic>),
@@ -1310,13 +1310,12 @@ _$TimingRepeatImpl _$$TimingRepeatImplFromJson(Map<String, dynamic> json) =>
       periodMaxElement: json['_periodMax'] == null
           ? null
           : Element.fromJson(json['_periodMax'] as Map<String, dynamic>),
-      periodUnit: $enumDecodeNullable(
-          _$TimingRepeatPeriodUnitEnumMap, json['periodUnit']),
+      periodUnit: $enumDecodeNullable(_$UnitsOfTimeEnumMap, json['periodUnit']),
       periodUnitElement: json['_periodUnit'] == null
           ? null
           : Element.fromJson(json['_periodUnit'] as Map<String, dynamic>),
       dayOfWeek: (json['dayOfWeek'] as List<dynamic>?)
-          ?.map(FhirCode.fromJson)
+          ?.map((e) => $enumDecode(_$DaysOfWeekEnumMap, e))
           .toList(),
       dayOfWeekElement: (json['_dayOfWeek'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1327,7 +1326,9 @@ _$TimingRepeatImpl _$$TimingRepeatImplFromJson(Map<String, dynamic> json) =>
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      when: $enumDecodeNullable(_$TimingRepeatWhenEnumMap, json['when']),
+      when: (json['when'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$TimingRepeatWhenEnumMap, e))
+          .toList(),
       whenElement: (json['_when'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1364,8 +1365,7 @@ Map<String, dynamic> _$$TimingRepeatImplToJson(_$TimingRepeatImpl instance) {
   writeNotNull('_duration', instance.durationElement?.toJson());
   writeNotNull('durationMax', instance.durationMax?.toJson());
   writeNotNull('_durationMax', instance.durationMaxElement?.toJson());
-  writeNotNull(
-      'durationUnit', _$TimingRepeatDurationUnitEnumMap[instance.durationUnit]);
+  writeNotNull('durationUnit', _$UnitsOfTimeEnumMap[instance.durationUnit]);
   writeNotNull('_durationUnit', instance.durationUnitElement?.toJson());
   writeNotNull('frequency', instance.frequency?.toJson());
   writeNotNull('_frequency', instance.frequencyElement?.toJson());
@@ -1375,42 +1375,42 @@ Map<String, dynamic> _$$TimingRepeatImplToJson(_$TimingRepeatImpl instance) {
   writeNotNull('_period', instance.periodElement?.toJson());
   writeNotNull('periodMax', instance.periodMax?.toJson());
   writeNotNull('_periodMax', instance.periodMaxElement?.toJson());
-  writeNotNull(
-      'periodUnit', _$TimingRepeatPeriodUnitEnumMap[instance.periodUnit]);
+  writeNotNull('periodUnit', _$UnitsOfTimeEnumMap[instance.periodUnit]);
   writeNotNull('_periodUnit', instance.periodUnitElement?.toJson());
-  writeNotNull(
-      'dayOfWeek', instance.dayOfWeek?.map((e) => e.toJson()).toList());
+  writeNotNull('dayOfWeek',
+      instance.dayOfWeek?.map((e) => _$DaysOfWeekEnumMap[e]!).toList());
   writeNotNull(
       '_dayOfWeek', instance.dayOfWeekElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_timeOfDay', instance.timeOfDayElement?.map((e) => e.toJson()).toList());
-  writeNotNull('when', _$TimingRepeatWhenEnumMap[instance.when]);
+  writeNotNull('when',
+      instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList());
   writeNotNull('_when', instance.whenElement?.map((e) => e.toJson()).toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());
   return val;
 }
 
-const _$TimingRepeatDurationUnitEnumMap = {
-  TimingRepeatDurationUnit.s: 's',
-  TimingRepeatDurationUnit.min: 'min',
-  TimingRepeatDurationUnit.h: 'h',
-  TimingRepeatDurationUnit.d: 'd',
-  TimingRepeatDurationUnit.wk: 'wk',
-  TimingRepeatDurationUnit.mo: 'mo',
-  TimingRepeatDurationUnit.a: 'a',
+const _$UnitsOfTimeEnumMap = {
+  UnitsOfTime.s: 's',
+  UnitsOfTime.min: 'min',
+  UnitsOfTime.h: 'h',
+  UnitsOfTime.d: 'd',
+  UnitsOfTime.wk: 'wk',
+  UnitsOfTime.mo: 'mo',
+  UnitsOfTime.a: 'a',
 };
 
-const _$TimingRepeatPeriodUnitEnumMap = {
-  TimingRepeatPeriodUnit.s: 's',
-  TimingRepeatPeriodUnit.min: 'min',
-  TimingRepeatPeriodUnit.h: 'h',
-  TimingRepeatPeriodUnit.d: 'd',
-  TimingRepeatPeriodUnit.wk: 'wk',
-  TimingRepeatPeriodUnit.mo: 'mo',
-  TimingRepeatPeriodUnit.a: 'a',
+const _$DaysOfWeekEnumMap = {
+  DaysOfWeek.s: 's',
+  DaysOfWeek.min: 'min',
+  DaysOfWeek.h: 'h',
+  DaysOfWeek.d: 'd',
+  DaysOfWeek.wk: 'wk',
+  DaysOfWeek.mo: 'mo',
+  DaysOfWeek.a: 'a',
 };
 
 const _$TimingRepeatWhenEnumMap = {

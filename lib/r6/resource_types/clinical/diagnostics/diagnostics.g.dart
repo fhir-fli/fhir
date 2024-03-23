@@ -2662,6 +2662,9 @@ _$QuestionnaireResponseImpl _$$QuestionnaireResponseImplFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       questionnaire: FhirCanonical.fromJson(json['questionnaire']),
+      questionnaireElement: json['_questionnaire'] == null
+          ? null
+          : Element.fromJson(json['_questionnaire'] as Map<String, dynamic>),
       status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -2720,6 +2723,7 @@ Map<String, dynamic> _$$QuestionnaireResponseImplToJson(
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   val['questionnaire'] = instance.questionnaire.toJson();
+  writeNotNull('_questionnaire', instance.questionnaireElement?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

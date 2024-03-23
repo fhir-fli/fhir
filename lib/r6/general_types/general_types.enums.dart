@@ -147,7 +147,7 @@ enum ContactPointUse {
   mobile,
 }
 
-enum TimingRepeatDurationUnit {
+enum UnitsOfTime {
   @JsonValue('s')
   s,
   @JsonValue('min')
@@ -164,7 +164,7 @@ enum TimingRepeatDurationUnit {
   a,
 }
 
-enum TimingRepeatPeriodUnit {
+enum DaysOfWeek {
   @JsonValue('s')
   s,
   @JsonValue('min')

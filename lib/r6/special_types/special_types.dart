@@ -606,6 +606,7 @@ class FhirMeta with _$FhirMeta {
     ///  resources) that this resource claims to conform to. The URL is a
     ///  reference to [[[StructureDefinition.url]]].
     List<FhirCanonical>? profile,
+    @JsonKey(name: '_profile') List<Element>? profileElement,
 
     /// [security] Security labels applied to this resource. These tags connect
     ///  specific resources to the overall security policy and infrastructure.

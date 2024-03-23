@@ -1934,6 +1934,8 @@ mixin _$FhirMeta {
   ///  resources) that this resource claims to conform to. The URL is a
   ///  reference to [[[StructureDefinition.url]]].
   List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement => throw _privateConstructorUsedError;
 
   /// [security] Security labels applied to this resource. These tags connect
   ///  specific resources to the overall security policy and infrastructure.
@@ -1966,6 +1968,7 @@ abstract class $FhirMetaCopyWith<$Res> {
       FhirUri? source,
       @JsonKey(name: '_source') Element? sourceElement,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<Coding>? security,
       List<Coding>? tag});
 
@@ -1996,6 +1999,7 @@ class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
     Object? source = freezed,
     Object? sourceElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? security = freezed,
     Object? tag = freezed,
   }) {
@@ -2036,6 +2040,10 @@ class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
@@ -2102,6 +2110,7 @@ abstract class _$$FhirMetaImplCopyWith<$Res>
       FhirUri? source,
       @JsonKey(name: '_source') Element? sourceElement,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<Coding>? security,
       List<Coding>? tag});
 
@@ -2133,6 +2142,7 @@ class __$$FhirMetaImplCopyWithImpl<$Res>
     Object? source = freezed,
     Object? sourceElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? security = freezed,
     Object? tag = freezed,
   }) {
@@ -2173,6 +2183,10 @@ class __$$FhirMetaImplCopyWithImpl<$Res>
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value._profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       security: freezed == security
           ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
@@ -2198,10 +2212,12 @@ class _$FhirMetaImpl extends _FhirMeta {
       this.source,
       @JsonKey(name: '_source') this.sourceElement,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<Coding>? security,
       final List<Coding>? tag})
       : _extension_ = extension_,
         _profile = profile,
+        _profileElement = profileElement,
         _security = security,
         _tag = tag,
         super._();
@@ -2291,6 +2307,17 @@ class _$FhirMetaImpl extends _FhirMeta {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Element>? _profileElement;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement {
+    final value = _profileElement;
+    if (value == null) return null;
+    if (_profileElement is EqualUnmodifiableListView) return _profileElement;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// [security] Security labels applied to this resource. These tags connect
   ///  specific resources to the overall security policy and infrastructure.
   final List<Coding>? _security;
@@ -2327,7 +2354,7 @@ class _$FhirMetaImpl extends _FhirMeta {
 
   @override
   String toString() {
-    return 'FhirMeta(id: $id, extension_: $extension_, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, source: $source, sourceElement: $sourceElement, profile: $profile, security: $security, tag: $tag)';
+    return 'FhirMeta(id: $id, extension_: $extension_, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, source: $source, sourceElement: $sourceElement, profile: $profile, profileElement: $profileElement, security: $security, tag: $tag)';
   }
 
   @override
@@ -2350,6 +2377,8 @@ class _$FhirMetaImpl extends _FhirMeta {
             (identical(other.sourceElement, sourceElement) ||
                 other.sourceElement == sourceElement) &&
             const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality()
+                .equals(other._profileElement, _profileElement) &&
             const DeepCollectionEquality().equals(other._security, _security) &&
             const DeepCollectionEquality().equals(other._tag, _tag));
   }
@@ -2367,6 +2396,7 @@ class _$FhirMetaImpl extends _FhirMeta {
       source,
       sourceElement,
       const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_profileElement),
       const DeepCollectionEquality().hash(_security),
       const DeepCollectionEquality().hash(_tag));
 
@@ -2395,6 +2425,7 @@ abstract class _FhirMeta extends FhirMeta {
       final FhirUri? source,
       @JsonKey(name: '_source') final Element? sourceElement,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<Coding>? security,
       final List<Coding>? tag}) = _$FhirMetaImpl;
   const _FhirMeta._() : super._();
@@ -2458,6 +2489,9 @@ abstract class _FhirMeta extends FhirMeta {
   ///  resources) that this resource claims to conform to. The URL is a
   ///  reference to [[[StructureDefinition.url]]].
   List<FhirCanonical>? get profile;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement;
   @override
 
   /// [security] Security labels applied to this resource. These tags connect

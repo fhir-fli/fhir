@@ -25536,6 +25536,8 @@ mixin _$QuestionnaireResponse {
   /// [questionnaire] The Questionnaire that defines and organizes the
   ///  questions for which answers are being provided.
   FhirCanonical get questionnaire => throw _privateConstructorUsedError;
+  @JsonKey(name: '_questionnaire')
+  Element? get questionnaireElement => throw _privateConstructorUsedError;
 
   /// [status] The current state of the questionnaire response.
   FhirCode? get status => throw _privateConstructorUsedError;
@@ -25603,6 +25605,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCanonical questionnaire,
+      @JsonKey(name: '_questionnaire') Element? questionnaireElement,
       FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
@@ -25617,6 +25620,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get questionnaireElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ReferenceCopyWith<$Res>? get encounter;
@@ -25654,6 +25658,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? questionnaire = null,
+    Object? questionnaireElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? subject = freezed,
@@ -25725,6 +25730,10 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
           ? _value.questionnaire
           : questionnaire // ignore: cast_nullable_to_non_nullable
               as FhirCanonical,
+      questionnaireElement: freezed == questionnaireElement
+          ? _value.questionnaireElement
+          : questionnaireElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -25809,6 +25818,18 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get questionnaireElement {
+    if (_value.questionnaireElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.questionnaireElement!, (value) {
+      return _then(_value.copyWith(questionnaireElement: value) as $Val);
     });
   }
 
@@ -25911,6 +25932,7 @@ abstract class _$$QuestionnaireResponseImplCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCanonical questionnaire,
+      @JsonKey(name: '_questionnaire') Element? questionnaireElement,
       FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
@@ -25929,6 +25951,8 @@ abstract class _$$QuestionnaireResponseImplCopyWith<$Res>
   $ElementCopyWith<$Res>? get languageElement;
   @override
   $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get questionnaireElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -25970,6 +25994,7 @@ class __$$QuestionnaireResponseImplCopyWithImpl<$Res>
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? questionnaire = null,
+    Object? questionnaireElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? subject = freezed,
@@ -26041,6 +26066,10 @@ class __$$QuestionnaireResponseImplCopyWithImpl<$Res>
           ? _value.questionnaire
           : questionnaire // ignore: cast_nullable_to_non_nullable
               as FhirCanonical,
+      questionnaireElement: freezed == questionnaireElement
+          ? _value.questionnaireElement
+          : questionnaireElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -26101,6 +26130,7 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       required this.questionnaire,
+      @JsonKey(name: '_questionnaire') this.questionnaireElement,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.subject,
@@ -26314,6 +26344,9 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
   ///  questions for which answers are being provided.
   @override
   final FhirCanonical questionnaire;
+  @override
+  @JsonKey(name: '_questionnaire')
+  final Element? questionnaireElement;
 
   /// [status] The current state of the questionnaire response.
   @override
@@ -26372,7 +26405,7 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
 
   @override
   String toString() {
-    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, questionnaire: $questionnaire, status: $status, statusElement: $statusElement, subject: $subject, encounter: $encounter, authored: $authored, authoredElement: $authoredElement, author: $author, source: $source, item: $item)';
+    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, questionnaire: $questionnaire, questionnaireElement: $questionnaireElement, status: $status, statusElement: $statusElement, subject: $subject, encounter: $encounter, authored: $authored, authoredElement: $authoredElement, author: $author, source: $source, item: $item)';
   }
 
   @override
@@ -26405,6 +26438,8 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
             const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             (identical(other.questionnaire, questionnaire) ||
                 other.questionnaire == questionnaire) &&
+            (identical(other.questionnaireElement, questionnaireElement) ||
+                other.questionnaireElement == questionnaireElement) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -26439,6 +26474,7 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
         const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(_partOf),
         questionnaire,
+        questionnaireElement,
         status,
         statusElement,
         subject,
@@ -26483,6 +26519,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
           final List<Reference>? basedOn,
           final List<Reference>? partOf,
           required final FhirCanonical questionnaire,
+          @JsonKey(name: '_questionnaire') final Element? questionnaireElement,
           final FhirCode? status,
           @JsonKey(name: '_status') final Element? statusElement,
           final Reference? subject,
@@ -26606,6 +26643,9 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   /// [questionnaire] The Questionnaire that defines and organizes the
   ///  questions for which answers are being provided.
   FhirCanonical get questionnaire;
+  @override
+  @JsonKey(name: '_questionnaire')
+  Element? get questionnaireElement;
   @override
 
   /// [status] The current state of the questionnaire response.
