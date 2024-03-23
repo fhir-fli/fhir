@@ -2957,7 +2957,7 @@ class TimingRepeat with _$TimingRepeat {
     /// [durationUnit] The units of time for the duration, in UCUM units Normal
     ///  practice is to use the 'mo' code as a calendar month when calculating the
     ///  next occurrence.
-    TimingRepeatDurationUnit? durationUnit,
+    UnitsOfTime? durationUnit,
 
     /// [durationUnitElement] ("_durationUnit") Extensions for durationUnit
     @JsonKey(name: '_durationUnit') Element? durationUnitElement,
@@ -2998,14 +2998,14 @@ class TimingRepeat with _$TimingRepeat {
     /// [periodUnit] The units of time for the period in UCUM units Normal practice
     ///  is to use the 'mo' code as a calendar month when calculating the next
     ///  occurrence.
-    TimingRepeatPeriodUnit? periodUnit,
+    UnitsOfTime? periodUnit,
 
     /// [periodUnitElement] ("_periodUnit") Extensions for periodUnit
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
 
     /// [dayOfWeek] If one or more days of week is provided, then the action
     ///  happens only on the specified day(s).
-    List<FhirCode>? dayOfWeek,
+    List<DaysOfWeek>? dayOfWeek,
 
     /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
     @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
@@ -3018,7 +3018,7 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [when] An approximate time period during the day, potentially linked to an
     ///  event of daily living that indicates when the action should occur.
-    TimingRepeatWhen? when,
+    List<TimingRepeatWhen>? when,
 
     /// [whenElement] ("_when") Extensions for when
     @JsonKey(name: '_when') List<Element>? whenElement,

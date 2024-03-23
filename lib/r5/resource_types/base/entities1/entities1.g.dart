@@ -433,12 +433,43 @@ const _$MimeTypeEnumMap = {
   MimeType.audio_3gpp2: 'audio/3gpp2',
   MimeType.application_x_7z_compressed: 'application/x-7z-compressed',
   MimeType.text_hl7v2: 'text/hl7v2',
+  MimeType.x_application_hl7_v2_er7: 'x-application/hl7-v2+er7',
   MimeType.text_rtf: 'text/rtf',
   MimeType.application_cda_xml: 'application/cda+xml',
   MimeType.application_fhir_json: 'application/fhir+json',
   MimeType.application_fhir_xml: 'application/fhir+xml',
   MimeType.application_fhir_ndjson: 'application/fhir+ndjson',
   MimeType.application_json_fhir: 'application/json+fhir',
+  MimeType.application_dicom: 'application/dicom',
+  MimeType.application_dicom_variant_dicom_wado_rs:
+      'application/dicom; variant=DICOM WADO-RS',
+  MimeType.application_dicom_variant_dicom_stow_rs:
+      'application/dicom; variant=DICOM STOW-RS',
+  MimeType.application_dicom_variant_dicom_qido_rs:
+      'application/dicom; variant=DICOM QIDO-RS',
+  MimeType.application_dicom_variant_dicom_ups_rs:
+      'application/dicom; variant=DICOM UPS-RS',
+  MimeType.application_dicom_variant_dicom_wado_uri:
+      'application/dicom; variant=DICOM WADO-URI',
+  MimeType.application: 'application',
+  MimeType.audio: 'audio',
+  MimeType.audio_basic: 'audio/basic',
+  MimeType.audio_k32adpcm: 'audio/k32adpcm',
+  MimeType.image: 'image',
+  MimeType.image_g3fax: 'image/g3fax',
+  MimeType.model: 'model',
+  MimeType.model_vrml: 'model/vrml',
+  MimeType.multipart: 'multipart',
+  MimeType.multipart_x_hl7_cda_level_one: 'multipart/x-hl7-cda-level-one',
+  MimeType.multipart_x_hl7_cda_level1: 'multipart/x-hl7-cda-level1',
+  MimeType.text: 'text',
+  MimeType.text_sgml: 'text/sgml',
+  MimeType.text_x_hl7_ft: 'text/x-hl7-ft',
+  MimeType.text_x_hl7_text_xml: 'text/x-hl7-text+xml',
+  MimeType.video: 'video',
+  MimeType.video_quicktime: 'video/quicktime',
+  MimeType.video_x_avi: 'video/x-avi',
+  MimeType.video_x_ms_wmv: 'video/x-ms-wmv',
 };
 
 _$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(

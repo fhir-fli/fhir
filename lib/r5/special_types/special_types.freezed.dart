@@ -3409,7 +3409,7 @@ mixin _$ElementDefinition {
   ///  instances, when the deviation varies from the normal case. No extensions
   ///  are allowed on elements with a representation of 'xmlAttr', no matter what
   ///  FHIR serialization format is used.
-  ElementDefinitionRepresentation? get representation =>
+  List<ElementDefinitionRepresentation>? get representation =>
       throw _privateConstructorUsedError;
 
   /// [representationElement] ("_representation") Extensions for representation
@@ -6227,7 +6227,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      ElementDefinitionRepresentation? representation,
+      List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation') List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName') Element? sliceNameElement,
@@ -7116,7 +7116,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       representation: freezed == representation
           ? _value.representation
           : representation // ignore: cast_nullable_to_non_nullable
-              as ElementDefinitionRepresentation?,
+              as List<ElementDefinitionRepresentation>?,
       representationElement: freezed == representationElement
           ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
@@ -10867,7 +10867,7 @@ abstract class _$$ElementDefinitionImplCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      ElementDefinitionRepresentation? representation,
+      List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation') List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName') Element? sliceNameElement,
@@ -11956,9 +11956,9 @@ class __$$ElementDefinitionImplCopyWithImpl<$Res>
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       representation: freezed == representation
-          ? _value.representation
+          ? _value._representation
           : representation // ignore: cast_nullable_to_non_nullable
-              as ElementDefinitionRepresentation?,
+              as List<ElementDefinitionRepresentation>?,
       representationElement: freezed == representationElement
           ? _value._representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
@@ -13215,7 +13215,7 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
       final List<FhirExtension>? modifierExtension,
       this.path,
       @JsonKey(name: '_path') this.pathElement,
-      this.representation,
+      final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
       final List<Element>? representationElement,
       this.sliceName,
@@ -13534,6 +13534,7 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
       final List<ElementDefinitionMapping>? mapping})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
+        _representation = representation,
         _representationElement = representationElement,
         _code = code,
         _alias = alias,
@@ -13630,8 +13631,20 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
   ///  instances, when the deviation varies from the normal case. No extensions
   ///  are allowed on elements with a representation of 'xmlAttr', no matter what
   ///  FHIR serialization format is used.
+  final List<ElementDefinitionRepresentation>? _representation;
+
+  /// [representation] Codes that define how this element is represented in
+  ///  instances, when the deviation varies from the normal case. No extensions
+  ///  are allowed on elements with a representation of 'xmlAttr', no matter what
+  ///  FHIR serialization format is used.
   @override
-  final ElementDefinitionRepresentation? representation;
+  List<ElementDefinitionRepresentation>? get representation {
+    final value = _representation;
+    if (value == null) return null;
+    if (_representation is EqualUnmodifiableListView) return _representation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// [representationElement] ("_representation") Extensions for representation
   final List<Element>? _representationElement;
@@ -16819,8 +16832,8 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
             (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
                 other.pathElement == pathElement) &&
-            (identical(other.representation, representation) ||
-                other.representation == representation) &&
+            const DeepCollectionEquality()
+                .equals(other._representation, _representation) &&
             const DeepCollectionEquality()
                 .equals(other._representationElement, _representationElement) &&
             (identical(other.sliceName, sliceName) ||
@@ -17171,7 +17184,7 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
         const DeepCollectionEquality().hash(_modifierExtension),
         path,
         pathElement,
-        representation,
+        const DeepCollectionEquality().hash(_representation),
         const DeepCollectionEquality().hash(_representationElement),
         sliceName,
         sliceNameElement,
@@ -17506,7 +17519,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final List<FhirExtension>? modifierExtension,
       final String? path,
       @JsonKey(name: '_path') final Element? pathElement,
-      final ElementDefinitionRepresentation? representation,
+      final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
       final List<Element>? representationElement,
       final String? sliceName,
@@ -17906,7 +17919,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   ///  instances, when the deviation varies from the normal case. No extensions
   ///  are allowed on elements with a representation of 'xmlAttr', no matter what
   ///  FHIR serialization format is used.
-  ElementDefinitionRepresentation? get representation;
+  List<ElementDefinitionRepresentation>? get representation;
   @override
 
   /// [representationElement] ("_representation") Extensions for representation

@@ -12205,8 +12205,7 @@ mixin _$TimingRepeat {
   /// [durationUnit] The units of time for the duration, in UCUM units Normal
   ///  practice is to use the 'mo' code as a calendar month when calculating the
   ///  next occurrence.
-  TimingRepeatDurationUnit? get durationUnit =>
-      throw _privateConstructorUsedError;
+  UnitsOfTime? get durationUnit => throw _privateConstructorUsedError;
 
   /// [durationUnitElement] ("_durationUnit") Extensions for durationUnit
   @JsonKey(name: '_durationUnit')
@@ -12252,7 +12251,7 @@ mixin _$TimingRepeat {
   /// [periodUnit] The units of time for the period in UCUM units Normal practice
   ///  is to use the 'mo' code as a calendar month when calculating the next
   ///  occurrence.
-  TimingRepeatPeriodUnit? get periodUnit => throw _privateConstructorUsedError;
+  UnitsOfTime? get periodUnit => throw _privateConstructorUsedError;
 
   /// [periodUnitElement] ("_periodUnit") Extensions for periodUnit
   @JsonKey(name: '_periodUnit')
@@ -12260,7 +12259,7 @@ mixin _$TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<FhirCode>? get dayOfWeek => throw _privateConstructorUsedError;
+  List<DaysOfWeek>? get dayOfWeek => throw _privateConstructorUsedError;
 
   /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
   @JsonKey(name: '_dayOfWeek')
@@ -12275,7 +12274,7 @@ mixin _$TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to an
   ///  event of daily living that indicates when the action should occur.
-  TimingRepeatWhen? get when => throw _privateConstructorUsedError;
+  List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
 
   /// [whenElement] ("_when") Extensions for when
   @JsonKey(name: '_when')
@@ -12317,7 +12316,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_duration') Element? durationElement,
       FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
-      TimingRepeatDurationUnit? durationUnit,
+      UnitsOfTime? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
       FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
@@ -12327,13 +12326,13 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_period') Element? periodElement,
       FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
-      TimingRepeatPeriodUnit? periodUnit,
+      UnitsOfTime? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<FhirCode>? dayOfWeek,
+      List<DaysOfWeek>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      TimingRepeatWhen? when,
+      List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -12462,7 +12461,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       durationUnit: freezed == durationUnit
           ? _value.durationUnit
           : durationUnit // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatDurationUnit?,
+              as UnitsOfTime?,
       durationUnitElement: freezed == durationUnitElement
           ? _value.durationUnitElement
           : durationUnitElement // ignore: cast_nullable_to_non_nullable
@@ -12502,7 +12501,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       periodUnit: freezed == periodUnit
           ? _value.periodUnit
           : periodUnit // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatPeriodUnit?,
+              as UnitsOfTime?,
       periodUnitElement: freezed == periodUnitElement
           ? _value.periodUnitElement
           : periodUnitElement // ignore: cast_nullable_to_non_nullable
@@ -12510,7 +12509,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       dayOfWeek: freezed == dayOfWeek
           ? _value.dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<FhirCode>?,
+              as List<DaysOfWeek>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value.dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12526,7 +12525,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatWhen?,
+              as List<TimingRepeatWhen>?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -12734,7 +12733,7 @@ abstract class _$$TimingRepeatImplCopyWith<$Res>
       @JsonKey(name: '_duration') Element? durationElement,
       FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
-      TimingRepeatDurationUnit? durationUnit,
+      UnitsOfTime? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
       FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
@@ -12744,13 +12743,13 @@ abstract class _$$TimingRepeatImplCopyWith<$Res>
       @JsonKey(name: '_period') Element? periodElement,
       FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
-      TimingRepeatPeriodUnit? periodUnit,
+      UnitsOfTime? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<FhirCode>? dayOfWeek,
+      List<DaysOfWeek>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      TimingRepeatWhen? when,
+      List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -12891,7 +12890,7 @@ class __$$TimingRepeatImplCopyWithImpl<$Res>
       durationUnit: freezed == durationUnit
           ? _value.durationUnit
           : durationUnit // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatDurationUnit?,
+              as UnitsOfTime?,
       durationUnitElement: freezed == durationUnitElement
           ? _value.durationUnitElement
           : durationUnitElement // ignore: cast_nullable_to_non_nullable
@@ -12931,7 +12930,7 @@ class __$$TimingRepeatImplCopyWithImpl<$Res>
       periodUnit: freezed == periodUnit
           ? _value.periodUnit
           : periodUnit // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatPeriodUnit?,
+              as UnitsOfTime?,
       periodUnitElement: freezed == periodUnitElement
           ? _value.periodUnitElement
           : periodUnitElement // ignore: cast_nullable_to_non_nullable
@@ -12939,7 +12938,7 @@ class __$$TimingRepeatImplCopyWithImpl<$Res>
       dayOfWeek: freezed == dayOfWeek
           ? _value._dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<FhirCode>?,
+              as List<DaysOfWeek>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value._dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12953,9 +12952,9 @@ class __$$TimingRepeatImplCopyWithImpl<$Res>
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       when: freezed == when
-          ? _value.when
+          ? _value._when
           : when // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatWhen?,
+              as List<TimingRepeatWhen>?,
       whenElement: freezed == whenElement
           ? _value._whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -13002,11 +13001,11 @@ class _$TimingRepeatImpl extends _TimingRepeat {
       @JsonKey(name: '_periodMax') this.periodMaxElement,
       this.periodUnit,
       @JsonKey(name: '_periodUnit') this.periodUnitElement,
-      final List<FhirCode>? dayOfWeek,
+      final List<DaysOfWeek>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
       final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-      this.when,
+      final List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') final List<Element>? whenElement,
       this.offset,
       @JsonKey(name: '_offset') this.offsetElement})
@@ -13016,6 +13015,7 @@ class _$TimingRepeatImpl extends _TimingRepeat {
         _dayOfWeekElement = dayOfWeekElement,
         _timeOfDay = timeOfDay,
         _timeOfDayElement = timeOfDayElement,
+        _when = when,
         _whenElement = whenElement,
         super._();
 
@@ -13151,7 +13151,7 @@ class _$TimingRepeatImpl extends _TimingRepeat {
   ///  practice is to use the 'mo' code as a calendar month when calculating the
   ///  next occurrence.
   @override
-  final TimingRepeatDurationUnit? durationUnit;
+  final UnitsOfTime? durationUnit;
 
   /// [durationUnitElement] ("_durationUnit") Extensions for durationUnit
   @override
@@ -13207,7 +13207,7 @@ class _$TimingRepeatImpl extends _TimingRepeat {
   ///  is to use the 'mo' code as a calendar month when calculating the next
   ///  occurrence.
   @override
-  final TimingRepeatPeriodUnit? periodUnit;
+  final UnitsOfTime? periodUnit;
 
   /// [periodUnitElement] ("_periodUnit") Extensions for periodUnit
   @override
@@ -13216,12 +13216,12 @@ class _$TimingRepeatImpl extends _TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  final List<FhirCode>? _dayOfWeek;
+  final List<DaysOfWeek>? _dayOfWeek;
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
   @override
-  List<FhirCode>? get dayOfWeek {
+  List<DaysOfWeek>? get dayOfWeek {
     final value = _dayOfWeek;
     if (value == null) return null;
     if (_dayOfWeek is EqualUnmodifiableListView) return _dayOfWeek;
@@ -13274,8 +13274,18 @@ class _$TimingRepeatImpl extends _TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to an
   ///  event of daily living that indicates when the action should occur.
+  final List<TimingRepeatWhen>? _when;
+
+  /// [when] An approximate time period during the day, potentially linked to an
+  ///  event of daily living that indicates when the action should occur.
   @override
-  final TimingRepeatWhen? when;
+  List<TimingRepeatWhen>? get when {
+    final value = _when;
+    if (value == null) return null;
+    if (_when is EqualUnmodifiableListView) return _when;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// [whenElement] ("_when") Extensions for when
   final List<Element>? _whenElement;
@@ -13369,7 +13379,7 @@ class _$TimingRepeatImpl extends _TimingRepeat {
                 .equals(other._timeOfDay, _timeOfDay) &&
             const DeepCollectionEquality()
                 .equals(other._timeOfDayElement, _timeOfDayElement) &&
-            (identical(other.when, when) || other.when == when) &&
+            const DeepCollectionEquality().equals(other._when, _when) &&
             const DeepCollectionEquality()
                 .equals(other._whenElement, _whenElement) &&
             (identical(other.offset, offset) || other.offset == offset) &&
@@ -13411,7 +13421,7 @@ class _$TimingRepeatImpl extends _TimingRepeat {
         const DeepCollectionEquality().hash(_dayOfWeekElement),
         const DeepCollectionEquality().hash(_timeOfDay),
         const DeepCollectionEquality().hash(_timeOfDayElement),
-        when,
+        const DeepCollectionEquality().hash(_when),
         const DeepCollectionEquality().hash(_whenElement),
         offset,
         offsetElement
@@ -13447,7 +13457,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_duration') final Element? durationElement,
           final FhirDecimal? durationMax,
           @JsonKey(name: '_durationMax') final Element? durationMaxElement,
-          final TimingRepeatDurationUnit? durationUnit,
+          final UnitsOfTime? durationUnit,
           @JsonKey(name: '_durationUnit') final Element? durationUnitElement,
           final FhirPositiveInt? frequency,
           @JsonKey(name: '_frequency') final Element? frequencyElement,
@@ -13457,13 +13467,13 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_period') final Element? periodElement,
           final FhirDecimal? periodMax,
           @JsonKey(name: '_periodMax') final Element? periodMaxElement,
-          final TimingRepeatPeriodUnit? periodUnit,
+          final UnitsOfTime? periodUnit,
           @JsonKey(name: '_periodUnit') final Element? periodUnitElement,
-          final List<FhirCode>? dayOfWeek,
+          final List<DaysOfWeek>? dayOfWeek,
           @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
           final List<FhirTime>? timeOfDay,
           @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-          final TimingRepeatWhen? when,
+          final List<TimingRepeatWhen>? when,
           @JsonKey(name: '_when') final List<Element>? whenElement,
           final FhirUnsignedInt? offset,
           @JsonKey(name: '_offset') final Element? offsetElement}) =
@@ -13568,7 +13578,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [durationUnit] The units of time for the duration, in UCUM units Normal
   ///  practice is to use the 'mo' code as a calendar month when calculating the
   ///  next occurrence.
-  TimingRepeatDurationUnit? get durationUnit;
+  UnitsOfTime? get durationUnit;
   @override
 
   /// [durationUnitElement] ("_durationUnit") Extensions for durationUnit
@@ -13624,7 +13634,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [periodUnit] The units of time for the period in UCUM units Normal practice
   ///  is to use the 'mo' code as a calendar month when calculating the next
   ///  occurrence.
-  TimingRepeatPeriodUnit? get periodUnit;
+  UnitsOfTime? get periodUnit;
   @override
 
   /// [periodUnitElement] ("_periodUnit") Extensions for periodUnit
@@ -13634,7 +13644,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<FhirCode>? get dayOfWeek;
+  List<DaysOfWeek>? get dayOfWeek;
   @override
 
   /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
@@ -13653,7 +13663,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to an
   ///  event of daily living that indicates when the action should occur.
-  TimingRepeatWhen? get when;
+  List<TimingRepeatWhen>? get when;
   @override
 
   /// [whenElement] ("_when") Extensions for when

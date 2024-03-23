@@ -413,8 +413,9 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      representation: $enumDecodeNullable(
-          _$ElementDefinitionRepresentationEnumMap, json['representation']),
+      representation: (json['representation'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$ElementDefinitionRepresentationEnumMap, e))
+          .toList(),
       representationElement: (json['_representation'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1436,8 +1437,11 @@ Map<String, dynamic> _$$ElementDefinitionImplToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('path', instance.path);
   writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('representation',
-      _$ElementDefinitionRepresentationEnumMap[instance.representation]);
+  writeNotNull(
+      'representation',
+      instance.representation
+          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e]!)
+          .toList());
   writeNotNull('_representation',
       instance.representationElement?.map((e) => e.toJson()).toList());
   writeNotNull('sliceName', instance.sliceName);

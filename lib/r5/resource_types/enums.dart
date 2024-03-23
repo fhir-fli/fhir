@@ -159,6 +159,8 @@ enum MimeType {
   application_x_7z_compressed,
   @JsonValue('text/hl7v2')
   text_hl7v2,
+  @JsonValue('x-application/hl7-v2+er7')
+  x_application_hl7_v2_er7,
   @JsonValue('text/rtf')
   text_rtf,
   @JsonValue('application/cda+xml')
@@ -171,6 +173,56 @@ enum MimeType {
   application_fhir_ndjson,
   @JsonValue('application/json+fhir')
   application_json_fhir,
+  @JsonValue('application/dicom')
+  application_dicom,
+  @JsonValue('application/dicom; variant=DICOM WADO-RS')
+  application_dicom_variant_dicom_wado_rs,
+  @JsonValue('application/dicom; variant=DICOM STOW-RS')
+  application_dicom_variant_dicom_stow_rs,
+  @JsonValue('application/dicom; variant=DICOM QIDO-RS')
+  application_dicom_variant_dicom_qido_rs,
+  @JsonValue('application/dicom; variant=DICOM UPS-RS')
+  application_dicom_variant_dicom_ups_rs,
+  @JsonValue('application/dicom; variant=DICOM WADO-URI')
+  application_dicom_variant_dicom_wado_uri,
+  @JsonValue('application')
+  application,
+  @JsonValue('audio')
+  audio,
+  @JsonValue('audio/basic')
+  audio_basic,
+  @JsonValue('audio/k32adpcm')
+  audio_k32adpcm,
+  @JsonValue('image')
+  image,
+  @JsonValue('image/g3fax')
+  image_g3fax,
+  @JsonValue('model')
+  model,
+  @JsonValue('model/vrml')
+  model_vrml,
+  @JsonValue('multipart')
+  multipart,
+  @JsonValue('multipart/x-hl7-cda-level-one')
+  multipart_x_hl7_cda_level_one,
+  @JsonValue('multipart/x-hl7-cda-level1')
+  multipart_x_hl7_cda_level1,
+  @JsonValue('text')
+  text,
+  @JsonValue('text/sgml')
+  text_sgml,
+  @JsonValue('text/x-hl7-ft')
+  text_x_hl7_ft,
+  @JsonValue('text/x-hl7-text+xml')
+  text_x_hl7_text_xml,
+  @JsonValue('video')
+  video,
+  @JsonValue('video/quicktime')
+  video_quicktime,
+  @JsonValue('video/x-avi')
+  video_x_avi,
+  @JsonValue('video/x-ms-wmv')
+  video_x_ms_wmv,
 }
 
 enum ServiceMode {

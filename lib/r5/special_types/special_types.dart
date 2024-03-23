@@ -3293,7 +3293,7 @@ class ElementDefinition with _$ElementDefinition {
     ///  instances, when the deviation varies from the normal case. No extensions
     ///  are allowed on elements with a representation of 'xmlAttr', no matter what
     ///  FHIR serialization format is used.
-    ElementDefinitionRepresentation? representation,
+    List<ElementDefinitionRepresentation>? representation,
 
     /// [representationElement] ("_representation") Extensions for representation
     @JsonKey(name: '_representation') List<Element>? representationElement,
