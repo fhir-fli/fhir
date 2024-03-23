@@ -1946,6 +1946,9 @@ _$ElementDefinitionTypeImpl _$$ElementDefinitionTypeImplFromJson(
       profile: (json['profile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
+      profileElement: (json['_profile'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
@@ -1979,6 +1982,8 @@ Map<String, dynamic> _$$ElementDefinitionTypeImplToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'targetProfile', instance.targetProfile?.map((e) => e.toJson()).toList());
   writeNotNull('aggregation',

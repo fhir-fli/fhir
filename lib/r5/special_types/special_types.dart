@@ -6573,6 +6573,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     ///  canonical URL. When an implementation guide is specified, the type SHALL
     ///  conform to at least one profile defined in the implementation guide.
     List<FhirCanonical>? profile,
+    @JsonKey(name: '_profile') List<Element>? profileElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
     ///  identifies a profile structure or implementation Guide that applies to the
