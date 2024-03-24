@@ -165,7 +165,7 @@ enum UnitsOfTime {
   a,
 }
 
-enum DaysOfWeek{
+enum DaysOfWeek {
   @JsonValue('mon')
   mon,
   @JsonValue('tue')

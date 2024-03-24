@@ -6892,7 +6892,6 @@ class ElementDefinitionType with _$ElementDefinitionType {
     ///  SHALL conform to at least one profile defined in the implementation
     ///  guide.
     List<FhirCanonical>? profile,
-
     @JsonKey(name: '_profile') List<Element>? profileElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
