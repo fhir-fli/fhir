@@ -23744,6 +23744,8 @@ mixin _$ElementDefinitionType {
   ///  SHALL conform to at least one profile defined in the implementation
   ///  guide.
   List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement => throw _privateConstructorUsedError;
 
   /// [targetProfile] Used when the type is "Reference" or "canonical", and
   ///  identifies a profile structure or implementation Guide that applies to
@@ -23795,6 +23797,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       FhirUri? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<FhirCanonical>? targetProfile,
       ElementDefinitionTypeAggregation? aggregation,
       @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
@@ -23825,6 +23828,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
     Object? code = freezed,
     Object? codeElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? targetProfile = freezed,
     Object? aggregation = freezed,
     Object? aggregationElement = freezed,
@@ -23856,6 +23860,10 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       targetProfile: freezed == targetProfile
           ? _value.targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
@@ -23920,6 +23928,7 @@ abstract class _$$ElementDefinitionTypeImplCopyWith<$Res>
       FhirUri? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<FhirCanonical>? targetProfile,
       ElementDefinitionTypeAggregation? aggregation,
       @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
@@ -23950,6 +23959,7 @@ class __$$ElementDefinitionTypeImplCopyWithImpl<$Res>
     Object? code = freezed,
     Object? codeElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? targetProfile = freezed,
     Object? aggregation = freezed,
     Object? aggregationElement = freezed,
@@ -23981,6 +23991,10 @@ class __$$ElementDefinitionTypeImplCopyWithImpl<$Res>
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value._profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       targetProfile: freezed == targetProfile
           ? _value._targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
@@ -24015,6 +24029,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
       this.code,
       @JsonKey(name: '_code') this.codeElement,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<FhirCanonical>? targetProfile,
       this.aggregation,
       @JsonKey(name: '_aggregation') final List<Element>? aggregationElement,
@@ -24023,6 +24038,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _profile = profile,
+        _profileElement = profileElement,
         _targetProfile = targetProfile,
         _aggregationElement = aggregationElement,
         super._();
@@ -24139,6 +24155,17 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Element>? _profileElement;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement {
+    final value = _profileElement;
+    if (value == null) return null;
+    if (_profileElement is EqualUnmodifiableListView) return _profileElement;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// [targetProfile] Used when the type is "Reference" or "canonical", and
   ///  identifies a profile structure or implementation Guide that applies to
   ///  the target of the reference this element refers to. If any profiles
@@ -24202,7 +24229,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
+    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, profileElement: $profileElement, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
   }
 
   @override
@@ -24219,6 +24246,8 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
             (identical(other.codeElement, codeElement) ||
                 other.codeElement == codeElement) &&
             const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality()
+                .equals(other._profileElement, _profileElement) &&
             const DeepCollectionEquality()
                 .equals(other._targetProfile, _targetProfile) &&
             (identical(other.aggregation, aggregation) ||
@@ -24241,6 +24270,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
       code,
       codeElement,
       const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_profileElement),
       const DeepCollectionEquality().hash(_targetProfile),
       aggregation,
       const DeepCollectionEquality().hash(_aggregationElement),
@@ -24270,6 +24300,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       final FhirUri? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<FhirCanonical>? targetProfile,
       final ElementDefinitionTypeAggregation? aggregation,
       @JsonKey(name: '_aggregation') final List<Element>? aggregationElement,
@@ -24337,6 +24368,9 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   ///  SHALL conform to at least one profile defined in the implementation
   ///  guide.
   List<FhirCanonical>? get profile;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement;
   @override
 
   /// [targetProfile] Used when the type is "Reference" or "canonical", and

@@ -473,6 +473,7 @@ const _$R6ResourceTypeEnumMap = {
   R6ResourceType.ImplementationGuide: 'ImplementationGuide',
   R6ResourceType.Ingredient: 'Ingredient',
   R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InsuranceProduct: 'InsuranceProduct',
   R6ResourceType.InventoryItem: 'InventoryItem',
   R6ResourceType.InventoryReport: 'InventoryReport',
   R6ResourceType.Invoice: 'Invoice',

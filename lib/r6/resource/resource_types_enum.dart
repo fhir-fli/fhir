@@ -235,6 +235,9 @@ enum R6ResourceType {
   @JsonValue('InsurancePlan')
   InsurancePlan,
 
+  @JsonValue('InsuranceProduct')
+  InsuranceProduct,
+
   @JsonValue('InventoryItem')
   InventoryItem,
 
@@ -712,6 +715,9 @@ extension R6ResourceTypeEnumExtension on R6ResourceType {
 
       case R6ResourceType.InsurancePlan:
         return 'InsurancePlan';
+
+      case R6ResourceType.InsuranceProduct:
+        return 'InsuranceProduct';
 
       case R6ResourceType.InventoryItem:
         return 'InventoryItem';

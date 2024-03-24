@@ -261,6 +261,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R6ResourceType.InsurancePlan:
       return (resource as InsurancePlan)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R6ResourceType.InsuranceProduct:
+      return (resource as InsuranceProduct)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R6ResourceType.InventoryItem:
       return (resource as InventoryItem)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));

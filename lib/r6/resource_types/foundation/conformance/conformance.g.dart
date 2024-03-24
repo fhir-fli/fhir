@@ -348,6 +348,7 @@ const _$R6ResourceTypeEnumMap = {
   R6ResourceType.ImplementationGuide: 'ImplementationGuide',
   R6ResourceType.Ingredient: 'Ingredient',
   R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InsuranceProduct: 'InsuranceProduct',
   R6ResourceType.InventoryItem: 'InventoryItem',
   R6ResourceType.InventoryReport: 'InventoryReport',
   R6ResourceType.Invoice: 'Invoice',
@@ -3777,7 +3778,9 @@ _$SearchParameterComponentImpl _$$SearchParameterComponentImplFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      definition: FhirCanonical.fromJson(json['definition']),
+      definition: json['definition'] == null
+          ? null
+          : FhirCanonical.fromJson(json['definition']),
       expression: json['expression'] as String?,
       expressionElement: json['_expression'] == null
           ? null
@@ -3799,7 +3802,7 @@ Map<String, dynamic> _$$SearchParameterComponentImplToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['definition'] = instance.definition.toJson();
+  writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression', instance.expressionElement?.toJson());
   return val;

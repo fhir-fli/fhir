@@ -165,20 +165,20 @@ enum UnitsOfTime {
 }
 
 enum DaysOfWeek {
-  @JsonValue('s')
-  s,
-  @JsonValue('min')
-  min,
-  @JsonValue('h')
-  h,
-  @JsonValue('d')
-  d,
-  @JsonValue('wk')
-  wk,
-  @JsonValue('mo')
-  mo,
-  @JsonValue('a')
-  a,
+  @JsonValue('mon')
+  mon,
+  @JsonValue('tue')
+  tue,
+  @JsonValue('wed')
+  wed,
+  @JsonValue('thu')
+  thu,
+  @JsonValue('fri')
+  fri,
+  @JsonValue('sat')
+  sat,
+  @JsonValue('sun')
+  sun,
 }
 
 enum TimingRepeatWhen {

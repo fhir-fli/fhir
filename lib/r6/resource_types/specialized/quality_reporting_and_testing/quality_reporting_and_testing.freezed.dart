@@ -25378,6 +25378,8 @@ mixin _$TestScript {
 
   /// [profile] Reference to the profile to be used for validation.
   List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement => throw _privateConstructorUsedError;
 
   /// [variable] Variable is set based either on element value in response
   ///  body or on header field value in the response headers.
@@ -25456,6 +25458,7 @@ abstract class $TestScriptCopyWith<$Res> {
       List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
       List<TestScriptTest>? test,
@@ -25545,6 +25548,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
     Object? scope = freezed,
     Object? fixture = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? variable = freezed,
     Object? setup = freezed,
     Object? test = freezed,
@@ -25743,6 +25747,10 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -26076,6 +26084,7 @@ abstract class _$$TestScriptImplCopyWith<$Res>
       List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
       List<TestScriptTest>? test,
@@ -26184,6 +26193,7 @@ class __$$TestScriptImplCopyWithImpl<$Res>
     Object? scope = freezed,
     Object? fixture = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? variable = freezed,
     Object? setup = freezed,
     Object? test = freezed,
@@ -26382,6 +26392,10 @@ class __$$TestScriptImplCopyWithImpl<$Res>
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirCanonical>?,
+      profileElement: freezed == profileElement
+          ? _value._profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       variable: freezed == variable
           ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -26456,6 +26470,7 @@ class _$TestScriptImpl extends _TestScript {
       final List<TestScriptScope>? scope,
       final List<TestScriptFixture>? fixture,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<TestScriptVariable>? variable,
       this.setup,
       final List<TestScriptTest>? test,
@@ -26472,6 +26487,7 @@ class _$TestScriptImpl extends _TestScript {
         _scope = scope,
         _fixture = fixture,
         _profile = profile,
+        _profileElement = profileElement,
         _variable = variable,
         _test = test,
         super._();
@@ -26913,6 +26929,17 @@ class _$TestScriptImpl extends _TestScript {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Element>? _profileElement;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement {
+    final value = _profileElement;
+    if (value == null) return null;
+    if (_profileElement is EqualUnmodifiableListView) return _profileElement;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// [variable] Variable is set based either on element value in response
   ///  body or on header field value in the response headers.
   final List<TestScriptVariable>? _variable;
@@ -26952,7 +26979,7 @@ class _$TestScriptImpl extends _TestScript {
 
   @override
   String toString() {
-    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, origin: $origin, destination: $destination, metadata: $metadata, scope: $scope, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, origin: $origin, destination: $destination, metadata: $metadata, scope: $scope, fixture: $fixture, profile: $profile, profileElement: $profileElement, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
   }
 
   @override
@@ -26989,8 +27016,7 @@ class _$TestScriptImpl extends _TestScript {
                 other.versionElement == versionElement) &&
             (identical(other.versionAlgorithmString, versionAlgorithmString) ||
                 other.versionAlgorithmString == versionAlgorithmString) &&
-            (identical(other.versionAlgorithmStringElement,
-                    versionAlgorithmStringElement) ||
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
                 other.versionAlgorithmStringElement ==
                     versionAlgorithmStringElement) &&
             (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
@@ -27043,10 +27069,13 @@ class _$TestScriptImpl extends _TestScript {
             const DeepCollectionEquality().equals(other._scope, _scope) &&
             const DeepCollectionEquality().equals(other._fixture, _fixture) &&
             const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality()
+                .equals(other._profileElement, _profileElement) &&
             const DeepCollectionEquality().equals(other._variable, _variable) &&
             (identical(other.setup, setup) || other.setup == setup) &&
             const DeepCollectionEquality().equals(other._test, _test) &&
-            (identical(other.teardown, teardown) || other.teardown == teardown));
+            (identical(other.teardown, teardown) ||
+                other.teardown == teardown));
   }
 
   @JsonKey(ignore: true)
@@ -27101,6 +27130,7 @@ class _$TestScriptImpl extends _TestScript {
         const DeepCollectionEquality().hash(_scope),
         const DeepCollectionEquality().hash(_fixture),
         const DeepCollectionEquality().hash(_profile),
+        const DeepCollectionEquality().hash(_profileElement),
         const DeepCollectionEquality().hash(_variable),
         setup,
         const DeepCollectionEquality().hash(_test),
@@ -27173,6 +27203,7 @@ abstract class _TestScript extends TestScript {
       final List<TestScriptScope>? scope,
       final List<TestScriptFixture>? fixture,
       final List<FhirCanonical>? profile,
+      @JsonKey(name: '_profile') final List<Element>? profileElement,
       final List<TestScriptVariable>? variable,
       final TestScriptSetup? setup,
       final List<TestScriptTest>? test,
@@ -27472,6 +27503,9 @@ abstract class _TestScript extends TestScript {
 
   /// [profile] Reference to the profile to be used for validation.
   List<FhirCanonical>? get profile;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement;
   @override
 
   /// [variable] Variable is set based either on element value in response

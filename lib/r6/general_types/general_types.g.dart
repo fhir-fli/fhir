@@ -1404,13 +1404,13 @@ const _$UnitsOfTimeEnumMap = {
 };
 
 const _$DaysOfWeekEnumMap = {
-  DaysOfWeek.s: 's',
-  DaysOfWeek.min: 'min',
-  DaysOfWeek.h: 'h',
-  DaysOfWeek.d: 'd',
-  DaysOfWeek.wk: 'wk',
-  DaysOfWeek.mo: 'mo',
-  DaysOfWeek.a: 'a',
+  DaysOfWeek.mon: 'mon',
+  DaysOfWeek.tue: 'tue',
+  DaysOfWeek.wed: 'wed',
+  DaysOfWeek.thu: 'thu',
+  DaysOfWeek.fri: 'fri',
+  DaysOfWeek.sat: 'sat',
+  DaysOfWeek.sun: 'sun',
 };
 
 const _$TimingRepeatWhenEnumMap = {

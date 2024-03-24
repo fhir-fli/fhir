@@ -160,6 +160,8 @@ Resource _newId(Resource resource) {
       return (resource as Ingredient).copyWith(id: newId());
     case R6ResourceType.InsurancePlan:
       return (resource as InsurancePlan).copyWith(id: newId());
+    case R6ResourceType.InsuranceProduct:
+      return (resource as InsuranceProduct).copyWith(id: newId());
     case R6ResourceType.InventoryItem:
       return (resource as InventoryItem).copyWith(id: newId());
     case R6ResourceType.InventoryReport:

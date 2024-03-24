@@ -240,6 +240,7 @@ const _$R6ResourceTypeEnumMap = {
   R6ResourceType.ImplementationGuide: 'ImplementationGuide',
   R6ResourceType.Ingredient: 'Ingredient',
   R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InsuranceProduct: 'InsuranceProduct',
   R6ResourceType.InventoryItem: 'InventoryItem',
   R6ResourceType.InventoryReport: 'InventoryReport',
   R6ResourceType.Invoice: 'Invoice',
@@ -4870,5 +4871,295 @@ Map<String, dynamic> _$$InsurancePlanCostImplToJson(
   writeNotNull(
       'qualifier', instance.qualifier?.map((e) => e.toJson()).toList());
   writeNotNull('value', instance.value?.toJson());
+  return val;
+}
+
+_$InsuranceProductImpl _$$InsuranceProductImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InsuranceProductImpl(
+      resourceType: $enumDecodeNullable(
+              _$R6ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R6ResourceType.InsuranceProduct) ??
+          R6ResourceType.InsuranceProduct,
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      type: (json['type'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      nameElement: json['_name'] == null
+          ? null
+          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+      alias:
+          (json['alias'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      aliasElement: (json['_alias'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      ownedBy: json['ownedBy'] == null
+          ? null
+          : Reference.fromJson(json['ownedBy'] as Map<String, dynamic>),
+      administeredBy: json['administeredBy'] == null
+          ? null
+          : Reference.fromJson(json['administeredBy'] as Map<String, dynamic>),
+      coverageArea: (json['coverageArea'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map(
+              (e) => ExtendedContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      endpoint: (json['endpoint'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      network: (json['network'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      coverage: (json['coverage'] as List<dynamic>?)
+          ?.map((e) =>
+              InsuranceProductCoverage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      related: (json['related'] as List<dynamic>?)
+          ?.map((e) =>
+              InsuranceProductRelated.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$InsuranceProductImplToJson(
+    _$InsuranceProductImpl instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R6ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('alias', instance.alias);
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('ownedBy', instance.ownedBy?.toJson());
+  writeNotNull('administeredBy', instance.administeredBy?.toJson());
+  writeNotNull(
+      'coverageArea', instance.coverageArea?.map((e) => e.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
+  writeNotNull('network', instance.network?.map((e) => e.toJson()).toList());
+  writeNotNull('coverage', instance.coverage?.map((e) => e.toJson()).toList());
+  writeNotNull('related', instance.related?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$InsuranceProductCoverageImpl _$$InsuranceProductCoverageImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InsuranceProductCoverageImpl(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      network: (json['network'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      benefit: (json['benefit'] as List<dynamic>?)
+          ?.map((e) =>
+              InsuranceProductBenefit.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$InsuranceProductCoverageImplToJson(
+    _$InsuranceProductCoverageImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('network', instance.network?.map((e) => e.toJson()).toList());
+  writeNotNull('benefit', instance.benefit?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$InsuranceProductBenefitImpl _$$InsuranceProductBenefitImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InsuranceProductBenefitImpl(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      requirement: json['requirement'] as String?,
+      limit: (json['limit'] as List<dynamic>?)
+          ?.map(
+              (e) => InsuranceProductLimit.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$InsuranceProductBenefitImplToJson(
+    _$InsuranceProductBenefitImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('requirement', instance.requirement);
+  writeNotNull('limit', instance.limit?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$InsuranceProductLimitImpl _$$InsuranceProductLimitImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InsuranceProductLimitImpl(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      value: json['value'] == null
+          ? null
+          : Quantity.fromJson(json['value'] as Map<String, dynamic>),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$InsuranceProductLimitImplToJson(
+    _$InsuranceProductLimitImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  return val;
+}
+
+_$InsuranceProductRelatedImpl _$$InsuranceProductRelatedImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InsuranceProductRelatedImpl(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      product: Reference.fromJson(json['product'] as Map<String, dynamic>),
+      relationship: CodeableConcept.fromJson(
+          json['relationship'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$InsuranceProductRelatedImplToJson(
+    _$InsuranceProductRelatedImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['product'] = instance.product.toJson();
+  val['relationship'] = instance.relationship.toJson();
+  writeNotNull('period', instance.period?.toJson());
   return val;
 }

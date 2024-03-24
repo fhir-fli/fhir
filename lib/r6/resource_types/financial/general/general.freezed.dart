@@ -48624,3 +48624,2635 @@ abstract class _InsurancePlanCost extends InsurancePlanCost {
   _$$InsurancePlanCostImplCopyWith<_$InsurancePlanCostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+InsuranceProduct _$InsuranceProductFromJson(Map<String, dynamic> json) {
+  return _InsuranceProduct.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InsuranceProduct {
+  /// This is a InsuranceProduct resource
+  @JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+  R6ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
+
+  /// The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
+  FhirMeta? get meta => throw _privateConstructorUsedError;
+
+  /// A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing
+  /// the content. Often, this is a reference to an implementation guide that
+  /// defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// The base language in which the resource is written.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human.
+  Narrative? get text => throw _privateConstructorUsedError;
+
+  /// These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, nor can they have their own independent transaction
+  /// scope.
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource and that modifies the understanding
+  /// of the element that contains it and/or the understanding of the
+  /// containing element's descendants.
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// Business identifiers assigned to this health insurance product which
+  /// remain constant as the resource is updated and propagates from server to server.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// The current state of the health insurance product.
+  FhirCode? get status => throw _privateConstructorUsedError;
+
+  /// Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// The kind of health insurance product.
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+
+  /// Official name of the health insurance product as designated by the owner.
+  String? get name => throw _privateConstructorUsedError;
+
+  /// Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// A list of alternate names that the product is known as, or was known as
+  /// in the past.
+  List<String>? get alias => throw _privateConstructorUsedError;
+
+  /// Extensions for alias
+  @JsonKey(name: '_alias')
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
+
+  /// The period of time that the health insurance product is available.
+  Period? get period => throw _privateConstructorUsedError;
+
+  /// The entity that is providing the health insurance product and underwriting
+  /// the risk.
+  Reference? get ownedBy => throw _privateConstructorUsedError;
+
+  /// An organization which administer other services such as underwriting,
+  /// customer service and/or claims processing on behalf of the health
+  /// insurance product owner.
+  Reference? get administeredBy => throw _privateConstructorUsedError;
+
+  /// The geographic region in which a health insurance product's benefits apply.
+  List<Reference>? get coverageArea => throw _privateConstructorUsedError;
+
+  /// The contact details of communication devices available relevant to the
+  /// specific Insurance Product.
+  List<ExtendedContactDetail>? get contact =>
+      throw _privateConstructorUsedError;
+
+  /// The technical endpoints providing access to services operated for the
+  /// health insurance product.
+  List<Reference>? get endpoint => throw _privateConstructorUsedError;
+
+  /// Reference to the network included in the health insurance product.
+  List<Reference>? get network => throw _privateConstructorUsedError;
+
+  /// Details about the coverage offered by the insurance product.
+  List<InsuranceProductCoverage>? get coverage =>
+      throw _privateConstructorUsedError;
+
+  /// Another product that is related to this product.
+  List<InsuranceProductRelated>? get related =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InsuranceProductCopyWith<InsuranceProduct> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsuranceProductCopyWith<$Res> {
+  factory $InsuranceProductCopyWith(
+          InsuranceProduct value, $Res Function(InsuranceProduct) then) =
+      _$InsuranceProductCopyWithImpl<$Res, InsuranceProduct>;
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+      R6ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<CodeableConcept>? type,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<String>? alias,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      Period? period,
+      Reference? ownedBy,
+      Reference? administeredBy,
+      List<Reference>? coverageArea,
+      List<ExtendedContactDetail>? contact,
+      List<Reference>? endpoint,
+      List<Reference>? network,
+      List<InsuranceProductCoverage>? coverage,
+      List<InsuranceProductRelated>? related});
+
+  $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $PeriodCopyWith<$Res>? get period;
+  $ReferenceCopyWith<$Res>? get ownedBy;
+  $ReferenceCopyWith<$Res>? get administeredBy;
+}
+
+/// @nodoc
+class _$InsuranceProductCopyWithImpl<$Res, $Val extends InsuranceProduct>
+    implements $InsuranceProductCopyWith<$Res> {
+  _$InsuranceProductCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? alias = freezed,
+    Object? aliasElement = freezed,
+    Object? period = freezed,
+    Object? ownedBy = freezed,
+    Object? administeredBy = freezed,
+    Object? coverageArea = freezed,
+    Object? contact = freezed,
+    Object? endpoint = freezed,
+    Object? network = freezed,
+    Object? coverage = freezed,
+    Object? related = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R6ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      alias: freezed == alias
+          ? _value.alias
+          : alias // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      aliasElement: freezed == aliasElement
+          ? _value.aliasElement
+          : aliasElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      ownedBy: freezed == ownedBy
+          ? _value.ownedBy
+          : ownedBy // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      administeredBy: freezed == administeredBy
+          ? _value.administeredBy
+          : administeredBy // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      coverageArea: freezed == coverageArea
+          ? _value.coverageArea
+          : coverageArea // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      contact: freezed == contact
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
+      endpoint: freezed == endpoint
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      network: freezed == network
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      coverage: freezed == coverage
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductCoverage>?,
+      related: freezed == related
+          ? _value.related
+          : related // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductRelated>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get ownedBy {
+    if (_value.ownedBy == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.ownedBy!, (value) {
+      return _then(_value.copyWith(ownedBy: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get administeredBy {
+    if (_value.administeredBy == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.administeredBy!, (value) {
+      return _then(_value.copyWith(administeredBy: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InsuranceProductImplCopyWith<$Res>
+    implements $InsuranceProductCopyWith<$Res> {
+  factory _$$InsuranceProductImplCopyWith(_$InsuranceProductImpl value,
+          $Res Function(_$InsuranceProductImpl) then) =
+      __$$InsuranceProductImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+      R6ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<CodeableConcept>? type,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<String>? alias,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      Period? period,
+      Reference? ownedBy,
+      Reference? administeredBy,
+      List<Reference>? coverageArea,
+      List<ExtendedContactDetail>? contact,
+      List<Reference>? endpoint,
+      List<Reference>? network,
+      List<InsuranceProductCoverage>? coverage,
+      List<InsuranceProductRelated>? related});
+
+  @override
+  $FhirMetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+  @override
+  $ReferenceCopyWith<$Res>? get ownedBy;
+  @override
+  $ReferenceCopyWith<$Res>? get administeredBy;
+}
+
+/// @nodoc
+class __$$InsuranceProductImplCopyWithImpl<$Res>
+    extends _$InsuranceProductCopyWithImpl<$Res, _$InsuranceProductImpl>
+    implements _$$InsuranceProductImplCopyWith<$Res> {
+  __$$InsuranceProductImplCopyWithImpl(_$InsuranceProductImpl _value,
+      $Res Function(_$InsuranceProductImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? alias = freezed,
+    Object? aliasElement = freezed,
+    Object? period = freezed,
+    Object? ownedBy = freezed,
+    Object? administeredBy = freezed,
+    Object? coverageArea = freezed,
+    Object? contact = freezed,
+    Object? endpoint = freezed,
+    Object? network = freezed,
+    Object? coverage = freezed,
+    Object? related = freezed,
+  }) {
+    return _then(_$InsuranceProductImpl(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R6ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: freezed == type
+          ? _value._type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      alias: freezed == alias
+          ? _value._alias
+          : alias // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      aliasElement: freezed == aliasElement
+          ? _value._aliasElement
+          : aliasElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      ownedBy: freezed == ownedBy
+          ? _value.ownedBy
+          : ownedBy // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      administeredBy: freezed == administeredBy
+          ? _value.administeredBy
+          : administeredBy // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      coverageArea: freezed == coverageArea
+          ? _value._coverageArea
+          : coverageArea // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      contact: freezed == contact
+          ? _value._contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
+      endpoint: freezed == endpoint
+          ? _value._endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      network: freezed == network
+          ? _value._network
+          : network // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      coverage: freezed == coverage
+          ? _value._coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductCoverage>?,
+      related: freezed == related
+          ? _value._related
+          : related // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductRelated>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InsuranceProductImpl extends _InsuranceProduct {
+  const _$InsuranceProductImpl(
+      {@JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+      this.resourceType = R6ResourceType.InsuranceProduct,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      final List<CodeableConcept>? type,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      final List<String>? alias,
+      @JsonKey(name: '_alias') final List<Element>? aliasElement,
+      this.period,
+      this.ownedBy,
+      this.administeredBy,
+      final List<Reference>? coverageArea,
+      final List<ExtendedContactDetail>? contact,
+      final List<Reference>? endpoint,
+      final List<Reference>? network,
+      final List<InsuranceProductCoverage>? coverage,
+      final List<InsuranceProductRelated>? related})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _type = type,
+        _alias = alias,
+        _aliasElement = aliasElement,
+        _coverageArea = coverageArea,
+        _contact = contact,
+        _endpoint = endpoint,
+        _network = network,
+        _coverage = coverage,
+        _related = related,
+        super._();
+
+  factory _$InsuranceProductImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsuranceProductImplFromJson(json);
+
+  /// This is a InsuranceProduct resource
+  @override
+  @JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+  final R6ResourceType resourceType;
+
+  /// The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
+  @override
+  final FhirId? id;
+
+  /// The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
+  @override
+  final FhirMeta? meta;
+
+  /// A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing
+  /// the content. Often, this is a reference to an implementation guide that
+  /// defines the special rules along with other profiles etc.
+  @override
+  final FhirUri? implicitRules;
+
+  /// Extensions for implicitRules
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+
+  /// The base language in which the resource is written.
+  @override
+  final FhirCode? language;
+
+  /// Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human.
+  @override
+  final Narrative? text;
+
+  /// These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, nor can they have their own independent transaction
+  /// scope.
+  final List<Resource>? _contained;
+
+  /// These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, nor can they have their own independent transaction
+  /// scope.
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource.
+  final List<FhirExtension>? _extension_;
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource and that modifies the understanding
+  /// of the element that contains it and/or the understanding of the
+  /// containing element's descendants.
+  final List<FhirExtension>? _modifierExtension;
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource and that modifies the understanding
+  /// of the element that contains it and/or the understanding of the
+  /// containing element's descendants.
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Business identifiers assigned to this health insurance product which
+  /// remain constant as the resource is updated and propagates from server to server.
+  final List<Identifier>? _identifier;
+
+  /// Business identifiers assigned to this health insurance product which
+  /// remain constant as the resource is updated and propagates from server to server.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// The current state of the health insurance product.
+  @override
+  final FhirCode? status;
+
+  /// Extensions for status
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+
+  /// The kind of health insurance product.
+  final List<CodeableConcept>? _type;
+
+  /// The kind of health insurance product.
+  @override
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Official name of the health insurance product as designated by the owner.
+  @override
+  final String? name;
+
+  /// Extensions for name
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+
+  /// A list of alternate names that the product is known as, or was known as
+  /// in the past.
+  final List<String>? _alias;
+
+  /// A list of alternate names that the product is known as, or was known as
+  /// in the past.
+  @override
+  List<String>? get alias {
+    final value = _alias;
+    if (value == null) return null;
+    if (_alias is EqualUnmodifiableListView) return _alias;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Extensions for alias
+  final List<Element>? _aliasElement;
+
+  /// Extensions for alias
+  @override
+  @JsonKey(name: '_alias')
+  List<Element>? get aliasElement {
+    final value = _aliasElement;
+    if (value == null) return null;
+    if (_aliasElement is EqualUnmodifiableListView) return _aliasElement;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// The period of time that the health insurance product is available.
+  @override
+  final Period? period;
+
+  /// The entity that is providing the health insurance product and underwriting
+  /// the risk.
+  @override
+  final Reference? ownedBy;
+
+  /// An organization which administer other services such as underwriting,
+  /// customer service and/or claims processing on behalf of the health
+  /// insurance product owner.
+  @override
+  final Reference? administeredBy;
+
+  /// The geographic region in which a health insurance product's benefits apply.
+  final List<Reference>? _coverageArea;
+
+  /// The geographic region in which a health insurance product's benefits apply.
+  @override
+  List<Reference>? get coverageArea {
+    final value = _coverageArea;
+    if (value == null) return null;
+    if (_coverageArea is EqualUnmodifiableListView) return _coverageArea;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// The contact details of communication devices available relevant to the
+  /// specific Insurance Product.
+  final List<ExtendedContactDetail>? _contact;
+
+  /// The contact details of communication devices available relevant to the
+  /// specific Insurance Product.
+  @override
+  List<ExtendedContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// The technical endpoints providing access to services operated for the
+  /// health insurance product.
+  final List<Reference>? _endpoint;
+
+  /// The technical endpoints providing access to services operated for the
+  /// health insurance product.
+  @override
+  List<Reference>? get endpoint {
+    final value = _endpoint;
+    if (value == null) return null;
+    if (_endpoint is EqualUnmodifiableListView) return _endpoint;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Reference to the network included in the health insurance product.
+  final List<Reference>? _network;
+
+  /// Reference to the network included in the health insurance product.
+  @override
+  List<Reference>? get network {
+    final value = _network;
+    if (value == null) return null;
+    if (_network is EqualUnmodifiableListView) return _network;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Details about the coverage offered by the insurance product.
+  final List<InsuranceProductCoverage>? _coverage;
+
+  /// Details about the coverage offered by the insurance product.
+  @override
+  List<InsuranceProductCoverage>? get coverage {
+    final value = _coverage;
+    if (value == null) return null;
+    if (_coverage is EqualUnmodifiableListView) return _coverage;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Another product that is related to this product.
+  final List<InsuranceProductRelated>? _related;
+
+  /// Another product that is related to this product.
+  @override
+  List<InsuranceProductRelated>? get related {
+    final value = _related;
+    if (value == null) return null;
+    if (_related is EqualUnmodifiableListView) return _related;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'InsuranceProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, period: $period, ownedBy: $ownedBy, administeredBy: $administeredBy, coverageArea: $coverageArea, contact: $contact, endpoint: $endpoint, network: $network, coverage: $coverage, related: $related)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InsuranceProductImpl &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.nameElement, nameElement) ||
+                other.nameElement == nameElement) &&
+            const DeepCollectionEquality().equals(other._alias, _alias) &&
+            const DeepCollectionEquality()
+                .equals(other._aliasElement, _aliasElement) &&
+            (identical(other.period, period) || other.period == period) &&
+            (identical(other.ownedBy, ownedBy) || other.ownedBy == ownedBy) &&
+            (identical(other.administeredBy, administeredBy) ||
+                other.administeredBy == administeredBy) &&
+            const DeepCollectionEquality()
+                .equals(other._coverageArea, _coverageArea) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
+            const DeepCollectionEquality().equals(other._network, _network) &&
+            const DeepCollectionEquality().equals(other._coverage, _coverage) &&
+            const DeepCollectionEquality().equals(other._related, _related));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        status,
+        statusElement,
+        const DeepCollectionEquality().hash(_type),
+        name,
+        nameElement,
+        const DeepCollectionEquality().hash(_alias),
+        const DeepCollectionEquality().hash(_aliasElement),
+        period,
+        ownedBy,
+        administeredBy,
+        const DeepCollectionEquality().hash(_coverageArea),
+        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(_endpoint),
+        const DeepCollectionEquality().hash(_network),
+        const DeepCollectionEquality().hash(_coverage),
+        const DeepCollectionEquality().hash(_related)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InsuranceProductImplCopyWith<_$InsuranceProductImpl> get copyWith =>
+      __$$InsuranceProductImplCopyWithImpl<_$InsuranceProductImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InsuranceProductImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InsuranceProduct extends InsuranceProduct {
+  const factory _InsuranceProduct(
+      {@JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+      final R6ResourceType resourceType,
+      final FhirId? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final List<CodeableConcept>? type,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final List<String>? alias,
+      @JsonKey(name: '_alias') final List<Element>? aliasElement,
+      final Period? period,
+      final Reference? ownedBy,
+      final Reference? administeredBy,
+      final List<Reference>? coverageArea,
+      final List<ExtendedContactDetail>? contact,
+      final List<Reference>? endpoint,
+      final List<Reference>? network,
+      final List<InsuranceProductCoverage>? coverage,
+      final List<InsuranceProductRelated>? related}) = _$InsuranceProductImpl;
+  const _InsuranceProduct._() : super._();
+
+  factory _InsuranceProduct.fromJson(Map<String, dynamic> json) =
+      _$InsuranceProductImpl.fromJson;
+
+  @override
+
+  /// This is a InsuranceProduct resource
+  @JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+  R6ResourceType get resourceType;
+  @override
+
+  /// The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
+  FhirId? get id;
+  @override
+
+  /// The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
+  FhirMeta? get meta;
+  @override
+
+  /// A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing
+  /// the content. Often, this is a reference to an implementation guide that
+  /// defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules;
+  @override
+
+  /// Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+
+  /// The base language in which the resource is written.
+  FhirCode? get language;
+  @override
+
+  /// Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human.
+  Narrative? get text;
+  @override
+
+  /// These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, nor can they have their own independent transaction
+  /// scope.
+  List<Resource>? get contained;
+  @override
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// May be used to represent additional information that is not part of
+  /// the basic definition of the resource and that modifies the understanding
+  /// of the element that contains it and/or the understanding of the
+  /// containing element's descendants.
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// Business identifiers assigned to this health insurance product which
+  /// remain constant as the resource is updated and propagates from server to server.
+  List<Identifier>? get identifier;
+  @override
+
+  /// The current state of the health insurance product.
+  FhirCode? get status;
+  @override
+
+  /// Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+
+  /// The kind of health insurance product.
+  List<CodeableConcept>? get type;
+  @override
+
+  /// Official name of the health insurance product as designated by the owner.
+  String? get name;
+  @override
+
+  /// Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement;
+  @override
+
+  /// A list of alternate names that the product is known as, or was known as
+  /// in the past.
+  List<String>? get alias;
+  @override
+
+  /// Extensions for alias
+  @JsonKey(name: '_alias')
+  List<Element>? get aliasElement;
+  @override
+
+  /// The period of time that the health insurance product is available.
+  Period? get period;
+  @override
+
+  /// The entity that is providing the health insurance product and underwriting
+  /// the risk.
+  Reference? get ownedBy;
+  @override
+
+  /// An organization which administer other services such as underwriting,
+  /// customer service and/or claims processing on behalf of the health
+  /// insurance product owner.
+  Reference? get administeredBy;
+  @override
+
+  /// The geographic region in which a health insurance product's benefits apply.
+  List<Reference>? get coverageArea;
+  @override
+
+  /// The contact details of communication devices available relevant to the
+  /// specific Insurance Product.
+  List<ExtendedContactDetail>? get contact;
+  @override
+
+  /// The technical endpoints providing access to services operated for the
+  /// health insurance product.
+  List<Reference>? get endpoint;
+  @override
+
+  /// Reference to the network included in the health insurance product.
+  List<Reference>? get network;
+  @override
+
+  /// Details about the coverage offered by the insurance product.
+  List<InsuranceProductCoverage>? get coverage;
+  @override
+
+  /// Another product that is related to this product.
+  List<InsuranceProductRelated>? get related;
+  @override
+  @JsonKey(ignore: true)
+  _$$InsuranceProductImplCopyWith<_$InsuranceProductImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InsuranceProductCoverage _$InsuranceProductCoverageFromJson(
+    Map<String, dynamic> json) {
+  return _InsuranceProductCoverage.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InsuranceProductCoverage {
+  /// [id] Unique id for the element within a resource.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] Type of coverage (e.g., Medical, Dental).
+  CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [network] Reference to the network providing the type of coverage.
+  List<Reference>? get network => throw _privateConstructorUsedError;
+
+  /// [benefit] Specific benefits under this type of coverage.
+  List<InsuranceProductBenefit>? get benefit =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InsuranceProductCoverageCopyWith<InsuranceProductCoverage> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsuranceProductCoverageCopyWith<$Res> {
+  factory $InsuranceProductCoverageCopyWith(InsuranceProductCoverage value,
+          $Res Function(InsuranceProductCoverage) then) =
+      _$InsuranceProductCoverageCopyWithImpl<$Res, InsuranceProductCoverage>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<Reference>? network,
+      List<InsuranceProductBenefit>? benefit});
+
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class _$InsuranceProductCoverageCopyWithImpl<$Res,
+        $Val extends InsuranceProductCoverage>
+    implements $InsuranceProductCoverageCopyWith<$Res> {
+  _$InsuranceProductCoverageCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? network = freezed,
+    Object? benefit = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      network: freezed == network
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      benefit: freezed == benefit
+          ? _value.benefit
+          : benefit // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductBenefit>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InsuranceProductCoverageImplCopyWith<$Res>
+    implements $InsuranceProductCoverageCopyWith<$Res> {
+  factory _$$InsuranceProductCoverageImplCopyWith(
+          _$InsuranceProductCoverageImpl value,
+          $Res Function(_$InsuranceProductCoverageImpl) then) =
+      __$$InsuranceProductCoverageImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<Reference>? network,
+      List<InsuranceProductBenefit>? benefit});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class __$$InsuranceProductCoverageImplCopyWithImpl<$Res>
+    extends _$InsuranceProductCoverageCopyWithImpl<$Res,
+        _$InsuranceProductCoverageImpl>
+    implements _$$InsuranceProductCoverageImplCopyWith<$Res> {
+  __$$InsuranceProductCoverageImplCopyWithImpl(
+      _$InsuranceProductCoverageImpl _value,
+      $Res Function(_$InsuranceProductCoverageImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? network = freezed,
+    Object? benefit = freezed,
+  }) {
+    return _then(_$InsuranceProductCoverageImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      network: freezed == network
+          ? _value._network
+          : network // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      benefit: freezed == benefit
+          ? _value._benefit
+          : benefit // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductBenefit>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InsuranceProductCoverageImpl extends _InsuranceProductCoverage {
+  _$InsuranceProductCoverageImpl(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      final List<Reference>? network,
+      final List<InsuranceProductBenefit>? benefit})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _network = network,
+        _benefit = benefit,
+        super._();
+
+  factory _$InsuranceProductCoverageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsuranceProductCoverageImplFromJson(json);
+
+  /// [id] Unique id for the element within a resource.
+  @override
+  final String? id;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Type of coverage (e.g., Medical, Dental).
+  @override
+  final CodeableConcept type;
+
+  /// [network] Reference to the network providing the type of coverage.
+  final List<Reference>? _network;
+
+  /// [network] Reference to the network providing the type of coverage.
+  @override
+  List<Reference>? get network {
+    final value = _network;
+    if (value == null) return null;
+    if (_network is EqualUnmodifiableListView) return _network;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [benefit] Specific benefits under this type of coverage.
+  final List<InsuranceProductBenefit>? _benefit;
+
+  /// [benefit] Specific benefits under this type of coverage.
+  @override
+  List<InsuranceProductBenefit>? get benefit {
+    final value = _benefit;
+    if (value == null) return null;
+    if (_benefit is EqualUnmodifiableListView) return _benefit;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'InsuranceProductCoverage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, network: $network, benefit: $benefit)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InsuranceProductCoverageImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other._network, _network) &&
+            const DeepCollectionEquality().equals(other._benefit, _benefit));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      const DeepCollectionEquality().hash(_network),
+      const DeepCollectionEquality().hash(_benefit));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InsuranceProductCoverageImplCopyWith<_$InsuranceProductCoverageImpl>
+      get copyWith => __$$InsuranceProductCoverageImplCopyWithImpl<
+          _$InsuranceProductCoverageImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InsuranceProductCoverageImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InsuranceProductCoverage extends InsuranceProductCoverage {
+  factory _InsuranceProductCoverage(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final List<Reference>? network,
+          final List<InsuranceProductBenefit>? benefit}) =
+      _$InsuranceProductCoverageImpl;
+  _InsuranceProductCoverage._() : super._();
+
+  factory _InsuranceProductCoverage.fromJson(Map<String, dynamic> json) =
+      _$InsuranceProductCoverageImpl.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource.
+  String? get id;
+  @override
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] Type of coverage (e.g., Medical, Dental).
+  CodeableConcept get type;
+  @override
+
+  /// [network] Reference to the network providing the type of coverage.
+  List<Reference>? get network;
+  @override
+
+  /// [benefit] Specific benefits under this type of coverage.
+  List<InsuranceProductBenefit>? get benefit;
+  @override
+  @JsonKey(ignore: true)
+  _$$InsuranceProductCoverageImplCopyWith<_$InsuranceProductCoverageImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InsuranceProductBenefit _$InsuranceProductBenefitFromJson(
+    Map<String, dynamic> json) {
+  return _InsuranceProductBenefit.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InsuranceProductBenefit {
+  /// [id] Unique id for the element within a resource.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] Type of benefit (e.g., primary care, specialty care).
+  CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [requirement] The referral requirements to have access/coverage for this benefit.
+  String? get requirement => throw _privateConstructorUsedError;
+
+  /// [limit] The specific limits on the benefit.
+  List<InsuranceProductLimit>? get limit => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InsuranceProductBenefitCopyWith<InsuranceProductBenefit> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsuranceProductBenefitCopyWith<$Res> {
+  factory $InsuranceProductBenefitCopyWith(InsuranceProductBenefit value,
+          $Res Function(InsuranceProductBenefit) then) =
+      _$InsuranceProductBenefitCopyWithImpl<$Res, InsuranceProductBenefit>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      String? requirement,
+      List<InsuranceProductLimit>? limit});
+
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class _$InsuranceProductBenefitCopyWithImpl<$Res,
+        $Val extends InsuranceProductBenefit>
+    implements $InsuranceProductBenefitCopyWith<$Res> {
+  _$InsuranceProductBenefitCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? requirement = freezed,
+    Object? limit = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      requirement: freezed == requirement
+          ? _value.requirement
+          : requirement // ignore: cast_nullable_to_non_nullable
+              as String?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductLimit>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InsuranceProductBenefitImplCopyWith<$Res>
+    implements $InsuranceProductBenefitCopyWith<$Res> {
+  factory _$$InsuranceProductBenefitImplCopyWith(
+          _$InsuranceProductBenefitImpl value,
+          $Res Function(_$InsuranceProductBenefitImpl) then) =
+      __$$InsuranceProductBenefitImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      String? requirement,
+      List<InsuranceProductLimit>? limit});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class __$$InsuranceProductBenefitImplCopyWithImpl<$Res>
+    extends _$InsuranceProductBenefitCopyWithImpl<$Res,
+        _$InsuranceProductBenefitImpl>
+    implements _$$InsuranceProductBenefitImplCopyWith<$Res> {
+  __$$InsuranceProductBenefitImplCopyWithImpl(
+      _$InsuranceProductBenefitImpl _value,
+      $Res Function(_$InsuranceProductBenefitImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? requirement = freezed,
+    Object? limit = freezed,
+  }) {
+    return _then(_$InsuranceProductBenefitImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      requirement: freezed == requirement
+          ? _value.requirement
+          : requirement // ignore: cast_nullable_to_non_nullable
+              as String?,
+      limit: freezed == limit
+          ? _value._limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as List<InsuranceProductLimit>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InsuranceProductBenefitImpl extends _InsuranceProductBenefit {
+  _$InsuranceProductBenefitImpl(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.requirement,
+      final List<InsuranceProductLimit>? limit})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _limit = limit,
+        super._();
+
+  factory _$InsuranceProductBenefitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsuranceProductBenefitImplFromJson(json);
+
+  /// [id] Unique id for the element within a resource.
+  @override
+  final String? id;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Type of benefit (e.g., primary care, specialty care).
+  @override
+  final CodeableConcept type;
+
+  /// [requirement] The referral requirements to have access/coverage for this benefit.
+  @override
+  final String? requirement;
+
+  /// [limit] The specific limits on the benefit.
+  final List<InsuranceProductLimit>? _limit;
+
+  /// [limit] The specific limits on the benefit.
+  @override
+  List<InsuranceProductLimit>? get limit {
+    final value = _limit;
+    if (value == null) return null;
+    if (_limit is EqualUnmodifiableListView) return _limit;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'InsuranceProductBenefit(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, requirement: $requirement, limit: $limit)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InsuranceProductBenefitImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.requirement, requirement) ||
+                other.requirement == requirement) &&
+            const DeepCollectionEquality().equals(other._limit, _limit));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      requirement,
+      const DeepCollectionEquality().hash(_limit));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InsuranceProductBenefitImplCopyWith<_$InsuranceProductBenefitImpl>
+      get copyWith => __$$InsuranceProductBenefitImplCopyWithImpl<
+          _$InsuranceProductBenefitImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InsuranceProductBenefitImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InsuranceProductBenefit extends InsuranceProductBenefit {
+  factory _InsuranceProductBenefit(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final String? requirement,
+          final List<InsuranceProductLimit>? limit}) =
+      _$InsuranceProductBenefitImpl;
+  _InsuranceProductBenefit._() : super._();
+
+  factory _InsuranceProductBenefit.fromJson(Map<String, dynamic> json) =
+      _$InsuranceProductBenefitImpl.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource.
+  String? get id;
+  @override
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] Type of benefit (e.g., primary care, specialty care).
+  CodeableConcept get type;
+  @override
+
+  /// [requirement] The referral requirements to have access/coverage for this benefit.
+  String? get requirement;
+  @override
+
+  /// [limit] The specific limits on the benefit.
+  List<InsuranceProductLimit>? get limit;
+  @override
+  @JsonKey(ignore: true)
+  _$$InsuranceProductBenefitImplCopyWith<_$InsuranceProductBenefitImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InsuranceProductLimit _$InsuranceProductLimitFromJson(
+    Map<String, dynamic> json) {
+  return _InsuranceProductLimit.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InsuranceProductLimit {
+  /// [id] Unique id for the element within a resource.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [value] The maximum amount of a service item a plan will pay for a covered benefit.
+  Quantity? get value => throw _privateConstructorUsedError;
+
+  /// [code] The specific limit on the benefit.
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InsuranceProductLimitCopyWith<InsuranceProductLimit> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsuranceProductLimitCopyWith<$Res> {
+  factory $InsuranceProductLimitCopyWith(InsuranceProductLimit value,
+          $Res Function(InsuranceProductLimit) then) =
+      _$InsuranceProductLimitCopyWithImpl<$Res, InsuranceProductLimit>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? value,
+      CodeableConcept? code});
+
+  $QuantityCopyWith<$Res>? get value;
+  $CodeableConceptCopyWith<$Res>? get code;
+}
+
+/// @nodoc
+class _$InsuranceProductLimitCopyWithImpl<$Res,
+        $Val extends InsuranceProductLimit>
+    implements $InsuranceProductLimitCopyWith<$Res> {
+  _$InsuranceProductLimitCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? value = freezed,
+    Object? code = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuantityCopyWith<$Res>? get value {
+    if (_value.value == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.value!, (value) {
+      return _then(_value.copyWith(value: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get code {
+    if (_value.code == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InsuranceProductLimitImplCopyWith<$Res>
+    implements $InsuranceProductLimitCopyWith<$Res> {
+  factory _$$InsuranceProductLimitImplCopyWith(
+          _$InsuranceProductLimitImpl value,
+          $Res Function(_$InsuranceProductLimitImpl) then) =
+      __$$InsuranceProductLimitImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? value,
+      CodeableConcept? code});
+
+  @override
+  $QuantityCopyWith<$Res>? get value;
+  @override
+  $CodeableConceptCopyWith<$Res>? get code;
+}
+
+/// @nodoc
+class __$$InsuranceProductLimitImplCopyWithImpl<$Res>
+    extends _$InsuranceProductLimitCopyWithImpl<$Res,
+        _$InsuranceProductLimitImpl>
+    implements _$$InsuranceProductLimitImplCopyWith<$Res> {
+  __$$InsuranceProductLimitImplCopyWithImpl(_$InsuranceProductLimitImpl _value,
+      $Res Function(_$InsuranceProductLimitImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? value = freezed,
+    Object? code = freezed,
+  }) {
+    return _then(_$InsuranceProductLimitImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InsuranceProductLimitImpl extends _InsuranceProductLimit {
+  _$InsuranceProductLimitImpl(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.value,
+      this.code})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$InsuranceProductLimitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsuranceProductLimitImplFromJson(json);
+
+  /// [id] Unique id for the element within a resource.
+  @override
+  final String? id;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [value] The maximum amount of a service item a plan will pay for a covered benefit.
+  @override
+  final Quantity? value;
+
+  /// [code] The specific limit on the benefit.
+  @override
+  final CodeableConcept? code;
+
+  @override
+  String toString() {
+    return 'InsuranceProductLimit(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, value: $value, code: $code)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InsuranceProductLimitImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.code, code) || other.code == code));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      value,
+      code);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InsuranceProductLimitImplCopyWith<_$InsuranceProductLimitImpl>
+      get copyWith => __$$InsuranceProductLimitImplCopyWithImpl<
+          _$InsuranceProductLimitImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InsuranceProductLimitImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InsuranceProductLimit extends InsuranceProductLimit {
+  factory _InsuranceProductLimit(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Quantity? value,
+      final CodeableConcept? code}) = _$InsuranceProductLimitImpl;
+  _InsuranceProductLimit._() : super._();
+
+  factory _InsuranceProductLimit.fromJson(Map<String, dynamic> json) =
+      _$InsuranceProductLimitImpl.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource.
+  String? get id;
+  @override
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [value] The maximum amount of a service item a plan will pay for a covered benefit.
+  Quantity? get value;
+  @override
+
+  /// [code] The specific limit on the benefit.
+  CodeableConcept? get code;
+  @override
+  @JsonKey(ignore: true)
+  _$$InsuranceProductLimitImplCopyWith<_$InsuranceProductLimitImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InsuranceProductRelated _$InsuranceProductRelatedFromJson(
+    Map<String, dynamic> json) {
+  return _InsuranceProductRelated.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InsuranceProductRelated {
+  /// [id] Unique id for the element within a resource (for internal references).
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [product] The Related Product reference.
+  Reference get product => throw _privateConstructorUsedError;
+
+  /// [relationship] The relationship of this product to the related product.
+  CodeableConcept get relationship => throw _privateConstructorUsedError;
+
+  /// [period] Period of time that the product relationship is valid.
+  Period? get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InsuranceProductRelatedCopyWith<InsuranceProductRelated> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsuranceProductRelatedCopyWith<$Res> {
+  factory $InsuranceProductRelatedCopyWith(InsuranceProductRelated value,
+          $Res Function(InsuranceProductRelated) then) =
+      _$InsuranceProductRelatedCopyWithImpl<$Res, InsuranceProductRelated>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference product,
+      CodeableConcept relationship,
+      Period? period});
+
+  $ReferenceCopyWith<$Res> get product;
+  $CodeableConceptCopyWith<$Res> get relationship;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$InsuranceProductRelatedCopyWithImpl<$Res,
+        $Val extends InsuranceProductRelated>
+    implements $InsuranceProductRelatedCopyWith<$Res> {
+  _$InsuranceProductRelatedCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? product = null,
+    Object? relationship = null,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      product: null == product
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      relationship: null == relationship
+          ? _value.relationship
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res> get product {
+    return $ReferenceCopyWith<$Res>(_value.product, (value) {
+      return _then(_value.copyWith(product: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get relationship {
+    return $CodeableConceptCopyWith<$Res>(_value.relationship, (value) {
+      return _then(_value.copyWith(relationship: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InsuranceProductRelatedImplCopyWith<$Res>
+    implements $InsuranceProductRelatedCopyWith<$Res> {
+  factory _$$InsuranceProductRelatedImplCopyWith(
+          _$InsuranceProductRelatedImpl value,
+          $Res Function(_$InsuranceProductRelatedImpl) then) =
+      __$$InsuranceProductRelatedImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference product,
+      CodeableConcept relationship,
+      Period? period});
+
+  @override
+  $ReferenceCopyWith<$Res> get product;
+  @override
+  $CodeableConceptCopyWith<$Res> get relationship;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$$InsuranceProductRelatedImplCopyWithImpl<$Res>
+    extends _$InsuranceProductRelatedCopyWithImpl<$Res,
+        _$InsuranceProductRelatedImpl>
+    implements _$$InsuranceProductRelatedImplCopyWith<$Res> {
+  __$$InsuranceProductRelatedImplCopyWithImpl(
+      _$InsuranceProductRelatedImpl _value,
+      $Res Function(_$InsuranceProductRelatedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? product = null,
+    Object? relationship = null,
+    Object? period = freezed,
+  }) {
+    return _then(_$InsuranceProductRelatedImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      product: null == product
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      relationship: null == relationship
+          ? _value.relationship
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InsuranceProductRelatedImpl extends _InsuranceProductRelated {
+  _$InsuranceProductRelatedImpl(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.product,
+      required this.relationship,
+      this.period})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$InsuranceProductRelatedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsuranceProductRelatedImplFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references).
+  @override
+  final String? id;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [product] The Related Product reference.
+  @override
+  final Reference product;
+
+  /// [relationship] The relationship of this product to the related product.
+  @override
+  final CodeableConcept relationship;
+
+  /// [period] Period of time that the product relationship is valid.
+  @override
+  final Period? period;
+
+  @override
+  String toString() {
+    return 'InsuranceProductRelated(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, product: $product, relationship: $relationship, period: $period)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InsuranceProductRelatedImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.product, product) || other.product == product) &&
+            (identical(other.relationship, relationship) ||
+                other.relationship == relationship) &&
+            (identical(other.period, period) || other.period == period));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      product,
+      relationship,
+      period);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InsuranceProductRelatedImplCopyWith<_$InsuranceProductRelatedImpl>
+      get copyWith => __$$InsuranceProductRelatedImplCopyWithImpl<
+          _$InsuranceProductRelatedImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InsuranceProductRelatedImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InsuranceProductRelated extends InsuranceProductRelated {
+  factory _InsuranceProductRelated(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Reference product,
+      required final CodeableConcept relationship,
+      final Period? period}) = _$InsuranceProductRelatedImpl;
+  _InsuranceProductRelated._() : super._();
+
+  factory _InsuranceProductRelated.fromJson(Map<String, dynamic> json) =
+      _$InsuranceProductRelatedImpl.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references).
+  String? get id;
+  @override
+
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [product] The Related Product reference.
+  Reference get product;
+  @override
+
+  /// [relationship] The relationship of this product to the related product.
+  CodeableConcept get relationship;
+  @override
+
+  /// [period] Period of time that the product relationship is valid.
+  Period? get period;
+  @override
+  @JsonKey(ignore: true)
+  _$$InsuranceProductRelatedImplCopyWith<_$InsuranceProductRelatedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

@@ -433,6 +433,7 @@ const _$R6ResourceTypeEnumMap = {
   R6ResourceType.ImplementationGuide: 'ImplementationGuide',
   R6ResourceType.Ingredient: 'Ingredient',
   R6ResourceType.InsurancePlan: 'InsurancePlan',
+  R6ResourceType.InsuranceProduct: 'InsuranceProduct',
   R6ResourceType.InventoryItem: 'InventoryItem',
   R6ResourceType.InventoryReport: 'InventoryReport',
   R6ResourceType.Invoice: 'Invoice',
@@ -2666,6 +2667,9 @@ _$TestScriptImpl _$$TestScriptImplFromJson(Map<String, dynamic> json) =>
       profile: (json['profile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
+      profileElement: (json['_profile'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       variable: (json['variable'] as List<dynamic>?)
           ?.map((e) => TestScriptVariable.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2748,6 +2752,8 @@ Map<String, dynamic> _$$TestScriptImplToJson(_$TestScriptImpl instance) {
   writeNotNull('scope', instance.scope?.map((e) => e.toJson()).toList());
   writeNotNull('fixture', instance.fixture?.map((e) => e.toJson()).toList());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
   writeNotNull('variable', instance.variable?.map((e) => e.toJson()).toList());
   writeNotNull('setup', instance.setup?.toJson());
   writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());

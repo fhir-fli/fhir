@@ -11104,3 +11104,259 @@ class InsurancePlanCost with _$InsurancePlanCost {
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
 }
+
+/// [InsuranceProduct] Details of a Health Insurance product provided by an organization.
+@freezed
+class InsuranceProduct with Resource, _$InsuranceProduct {
+  /// [InsuranceProduct] Details of a Health Insurance product provided by an organization.
+  const InsuranceProduct._();
+
+  /// Factory constructor for [InsuranceProduct]
+  const factory InsuranceProduct({
+    /// This is a InsuranceProduct resource
+    @Default(R6ResourceType.InsuranceProduct)
+    @JsonKey(unknownEnumValue: R6ResourceType.InsuranceProduct)
+    R6ResourceType resourceType,
+
+    /// The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
+    FhirId? id,
+
+    /// The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
+    FhirMeta? meta,
+
+    /// A reference to a set of rules that were followed when the
+    /// resource was constructed, and which must be understood when processing
+    /// the content. Often, this is a reference to an implementation guide that
+    /// defines the special rules along with other profiles etc.
+    FhirUri? implicitRules,
+
+    /// Extensions for implicitRules
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// The base language in which the resource is written.
+    FhirCode? language,
+
+    /// Extensions for language
+    @JsonKey(name: '_language') Element? languageElement,
+
+    /// A human-readable narrative that contains a summary of the resource
+    /// and can be used to represent the content of the resource to a human.
+    Narrative? text,
+
+    /// These resources do not have an independent existence apart
+    /// from the resource that contains them - they cannot be identified
+    /// independently, nor can they have their own independent transaction
+    /// scope.
+    List<Resource>? contained,
+
+    /// May be used to represent additional information that is not part of
+    /// the basic definition of the resource.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// May be used to represent additional information that is not part of
+    /// the basic definition of the resource and that modifies the understanding
+    /// of the element that contains it and/or the understanding of the
+    /// containing element's descendants.
+    List<FhirExtension>? modifierExtension,
+
+    /// Business identifiers assigned to this health insurance product which
+    /// remain constant as the resource is updated and propagates from server to server.
+    List<Identifier>? identifier,
+
+    /// The current state of the health insurance product.
+    FhirCode? status,
+
+    /// Extensions for status
+    @JsonKey(name: '_status') Element? statusElement,
+
+    /// The kind of health insurance product.
+    List<CodeableConcept>? type,
+
+    /// Official name of the health insurance product as designated by the owner.
+    String? name,
+
+    /// Extensions for name
+    @JsonKey(name: '_name') Element? nameElement,
+
+    /// A list of alternate names that the product is known as, or was known as
+    /// in the past.
+    List<String>? alias,
+
+    /// Extensions for alias
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
+
+    /// The period of time that the health insurance product is available.
+    Period? period,
+
+    /// The entity that is providing the health insurance product and underwriting
+    /// the risk.
+    Reference? ownedBy,
+
+    /// An organization which administer other services such as underwriting,
+    /// customer service and/or claims processing on behalf of the health
+    /// insurance product owner.
+    Reference? administeredBy,
+
+    /// The geographic region in which a health insurance product's benefits apply.
+    List<Reference>? coverageArea,
+
+    /// The contact details of communication devices available relevant to the
+    /// specific Insurance Product.
+    List<ExtendedContactDetail>? contact,
+
+    /// The technical endpoints providing access to services operated for the
+    /// health insurance product.
+    List<Reference>? endpoint,
+
+    /// Reference to the network included in the health insurance product.
+    List<Reference>? network,
+
+    /// Details about the coverage offered by the insurance product.
+    List<InsuranceProductCoverage>? coverage,
+
+    /// Another product that is related to this product.
+    List<InsuranceProductRelated>? related,
+  }) = _InsuranceProduct;
+
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory InsuranceProduct.fromYaml(dynamic yaml) => yaml is String
+      ? InsuranceProduct.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? InsuranceProduct.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'InsuranceProduct cannot be constructed from input provided, it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor that converts json format to dart object
+  factory InsuranceProduct.fromJson(Map<String, dynamic> json) =>
+      _$InsuranceProductFromJson(json);
+}
+
+/// [InsuranceProductCoverage] Details of coverage provided by a Health Insurance product.
+@freezed
+class InsuranceProductCoverage with _$InsuranceProductCoverage {
+  /// Constructor for [InsuranceProductCoverage].
+  const InsuranceProductCoverage._();
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory InsuranceProductCoverage({
+    /// [id] Unique id for the element within a resource.
+    String? id,
+
+    /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+    List<FhirExtension>? modifierExtension,
+
+    /// [type] Type of coverage (e.g., Medical, Dental).
+    required CodeableConcept type,
+
+    /// [network] Reference to the network providing the type of coverage.
+    List<Reference>? network,
+
+    /// [benefit] Specific benefits under this type of coverage.
+    List<InsuranceProductBenefit>? benefit,
+  }) = _InsuranceProductCoverage;
+
+  /// Factory constructor that converts json format to dart object
+  factory InsuranceProductCoverage.fromJson(Map<String, dynamic> json) =>
+      _$InsuranceProductCoverageFromJson(json);
+}
+
+/// [InsuranceProductBenefit] Specific benefits under a type of coverage of a Health Insurance product.
+@freezed
+class InsuranceProductBenefit with _$InsuranceProductBenefit {
+  /// Constructor for [InsuranceProductBenefit].
+  const InsuranceProductBenefit._();
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory InsuranceProductBenefit({
+    /// [id] Unique id for the element within a resource.
+    String? id,
+
+    /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+    List<FhirExtension>? modifierExtension,
+
+    /// [type] Type of benefit (e.g., primary care, specialty care).
+    required CodeableConcept type,
+
+    /// [requirement] The referral requirements to have access/coverage for this benefit.
+    String? requirement,
+
+    /// [limit] The specific limits on the benefit.
+    List<InsuranceProductLimit>? limit,
+  }) = _InsuranceProductBenefit;
+
+  /// Factory constructor that converts json format to dart object
+  factory InsuranceProductBenefit.fromJson(Map<String, dynamic> json) =>
+      _$InsuranceProductBenefitFromJson(json);
+}
+
+/// [InsuranceProductLimit] The specific limits on the benefit of a Health Insurance product.
+@freezed
+class InsuranceProductLimit with _$InsuranceProductLimit {
+  /// Constructor for [InsuranceProductLimit].
+  const InsuranceProductLimit._();
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory InsuranceProductLimit({
+    /// [id] Unique id for the element within a resource.
+    String? id,
+
+    /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+    List<FhirExtension>? modifierExtension,
+
+    /// [value] The maximum amount of a service item a plan will pay for a covered benefit.
+    Quantity? value,
+
+    /// [code] The specific limit on the benefit.
+    CodeableConcept? code,
+  }) = _InsuranceProductLimit;
+
+  /// Factory constructor that converts json format to dart object
+  factory InsuranceProductLimit.fromJson(Map<String, dynamic> json) =>
+      _$InsuranceProductLimitFromJson(json);
+}
+
+/// [InsuranceProductRelated] Details of a Health Insurance product provided by an organization that is related to another product.
+@freezed
+class InsuranceProductRelated with _$InsuranceProductRelated {
+  /// Constructor for [InsuranceProductRelated].
+  const InsuranceProductRelated._();
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory InsuranceProductRelated({
+    /// [id] Unique id for the element within a resource (for internal references).
+    String? id,
+
+    /// [extension] May be used to represent additional information that is not part of the basic definition of the element.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that modifies the understanding of the element.
+    List<FhirExtension>? modifierExtension,
+
+    /// [product] The Related Product reference.
+    required Reference product,
+
+    /// [relationship] The relationship of this product to the related product.
+    required CodeableConcept relationship,
+
+    /// [period] Period of time that the product relationship is valid.
+    Period? period,
+  }) = _InsuranceProductRelated;
+
+  /// Factory constructor that converts json format to dart object
+  factory InsuranceProductRelated.fromJson(Map<String, dynamic> json) =>
+      _$InsuranceProductRelatedFromJson(json);
+}

@@ -8990,7 +8990,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
 
     /// [definition] The definition of the search parameter that describes this
     ///  part.
-    required FhirCanonical definition,
+    FhirCanonical? definition,
 
     /// [expression] A sub-expression that defines how to extract values for
     ///  this component from the output of the main SearchParameter.expression.

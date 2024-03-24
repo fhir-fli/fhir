@@ -38465,7 +38465,7 @@ mixin _$SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  FhirCanonical get definition => throw _privateConstructorUsedError;
+  FhirCanonical? get definition => throw _privateConstructorUsedError;
 
   /// [expression] A sub-expression that defines how to extract values for
   ///  this component from the output of the main SearchParameter.expression.
@@ -38491,7 +38491,7 @@ abstract class $SearchParameterComponentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCanonical definition,
+      FhirCanonical? definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -38515,7 +38515,7 @@ class _$SearchParameterComponentCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? definition = null,
+    Object? definition = freezed,
     Object? expression = freezed,
     Object? expressionElement = freezed,
   }) {
@@ -38532,10 +38532,10 @@ class _$SearchParameterComponentCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      definition: null == definition
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as FhirCanonical,
+              as FhirCanonical?,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
@@ -38573,7 +38573,7 @@ abstract class _$$SearchParameterComponentImplCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirCanonical definition,
+      FhirCanonical? definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -38597,7 +38597,7 @@ class __$$SearchParameterComponentImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? definition = null,
+    Object? definition = freezed,
     Object? expression = freezed,
     Object? expressionElement = freezed,
   }) {
@@ -38614,10 +38614,10 @@ class __$$SearchParameterComponentImplCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      definition: null == definition
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as FhirCanonical,
+              as FhirCanonical?,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
@@ -38637,7 +38637,7 @@ class _$SearchParameterComponentImpl extends _SearchParameterComponent {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required this.definition,
+      this.definition,
       this.expression,
       @JsonKey(name: '_expression') this.expressionElement})
       : _extension_ = extension_,
@@ -38719,7 +38719,7 @@ class _$SearchParameterComponentImpl extends _SearchParameterComponent {
   /// [definition] The definition of the search parameter that describes this
   ///  part.
   @override
-  final FhirCanonical definition;
+  final FhirCanonical? definition;
 
   /// [expression] A sub-expression that defines how to extract values for
   ///  this component from the output of the main SearchParameter.expression.
@@ -38785,7 +38785,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final FhirCanonical definition,
+          final FhirCanonical? definition,
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$SearchParameterComponentImpl;
@@ -38830,7 +38830,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  FhirCanonical get definition;
+  FhirCanonical? get definition;
   @override
 
   /// [expression] A sub-expression that defines how to extract values for

@@ -161,6 +161,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Ingredient.fromJson(json);
     case 'InsurancePlan':
       return InsurancePlan.fromJson(json);
+    case 'InsuranceProduct':
+      return InsuranceProduct.fromJson(json);
     case 'InventoryItem':
       return InventoryItem.fromJson(json);
     case 'InventoryReport':
