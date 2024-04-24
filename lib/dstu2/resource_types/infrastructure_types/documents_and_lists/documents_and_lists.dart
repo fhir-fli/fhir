@@ -671,8 +671,8 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
 class FhirList with Resource, _$FhirList {
   const FhirList._();
   const factory FhirList({
-    @Default(Dstu2ResourceType.FhirList)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+    @Default(Dstu2ResourceType.List)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
     Dstu2ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,

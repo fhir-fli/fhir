@@ -210,7 +210,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case Stu3ResourceType.Linkage:
       return (resource as Linkage)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-    case Stu3ResourceType.FhirList:
+    case Stu3ResourceType.List:
       return (resource as FhirList)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case Stu3ResourceType.Location:

@@ -674,8 +674,8 @@ class Library with Resource, _$Library {
 class FhirList with Resource, _$FhirList {
   const FhirList._();
   const factory FhirList({
-    @Default(Stu3ResourceType.FhirList)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
+    @Default(Stu3ResourceType.List)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.List)
     Stu3ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,

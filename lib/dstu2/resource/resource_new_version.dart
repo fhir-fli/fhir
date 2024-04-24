@@ -226,7 +226,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
       return (resource as ImplementationGuide)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
 
-    case Dstu2ResourceType.FhirList:
+    case Dstu2ResourceType.List:
       return (resource as FhirList)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
 

@@ -3,201 +3,113 @@ part of 'resource.dart';
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dynamic>] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
-  final dynamic resourceType = json['resourceType'];
-  switch (resourceType) {
-    case 'Account':
-      return Account.fromJson(json);
-    case 'AllergyIntolerance':
-      return AllergyIntolerance.fromJson(json);
-    case 'Appointment':
-      return Appointment.fromJson(json);
-    case 'AppointmentResponse':
-      return AppointmentResponse.fromJson(json);
-    case 'AuditEvent':
-      return AuditEvent.fromJson(json);
-    case 'Basic':
-      return Basic.fromJson(json);
-    case 'Binary':
-      return Binary.fromJson(json);
-    case 'BodySite':
-      return BodySite.fromJson(json);
-    case 'Bundle':
-      return Bundle.fromJson(json);
-    case 'CapabilityStatement':
-      return CapabilityStatement.fromJson(json);
-    case 'CarePlan':
-      return CarePlan.fromJson(json);
-    case 'Claim':
-      return Claim.fromJson(json);
-    case 'ClaimResponse':
-      return ClaimResponse.fromJson(json);
-    case 'ClinicalImpression':
-      return ClinicalImpression.fromJson(json);
-    case 'Communication':
-      return Communication.fromJson(json);
-    case 'CommunicationRequest':
-      return CommunicationRequest.fromJson(json);
-    case 'Composition':
-      return Composition.fromJson(json);
-    case 'ConceptMap':
-      return ConceptMap.fromJson(json);
-    case 'Condition':
-      return Condition.fromJson(json);
-    case 'Conformance':
-      return Conformance.fromJson(json);
-    case 'Contract':
-      return Contract.fromJson(json);
-    case 'Coverage':
-      return Coverage.fromJson(json);
-    case 'DataElement':
-      return DataElement.fromJson(json);
-    case 'DetectedIssue':
-      return DetectedIssue.fromJson(json);
-    case 'Device':
-      return Device.fromJson(json);
-    case 'DeviceComponent':
-      return DeviceComponent.fromJson(json);
-    case 'DeviceMetric':
-      return DeviceMetric.fromJson(json);
-    case 'DeviceUseRequest':
-      return DeviceUseRequest.fromJson(json);
-    case 'DeviceUseStatement':
-      return DeviceUseStatement.fromJson(json);
-    case 'DiagnosticOrder':
-      return DiagnosticOrder.fromJson(json);
-    case 'DiagnosticReport':
-      return DiagnosticReport.fromJson(json);
-    case 'DocumentManifest':
-      return DocumentManifest.fromJson(json);
-    case 'DocumentReference':
-      return DocumentReference.fromJson(json);
-    case 'EligibilityRequest':
-      return EligibilityRequest.fromJson(json);
-    case 'EligibilityResponse':
-      return EligibilityResponse.fromJson(json);
-    case 'Encounter':
-      return Encounter.fromJson(json);
-    case 'EnrollmentRequest':
-      return EnrollmentRequest.fromJson(json);
-    case 'EnrollmentResponse':
-      return EnrollmentResponse.fromJson(json);
-    case 'EpisodeOfCare':
-      return EpisodeOfCare.fromJson(json);
-    case 'ExplanationOfBenefit':
-      return ExplanationOfBenefit.fromJson(json);
-    case 'FamilyMemberHistory':
-      return FamilyMemberHistory.fromJson(json);
-    case 'Flag':
-      return Flag.fromJson(json);
-    case 'Goal':
-      return Goal.fromJson(json);
-    case 'Group':
-      return FhirGroup.fromJson(json);
-    case 'HealthcareService':
-      return HealthcareService.fromJson(json);
-    case 'ImagingObjectSelection':
-      return ImagingObjectSelection.fromJson(json);
-    case 'ImagingStudy':
-      return ImagingStudy.fromJson(json);
-    case 'Immunization':
-      return Immunization.fromJson(json);
-    case 'ImmunizationRecommendation':
-      return ImmunizationRecommendation.fromJson(json);
-    case 'ImplementationGuide':
-      return ImplementationGuide.fromJson(json);
-    case 'List':
-      return FhirList.fromJson(json);
-    case 'Location':
-      return Location.fromJson(json);
-    case 'Media':
-      return Media.fromJson(json);
-    case 'Medication':
-      return Medication.fromJson(json);
-    case 'MedicationAdministration':
-      return MedicationAdministration.fromJson(json);
-    case 'MedicationDispense':
-      return MedicationDispense.fromJson(json);
-    case 'MedicationOrder':
-      return MedicationOrder.fromJson(json);
-    case 'MedicationStatement':
-      return MedicationStatement.fromJson(json);
-    case 'MessageHeader':
-      return MessageHeader.fromJson(json);
-    case 'NamingSystem':
-      return NamingSystem.fromJson(json);
-    case 'NutritionOrder':
-      return NutritionOrder.fromJson(json);
-    case 'Observation':
-      return Observation.fromJson(json);
-    case 'OperationDefinition':
-      return OperationDefinition.fromJson(json);
-    case 'OperationOutcome':
-      return OperationOutcome.fromJson(json);
-    case 'Order':
-      return Order.fromJson(json);
-    case 'OrderResponse':
-      return OrderResponse.fromJson(json);
-    case 'Organization':
-      return Organization.fromJson(json);
-    case 'Parameters':
-      return Parameters.fromJson(json);
-    case 'Patient':
-      return Patient.fromJson(json);
-    case 'PaymentNotice':
-      return PaymentNotice.fromJson(json);
-    case 'PaymentReconciliation':
-      return PaymentReconciliation.fromJson(json);
-    case 'Person':
-      return Person.fromJson(json);
-    case 'Practitioner':
-      return Practitioner.fromJson(json);
-    case 'Procedure':
-      return Procedure.fromJson(json);
-    case 'ProcedureRequest':
-      return ProcedureRequest.fromJson(json);
-    case 'ProcessRequest':
-      return ProcessRequest.fromJson(json);
-    case 'ProcessResponse':
-      return ProcessResponse.fromJson(json);
-    case 'Provenance':
-      return Provenance.fromJson(json);
-    case 'Questionnaire':
-      return Questionnaire.fromJson(json);
-    case 'QuestionnaireResponse':
-      return QuestionnaireResponse.fromJson(json);
-    case 'ReferralRequest':
-      return ReferralRequest.fromJson(json);
-    case 'RelatedPerson':
-      return RelatedPerson.fromJson(json);
-    case 'RiskAssessment':
-      return RiskAssessment.fromJson(json);
-    case 'Schedule':
-      return Schedule.fromJson(json);
-    case 'SearchParameter':
-      return SearchParameter.fromJson(json);
-    case 'Slot':
-      return Slot.fromJson(json);
-    case 'Specimen':
-      return Specimen.fromJson(json);
-    case 'StructureDefinition':
-      return StructureDefinition.fromJson(json);
-    case 'Subscription':
-      return Subscription.fromJson(json);
-    case 'Substance':
-      return Substance.fromJson(json);
-    case 'SupplyDelivery':
-      return SupplyDelivery.fromJson(json);
-    case 'SupplyRequest':
-      return SupplyRequest.fromJson(json);
-    case 'TestScript':
-      return TestScript.fromJson(json);
-    case 'ValueSet':
-      return ValueSet.fromJson(json);
-    case 'VisionPrescription':
-      return VisionPrescription.fromJson(json);
-    default:
-      throw UnsupportedError(
-          "You have passed Resource.fromJson a type doesn't exist or is null. "
-          'In this case, the resourceType is $resourceType.');
-  }
+  final Dstu2ResourceType? resourceType =
+      resourceTypeFromStringMap[json['resourceType']];
+  return switch (resourceType) {
+    Dstu2ResourceType.Account => Account.fromJson(json),
+    Dstu2ResourceType.AllergyIntolerance => AllergyIntolerance.fromJson(json),
+    Dstu2ResourceType.Appointment => Appointment.fromJson(json),
+    Dstu2ResourceType.AppointmentResponse => AppointmentResponse.fromJson(json),
+    Dstu2ResourceType.AuditEvent => AuditEvent.fromJson(json),
+    Dstu2ResourceType.Basic => Basic.fromJson(json),
+    Dstu2ResourceType.Binary => Binary.fromJson(json),
+    Dstu2ResourceType.BodySite => BodySite.fromJson(json),
+    Dstu2ResourceType.Bundle => Bundle.fromJson(json),
+    Dstu2ResourceType.CapabilityStatement => CapabilityStatement.fromJson(json),
+    Dstu2ResourceType.CarePlan => CarePlan.fromJson(json),
+    Dstu2ResourceType.Claim => Claim.fromJson(json),
+    Dstu2ResourceType.ClaimResponse => ClaimResponse.fromJson(json),
+    Dstu2ResourceType.ClinicalImpression => ClinicalImpression.fromJson(json),
+    Dstu2ResourceType.Communication => Communication.fromJson(json),
+    Dstu2ResourceType.CommunicationRequest =>
+      CommunicationRequest.fromJson(json),
+    Dstu2ResourceType.Composition => Composition.fromJson(json),
+    Dstu2ResourceType.ConceptMap => ConceptMap.fromJson(json),
+    Dstu2ResourceType.Condition => Condition.fromJson(json),
+    Dstu2ResourceType.Conformance => Conformance.fromJson(json),
+    Dstu2ResourceType.Contract => Contract.fromJson(json),
+    Dstu2ResourceType.Coverage => Coverage.fromJson(json),
+    Dstu2ResourceType.DataElement => DataElement.fromJson(json),
+    Dstu2ResourceType.DetectedIssue => DetectedIssue.fromJson(json),
+    Dstu2ResourceType.Device => Device.fromJson(json),
+    Dstu2ResourceType.DeviceComponent => DeviceComponent.fromJson(json),
+    Dstu2ResourceType.DeviceMetric => DeviceMetric.fromJson(json),
+    Dstu2ResourceType.DeviceUseRequest => DeviceUseRequest.fromJson(json),
+    Dstu2ResourceType.DeviceUseStatement => DeviceUseStatement.fromJson(json),
+    Dstu2ResourceType.DiagnosticOrder => DiagnosticOrder.fromJson(json),
+    Dstu2ResourceType.DiagnosticReport => DiagnosticReport.fromJson(json),
+    Dstu2ResourceType.DocumentManifest => DocumentManifest.fromJson(json),
+    Dstu2ResourceType.DocumentReference => DocumentReference.fromJson(json),
+    Dstu2ResourceType.EligibilityRequest => EligibilityRequest.fromJson(json),
+    Dstu2ResourceType.EligibilityResponse => EligibilityResponse.fromJson(json),
+    Dstu2ResourceType.Encounter => Encounter.fromJson(json),
+    Dstu2ResourceType.EnrollmentRequest => EnrollmentRequest.fromJson(json),
+    Dstu2ResourceType.EnrollmentResponse => EnrollmentResponse.fromJson(json),
+    Dstu2ResourceType.EpisodeOfCare => EpisodeOfCare.fromJson(json),
+    Dstu2ResourceType.ExplanationOfBenefit =>
+      ExplanationOfBenefit.fromJson(json),
+    Dstu2ResourceType.FamilyMemberHistory => FamilyMemberHistory.fromJson(json),
+    Dstu2ResourceType.Flag => Flag.fromJson(json),
+    Dstu2ResourceType.Goal => Goal.fromJson(json),
+    Dstu2ResourceType.Group => FhirGroup.fromJson(json),
+    Dstu2ResourceType.HealthcareService => HealthcareService.fromJson(json),
+    Dstu2ResourceType.ImagingObjectSelection =>
+      ImagingObjectSelection.fromJson(json),
+    Dstu2ResourceType.ImagingStudy => ImagingStudy.fromJson(json),
+    Dstu2ResourceType.Immunization => Immunization.fromJson(json),
+    Dstu2ResourceType.ImmunizationRecommendation =>
+      ImmunizationRecommendation.fromJson(json),
+    Dstu2ResourceType.ImplementationGuide => ImplementationGuide.fromJson(json),
+    Dstu2ResourceType.List => FhirList.fromJson(json),
+    Dstu2ResourceType.Location => Location.fromJson(json),
+    Dstu2ResourceType.Media => Media.fromJson(json),
+    Dstu2ResourceType.Medication => Medication.fromJson(json),
+    Dstu2ResourceType.MedicationAdministration =>
+      MedicationAdministration.fromJson(json),
+    Dstu2ResourceType.MedicationDispense => MedicationDispense.fromJson(json),
+    Dstu2ResourceType.MedicationOrder => MedicationOrder.fromJson(json),
+    Dstu2ResourceType.MedicationStatement => MedicationStatement.fromJson(json),
+    Dstu2ResourceType.MessageHeader => MessageHeader.fromJson(json),
+    Dstu2ResourceType.NamingSystem => NamingSystem.fromJson(json),
+    Dstu2ResourceType.NutritionOrder => NutritionOrder.fromJson(json),
+    Dstu2ResourceType.Observation => Observation.fromJson(json),
+    Dstu2ResourceType.OperationDefinition => OperationDefinition.fromJson(json),
+    Dstu2ResourceType.OperationOutcome => OperationOutcome.fromJson(json),
+    Dstu2ResourceType.Order => Order.fromJson(json),
+    Dstu2ResourceType.OrderResponse => OrderResponse.fromJson(json),
+    Dstu2ResourceType.Organization => Organization.fromJson(json),
+    Dstu2ResourceType.Parameters => Parameters.fromJson(json),
+    Dstu2ResourceType.Patient => Patient.fromJson(json),
+    Dstu2ResourceType.PaymentNotice => PaymentNotice.fromJson(json),
+    Dstu2ResourceType.PaymentReconciliation =>
+      PaymentReconciliation.fromJson(json),
+    Dstu2ResourceType.Person => Person.fromJson(json),
+    Dstu2ResourceType.Practitioner => Practitioner.fromJson(json),
+    Dstu2ResourceType.Procedure => Procedure.fromJson(json),
+    Dstu2ResourceType.ProcedureRequest => ProcedureRequest.fromJson(json),
+    Dstu2ResourceType.ProcessRequest => ProcessRequest.fromJson(json),
+    Dstu2ResourceType.ProcessResponse => ProcessResponse.fromJson(json),
+    Dstu2ResourceType.Provenance => Provenance.fromJson(json),
+    Dstu2ResourceType.Questionnaire => Questionnaire.fromJson(json),
+    Dstu2ResourceType.QuestionnaireResponse =>
+      QuestionnaireResponse.fromJson(json),
+    Dstu2ResourceType.ReferralRequest => ReferralRequest.fromJson(json),
+    Dstu2ResourceType.RelatedPerson => RelatedPerson.fromJson(json),
+    Dstu2ResourceType.RiskAssessment => RiskAssessment.fromJson(json),
+    Dstu2ResourceType.Schedule => Schedule.fromJson(json),
+    Dstu2ResourceType.SearchParameter => SearchParameter.fromJson(json),
+    Dstu2ResourceType.Slot => Slot.fromJson(json),
+    Dstu2ResourceType.Specimen => Specimen.fromJson(json),
+    Dstu2ResourceType.StructureDefinition => StructureDefinition.fromJson(json),
+    Dstu2ResourceType.Subscription => Subscription.fromJson(json),
+    Dstu2ResourceType.Substance => Substance.fromJson(json),
+    Dstu2ResourceType.SupplyDelivery => SupplyDelivery.fromJson(json),
+    Dstu2ResourceType.SupplyRequest => SupplyRequest.fromJson(json),
+    Dstu2ResourceType.TestScript => TestScript.fromJson(json),
+    Dstu2ResourceType.ValueSet => ValueSet.fromJson(json),
+    Dstu2ResourceType.VisionPrescription => VisionPrescription.fromJson(json),
+    _ => throw UnsupportedError(
+        "You have passed Resource.fromJson a type doesn't exist or is null. "
+        'In this case, the resourceType is $resourceType.')
+  };
 }

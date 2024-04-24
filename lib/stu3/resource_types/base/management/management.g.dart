@@ -227,7 +227,7 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.ImplementationGuide: 'ImplementationGuide',
   Stu3ResourceType.Library: 'Library',
   Stu3ResourceType.Linkage: 'Linkage',
-  Stu3ResourceType.FhirList: 'List',
+  Stu3ResourceType.List: 'List',
   Stu3ResourceType.Location: 'Location',
   Stu3ResourceType.Measure: 'Measure',
   Stu3ResourceType.MeasureReport: 'MeasureReport',
@@ -1032,8 +1032,8 @@ _$FhirListImpl _$$FhirListImplFromJson(Map<String, dynamic> json) =>
     _$FhirListImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: Stu3ResourceType.FhirList) ??
-          Stu3ResourceType.FhirList,
+              unknownValue: Stu3ResourceType.List) ??
+          Stu3ResourceType.List,
       dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
