@@ -4,7 +4,7 @@ part of 'resource.dart';
 /// [Map<String, Dynamic>] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
   final Stu3ResourceType? resourceType =
-  resourceTypeFromStringMap[json['resourceType']];
+      resourceTypeFromStringMap[json['resourceType']];
   return switch (resourceType) {
     Stu3ResourceType.Account => Account.fromJson(json),
     Stu3ResourceType.ActivityDefinition => ActivityDefinition.fromJson(json),
@@ -26,8 +26,10 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.ClinicalImpression => ClinicalImpression.fromJson(json),
     Stu3ResourceType.CodeSystem => CodeSystem.fromJson(json),
     Stu3ResourceType.Communication => Communication.fromJson(json),
-    Stu3ResourceType.CommunicationRequest => CommunicationRequest.fromJson(json),
-    Stu3ResourceType.CompartmentDefinition => CompartmentDefinition.fromJson(json),
+    Stu3ResourceType.CommunicationRequest =>
+      CommunicationRequest.fromJson(json),
+    Stu3ResourceType.CompartmentDefinition =>
+      CompartmentDefinition.fromJson(json),
     Stu3ResourceType.Composition => Composition.fromJson(json),
     Stu3ResourceType.ConceptMap => ConceptMap.fromJson(json),
     Stu3ResourceType.Condition => Condition.fromJson(json),
@@ -52,7 +54,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.EnrollmentResponse => EnrollmentResponse.fromJson(json),
     Stu3ResourceType.EpisodeOfCare => EpisodeOfCare.fromJson(json),
     Stu3ResourceType.ExpansionProfile => ExpansionProfile.fromJson(json),
-    Stu3ResourceType.ExplanationOfBenefit => ExplanationOfBenefit.fromJson(json),
+    Stu3ResourceType.ExplanationOfBenefit =>
+      ExplanationOfBenefit.fromJson(json),
     Stu3ResourceType.FamilyMemberHistory => FamilyMemberHistory.fromJson(json),
     Stu3ResourceType.Flag => Flag.fromJson(json),
     Stu3ResourceType.Goal => Goal.fromJson(json),
@@ -63,7 +66,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.ImagingManifest => ImagingManifest.fromJson(json),
     Stu3ResourceType.ImagingStudy => ImagingStudy.fromJson(json),
     Stu3ResourceType.Immunization => Immunization.fromJson(json),
-    Stu3ResourceType.ImmunizationRecommendation => ImmunizationRecommendation.fromJson(json),
+    Stu3ResourceType.ImmunizationRecommendation =>
+      ImmunizationRecommendation.fromJson(json),
     Stu3ResourceType.ImplementationGuide => ImplementationGuide.fromJson(json),
     Stu3ResourceType.Library => Library.fromJson(json),
     Stu3ResourceType.Linkage => Linkage.fromJson(json),
@@ -73,7 +77,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.MeasureReport => MeasureReport.fromJson(json),
     Stu3ResourceType.Media => Media.fromJson(json),
     Stu3ResourceType.Medication => Medication.fromJson(json),
-    Stu3ResourceType.MedicationAdministration => MedicationAdministration.fromJson(json),
+    Stu3ResourceType.MedicationAdministration =>
+      MedicationAdministration.fromJson(json),
     Stu3ResourceType.MedicationDispense => MedicationDispense.fromJson(json),
     Stu3ResourceType.MedicationRequest => MedicationRequest.fromJson(json),
     Stu3ResourceType.MedicationStatement => MedicationStatement.fromJson(json),
@@ -88,7 +93,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.Parameters => Parameters.fromJson(json),
     Stu3ResourceType.Patient => Patient.fromJson(json),
     Stu3ResourceType.PaymentNotice => PaymentNotice.fromJson(json),
-    Stu3ResourceType.PaymentReconciliation => PaymentReconciliation.fromJson(json),
+    Stu3ResourceType.PaymentReconciliation =>
+      PaymentReconciliation.fromJson(json),
     Stu3ResourceType.Person => Person.fromJson(json),
     Stu3ResourceType.PlanDefinition => PlanDefinition.fromJson(json),
     Stu3ResourceType.Practitioner => Practitioner.fromJson(json),
@@ -99,7 +105,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.ProcessResponse => ProcessResponse.fromJson(json),
     Stu3ResourceType.Provenance => Provenance.fromJson(json),
     Stu3ResourceType.Questionnaire => Questionnaire.fromJson(json),
-    Stu3ResourceType.QuestionnaireResponse => QuestionnaireResponse.fromJson(json),
+    Stu3ResourceType.QuestionnaireResponse =>
+      QuestionnaireResponse.fromJson(json),
     Stu3ResourceType.ReferralRequest => ReferralRequest.fromJson(json),
     Stu3ResourceType.RelatedPerson => RelatedPerson.fromJson(json),
     Stu3ResourceType.RequestGroup => RequestGroup.fromJson(json),
@@ -124,7 +131,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Stu3ResourceType.ValueSet => ValueSet.fromJson(json),
     Stu3ResourceType.VisionPrescription => VisionPrescription.fromJson(json),
     _ => throw UnsupportedError(
-          "You have passed Resource.fromJson a type doesn't exist or is null. "
-          'In this case, the resourceType is $resourceType.')
+        "You have passed Resource.fromJson a type doesn't exist or is null. "
+        'In this case, the resourceType is $resourceType.')
   };
 }

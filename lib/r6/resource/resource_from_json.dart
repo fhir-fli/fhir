@@ -4,12 +4,13 @@ part of 'resource.dart';
 /// [Map<String, Dynamic>] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
   final R6ResourceType? resourceType =
-  resourceTypeFromStringMap[json['resourceType']];
+      resourceTypeFromStringMap[json['resourceType']];
   return switch (resourceType) {
     R6ResourceType.Account => Account.fromJson(json),
     R6ResourceType.ActivityDefinition => ActivityDefinition.fromJson(json),
     R6ResourceType.ActorDefinition => ActorDefinition.fromJson(json),
-    R6ResourceType.AdministrableProductDefinition => AdministrableProductDefinition.fromJson(json),
+    R6ResourceType.AdministrableProductDefinition =>
+      AdministrableProductDefinition.fromJson(json),
     R6ResourceType.AdverseEvent => AdverseEvent.fromJson(json),
     R6ResourceType.AllergyIntolerance => AllergyIntolerance.fromJson(json),
     R6ResourceType.Appointment => Appointment.fromJson(json),
@@ -18,8 +19,10 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.AuditEvent => AuditEvent.fromJson(json),
     R6ResourceType.Basic => Basic.fromJson(json),
     R6ResourceType.Binary => Binary.fromJson(json),
-    R6ResourceType.BiologicallyDerivedProduct => BiologicallyDerivedProduct.fromJson(json),
-    R6ResourceType.BiologicallyDerivedProductDispense => BiologicallyDerivedProductDispense.fromJson(json),
+    R6ResourceType.BiologicallyDerivedProduct =>
+      BiologicallyDerivedProduct.fromJson(json),
+    R6ResourceType.BiologicallyDerivedProductDispense =>
+      BiologicallyDerivedProductDispense.fromJson(json),
     R6ResourceType.BodyStructure => BodyStructure.fromJson(json),
     R6ResourceType.Bundle => Bundle.fromJson(json),
     R6ResourceType.CapabilityStatement => CapabilityStatement.fromJson(json),
@@ -31,11 +34,13 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.Claim => Claim.fromJson(json),
     R6ResourceType.ClaimResponse => ClaimResponse.fromJson(json),
     R6ResourceType.ClinicalImpression => ClinicalImpression.fromJson(json),
-    R6ResourceType.ClinicalUseDefinition => ClinicalUseDefinition.fromJson(json),
+    R6ResourceType.ClinicalUseDefinition =>
+      ClinicalUseDefinition.fromJson(json),
     R6ResourceType.CodeSystem => CodeSystem.fromJson(json),
     R6ResourceType.Communication => Communication.fromJson(json),
     R6ResourceType.CommunicationRequest => CommunicationRequest.fromJson(json),
-    R6ResourceType.CompartmentDefinition => CompartmentDefinition.fromJson(json),
+    R6ResourceType.CompartmentDefinition =>
+      CompartmentDefinition.fromJson(json),
     R6ResourceType.Composition => Composition.fromJson(json),
     R6ResourceType.ConceptMap => ConceptMap.fromJson(json),
     R6ResourceType.Condition => Condition.fromJson(json),
@@ -43,8 +48,10 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.Consent => Consent.fromJson(json),
     R6ResourceType.Contract => Contract.fromJson(json),
     R6ResourceType.Coverage => Coverage.fromJson(json),
-    R6ResourceType.CoverageEligibilityRequest => CoverageEligibilityRequest.fromJson(json),
-    R6ResourceType.CoverageEligibilityResponse => CoverageEligibilityResponse.fromJson(json),
+    R6ResourceType.CoverageEligibilityRequest =>
+      CoverageEligibilityRequest.fromJson(json),
+    R6ResourceType.CoverageEligibilityResponse =>
+      CoverageEligibilityResponse.fromJson(json),
     R6ResourceType.DetectedIssue => DetectedIssue.fromJson(json),
     R6ResourceType.Device => Device.fromJson(json),
     R6ResourceType.DeviceAssociation => DeviceAssociation.fromJson(json),
@@ -79,8 +86,10 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.ImagingSelection => ImagingSelection.fromJson(json),
     R6ResourceType.ImagingStudy => ImagingStudy.fromJson(json),
     R6ResourceType.Immunization => Immunization.fromJson(json),
-    R6ResourceType.ImmunizationEvaluation => ImmunizationEvaluation.fromJson(json),
-    R6ResourceType.ImmunizationRecommendation => ImmunizationRecommendation.fromJson(json),
+    R6ResourceType.ImmunizationEvaluation =>
+      ImmunizationEvaluation.fromJson(json),
+    R6ResourceType.ImmunizationRecommendation =>
+      ImmunizationRecommendation.fromJson(json),
     R6ResourceType.ImplementationGuide => ImplementationGuide.fromJson(json),
     R6ResourceType.Ingredient => Ingredient.fromJson(json),
     R6ResourceType.InsurancePlan => InsurancePlan.fromJson(json),
@@ -92,16 +101,19 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.Linkage => Linkage.fromJson(json),
     R6ResourceType.List => FhirList.fromJson(json),
     R6ResourceType.Location => Location.fromJson(json),
-    R6ResourceType.ManufacturedItemDefinition => ManufacturedItemDefinition.fromJson(json),
+    R6ResourceType.ManufacturedItemDefinition =>
+      ManufacturedItemDefinition.fromJson(json),
     R6ResourceType.Measure => Measure.fromJson(json),
     R6ResourceType.MeasureReport => MeasureReport.fromJson(json),
     R6ResourceType.Medication => Medication.fromJson(json),
-    R6ResourceType.MedicationAdministration => MedicationAdministration.fromJson(json),
+    R6ResourceType.MedicationAdministration =>
+      MedicationAdministration.fromJson(json),
     R6ResourceType.MedicationDispense => MedicationDispense.fromJson(json),
     R6ResourceType.MedicationKnowledge => MedicationKnowledge.fromJson(json),
     R6ResourceType.MedicationRequest => MedicationRequest.fromJson(json),
     R6ResourceType.MedicationStatement => MedicationStatement.fromJson(json),
-    R6ResourceType.MedicinalProductDefinition => MedicinalProductDefinition.fromJson(json),
+    R6ResourceType.MedicinalProductDefinition =>
+      MedicinalProductDefinition.fromJson(json),
     R6ResourceType.MessageDefinition => MessageDefinition.fromJson(json),
     R6ResourceType.MessageHeader => MessageHeader.fromJson(json),
     R6ResourceType.MolecularSequence => MolecularSequence.fromJson(json),
@@ -110,16 +122,20 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.NutritionOrder => NutritionOrder.fromJson(json),
     R6ResourceType.NutritionProduct => NutritionProduct.fromJson(json),
     R6ResourceType.Observation => Observation.fromJson(json),
-    R6ResourceType.ObservationDefinition => ObservationDefinition.fromJson(json),
+    R6ResourceType.ObservationDefinition =>
+      ObservationDefinition.fromJson(json),
     R6ResourceType.OperationDefinition => OperationDefinition.fromJson(json),
     R6ResourceType.OperationOutcome => OperationOutcome.fromJson(json),
     R6ResourceType.Organization => Organization.fromJson(json),
-    R6ResourceType.OrganizationAffiliation => OrganizationAffiliation.fromJson(json),
-    R6ResourceType.PackagedProductDefinition => PackagedProductDefinition.fromJson(json),
+    R6ResourceType.OrganizationAffiliation =>
+      OrganizationAffiliation.fromJson(json),
+    R6ResourceType.PackagedProductDefinition =>
+      PackagedProductDefinition.fromJson(json),
     R6ResourceType.Parameters => Parameters.fromJson(json),
     R6ResourceType.Patient => Patient.fromJson(json),
     R6ResourceType.PaymentNotice => PaymentNotice.fromJson(json),
-    R6ResourceType.PaymentReconciliation => PaymentReconciliation.fromJson(json),
+    R6ResourceType.PaymentReconciliation =>
+      PaymentReconciliation.fromJson(json),
     R6ResourceType.Permission => Permission.fromJson(json),
     R6ResourceType.Person => Person.fromJson(json),
     R6ResourceType.PlanDefinition => PlanDefinition.fromJson(json),
@@ -128,8 +144,10 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.Procedure => Procedure.fromJson(json),
     R6ResourceType.Provenance => Provenance.fromJson(json),
     R6ResourceType.Questionnaire => Questionnaire.fromJson(json),
-    R6ResourceType.QuestionnaireResponse => QuestionnaireResponse.fromJson(json),
-    R6ResourceType.RegulatedAuthorization => RegulatedAuthorization.fromJson(json),
+    R6ResourceType.QuestionnaireResponse =>
+      QuestionnaireResponse.fromJson(json),
+    R6ResourceType.RegulatedAuthorization =>
+      RegulatedAuthorization.fromJson(json),
     R6ResourceType.RelatedPerson => RelatedPerson.fromJson(json),
     R6ResourceType.RequestOrchestration => RequestOrchestration.fromJson(json),
     R6ResourceType.Requirements => Requirements.fromJson(json),
@@ -152,12 +170,15 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.SubstanceNucleicAcid => SubstanceNucleicAcid.fromJson(json),
     R6ResourceType.SubstancePolymer => SubstancePolymer.fromJson(json),
     R6ResourceType.SubstanceProtein => SubstanceProtein.fromJson(json),
-    R6ResourceType.SubstanceReferenceInformation => SubstanceReferenceInformation.fromJson(json),
-    R6ResourceType.SubstanceSourceMaterial => SubstanceSourceMaterial.fromJson(json),
+    R6ResourceType.SubstanceReferenceInformation =>
+      SubstanceReferenceInformation.fromJson(json),
+    R6ResourceType.SubstanceSourceMaterial =>
+      SubstanceSourceMaterial.fromJson(json),
     R6ResourceType.SupplyDelivery => SupplyDelivery.fromJson(json),
     R6ResourceType.SupplyRequest => SupplyRequest.fromJson(json),
     R6ResourceType.Task => Task.fromJson(json),
-    R6ResourceType.TerminologyCapabilities => TerminologyCapabilities.fromJson(json),
+    R6ResourceType.TerminologyCapabilities =>
+      TerminologyCapabilities.fromJson(json),
     R6ResourceType.TestPlan => TestPlan.fromJson(json),
     R6ResourceType.TestReport => TestReport.fromJson(json),
     R6ResourceType.TestScript => TestScript.fromJson(json),
@@ -166,7 +187,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R6ResourceType.VerificationResult => VerificationResult.fromJson(json),
     R6ResourceType.VisionPrescription => VisionPrescription.fromJson(json),
     _ => throw UnsupportedError(
-          "You have passed Resource.fromJson a type doesn't exist or is null. "
-          'In this case, the resourceType is $resourceType.')
+        "You have passed Resource.fromJson a type doesn't exist or is null. "
+        'In this case, the resourceType is $resourceType.')
   };
 }

@@ -4,7 +4,7 @@ part of 'resource.dart';
 /// [Map<String, Dynamic>] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
   final Dstu2ResourceType? resourceType =
-  resourceTypeFromStringMap[json['resourceType']];
+      resourceTypeFromStringMap[json['resourceType']];
   return switch (resourceType) {
     Dstu2ResourceType.Account => Account.fromJson(json),
     Dstu2ResourceType.AllergyIntolerance => AllergyIntolerance.fromJson(json),
@@ -21,7 +21,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Dstu2ResourceType.ClaimResponse => ClaimResponse.fromJson(json),
     Dstu2ResourceType.ClinicalImpression => ClinicalImpression.fromJson(json),
     Dstu2ResourceType.Communication => Communication.fromJson(json),
-    Dstu2ResourceType.CommunicationRequest => CommunicationRequest.fromJson(json),
+    Dstu2ResourceType.CommunicationRequest =>
+      CommunicationRequest.fromJson(json),
     Dstu2ResourceType.Composition => Composition.fromJson(json),
     Dstu2ResourceType.ConceptMap => ConceptMap.fromJson(json),
     Dstu2ResourceType.Condition => Condition.fromJson(json),
@@ -45,22 +46,26 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Dstu2ResourceType.EnrollmentRequest => EnrollmentRequest.fromJson(json),
     Dstu2ResourceType.EnrollmentResponse => EnrollmentResponse.fromJson(json),
     Dstu2ResourceType.EpisodeOfCare => EpisodeOfCare.fromJson(json),
-    Dstu2ResourceType.ExplanationOfBenefit => ExplanationOfBenefit.fromJson(json),
+    Dstu2ResourceType.ExplanationOfBenefit =>
+      ExplanationOfBenefit.fromJson(json),
     Dstu2ResourceType.FamilyMemberHistory => FamilyMemberHistory.fromJson(json),
     Dstu2ResourceType.Flag => Flag.fromJson(json),
     Dstu2ResourceType.Goal => Goal.fromJson(json),
     Dstu2ResourceType.Group => FhirGroup.fromJson(json),
     Dstu2ResourceType.HealthcareService => HealthcareService.fromJson(json),
-    Dstu2ResourceType.ImagingObjectSelection => ImagingObjectSelection.fromJson(json),
+    Dstu2ResourceType.ImagingObjectSelection =>
+      ImagingObjectSelection.fromJson(json),
     Dstu2ResourceType.ImagingStudy => ImagingStudy.fromJson(json),
     Dstu2ResourceType.Immunization => Immunization.fromJson(json),
-    Dstu2ResourceType.ImmunizationRecommendation => ImmunizationRecommendation.fromJson(json),
+    Dstu2ResourceType.ImmunizationRecommendation =>
+      ImmunizationRecommendation.fromJson(json),
     Dstu2ResourceType.ImplementationGuide => ImplementationGuide.fromJson(json),
     Dstu2ResourceType.List => FhirList.fromJson(json),
     Dstu2ResourceType.Location => Location.fromJson(json),
     Dstu2ResourceType.Media => Media.fromJson(json),
     Dstu2ResourceType.Medication => Medication.fromJson(json),
-    Dstu2ResourceType.MedicationAdministration => MedicationAdministration.fromJson(json),
+    Dstu2ResourceType.MedicationAdministration =>
+      MedicationAdministration.fromJson(json),
     Dstu2ResourceType.MedicationDispense => MedicationDispense.fromJson(json),
     Dstu2ResourceType.MedicationOrder => MedicationOrder.fromJson(json),
     Dstu2ResourceType.MedicationStatement => MedicationStatement.fromJson(json),
@@ -76,7 +81,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Dstu2ResourceType.Parameters => Parameters.fromJson(json),
     Dstu2ResourceType.Patient => Patient.fromJson(json),
     Dstu2ResourceType.PaymentNotice => PaymentNotice.fromJson(json),
-    Dstu2ResourceType.PaymentReconciliation => PaymentReconciliation.fromJson(json),
+    Dstu2ResourceType.PaymentReconciliation =>
+      PaymentReconciliation.fromJson(json),
     Dstu2ResourceType.Person => Person.fromJson(json),
     Dstu2ResourceType.Practitioner => Practitioner.fromJson(json),
     Dstu2ResourceType.Procedure => Procedure.fromJson(json),
@@ -85,7 +91,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Dstu2ResourceType.ProcessResponse => ProcessResponse.fromJson(json),
     Dstu2ResourceType.Provenance => Provenance.fromJson(json),
     Dstu2ResourceType.Questionnaire => Questionnaire.fromJson(json),
-    Dstu2ResourceType.QuestionnaireResponse => QuestionnaireResponse.fromJson(json),
+    Dstu2ResourceType.QuestionnaireResponse =>
+      QuestionnaireResponse.fromJson(json),
     Dstu2ResourceType.ReferralRequest => ReferralRequest.fromJson(json),
     Dstu2ResourceType.RelatedPerson => RelatedPerson.fromJson(json),
     Dstu2ResourceType.RiskAssessment => RiskAssessment.fromJson(json),
@@ -102,7 +109,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     Dstu2ResourceType.ValueSet => ValueSet.fromJson(json),
     Dstu2ResourceType.VisionPrescription => VisionPrescription.fromJson(json),
     _ => throw UnsupportedError(
-          "You have passed Resource.fromJson a type doesn't exist or is null. "
-          'In this case, the resourceType is $resourceType.')
+        "You have passed Resource.fromJson a type doesn't exist or is null. "
+        'In this case, the resourceType is $resourceType.')
   };
 }
