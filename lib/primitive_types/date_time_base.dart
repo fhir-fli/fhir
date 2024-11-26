@@ -57,7 +57,7 @@ abstract class FhirDateTimeBase
         'millisecond': millisecond,
         'microsecond': microsecond,
         'timeZoneOffset': timeZoneOffset,
-        'isUtc': isUtc ? 0 : 1,
+        'isUtc': isUtc ? 1 : 0,
       };
 
   const FhirDateTimeBase({
