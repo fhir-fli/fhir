@@ -430,31 +430,48 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   DateTime dateTimeFromMap(Map<String, num?> map) {
-    final DateTime dateTime = DateTime(
-      map['year'] as int? ?? 0,
-      hasMonth ? map['month'] as int? ?? 0 : 1,
-      hasDay ? map['day'] as int? ?? 0 : 1,
-      hasHours ? map['hour'] as int? ?? 0 : 0,
-      hasMinutes ? map['minute'] as int? ?? 0 : 0,
-      hasSeconds ? map['second'] as int? ?? 0 : 0,
-      hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
-      this == DateTimePrecision.dateTime ? map['microsecond'] as int? ?? 0 : 0,
-    );
-    final DateTime localDateTime = dateTime.toLocal();
-    final Duration localOffset = localDateTime.timeZoneOffset;
-    final int actualOffset = localOffset.inHours +
-        (int.tryParse(map['offset']?.toString() ?? '0') ?? 0);
-    final DateTime actualDateTime =
-        localDateTime.add(Duration(hours: actualOffset));
-    return DateTime(
-        actualDateTime.year,
-        actualDateTime.month,
-        actualDateTime.day,
-        actualDateTime.hour - actualOffset,
-        actualDateTime.minute,
-        actualDateTime.second,
-        actualDateTime.millisecond,
-        actualDateTime.microsecond);
+    if (map['isUtc'] != null && map['isUtc'] == 1) {
+      return DateTime.utc(
+        map['year'] as int? ?? 0,
+        hasMonth ? map['month'] as int? ?? 0 : 1,
+        hasDay ? map['day'] as int? ?? 0 : 1,
+        hasHours ? map['hour'] as int? ?? 0 : 0,
+        hasMinutes ? map['minute'] as int? ?? 0 : 0,
+        hasSeconds ? map['second'] as int? ?? 0 : 0,
+        hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
+        this == DateTimePrecision.dateTime
+            ? map['microsecond'] as int? ?? 0
+            : 0,
+      );
+    } else {
+      final DateTime dateTime = DateTime(
+        map['year'] as int? ?? 0,
+        hasMonth ? map['month'] as int? ?? 0 : 1,
+        hasDay ? map['day'] as int? ?? 0 : 1,
+        hasHours ? map['hour'] as int? ?? 0 : 0,
+        hasMinutes ? map['minute'] as int? ?? 0 : 0,
+        hasSeconds ? map['second'] as int? ?? 0 : 0,
+        hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
+        this == DateTimePrecision.dateTime
+            ? map['microsecond'] as int? ?? 0
+            : 0,
+      );
+      final DateTime localDateTime = dateTime.toLocal();
+      final Duration localOffset = localDateTime.timeZoneOffset;
+      final int actualOffset = localOffset.inHours +
+          (int.tryParse(map['offset']?.toString() ?? '0') ?? 0);
+      final DateTime actualDateTime =
+          localDateTime.add(Duration(hours: actualOffset));
+      return DateTime(
+          actualDateTime.year,
+          actualDateTime.month,
+          actualDateTime.day,
+          actualDateTime.hour - actualOffset,
+          actualDateTime.minute,
+          actualDateTime.second,
+          actualDateTime.millisecond,
+          actualDateTime.microsecond);
+    }
   }
 
   String dateTimeMapToString<T>(Map<String, num?> map) {
