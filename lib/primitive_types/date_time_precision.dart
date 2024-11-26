@@ -444,7 +444,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
             : 0,
       );
     } else {
-      final DateTime dateTime = DateTime(
+      final DateTime dateTime = DateTime.utc(
         map['year'] as int? ?? 0,
         hasMonth ? map['month'] as int? ?? 0 : 1,
         hasDay ? map['day'] as int? ?? 0 : 1,
@@ -457,20 +457,9 @@ extension DateTimePrecisionExtension on DateTimePrecision {
             : 0,
       );
       final DateTime localDateTime = dateTime.toLocal();
-      final Duration localOffset = localDateTime.timeZoneOffset;
-      final int actualOffset = localOffset.inHours +
-          (int.tryParse(map['offset']?.toString() ?? '0') ?? 0);
-      final DateTime actualDateTime =
-          localDateTime.add(Duration(hours: actualOffset));
-      return DateTime(
-          actualDateTime.year,
-          actualDateTime.month,
-          actualDateTime.day,
-          actualDateTime.hour - actualOffset,
-          actualDateTime.minute,
-          actualDateTime.second,
-          actualDateTime.millisecond,
-          actualDateTime.microsecond);
+      final num actualOffset = map['timeZoneOffset'] ?? 0.0;
+      return localDateTime
+          .subtract(Duration(minutes: (actualOffset * 60.0).round()));
     }
   }
 
