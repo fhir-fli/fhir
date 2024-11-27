@@ -430,36 +430,44 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   DateTime dateTimeFromMap(Map<String, num?> map) {
+    final DateTime utcDateTime = DateTime.utc(
+      map['year'] as int? ?? 0,
+      hasMonth ? map['month'] as int? ?? 0 : 1,
+      hasDay ? map['day'] as int? ?? 0 : 1,
+      hasHours ? map['hour'] as int? ?? 0 : 0,
+      hasMinutes ? map['minute'] as int? ?? 0 : 0,
+      hasSeconds ? map['second'] as int? ?? 0 : 0,
+      hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
+      this == DateTimePrecision.dateTime ? map['microsecond'] as int? ?? 0 : 0,
+    );
+
+    // if timestamp is in UTC format, return UTC time
     if (map['isUtc'] != null && map['isUtc'] == 1) {
-      return DateTime.utc(
-        map['year'] as int? ?? 0,
-        hasMonth ? map['month'] as int? ?? 0 : 1,
-        hasDay ? map['day'] as int? ?? 0 : 1,
-        hasHours ? map['hour'] as int? ?? 0 : 0,
-        hasMinutes ? map['minute'] as int? ?? 0 : 0,
-        hasSeconds ? map['second'] as int? ?? 0 : 0,
-        hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
-        this == DateTimePrecision.dateTime
-            ? map['microsecond'] as int? ?? 0
-            : 0,
-      );
-    } else {
-      final DateTime dateTime = DateTime.utc(
-        map['year'] as int? ?? 0,
-        hasMonth ? map['month'] as int? ?? 0 : 1,
-        hasDay ? map['day'] as int? ?? 0 : 1,
-        hasHours ? map['hour'] as int? ?? 0 : 0,
-        hasMinutes ? map['minute'] as int? ?? 0 : 0,
-        hasSeconds ? map['second'] as int? ?? 0 : 0,
-        hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
-        this == DateTimePrecision.dateTime
-            ? map['microsecond'] as int? ?? 0
-            : 0,
-      );
-      final DateTime localDateTime = dateTime.toLocal();
+      return utcDateTime;
+    }
+
+    if (hasTimezoneOffset) {
+      // timestamp has an explicit offset applied, so it must be converted
+      // to local time and the offset adjusted
+      final DateTime localDateTime = utcDateTime.toLocal();
       final num actualOffset = map['timeZoneOffset'] ?? 0.0;
       return localDateTime
           .subtract(Duration(minutes: (actualOffset * 60.0).round()));
+    } else {
+      // no offset was specified, so the timestamp was in local time from
+      // the beginning - return instance in local time
+      return DateTime(
+        map['year'] as int? ?? 0,
+        hasMonth ? map['month'] as int? ?? 0 : 1,
+        hasDay ? map['day'] as int? ?? 0 : 1,
+        hasHours ? map['hour'] as int? ?? 0 : 0,
+        hasMinutes ? map['minute'] as int? ?? 0 : 0,
+        hasSeconds ? map['second'] as int? ?? 0 : 0,
+        hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
+        this == DateTimePrecision.dateTime
+            ? map['microsecond'] as int? ?? 0
+            : 0,
+      );
     }
   }
 
