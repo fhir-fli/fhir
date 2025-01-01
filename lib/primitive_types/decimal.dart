@@ -32,6 +32,17 @@ class FhirDecimal extends FhirNumber {
         true,
         int.tryParse(inValue.toString()) != null,
       );
+    } else if (inValue is String) {
+      final double? parsedDouble = double.tryParse(inValue);
+
+      if (parsedDouble != null) {
+        return FhirDecimal._(
+          inValue,
+          parsedDouble,
+          true,
+          int.tryParse(inValue) != null,
+        );
+      }
     }
     throw CannotBeConstructed<FhirDecimal>(
         'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
