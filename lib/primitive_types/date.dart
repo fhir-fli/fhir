@@ -55,6 +55,10 @@ class FhirDate extends FhirDateTimeBase<FhirDate> {
     );
   }
 
+  @override
+  String toIso8601String({bool asUtc = false}) =>
+      value.toIso8601String().split('T').first;
+
   factory FhirDate.fromJson(String json) => FhirDate(json);
 
   factory FhirDate.fromYaml(String yaml) =>
