@@ -6505,7 +6505,7 @@ FhirList _$FhirListFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirList {
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @JsonKey(includeFromJson: true, includeToJson: false)
   int? get dbId => throw _privateConstructorUsedError;
@@ -6560,7 +6560,7 @@ abstract class $FhirListCopyWith<$Res> {
       _$FhirListCopyWithImpl<$Res, FhirList>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
       Dstu2ResourceType resourceType,
       @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
       @JsonKey(name: 'id') FhirId? fhirId,
@@ -6948,7 +6948,7 @@ abstract class _$$FhirListImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
       Dstu2ResourceType resourceType,
       @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
       @JsonKey(name: 'id') FhirId? fhirId,
@@ -7175,8 +7175,8 @@ class __$$FhirListImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FhirListImpl extends _FhirList {
   const _$FhirListImpl(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
-      this.resourceType = Dstu2ResourceType.FhirList,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+      this.resourceType = Dstu2ResourceType.List,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
       @JsonKey(name: 'id') this.fhirId,
       this.meta,
@@ -7216,7 +7216,7 @@ class _$FhirListImpl extends _FhirList {
       _$$FhirListImplFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
   final Dstu2ResourceType resourceType;
   @override
   @JsonKey(includeFromJson: true, includeToJson: false)
@@ -7435,7 +7435,7 @@ class _$FhirListImpl extends _FhirList {
 
 abstract class _FhirList extends FhirList {
   const factory _FhirList(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
       final Dstu2ResourceType resourceType,
       @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
       @JsonKey(name: 'id') final FhirId? fhirId,
@@ -7472,7 +7472,7 @@ abstract class _FhirList extends FhirList {
       _$FhirListImpl.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
   Dstu2ResourceType get resourceType;
   @override
   @JsonKey(includeFromJson: true, includeToJson: false)

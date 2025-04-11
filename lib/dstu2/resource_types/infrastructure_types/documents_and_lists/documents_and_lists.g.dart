@@ -183,7 +183,7 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Immunization: 'Immunization',
   Dstu2ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   Dstu2ResourceType.ImplementationGuide: 'ImplementationGuide',
-  Dstu2ResourceType.FhirList: 'List',
+  Dstu2ResourceType.List: 'List',
   Dstu2ResourceType.Location: 'Location',
   Dstu2ResourceType.Media: 'Media',
   Dstu2ResourceType.Medication: 'Medication',
@@ -969,8 +969,8 @@ _$FhirListImpl _$$FhirListImplFromJson(Map<String, dynamic> json) =>
     _$FhirListImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: Dstu2ResourceType.FhirList) ??
-          Dstu2ResourceType.FhirList,
+              unknownValue: Dstu2ResourceType.List) ??
+          Dstu2ResourceType.List,
       dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null

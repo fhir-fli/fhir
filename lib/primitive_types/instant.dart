@@ -10,91 +10,77 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'primitive_types.dart';
 
 @immutable
-class FhirInstant extends FhirDateTimeBase {
-  const FhirInstant.fromBase({
+class FhirInstant extends FhirDateTimeBase<FhirInstant> {
+  const FhirInstant._({
     required super.isValid,
-    required super.precision,
-    required super.input,
     required super.parseError,
-    required super.year,
-    required super.month,
-    required super.day,
-    required super.hour,
-    required super.minute,
-    required super.second,
-    required super.millisecond,
-    required super.microsecond,
-    required super.timeZoneOffset,
-    required super.isUtc,
+    required super.value,
   });
 
-  factory FhirInstant(dynamic inValue, [DateTimePrecision? precision]) =>
-      FhirDateTimeBase.constructor<FhirInstant>(
-          inValue,
-          inValue is DateTime
-              ? precision ?? DateTimePrecision.instant
-              : precision) as FhirInstant;
-
-  factory FhirInstant.fromJson(String json, {DateTimePrecision? precision}) =>
-      FhirInstant(json, precision);
-
-  factory FhirInstant.fromYaml(String yaml, [DateTimePrecision? precision]) =>
-      FhirInstant(jsonDecode(jsonEncode(yaml)), precision);
+  factory FhirInstant(dynamic inValue) {
+    final ({bool isValid, Exception? parseError, DateTime value}) parsed =
+        FhirDateTimeBase.parse(inValue);
+    return FhirInstant._(
+      isValid: parsed.isValid,
+      parseError: parsed.parseError,
+      value: parsed.value,
+    );
+  }
 
   factory FhirInstant.fromUnits({
     required int year,
-    required int month,
-    required int day,
-    required int hour,
-    required int minute,
-    required int second,
+    int? month,
+    int? day,
+    int? hour,
+    int? minute,
+    int? second,
     int? millisecond,
     int? microsecond,
-    required num timeZoneOffset,
     bool? isUtc,
-  }) =>
-      FhirDateTimeBase.fromUnits<FhirInstant>(
-        year: year,
-        month: month,
-        day: day,
-        hour: hour,
-        minute: minute,
-        second: second,
-        millisecond: millisecond,
-        microsecond: microsecond,
-        timeZoneOffset: timeZoneOffset,
-        isUtc: isUtc ?? false,
-      ) as FhirInstant;
+  }) {
+    final DateTime dateTime = DateTime(
+      year,
+      month ?? 1,
+      day ?? 1,
+      hour ?? 0,
+      minute ?? 0,
+      second ?? 0,
+      millisecond ?? 0,
+      microsecond ?? 0,
+    );
+    return FhirInstant._(
+      isValid: true,
+      parseError: null,
+      value: isUtc != true ? dateTime : dateTime.toUtc(),
+    );
+  }
+
+  factory FhirInstant.fromJson(String json) => FhirInstant(json);
+
+  factory FhirInstant.fromYaml(String yaml) =>
+      FhirInstant(jsonDecode(jsonEncode(yaml)));
 
   @override
-  bool operator ==(Object other) => isEqual(other) ?? false;
+  FhirInstant plus(Object other) {
+    final Duration? duration = durationFromObject(other);
+    return duration != null
+        ? FhirInstant._(
+            isValid: true,
+            parseError: null,
+            value: value.add(duration),
+          )
+        : this;
+  }
 
   @override
-  int get hashCode =>
-      input.hashCode ^
-      parseError.hashCode ^
-      year.hashCode ^
-      month.hashCode ^
-      day.hashCode ^
-      hour.hashCode ^
-      minute.hashCode ^
-      second.hashCode ^
-      millisecond.hashCode ^
-      microsecond.hashCode ^
-      timeZoneOffset.hashCode ^
-      isUtc.hashCode;
-
-  FhirInstant plus(ExtendedDuration other) =>
-      FhirDateTimeBase.plus<FhirInstant>(this, other) as FhirInstant;
-
-  FhirInstant subtract<T>(ExtendedDuration other) =>
-      FhirDateTimeBase.subtract<FhirInstant>(this, other) as FhirInstant;
-
-  @override
-  FhirInstant operator +(ExtendedDuration other) =>
-      FhirDateTimeBase.plus<FhirInstant>(this, other) as FhirInstant;
-
-  @override
-  FhirInstant operator -(ExtendedDuration other) =>
-      FhirDateTimeBase.subtract<FhirInstant>(this, other) as FhirInstant;
+  FhirInstant subtract(Object other) {
+    final Duration? duration = durationFromObject(other);
+    return duration != null
+        ? FhirInstant._(
+            isValid: true,
+            parseError: null,
+            value: value.subtract(duration),
+          )
+        : this;
+  }
 }
