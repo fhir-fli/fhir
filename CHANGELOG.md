@@ -9,6 +9,9 @@
 * Added r6
 * Removed XML
 * added some Enums back to R5
+* PR from [Yevgny](https://github.com/Yevgny) for dependency updates
+* PR from [easazade](https://github.com/easazade) for improved parsing for FhirDecimal
+* PR from [luis901101](https://github.com/luis901101) for improved enums with ResourceType
 
 ## [0.12.0]
 
