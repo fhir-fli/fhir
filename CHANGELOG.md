@@ -1,5 +1,9 @@
 # fhir
 
+## [0.12.2]
+
+* README only: points to fhir_r4, the fhir_migrate tool and the migration guide. No code change.
+
 ## [0.12.1]
 
 * Changed some equalities with FhirTime
